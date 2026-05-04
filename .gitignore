@@ -1,0 +1,30 @@
+node_modules/
+dist/
+build/
+.cache/
+.env
+.env.*
+!.env.example
+
+# macOS
+.DS_Store
+
+# Logs
+*.log
+npm-debug.log*
+
+# Playwright / test output
+test-results/
+playwright-report/
+coverage/
+
+# Cloudflare
+.wrangler/
+.dev.vars
+
+# Xcode
+DerivedData/
+*.xcworkspace/xcuserdata/
+*.xcodeproj/xcuserdata/
+*.xcodeproj/project.xcworkspace/xcuserdata/
+
