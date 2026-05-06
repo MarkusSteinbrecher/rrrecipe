@@ -617,10 +617,14 @@ function renderImportWorkbench(): string {
   const youtubeExpanded = isImportSourceExpanded("source:youtube");
   const baselineExpanded = isImportSourceExpanded("baseline");
   const mealDbExpanded = isImportSourceExpanded("themealdb");
+  const backlogEndpointAvailable = hasBacklogEndpoint();
+  const youtubeEmptyMessage = backlogEndpointAvailable
+    ? "No YouTube videos yet."
+    : "Import API offline. Start `npm run research:dev-api` on the workstation to add channels.";
   return `
     <section class="rr-import-panel rr-import-workbench">
       <section class="rr-add-channel">
-        <div class="rr-section-label"><span>add video or channel</span><span class="count">${hasBacklogEndpoint() ? "local api" : "command fallback"}</span></div>
+        <div class="rr-section-label"><span>add video or channel</span><span class="count">${backlogEndpointAvailable ? "local api" : "import api offline"}</span></div>
         <div class="rr-add-channel-row">
           <input data-action="update-channel-backlog-input" value="${escapeHtml(state.channelBacklogInput)}" placeholder="paste a YouTube video URL, @handle, channel URL, or channel ID">
           <button class="rr-mini-action" data-action="add-backlog-channel">add source</button>
@@ -641,7 +645,7 @@ function renderImportWorkbench(): string {
         ${renderImportSourceHeader("youtube", `${youtubeGroups.length} groups · ${totalVideos + collectedCatalog.records.length} videos`, "source:youtube", youtubeExpanded)}
         ${youtubeExpanded ? `
           <div data-import-backlog-list>
-            ${youtubeGroups.length ? youtubeGroups.map(renderBacklogChannelGroup).join("") : `<p class="rr-import-empty">${state.importSearch.trim() ? "No YouTube videos match this search." : "No YouTube videos yet."}</p>`}
+            ${youtubeGroups.length ? youtubeGroups.map(renderBacklogChannelGroup).join("") : `<p class="rr-import-empty">${state.importSearch.trim() ? "No YouTube videos match this search." : youtubeEmptyMessage}</p>`}
             ${collectedCatalog.records.length ? renderYouTubeCatalogGroup() : ""}
           </div>
         ` : ""}

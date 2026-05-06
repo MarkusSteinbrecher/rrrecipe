@@ -486,6 +486,7 @@ async function responseErrorMessage(response: Response): Promise<string> {
 }
 
 function localDevApiBaseUrl(): string | undefined {
+  if (typeof window === "undefined") return undefined;
   const hostname = window.location.hostname;
   const isLocal =
     hostname === "localhost" ||
