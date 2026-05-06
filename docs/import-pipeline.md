@@ -148,3 +148,42 @@ Phase 2+:
 - 5 YouTube videos where the recipe is only spoken.
 - 3 PDFs or photographed recipes.
 - 3 pasted family recipes with loose formatting.
+
+## Future Paid-Import Surface
+
+Per [`design/decisions/0001-mvp-scope.md`](../design/decisions/0001-mvp-scope.md),
+the static MVP runs with no backend. The paid import surface is a later
+production capability — the frontend should be prepared to call it, but the
+build must not depend on it.
+
+When that capability ships:
+
+- **Hosting:** Cloudflare Worker. Easy CORS for GitHub Pages, secrets stay
+  server-side, built-in rate limiting, D1/R2/Queues available for async jobs.
+- **API surface:**
+  - `POST /api/import/youtube` — full path (URL → metadata → transcript →
+    candidate). Returns `202 + jobId` for long-running imports;
+    `GET /api/import/jobs/:id` polls for status.
+  - `POST /api/import/refine` — improves a local draft from raw text without
+    fetching external URLs. Used by the frontend's "refine with AI" button.
+- **Provider strategy:**
+  - YouTube Data API for metadata (title, channel, description, thumbnail,
+    duration, published date).
+  - Transcripts only from allowed sources: user-pasted, uploaded file,
+    creator-owned OAuth captions, NotebookLM Enterprise (if access exists).
+    No unofficial transcript scraping as a product dependency.
+  - One AI normalization provider behind a strict-JSON contract; validate all
+    output before returning; preserve raw ingredient lines and timestamp
+    evidence.
+- **Required controls before public launch:** auth + entitlement check; per-user
+  monthly import quota; per-IP rate limit; provider cost cap; URL host allowlist
+  (reject private/internal IPs); body-size limits; redaction of secrets and
+  large user text from logs.
+- **The browser never receives provider API keys.** The Worker is the only
+  place those keys live.
+
+The verified-working YouTube transcript fetcher in
+[`tools/import-dev-server/dev-server.mjs`](../tools/import-dev-server/dev-server.mjs)
+is the prototype for the transcript-provider piece. Lifting it into a real
+Worker is a separate, post-MVP project — it requires the controls above before
+it can be exposed publicly.

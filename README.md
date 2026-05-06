@@ -64,14 +64,23 @@ Operating manual: [`CLAUDE.md`](CLAUDE.md). Live state: [`session-log.md`](sessi
    - Sync recipes, tags, edits, and import job results through the Worker API.
    - Keep export/import of all user data as a first-class escape hatch.
 
-## Current Prep Files
+## Docs
 
-- [docs/architecture.md](docs/architecture.md)
-- [docs/import-pipeline.md](docs/import-pipeline.md)
-- [docs/video-steps.md](docs/video-steps.md)
-- [docs/cooking-mode.md](docs/cooking-mode.md)
-- [docs/data-model.md](docs/data-model.md)
-- [docs/versioning.md](docs/versioning.md)
-- [docs/localization-and-units.md](docs/localization-and-units.md)
-- [docs/development-setup.md](docs/development-setup.md)
-- [docs/open-decisions.md](docs/open-decisions.md)
+- [`docs/architecture.md`](docs/architecture.md) — stack, source layout,
+  storage, testing, local development.
+- [`docs/data-model.md`](docs/data-model.md) — Recipe / Version / Variant /
+  Source / IngredientLine / InstructionStep contracts.
+- [`docs/cooking-mode.md`](docs/cooking-mode.md) — hands-free cooking flow,
+  command model, voice/touch/visual inputs.
+- [`docs/import-pipeline.md`](docs/import-pipeline.md) — candidate-review
+  contract, source-type playbooks, future paid-import surface.
+- [`docs/versioning.md`](docs/versioning.md) — append-only edits, variants,
+  drafts, sync conflict model.
+- [`docs/video-steps.md`](docs/video-steps.md) — step↔video timestamp anchors.
+- [`docs/localization-and-units.md`](docs/localization-and-units.md) —
+  measurement display, density table, language layers.
+- [`design/decisions/`](design/decisions/) — ADRs.
+- [`internal/design_handoff_recipe_app/README.md`](internal/design_handoff_recipe_app/README.md)
+  — high-fidelity design canon for the five SPA screens.
+- [`tools/README.md`](tools/README.md) — research and dev-only tooling
+  (not bundled in the SPA).

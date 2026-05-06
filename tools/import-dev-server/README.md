@@ -90,4 +90,4 @@ Replace this mock with a Cloudflare Worker that:
 - calls an AI normalization provider,
 - validates and returns a `RecipeCandidate`.
 
-See `docs/import-backend-architecture.md`.
+See `docs/import-pipeline.md` §"Future Paid-Import Surface".

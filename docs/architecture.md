@@ -1,95 +1,155 @@
-# Architecture Plan
+# Architecture
 
-## Baseline Approach
+> Companion to [`../CLAUDE.md`](../CLAUDE.md). The CLAUDE.md sets the operating
+> rules; this doc describes what's actually here and how it's organized.
 
-Mirror the parts of `rrradio.org` that fit:
+## Stack
 
-- **Web first:** Vite + TypeScript, minimal dependencies, mobile-first UI.
-- **Native iOS second:** SwiftUI client that consumes the same published JSON
-  contracts and API endpoints.
-- **Small backend:** Cloudflare Worker for imports, CORS, API keys, rate limits,
-  and future sync.
-- **Generated/shared artifacts:** schema fixtures, test data, and import results
-  are committed as stable examples so regressions are easy to see.
-- **Tests around contracts:** pure parsing and normalization logic should be
-  heavily tested before UI tests.
+- **Web (Phase 1):** Vite + TypeScript, vanilla DOM, mobile-first. Static MVP
+  on GitHub Pages, no backend. IndexedDB for local recipe storage.
+- **iOS (Phase 2, later):** SwiftUI + SwiftData/SQLite. Mirrors the web UX and
+  consumes the same JSON contracts. xcodegen project layout, matching the
+  `rrradio` pattern.
+- **Backend (Phase 3+, later):** Cloudflare Worker behind the import endpoints
+  in [`import-pipeline.md`](import-pipeline.md). The static MVP must run with
+  the Worker absent or unreachable.
 
-The import backend is intentionally optional for the GitHub Pages MVP. The
-production architecture for YouTube extraction, AI normalization, local worker
-testing, and paid-user gating is defined in
-[`import-backend-architecture.md`](import-backend-architecture.md).
-
-## Proposed Source Layout
+## Source layout
 
 ```text
 rrrecipe/
-  apps/
-    web/                  # Vite + TypeScript web app
-    worker/               # Cloudflare Worker import/sync API
-    ios/                  # SwiftUI app once Phase 4 starts
-  packages/
-    schema/               # JSON schemas and TypeScript types
-    importers/            # pure extraction/normalization helpers
-    fixtures/             # saved HTML/transcripts/import examples
-  docs/
-    architecture.md
-    data-model.md
-    import-pipeline.md
-    import-backend-architecture.md
-    development-setup.md
-    open-decisions.md
+  src/                        # Vite SPA
+    main.ts                   # SPA entry; render loop and event bus
+    style.css                 # design-canon tokens + per-screen styles
+    storage.ts                # IndexedDB + baseline merge wrapper
+    snapshot-merge.ts         # pure baseline-catalog merge (testable)
+    ingredient-scale.ts       # parseQuantity / formatQuantity / scaling
+    format.ts                 # uid, timestamps, speakStep helpers
+    types.ts                  # AppSnapshot, Recipe, RecipeVersion, ...
+    importers/                # YouTube id parsing, candidate construction
+    data/                     # baseline-catalog.ts + app-snapshot.json
+  internal/design_handoff_recipe_app/
+                              # design canon (5 screens, tokens, interactions)
+  design/decisions/           # ADRs (NNNN-slug.md)
+  docs/                       # this directory — architecture, data-model,
+                              # cooking-mode, import-pipeline, versioning,
+                              # plus localization-and-units, video-steps
+  data/                       # research datasets — not bundled into the SPA
+  tools/                      # research and dev-only tooling — not bundled
+    import-dev-server/        # local Node prototype of the future Worker
+    research/                 # YouTube + TheMealDB collectors and docs
+    lib/                      # transcripts.mjs (segment-to-block normalizer)
+  public/                     # static assets that ship with the SPA
+  .github/workflows/          # GitHub Pages deploy
 ```
 
-Start with a single package if that is faster, but keep this boundary in mind:
-UI, import extraction, and backend IO should not become one tangled module.
+UI, import extraction, and any future backend IO must stay separate modules.
+The render loop in `main.ts` will decompose into per-screen `render-*.ts` modules
++ a render harness (rrradio's pattern) in a future session.
 
-## Storage Strategy
+## Storage
 
-### MVP
+**MVP:** the SPA stores recipes locally in IndexedDB (`storage.ts`).
+Export/import JSON is a first-class escape hatch from day one.
 
-- Web stores recipes locally in IndexedDB.
-- Worker stores no user recipes at first; it only returns import candidates.
-- Export/import JSON is available from day one.
+**Future sync:** when sync ships, the Worker owns canonical recipe records (D1
+or another small SQL DB), R2 stores user-uploaded images, and clients keep a
+local cache they reconcile on launch/resume. Account design is deferred until
+sync is needed — see [`versioning.md`](versioning.md) for the conflict model.
 
-### Sync Version
-
-- Worker owns canonical recipe records in Cloudflare D1 or another small SQL
-  database.
-- R2 stores user-uploaded images and extracted thumbnails.
-- Clients keep a local cache and sync on launch/resume.
-
-This avoids forcing account design into the MVP while leaving room for real
-multi-device sync later.
-
-## Client Responsibilities
+## Client responsibilities
 
 ### Web
 
-- Recipe library, search, tags, collections.
-- Recipe editor and import review.
-- Cooking mode with step focus, timers, scaling, notes.
+- Library / Browse / Detail / Mise en place / Cook / Timers (per the design
+  canon at `internal/design_handoff_recipe_app/`).
+- Recipe editor, source links, tags, search.
+- Hands-free cooking mode (tap/swipe/voice) — see [`cooking-mode.md`](cooking-mode.md).
 - Offline read access to saved recipes.
 
-### Worker
+### Worker (later)
 
-- Fetch external URLs server-side.
+- Fetch external URLs server-side with a host allowlist.
 - Parse Schema.org Recipe JSON-LD and basic metadata.
-- Call model providers for unstructured extraction.
-- Track import job status for longer operations.
-- Hide API keys and enforce source allow/deny rules.
+- Call model providers for unstructured extraction; never expose keys to the
+  browser.
+- Track async import job status.
+- Enforce CORS, auth, entitlement, rate limits.
 
-### iOS
+### iOS (later)
 
-- Native library, search, cooking mode, timers.
+- Native Browse / Cook flow.
 - Share extension: "Import to rrrecipe" from Safari/YouTube.
 - Offline cache.
 - Later: camera/photo import and Siri/Shortcuts hooks.
 
-## Test Strategy
+## Testing
 
-- Unit tests for recipe schema validation, ingredient parsing, URL parsing, and
-  import normalization.
-- Fixture tests for each import source class.
-- Worker tests with mocked fetch and model calls.
+The pure-logic contracts get unit-tested first (vitest); UI smoke tests come
+later. Initial coverage:
+
+- `parseYouTubeVideoId` — URL forms, bare IDs, embedded-in-text.
+- `parseQuantity` / `formatQuantity` / `formatScaledQuantity` — ingredient
+  scaling math.
+- `mergeBaselineCatalog` — append-without-duplicate, sourceId merge,
+  immutability of input.
+- `normalizeTranscriptSegments` — gap/sentence splits, maxBlockChars,
+  timestamp rounding.
+
+Run with `npm test` (one-shot) or `npm run test:watch`. Future:
+- Worker tests with mocked fetch and model calls (when the Worker exists).
 - Web smoke tests for library, editor, import review, and cooking mode.
-- iOS XCTest for schema decoding and search parity when the native client starts.
+- iOS XCTest for schema decoding and search parity.
+
+## Local development
+
+```sh
+npm install
+npm run dev              # Vite dev server on http://localhost:5174 (or :5173)
+npm run typecheck        # tsc --noEmit
+npm test                 # vitest run
+npm run build            # tsc + vite build → dist/
+```
+
+The dev server binds `0.0.0.0` so a phone on the same Wi-Fi can hit it at
+`http://<mac-ip>:5174/rrrecipe/`. Useful for testing cooking mode on real
+hardware.
+
+The optional research/import dev-API runs separately:
+
+```sh
+npm run research:dev-api   # node tools/import-dev-server/dev-server.mjs
+```
+
+Secrets for the dev-API live in `.dev.vars` at the repo root (gitignored):
+
+```text
+YOUTUBE_API_KEY=...
+OPENROUTER_API_KEY=...
+ALLOWED_ORIGIN=http://localhost:5174
+```
+
+Pointing the SPA at the dev-API:
+
+```sh
+VITE_RRRECIPE_IMPORT_API_URL=http://localhost:8787/api/import/refine npm run dev -- --port 5175
+```
+
+## Quality gates
+
+Expected on every change:
+
+```sh
+npm run typecheck
+npm test
+npm run build
+```
+
+For iOS later:
+
+```sh
+cd apps/ios
+xcodegen
+xcodebuild test -project RecipeApp.xcodeproj -scheme RecipeApp \
+  -destination 'platform=iOS Simulator,name=iPhone 16'
+```

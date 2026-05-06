@@ -32,4 +32,4 @@ See [`design/decisions/0001-mvp-scope.md`](../design/decisions/0001-mvp-scope.md
 YouTube descriptions (the source-page extractor). Acceptable for local dev; **never
 expose this on the public internet without a host allowlist + rate limits +
 entitlement check.** When this code eventually lifts into a real Cloudflare Worker,
-those controls are mandatory — see [`docs/import-backend-architecture.md`](../docs/import-backend-architecture.md).
+those controls are mandatory — see [`docs/import-pipeline.md`](../docs/import-pipeline.md) §"Future Paid-Import Surface".
