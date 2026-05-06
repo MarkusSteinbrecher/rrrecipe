@@ -15,6 +15,7 @@
     "test:watch": "vitest",
     "research:dev-api": "node tools/import-dev-server/dev-server.mjs",
     "research:youtube:collect": "node tools/research/youtube/collect-recipes.mjs",
+    "research:youtube:fetch-transcript": "node tools/research/youtube/fetch-transcript.mjs",
     "research:youtube:backlog": "node tools/research/youtube/backlog.mjs",
     "research:youtube:expand-channel": "node tools/research/youtube/expand-channel.mjs",
     "research:youtube:probe-video-api": "node tools/research/youtube/probe-video-api.mjs",

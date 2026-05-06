@@ -49,6 +49,12 @@ MVP implementation status:
    recipe save path.
 5. Unknown videos can still produce a low-confidence draft when the user pastes
    the video description, transcript, or NotebookLM output under the URL.
+6. For research and import-pipeline development, the local
+   `npm run research:youtube:fetch-transcript -- --video-id <id>` CLI fetches a
+   transcript via the public player API and writes raw / sanitized / blocks files
+   under `data/youtube-recipes/transcripts/`. Same code path as the dev server's
+   `/api/backlog/videos/transcript/retrieve`. Not part of the SPA build; not a
+   public production surface — see [`tools/README.md`](../tools/README.md).
 
 Reliable path:
 
