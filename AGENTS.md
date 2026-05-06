@@ -123,13 +123,17 @@ du -sh dist/          # note the delta vs. main in the PR body
 
 If any gate fails, fix it before committing. Don't push red.
 
-### 5.6 Append a session-log entry in the same commit
+### 5.6 Drop a session-log file in the same PR
 
-[`session-log.md`](session-log.md) is append-only, dated, and the canonical
-record of what changed. Format:
+Session entries live in [`session-logs/`](session-logs/) as individual files,
+one per PR. Naming: `YYYY-MM-DD-NN-<slug>.md` (NN = two-digit sequence within
+the day, zero-padded — pick the next number after the highest existing one for
+that date). The filename is the index — no frontmatter required.
+
+Format inside the file:
 
 ```markdown
-## YYYY-MM-DD — Codex #N: <one-line summary>
+# YYYY-MM-DD — Codex #N: <one-line summary>
 
 What was done (PR `<branch>`, closes #N):
 
@@ -139,8 +143,15 @@ Verified: `npm run typecheck` clean, `npm test` clean (X tests),
 `npm run build` clean. Bundle delta: ...
 ```
 
+**Why a directory and not a single file:** every PR appending to one
+`session-log.md` made it a hot conflict surface — sequential merges turned each
+following PR into a rebase loop. Per-entry files mean two PRs never touch the
+same file, so Codex / Claude / sponsor work can land in parallel. See
+[issue #12 / PR #13](https://github.com/MarkusSteinbrecher/rrrecipe/issues/12)
+for the migration.
+
 See [`~/Code/HQ/wiki/conventions/session-log.md`](https://github.com/MarkusSteinbrecher/HQ/blob/main/wiki/conventions/session-log.md)
-for the full convention.
+for the cross-project convention.
 
 ### 5.7 Commit format
 
@@ -202,7 +213,7 @@ Say so. Don't claim a manual smoke test you didn't do.
 - **Import pipeline:** [`docs/import-pipeline.md`](docs/import-pipeline.md)
 - **Versioning:** [`docs/versioning.md`](docs/versioning.md)
 - **Decisions:** [`design/decisions/`](design/decisions/) — ADRs.
-- **Live state:** [`session-log.md`](session-log.md) and GitHub issues.
+- **Live state:** [`session-logs/`](session-logs/) and GitHub issues.
 - **Issue template:** [`.github/ISSUE_TEMPLATE/codex-task.md`](.github/ISSUE_TEMPLATE/codex-task.md).
 - **Wiki (cross-project):** `~/Code/HQ/wiki/` — read-only for agents working
   in this project. The wiki page for this project is at
@@ -218,7 +229,7 @@ Say so. Don't claim a manual smoke test you didn't do.
 - [ ] Bundle-size delta from `du -sh dist/` known and acceptable.
 - [ ] No secrets, no API keys, no `.dev.vars` content in the diff.
 - [ ] Tests added for any new pure logic.
-- [ ] `session-log.md` entry appended.
+- [ ] `session-logs/<date>-NN-<slug>.md` added (one file per PR).
 - [ ] Commit message has the Co-Author trailer(s).
 - [ ] PR body includes `Closes #N`, gate output, and a test-plan checklist
       mirroring the issue's acceptance criteria.

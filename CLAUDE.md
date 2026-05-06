@@ -24,7 +24,7 @@ A private-first recipe app. Web first (Vite + TypeScript static SPA on GitHub Pa
 - **Static MVP must run with no backend.** No `dev:api` dependency in the default story. The build must not fail or behave differently when the import API is unreachable.
 - **No SSRF surface.** The dev import server fetches arbitrary URLs from YouTube descriptions; that code must never ship publicly without a host allowlist + rate limits + entitlement check.
 - **GitHub Pages bundle stays small.** Target `dist/` < 1 MB without images. Images that ship belong in `public/` only if they're recipe assets the seeded catalog actually displays.
-- **Append-only `session-log.md`.** Date format ISO. End every working session with an entry. See `~/Code/HQ/wiki/conventions/session-log.md`.
+- **One session log file per PR.** Add `session-logs/YYYY-MM-DD-NN-<slug>.md` (NN = sequence within the day, zero-padded). Single-file `session-log.md` was deprecated as a hot-conflict surface. See `~/Code/HQ/wiki/conventions/session-log.md` and the stub at `session-log.md`.
 
 ## Pointers
 
@@ -33,7 +33,7 @@ A private-first recipe app. Web first (Vite + TypeScript static SPA on GitHub Pa
 - **Architecture:** [`docs/architecture.md`](docs/architecture.md)
 - **Data model:** [`docs/data-model.md`](docs/data-model.md)
 - **Decisions:** [`design/decisions/`](design/decisions/) — ADRs (start at `0001-mvp-scope.md`)
-- **Live state:** [`session-log.md`](session-log.md) and GitHub issues
+- **Live state:** [`session-logs/`](session-logs/) and GitHub issues
 
 ## Wiki
 
