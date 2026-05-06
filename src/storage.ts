@@ -1,5 +1,6 @@
 import appSnapshot from "./data/app-snapshot.json";
 import { baselineCatalog } from "./data/baseline-catalog";
+import { mergeBaselineCatalog } from "./snapshot-merge";
 import type { AppSnapshot } from "./types";
 
 const DB_NAME = "rrrecipe";
@@ -37,47 +38,6 @@ function requestToPromise<T>(request: IDBRequest<T>): Promise<T> {
   });
 }
 
-function appendMissingById<T extends { id: string }>(target: T[], additions: T[]): boolean {
-  const existingIds = new Set(target.map((item) => item.id));
-  let changed = false;
-
-  for (const item of additions) {
-    if (existingIds.has(item.id)) continue;
-    target.push(structuredClone(item));
-    existingIds.add(item.id);
-    changed = true;
-  }
-
-  return changed;
-}
-
-function mergeBaselineVersionSources(snapshot: AppSnapshot): boolean {
-  let changed = false;
-  for (const baselineVersion of baselineCatalog.versions) {
-    const existing = snapshot.versions.find((version) => version.id === baselineVersion.id);
-    if (!existing) continue;
-    for (const sourceId of baselineVersion.sourceIds) {
-      if (existing.sourceIds.includes(sourceId)) continue;
-      existing.sourceIds.push(sourceId);
-      changed = true;
-    }
-  }
-  return changed;
-}
-
-function withBaselineCatalog(snapshot: AppSnapshot): { snapshot: AppSnapshot; changed: boolean } {
-  const next = structuredClone(snapshot);
-  const changed = [
-    appendMissingById(next.sources, baselineCatalog.sources),
-    appendMissingById(next.recipes, baselineCatalog.recipes),
-    appendMissingById(next.variants, baselineCatalog.variants),
-    appendMissingById(next.versions, baselineCatalog.versions),
-    mergeBaselineVersionSources(next),
-  ].some(Boolean);
-
-  return { snapshot: next, changed };
-}
-
 export async function loadSnapshot(): Promise<AppSnapshot> {
   const db = await openDb();
   const tx = db.transaction(STORE_NAME, "readonly");
@@ -85,12 +45,12 @@ export async function loadSnapshot(): Promise<AppSnapshot> {
   const snapshot = await requestToPromise<AppSnapshot | undefined>(store.get(SNAPSHOT_KEY));
 
   if (snapshot) {
-    const hydrated = withBaselineCatalog(snapshot);
+    const hydrated = mergeBaselineCatalog(snapshot, baselineCatalog);
     if (hydrated.changed) await saveSnapshot(hydrated.snapshot);
     return hydrated.snapshot;
   }
 
-  const hydrated = withBaselineCatalog(initialSnapshot).snapshot;
+  const hydrated = mergeBaselineCatalog(initialSnapshot, baselineCatalog).snapshot;
   await saveSnapshot(hydrated);
   return hydrated;
 }
@@ -103,7 +63,7 @@ export async function saveSnapshot(snapshot: AppSnapshot): Promise<void> {
 }
 
 export async function resetSnapshot(): Promise<AppSnapshot> {
-  const snapshot = withBaselineCatalog(initialSnapshot).snapshot;
+  const snapshot = mergeBaselineCatalog(initialSnapshot, baselineCatalog).snapshot;
   await saveSnapshot(snapshot);
   return snapshot;
 }
