@@ -15,7 +15,7 @@ app merges those baseline records into IndexedDB for local runtime edits.
 Research artifacts (YouTube backlogs, TheMealDB collections, transcript pulls)
 live under [`data/`](data/) and [`tools/research/`](tools/research/) but are
 **not bundled into the SPA** — see [`design/decisions/0001-mvp-scope.md`](design/decisions/0001-mvp-scope.md).
-Operating manual: [`CLAUDE.md`](CLAUDE.md). Live state: [`session-log.md`](session-log.md).
+Operating manual: [`CLAUDE.md`](CLAUDE.md). Live state: [`session-logs/`](session-logs/).
 
 ## Goals
 

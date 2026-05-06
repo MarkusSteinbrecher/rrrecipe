@@ -7,11 +7,12 @@ assignees: []
 ---
 
 > Read [`CLAUDE.md`](../../CLAUDE.md) and [`design/decisions/`](../../design/decisions/)
-> first. End every PR with a `session-log.md` entry per
+> first. End every PR by adding a file under [`session-logs/`](../../session-logs/)
+> named `YYYY-MM-DD-NN-<slug>.md` per
 > [`~/Code/HQ/wiki/conventions/session-log.md`](https://github.com/MarkusSteinbrecher/HQ/blob/main/wiki/conventions/session-log.md).
 
 ## Why
-<!-- One paragraph. Link the ADR / design doc / session-log entry that motivates this. -->
+<!-- One paragraph. Link the ADR / design doc / session-logs/ entry that motivates this. -->
 
 ## Scope
 <!-- What's in. Bounded list of files and acceptance criteria. -->
@@ -26,7 +27,7 @@ assignees: []
 - [ ] `npm run build` clean; bundle size delta noted in the PR body.
 - [ ] No new permission, SSRF, or secret surface introduced.
 - [ ] Conventions followed: link the relevant ADR or `wiki/conventions/*` page.
-- [ ] `session-log.md` entry appended in the same PR.
+- [ ] `session-logs/<date>-NN-<slug>.md` added in the same PR.
 
 ## Implementation notes
 <!-- Pointers to existing code patterns to mirror, files expected to change,
