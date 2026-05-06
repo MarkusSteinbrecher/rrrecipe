@@ -105,15 +105,28 @@ Run with `npm test` (one-shot) or `npm run test:watch`. Future:
 
 ```sh
 npm install
-npm run dev              # Vite dev server on http://localhost:5174 (or :5173)
+npm run dev              # Vite dev server on port 5174
 npm run typecheck        # tsc --noEmit
 npm test                 # vitest run
 npm run build            # tsc + vite build → dist/
 ```
 
+### Port allocation
+
+Pin to these so multiple agents / sessions don't fight for ports or duplicate
+servers. Mirror of `AGENTS.md` §4.1.
+
+| Port | What runs there | Start command |
+|---|---|---|
+| 5173 | (Vite default — avoid, not used here) | — |
+| **5174** | Primary Vite dev server. iPad URL `http://<mac-ip>:5174/rrrecipe/`. | `npm run dev` |
+| **5175** | Secondary Vite — when also running the dev-api locally. | `VITE_RRRECIPE_IMPORT_API_URL=http://localhost:8787/api/import/refine npm run dev -- --port 5175` |
+| **8787** | Local dev import API (channel intake, transcript retrieval, candidate generation). | `npm run research:dev-api` |
+
 The dev server binds `0.0.0.0` so a phone on the same Wi-Fi can hit it at
 `http://<mac-ip>:5174/rrrecipe/`. Useful for testing cooking mode on real
-hardware.
+hardware. If a port is already in use, run `lsof -i :<port>` first — don't
+silently start a parallel server on a different port.
 
 The optional research/import dev-API runs separately:
 
