@@ -9,7 +9,7 @@ the backend contract while the GitHub Pages MVP remains static.
 Terminal 1:
 
 ```sh
-npm run dev:api
+npm run research:dev-api
 ```
 
 Terminal 2:
@@ -34,15 +34,16 @@ Create `.dev.vars` at the repo root:
 ```text
 AI_PROVIDER=openrouter
 OPENROUTER_API_KEY=your_key_here
-OPENROUTER_MODEL=google/gemma-4-26b-a4b-it:free
+OPENROUTER_MODEL=openrouter/owl-alpha
 ```
 
-`npm run dev:api` loads `.dev.vars` automatically.
+`npm run research:dev-api` loads `.dev.vars` automatically.
 
-The pinned Gemma free model gives more repeatable local tests than
-`openrouter/free`. Free models can still be temporarily unavailable or
-rate-limited. When that happens, the local API falls back to the deterministic
-mock parser and returns a warning.
+`openrouter/owl-alpha` is the default because OpenRouter lists it as a free
+model with `response_format` and structured-output support as of 2026-05-06.
+Free models can still be temporarily unavailable or rate-limited. When that
+happens, the local API falls back to the deterministic mock parser and returns
+a warning.
 
 ## Endpoints
 

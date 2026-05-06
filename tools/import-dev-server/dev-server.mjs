@@ -10,7 +10,7 @@ const port = Number(process.env.PORT ?? 8787);
 const host = process.env.HOST ?? "0.0.0.0";
 const allowedOrigin = process.env.ALLOWED_ORIGIN ?? "*";
 const aiProvider = process.env.AI_PROVIDER ?? "mock";
-const openRouterModel = process.env.OPENROUTER_MODEL ?? "openrouter/free";
+const openRouterModel = process.env.OPENROUTER_MODEL ?? "openrouter/owl-alpha";
 const youtubeApiKey = process.env.YOUTUBE_API_KEY;
 
 const server = http.createServer(async (request, response) => {

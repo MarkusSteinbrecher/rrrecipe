@@ -80,7 +80,7 @@ During local app development, the Import page can add a video or channel through
 the local API when both servers are running:
 
 ```sh
-npm run dev:api
+npm run research:dev-api
 VITE_RRRECIPE_IMPORT_API_URL=http://localhost:8787/api/import/refine npm run dev -- --host 127.0.0.1 --port 5175
 ```
 
