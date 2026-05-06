@@ -65,6 +65,22 @@ Cook → Timers), tokens, and interactions. Don't drift from it without an ADR.
 - **No secrets in the SPA.** API keys live in `.dev.vars` (gitignored) on the
   workstation. The browser must never see them.
 
+## 4.1 Local servers — port allocation
+
+Pin to these ports so multiple agents don't fight for them or duplicate work.
+
+| Port | What runs there | Start command |
+|---|---|---|
+| 5173 | (Vite default — **avoid**, not what we use) | — |
+| **5174** | Primary Vite dev server. iPad URL is `http://<mac-ip>:5174/rrrecipe/`. | `npm run dev` |
+| **5175** | Secondary Vite — only when also running the dev-api locally so the SPA can talk to it. | `VITE_RRRECIPE_IMPORT_API_URL=http://localhost:8787/api/import/refine npm run dev -- --port 5175` |
+| **8787** | Local dev import API (channel intake, transcript retrieval, candidate generation). | `npm run research:dev-api` |
+
+If a port is already in use, **don't pick a different one and start a parallel
+server.** Check `lsof -i :<port>` first; if it's another agent's session, ask
+in the issue/PR before killing it. The default story is one Vite + (optionally)
+one dev-api on the workstation.
+
 ## 5. Workflow rules — non-negotiable
 
 These rules exist because Codex's first pass at issues #1, #2, #5, #6 wrote
