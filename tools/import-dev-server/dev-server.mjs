@@ -2,6 +2,7 @@ import http from "node:http";
 import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, resolve } from "node:path";
 import { normalizeTranscriptSegments, transcriptBlocksToText } from "../lib/transcripts.mjs";
+import { readResponseTextWithLimit, validateExternalUrl } from "../lib/url-safety.mjs";
 import { fetchYouTubeTranscript } from "../lib/youtube-transcript.mjs";
 
 loadDevVars();
@@ -12,6 +13,7 @@ const allowedOrigin = process.env.ALLOWED_ORIGIN ?? "*";
 const aiProvider = process.env.AI_PROVIDER ?? "mock";
 const openRouterModel = process.env.OPENROUTER_MODEL ?? "openrouter/owl-alpha";
 const youtubeApiKey = process.env.YOUTUBE_API_KEY;
+const maxSourcePageBytes = 2 * 1024 * 1024;
 
 const server = http.createServer(async (request, response) => {
   setCorsHeaders(response);
@@ -981,13 +983,14 @@ async function fetchAndStoreRecipeSourcePages(video, now) {
 }
 
 async function fetchAndStoreRecipeSourcePage(video, url, now) {
+  await validateExternalUrl(url);
   const response = await fetch(url, {
     headers: {
       "accept-language": "en-US,en;q=0.9",
       "user-agent": "Mozilla/5.0 rrrecipe-local-dev/0.1",
     },
   });
-  const html = await response.text();
+  const html = await readResponseTextWithLimit(response, maxSourcePageBytes);
   if (!response.ok) throw new Error(`Recipe page request failed with HTTP ${response.status}: ${html.slice(0, 120)}`);
 
   const extracted = extractRecipeDataFromHtml(html, url);
@@ -1529,6 +1532,7 @@ function numberOrUndefined(value) {
 
 async function downloadChannelImage(url, channelId, kind) {
   try {
+    await validateExternalUrl(url);
     const response = await fetch(url);
     if (!response.ok) return undefined;
     const contentType = response.headers.get("content-type") ?? "";
