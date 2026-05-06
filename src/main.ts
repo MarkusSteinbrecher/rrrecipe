@@ -1,5 +1,6 @@
 import "./style.css";
 import { formatTimestamp, speakStep, textareaLines, uid, youtubeTimestampUrl } from "./format";
+import { buildSnapshotForCandidate } from "./import-finalize";
 import { formatScaledQuantity } from "./ingredient-scale";
 import { hasAiImportEndpoint, refineCandidateWithAi } from "./importers/ai";
 import { addChannelToBacklog, hasBacklogEndpoint, processBacklogVideo, readBacklogVideoTranscript, retrieveBacklogVideoSourcePages, retrieveBacklogVideoTranscript, retrieveChannelVideos, saveBacklogVideoTranscript } from "./importers/backlog";
@@ -3095,68 +3096,11 @@ async function finalizeImportCandidate(candidate: RecipeCandidate, backlogVideoI
     throw new Error("This draft needs ingredients and steps before it can be finalized.");
   }
 
-  const createdAt = new Date().toISOString();
-  const existingImport = importedRecipeForSource(candidate.source);
-  const existingVariant = existingImport ? state.snapshot.variants.find((item) => item.recipeId === existingImport.recipe.id && item.id === existingImport.recipe.defaultVariantId) : undefined;
-  const recipeId = existingImport?.recipe.id ?? uid("recipe");
-  const variantId = existingVariant?.id ?? uid("variant");
-  const versionId = uid("version");
-  const existingSourceIds = new Set(state.snapshot.sources.map((item) => item.id));
-  const source: Source = {
-    ...candidate.source,
-    id: existingImport?.source.id ?? (existingSourceIds.has(candidate.source.id) ? uid("source") : candidate.source.id),
-    retrievedAt: candidate.source.retrievedAt || createdAt,
-  };
-  const version: RecipeVersion = {
-    id: versionId,
-    recipeId,
-    variantId,
-    title: candidate.title,
-    language: candidate.language,
-    description: candidate.description,
-    sourceIds: [source.id],
-    imageIds: [],
-    yield: candidate.yield,
-    times: candidate.times,
-    ingredients: candidate.ingredients,
-    steps: candidate.steps,
-    notes: candidate.notes,
-    tags: candidate.tags,
-    collections: [],
-    changeSummary: existingImport ? `${source.type} import update` : `${source.type} import`,
-    origin: "import",
-    createdAt,
-    createdBy: "importer",
-  };
-
-  const sourceIndex = state.snapshot.sources.findIndex((item) => item.id === source.id);
-  if (sourceIndex >= 0) state.snapshot.sources[sourceIndex] = source;
-  else state.snapshot.sources.push(source);
-
-  if (existingImport) {
-    existingImport.recipe.currentVersionId = versionId;
-    existingImport.recipe.updatedAt = createdAt;
-    if (existingVariant) existingVariant.currentVersionId = versionId;
-  } else {
-    const recipe: Recipe = {
-      id: recipeId,
-      currentVersionId: versionId,
-      defaultVariantId: variantId,
-      createdAt,
-      updatedAt: createdAt,
-    };
-    state.snapshot.recipes.push(recipe);
-    state.snapshot.variants.push({
-      id: variantId,
-      recipeId,
-      name: "Original",
-      baseVersionId: versionId,
-      currentVersionId: versionId,
-      description: `Imported from ${source.type}`,
-      createdAt,
-    });
-  }
-  state.snapshot.versions.push(version);
+  const finalized = buildSnapshotForCandidate(state.snapshot, candidate);
+  state.snapshot = finalized.snapshot;
+  const recipeId = finalized.recipeId;
+  const versionId = finalized.versionId;
+  const createdAt = finalized.createdAt;
   state.selectedRecipeId = recipeId;
   state.selectedVersionId = versionId;
   const videoId = backlogVideoId ?? candidate.source.media?.videoId;
@@ -3176,7 +3120,7 @@ async function finalizeImportCandidate(candidate: RecipeCandidate, backlogVideoI
           updatedAt: createdAt,
         },
       ]);
-      state.videoActionStatus[videoId] = { tone: "success", message: existingImport ? "Recipe updated with a new version." : "Recipe approved and finalized into the catalog." };
+      state.videoActionStatus[videoId] = { tone: "success", message: finalized.updatedExistingRecipe ? "Recipe updated with a new version." : "Recipe approved and finalized into the catalog." };
     }
   }
   state.importCandidate = undefined;
