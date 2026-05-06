@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-05-05T16:30:00.000Z",
+  "sourceTextKind": "youtube description",
+  "sourceTextLength": 1034,
+  "evidenceTextLength": 1034,
+  "metadataRefreshed": false,
+  "candidate": {
+    "id": "candidate-peanut-butter-pie-cinnamon-cereal-crust-manual-v1",
+    "source": {
+      "id": "source-youtube-bmM9lFExQkg",
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=bmM9lFExQkg",
+      "title": "Peanut Butter Pie with Cinnamon Cereal Crust Recipe | Cupcake Jemma",
+      "author": "CupcakeJemma",
+      "licenseNote": "Drafted from the YouTube description in the local backlog.",
+      "retrievedAt": "2026-05-05T16:30:00.000Z",
+      "media": {
+        "provider": "youtube",
+        "videoId": "bmM9lFExQkg",
+        "channelId": "UCoMum0pwewO8_WtTlUQxGHw",
+        "channelTitle": "CupcakeJemma",
+        "channelHandle": "@cupcakejemma",
+        "durationSeconds": 898,
+        "thumbnailUrl": "https://i.ytimg.com/vi/bmM9lFExQkg/hqdefault.jpg",
+        "canonicalUrl": "https://www.youtube.com/watch?v=bmM9lFExQkg"
+      }
+    },
+    "title": "Peanut Butter Pie with Cinnamon Cereal Crust",
+    "language": "en",
+    "description": "A chilled peanut butter pastry-cream pie in a cinnamon cereal and chocolate sandwich cookie crust, finished with mascarpone cream and roasted peanuts.",
+    "yield": {
+      "raw": "1 pie",
+      "quantity": 1,
+      "unit": "pie"
+    },
+    "times": {
+      "prepMinutes": 75,
+      "cookMinutes": 20,
+      "totalMinutes": 300
+    },
+    "ingredients": [
+      { "id": "ing-pbp-01", "section": "pastry cream filling", "raw": "6 large egg yolks", "language": "en", "quantity": "6", "unit": "large", "item": "egg yolks" },
+      { "id": "ing-pbp-02", "section": "pastry cream filling", "raw": "125g caster sugar", "language": "en", "quantity": "125", "unit": "g", "item": "caster sugar" },
+      { "id": "ing-pbp-03", "section": "pastry cream filling", "raw": "65g cornflour", "language": "en", "quantity": "65", "unit": "g", "item": "cornflour" },
+      { "id": "ing-pbp-04", "section": "pastry cream filling", "raw": "2.5 tsp powdered gelatine", "language": "en", "quantity": "2.5", "unit": "tsp", "item": "powdered gelatine" },
+      { "id": "ing-pbp-05", "section": "pastry cream filling", "raw": "500g whole milk", "language": "en", "quantity": "500", "unit": "g", "item": "whole milk" },
+      { "id": "ing-pbp-06", "section": "pastry cream filling", "raw": "2 tsp vanilla extract", "language": "en", "quantity": "2", "unit": "tsp", "item": "vanilla extract" },
+      { "id": "ing-pbp-07", "section": "pastry cream filling", "raw": "150g very soft butter", "language": "en", "quantity": "150", "unit": "g", "item": "butter", "preparation": "very soft" },
+      { "id": "ing-pbp-08", "section": "pastry cream filling", "raw": "275g dark roast peanut butter", "language": "en", "quantity": "275", "unit": "g", "item": "dark roast peanut butter" },
+      { "id": "ing-pbp-09", "section": "crust", "raw": "80g butter, melted, for the cornflakes", "language": "en", "quantity": "80", "unit": "g", "item": "butter", "preparation": "melted, for the cornflakes" },
+      { "id": "ing-pbp-10", "section": "crust", "raw": "80g soft light brown sugar", "language": "en", "quantity": "80", "unit": "g", "item": "soft light brown sugar" },
+      { "id": "ing-pbp-11", "section": "crust", "raw": "2 tsp ground cinnamon", "language": "en", "quantity": "2", "unit": "tsp", "item": "ground cinnamon" },
+      { "id": "ing-pbp-12", "section": "crust", "raw": "cornflakes, quantity not stated in the YouTube description", "language": "en", "item": "cornflakes" },
+      { "id": "ing-pbp-13", "section": "crust", "raw": "265g crushed chocolate sandwich cookies", "language": "en", "quantity": "265", "unit": "g", "item": "chocolate sandwich cookies", "preparation": "crushed" },
+      { "id": "ing-pbp-14", "section": "crust", "raw": "60g butter, melted, to bind the crumbs", "language": "en", "quantity": "60", "unit": "g", "item": "butter", "preparation": "melted, to bind the crumbs" },
+      { "id": "ing-pbp-15", "section": "crust", "raw": "pinch of salt", "language": "en", "unit": "pinch", "item": "salt" },
+      { "id": "ing-pbp-16", "section": "finish", "raw": "150-200g mascarpone cream", "language": "en", "quantity": "150-200", "unit": "g", "item": "mascarpone cream" },
+      { "id": "ing-pbp-17", "section": "finish", "raw": "150-200g double cream", "language": "en", "quantity": "150-200", "unit": "g", "item": "double cream" },
+      { "id": "ing-pbp-18", "section": "finish", "raw": "dark roasted peanuts", "language": "en", "item": "dark roasted peanuts" }
+    ],
+    "steps": [
+      { "id": "step-pbp-01", "section": "crust", "position": 1, "text": "Prepare a loose-bottom pie tin. Mix cornflakes with 80g melted butter, brown sugar, and cinnamon, then toast until crisp and fragrant.", "language": "en" },
+      { "id": "step-pbp-02", "section": "crust", "position": 2, "text": "Crush the chocolate sandwich cookies and combine them with the toasted cinnamon cereal, 60g melted butter, and a pinch of salt.", "language": "en" },
+      { "id": "step-pbp-03", "section": "crust", "position": 3, "text": "Press the crumb mixture firmly into the base and sides of the tin, then chill until set.", "language": "en", "timerSeconds": 1800 },
+      { "id": "step-pbp-04", "section": "pastry cream filling", "position": 4, "text": "Whisk egg yolks, caster sugar, and cornflour until smooth. Bloom the powdered gelatine according to the packet instructions.", "language": "en" },
+      { "id": "step-pbp-05", "section": "pastry cream filling", "position": 5, "text": "Heat the milk with vanilla until steaming. Temper it into the yolk mixture, then return everything to the pan and cook, whisking, until thick.", "language": "en" },
+      { "id": "step-pbp-06", "section": "pastry cream filling", "position": 6, "text": "Whisk in the bloomed gelatine while the pastry cream is hot, then cool until warm but not set.", "language": "en" },
+      { "id": "step-pbp-07", "section": "pastry cream filling", "position": 7, "text": "Beat in the very soft butter and dark roast peanut butter until smooth and fully emulsified.", "language": "en" },
+      { "id": "step-pbp-08", "section": "assembly", "position": 8, "text": "Spoon the peanut butter filling into the chilled crust, level the top, and chill until fully set.", "language": "en", "timerSeconds": 10800 },
+      { "id": "step-pbp-09", "section": "finish", "position": 9, "text": "Whip equal amounts of mascarpone cream and double cream to a soft piping or spooning consistency.", "language": "en" },
+      { "id": "step-pbp-10", "section": "finish", "position": 10, "text": "Top the set pie with the mascarpone cream mixture and finish with dark roasted peanuts.", "language": "en" }
+    ],
+    "notes": [
+      "The ingredient list is from the local YouTube backlog description.",
+      "The video description does not state the cornflake quantity for the cereal crust."
+    ],
+    "tags": ["youtube", "cupcake jemma", "baking", "pie", "peanut butter", "dessert"],
+    "confidence": {
+      "overall": 0.72,
+      "source": 0.82,
+      "ingredients": 0.82,
+      "steps": 0.62
+    },
+    "warnings": [
+      "No local transcript file is stored for this video; method steps are manually normalized from the available ingredient sections and standard pastry workflow.",
+      "The cornflake quantity is not present in the YouTube description."
+    ]
+  }
+}

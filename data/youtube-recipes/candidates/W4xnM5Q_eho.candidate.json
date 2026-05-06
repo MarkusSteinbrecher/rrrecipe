@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-05-05T12:58:53.816Z",
+  "sourceTextKind": "youtube description",
+  "candidate": {
+    "id": "candidate-52301a3c-84c0-4d75-8761-11977290fe22",
+    "source": {
+      "id": "source-148ca4a4-4e65-45ae-abe6-a8d440c5d5af",
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=W4xnM5Q_eho",
+      "title": "Breakfast sandwiches with Andy Allan 🍳￼",
+      "author": "Andy Cooks",
+      "retrievedAt": "2026-05-05T12:58:53.816Z",
+      "media": {
+        "provider": "youtube",
+        "videoId": "W4xnM5Q_eho",
+        "channelId": "UCqNkn5PNeSqbQTAR5RP-L-Q",
+        "channelTitle": "Andy Cooks",
+        "channelHandle": "@andy_cooks",
+        "durationSeconds": 108,
+        "thumbnailUrl": "https://i.ytimg.com/vi/W4xnM5Q_eho/hqdefault.jpg",
+        "canonicalUrl": "https://www.youtube.com/watch?v=W4xnM5Q_eho"
+      }
+    },
+    "title": "Breakfast sandwiches with Andy Allan 🍳￼",
+    "language": "en",
+    "description": "",
+    "yield": {
+      "raw": "",
+      "quantity": 0,
+      "unit": ""
+    },
+    "times": {
+      "prepMinutes": 0,
+      "cookMinutes": 0,
+      "totalMinutes": 2
+    },
+    "ingredients": [],
+    "steps": [],
+    "notes": [
+      "Created from youtube description."
+    ],
+    "tags": [
+      "youtube",
+      "import"
+    ],
+    "confidence": {
+      "source": 0.95,
+      "ingredients": 0.12,
+      "steps": 0.12,
+      "overall": 0.24
+    },
+    "warnings": [
+      "No transcript is saved yet. This draft uses the video description and may be incomplete.",
+      "Local backend mock refinement ran. This is contract testing only; no external AI provider was called."
+    ]
+  }
+}

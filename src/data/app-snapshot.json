@@ -1,0 +1,405 @@
+{
+  "recipes": [
+    {
+      "id": "recipe-shakshuka",
+      "currentVersionId": "version-shakshuka-import",
+      "defaultVariantId": "variant-shakshuka-original",
+      "createdAt": "2026-05-04T00:00:00.000Z",
+      "updatedAt": "2026-05-04T00:00:00.000Z"
+    }
+  ],
+  "variants": [
+    {
+      "id": "variant-shakshuka-original",
+      "recipeId": "recipe-shakshuka",
+      "name": "Original",
+      "baseVersionId": "version-shakshuka-import",
+      "currentVersionId": "version-shakshuka-import",
+      "createdAt": "2026-05-04T00:00:00.000Z"
+    }
+  ],
+  "sources": [
+    {
+      "id": "source-shakshuka-video",
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=aqz-KE-bpKQ",
+      "title": "Example shakshuka video",
+      "author": "Example Kitchen",
+      "retrievedAt": "2026-05-04T00:00:00.000Z",
+      "media": {
+        "provider": "youtube",
+        "videoId": "aqz-KE-bpKQ",
+        "channelTitle": "Example Kitchen",
+        "durationSeconds": 213,
+        "thumbnailUrl": "https://img.youtube.com/vi/aqz-KE-bpKQ/hqdefault.jpg",
+        "canonicalUrl": "https://www.youtube.com/watch?v=aqz-KE-bpKQ"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "id": "version-shakshuka-import",
+      "recipeId": "recipe-shakshuka",
+      "variantId": "variant-shakshuka-original",
+      "title": "Shakshuka",
+      "language": "en",
+      "subtitle": "Eggs poached in a peppery tomato sauce",
+      "description": "A North African breakfast standby. The trick: build the sauce until it tastes like itself before the eggs go in. Taste, salt, taste again.",
+      "sourceIds": ["source-shakshuka-video"],
+      "imageIds": [],
+      "yield": {
+        "quantity": 4,
+        "unit": "servings",
+        "raw": "4 servings"
+      },
+      "times": {
+        "prepMinutes": 15,
+        "cookMinutes": 20,
+        "totalMinutes": 35
+      },
+      "ingredients": [
+        {
+          "id": "oil",
+          "raw": "3 tbsp olive oil",
+          "language": "en",
+          "quantity": "3",
+          "unit": "tbsp",
+          "item": "olive oil",
+          "normalized": {
+            "quantityValue": 3,
+            "unit": "tbsp",
+            "unitSystem": "us",
+            "ingredientKey": "olive-oil"
+          },
+          "conversion": {
+            "confidence": "approximate",
+            "canonicalMilliliters": 45
+          }
+        },
+        {
+          "id": "onion",
+          "raw": "1 large yellow onion, diced",
+          "language": "en",
+          "quantity": "1",
+          "unit": "large",
+          "item": "yellow onion, diced",
+          "normalized": {
+            "quantityValue": 1,
+            "unit": "large",
+            "unitSystem": "count",
+            "ingredientKey": "yellow-onion"
+          },
+          "conversion": {
+            "confidence": "unknown"
+          }
+        },
+        {
+          "id": "pepper",
+          "raw": "1 red bell pepper, diced",
+          "language": "en",
+          "quantity": "1",
+          "unit": "",
+          "item": "red bell pepper, diced",
+          "normalized": {
+            "quantityValue": 1,
+            "unit": "",
+            "unitSystem": "count",
+            "ingredientKey": "red-bell-pepper"
+          },
+          "conversion": {
+            "confidence": "unknown"
+          }
+        },
+        {
+          "id": "garlic",
+          "raw": "4 cloves garlic, sliced",
+          "language": "en",
+          "quantity": "4",
+          "unit": "cloves",
+          "item": "garlic, sliced",
+          "normalized": {
+            "quantityValue": 4,
+            "unit": "cloves",
+            "unitSystem": "count",
+            "ingredientKey": "garlic"
+          },
+          "conversion": {
+            "confidence": "unknown"
+          }
+        },
+        {
+          "id": "cumin",
+          "raw": "2 tsp ground cumin",
+          "language": "en",
+          "quantity": "2",
+          "unit": "tsp",
+          "item": "ground cumin",
+          "normalized": {
+            "quantityValue": 2,
+            "unit": "tsp",
+            "unitSystem": "us",
+            "ingredientKey": "cumin"
+          },
+          "conversion": {
+            "confidence": "approximate",
+            "canonicalMilliliters": 10
+          }
+        },
+        {
+          "id": "paprika",
+          "raw": "2 tsp smoked paprika",
+          "language": "en",
+          "quantity": "2",
+          "unit": "tsp",
+          "item": "smoked paprika",
+          "normalized": {
+            "quantityValue": 2,
+            "unit": "tsp",
+            "unitSystem": "us",
+            "ingredientKey": "paprika"
+          },
+          "conversion": {
+            "confidence": "approximate",
+            "canonicalMilliliters": 10
+          }
+        },
+        {
+          "id": "chili",
+          "raw": "1/2 tsp chili flakes",
+          "language": "en",
+          "quantity": "1/2",
+          "unit": "tsp",
+          "item": "chili flakes",
+          "normalized": {
+            "quantityValue": 0.5,
+            "unit": "tsp",
+            "unitSystem": "us",
+            "ingredientKey": "chili-flakes"
+          },
+          "conversion": {
+            "confidence": "approximate",
+            "canonicalMilliliters": 2.5
+          }
+        },
+        {
+          "id": "tomato",
+          "raw": "28 oz whole peeled tomatoes",
+          "language": "en",
+          "quantity": "28",
+          "unit": "oz",
+          "item": "whole peeled tomatoes",
+          "normalized": {
+            "quantityValue": 28,
+            "unit": "oz",
+            "unitSystem": "imperial",
+            "ingredientKey": "tomatoes"
+          },
+          "conversion": {
+            "confidence": "approximate",
+            "canonicalGrams": 794
+          }
+        },
+        {
+          "id": "salt",
+          "raw": "kosher salt, to taste",
+          "language": "en",
+          "quantity": "",
+          "unit": "",
+          "item": "kosher salt, to taste",
+          "normalized": {
+            "unitSystem": "unknown",
+            "ingredientKey": "salt"
+          },
+          "conversion": {
+            "confidence": "unknown"
+          }
+        },
+        {
+          "id": "eggs",
+          "raw": "6 large eggs",
+          "language": "en",
+          "quantity": "6",
+          "unit": "",
+          "item": "large eggs",
+          "normalized": {
+            "quantityValue": 6,
+            "unit": "",
+            "unitSystem": "count",
+            "ingredientKey": "egg"
+          },
+          "conversion": {
+            "confidence": "unknown"
+          }
+        },
+        {
+          "id": "feta",
+          "raw": "1/2 cup feta, crumbled",
+          "language": "en",
+          "quantity": "1/2",
+          "unit": "cup",
+          "item": "feta, crumbled",
+          "normalized": {
+            "quantityValue": 0.5,
+            "unit": "cup",
+            "unitSystem": "us",
+            "ingredientKey": "feta"
+          },
+          "conversion": {
+            "confidence": "approximate",
+            "canonicalGrams": 75
+          }
+        },
+        {
+          "id": "parsley",
+          "raw": "1/4 cup parsley, chopped",
+          "language": "en",
+          "quantity": "1/4",
+          "unit": "cup",
+          "item": "parsley, chopped",
+          "normalized": {
+            "quantityValue": 0.25,
+            "unit": "cup",
+            "unitSystem": "us",
+            "ingredientKey": "parsley"
+          },
+          "conversion": {
+            "confidence": "unknown"
+          }
+        },
+        {
+          "id": "bread",
+          "raw": "1 loaf crusty bread",
+          "language": "en",
+          "quantity": "1",
+          "unit": "loaf",
+          "item": "crusty bread",
+          "normalized": {
+            "quantityValue": 1,
+            "unit": "loaf",
+            "unitSystem": "count",
+            "ingredientKey": "bread"
+          },
+          "conversion": {
+            "confidence": "unknown"
+          }
+        }
+      ],
+      "steps": [
+        {
+          "id": "step-aromatics",
+          "position": 1,
+          "text": "Warm olive oil in a wide skillet over medium heat. Add onion and bell pepper. Cook until soft and translucent. Do not rush this.",
+          "language": "en",
+          "timerSeconds": 480,
+          "mediaAnchors": [
+            {
+              "sourceId": "source-shakshuka-video",
+              "startSeconds": 20,
+              "endSeconds": 50,
+              "label": "soften",
+              "confidence": "manual"
+            }
+          ]
+        },
+        {
+          "id": "step-spices",
+          "position": 2,
+          "text": "Add garlic, cumin, paprika, and chili flakes. Stir constantly for 60 seconds until fragrant.",
+          "language": "en",
+          "timerSeconds": 60,
+          "mediaAnchors": [
+            {
+              "sourceId": "source-shakshuka-video",
+              "startSeconds": 68,
+              "endSeconds": 98,
+              "label": "bloom",
+              "confidence": "manual"
+            }
+          ]
+        },
+        {
+          "id": "step-sauce",
+          "position": 3,
+          "text": "Crush tomatoes by hand into the pan. Season with salt. Simmer until thickened and a spoon leaves a clear trail across the pan.",
+          "language": "en",
+          "timerSeconds": 720,
+          "mediaAnchors": [
+            {
+              "sourceId": "source-shakshuka-video",
+              "startSeconds": 104,
+              "endSeconds": 134,
+              "label": "reduce",
+              "confidence": "manual"
+            }
+          ]
+        },
+        {
+          "id": "step-wells",
+          "position": 4,
+          "text": "With the back of a spoon, press six shallow wells into the sauce. Crack one egg into each.",
+          "language": "en",
+          "mediaAnchors": [
+            {
+              "sourceId": "source-shakshuka-video",
+              "startSeconds": 144,
+              "endSeconds": 174,
+              "label": "wells",
+              "confidence": "manual"
+            }
+          ]
+        },
+        {
+          "id": "step-poach",
+          "position": 5,
+          "text": "Cover and reduce heat to low. Cook until whites are set but yolks are still loose.",
+          "language": "en",
+          "timerSeconds": 420,
+          "mediaAnchors": [
+            {
+              "sourceId": "source-shakshuka-video",
+              "startSeconds": 166,
+              "endSeconds": 196,
+              "label": "poach",
+              "confidence": "manual"
+            }
+          ]
+        },
+        {
+          "id": "step-finish",
+          "position": 6,
+          "text": "Scatter feta and parsley over the top. Bring the pan to the table with bread.",
+          "language": "en",
+          "mediaAnchors": [
+            {
+              "sourceId": "source-shakshuka-video",
+              "startSeconds": 194,
+              "endSeconds": 224,
+              "label": "finish",
+              "confidence": "manual"
+            }
+          ]
+        }
+      ],
+      "notes": ["Design seed data for the phone-first cooking mode MVP."],
+      "tags": ["brunch", "one-pan", "vegetarian"],
+      "collections": ["Examples"],
+      "changeSummary": "Imported seed recipe",
+      "origin": "import",
+      "createdAt": "2026-05-04T00:00:00.000Z",
+      "createdBy": "importer"
+    }
+  ],
+  "settings": {
+    "appLanguage": "en",
+    "recipeLanguageMode": "original",
+    "measurementSystem": "original",
+    "temperatureUnit": "original",
+    "theme": "dark",
+    "numberLocale": "en-US",
+    "cookingMode": {
+      "readbackEnabled": true,
+      "videoAutoSeek": false,
+      "commandInputEnabled": false
+    }
+  }
+}

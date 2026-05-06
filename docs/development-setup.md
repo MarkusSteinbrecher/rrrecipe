@@ -44,6 +44,40 @@ npm create cloudflare@latest apps/worker
 
 Do not install dependencies until the repo structure and app name are confirmed.
 
+For the current GitHub Pages MVP, the worker is optional. In local development,
+both servers bind to the local network so the app can be tested from a phone on
+the same Wi-Fi:
+
+```sh
+npm run dev:api
+npm run dev -- --port 5175
+```
+
+Open the app from another device with the Mac's local IP, for example:
+
+```text
+http://192.168.42.60:5175/rrrecipe/
+```
+
+When `VITE_RRRECIPE_IMPORT_API_URL` is unset, the web app infers the local API
+from the same host on port `8787`. For example, opening the frontend at
+`http://192.168.42.60:5175/rrrecipe/` makes the app call
+`http://192.168.42.60:8787/api/import/refine`.
+
+Worker secrets belong in the worker environment, not in Vite:
+
+```text
+YOUTUBE_API_KEY=...
+OPENAI_API_KEY=...
+ALLOWED_ORIGIN=http://localhost:5174
+```
+
+See `docs/import-backend-architecture.md` for the production and paid-user
+architecture.
+
+See `docs/local-dev-implementation-plan.md` for the executable local backend
+plan and session handoff checklist.
+
 ## First Development Milestones
 
 1. Create shared schema package with `Recipe`, `RecipeCandidate`, `Source`, and

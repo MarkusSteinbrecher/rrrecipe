@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-05-05T18:09:14.939Z",
+  "sourceTextKind": "sanitized transcript",
+  "sourceTextLength": 2590,
+  "evidenceTextLength": 3760,
+  "metadataRefreshed": true,
+  "candidate": {
+    "id": "candidate-4120a4a1-53a3-4ce5-9ee7-7eb3b273139b",
+    "source": {
+      "id": "source-9e893a7f-14f9-4832-ac2d-acc7b0f550ab",
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=wqA-xQZo75E",
+      "title": "Jacques Pépin's Easy and Delicious Grilled Swordfish Recipe | Cooking at Home | KQED",
+      "author": "KQED",
+      "retrievedAt": "2026-05-05T18:09:15.067Z",
+      "media": {
+        "provider": "youtube",
+        "videoId": "wqA-xQZo75E",
+        "channelId": "UCeC0IOo7i1P_61zVUWbJ4nw",
+        "channelTitle": "KQED",
+        "channelHandle": "@kqed",
+        "durationSeconds": 289,
+        "thumbnailUrl": "https://i.ytimg.com/vi/wqA-xQZo75E/hqdefault.jpg",
+        "canonicalUrl": "https://www.youtube.com/watch?v=wqA-xQZo75E"
+      }
+    },
+    "title": "Jacques Pépin's Easy and Delicious Grilled Swordfish Recipe | Cooking at Home | KQED",
+    "language": "en",
+    "description": "Jacques Pépin's grilled swordfish recipe is a healthy, nutritious,  and easy choice for dinner. Topped with a colorful vegetable garnish, it's a beautiful dish as well. Happy cooking!\n\nWhat you'll need:\nTwo 6 oz swordfish steaks, salt and pepper, cooking oil, 1/2 cup diced tomatoes, 12 kalamata olives, 2 tbsp sweet onions, parsley, 1/4 chopped zucchini, 2 tbsp olive oil\n\nJacques Pépin Cooking At Home: Grilled Swordfish\nSubscribe to watch a new Jacques Pépin video every week: \nhttps://www.youtube.com/kqed?sub_conf....\n#jacquespepin​​​​​​​ #howto #recipes #kqed \n\nAbout Jacques Pépin Cooking At Home: \nJacques Pépin Cooking At Home features short recipe videos that transform readily-available ingredients into exciting new dishes, perfect for newly-anointed home cooks and seasoned chefs alike. Presented by the Jacques Pépin Foundation, an organization dedicated to enriching lives and strengthening communities through the power of culinary education. https://jp.foundation/​​​\n\nWatch more food videos on @KQEDFood.",
+    "yield": {
+      "raw": "",
+      "quantity": 0,
+      "unit": ""
+    },
+    "times": {
+      "prepMinutes": 0,
+      "cookMinutes": 0,
+      "totalMinutes": 5
+    },
+    "ingredients": [
+      {
+        "id": "ing-c65d8783-f721-4734-985d-f75b9cd7acf5",
+        "raw": "pepper",
+        "language": "en",
+        "item": "pepper",
+        "normalized": {
+          "unitSystem": "unknown"
+        },
+        "conversion": {
+          "confidence": "unknown"
+        }
+      },
+      {
+        "id": "ing-47b2ae3e-0f0d-4736-9a10-3b323613cb2a",
+        "raw": "a little bit of corn oil.",
+        "language": "en",
+        "unit": "a",
+        "item": "little bit of corn oil.",
+        "normalized": {
+          "unitSystem": "unknown"
+        },
+        "conversion": {
+          "confidence": "unknown"
+        }
+      },
+      {
+        "id": "ing-cb99fe33-0845-4514-9ae3-bf7bffbb8dc7",
+        "raw": "A little dash of pepper.",
+        "language": "en",
+        "unit": "A",
+        "item": "little dash of pepper.",
+        "normalized": {
+          "unitSystem": "unknown"
+        },
+        "conversion": {
+          "confidence": "unknown"
+        }
+      }
+    ],
+    "steps": [],
+    "notes": [
+      "Created from sanitized transcript."
+    ],
+    "tags": [
+      "youtube",
+      "import"
+    ],
+    "confidence": {
+      "source": 0.95,
+      "ingredients": 0.72,
+      "steps": 0.12,
+      "overall": 0.24
+    },
+    "warnings": [
+      "Local backend mock refinement ran. This is contract testing only; no external AI provider was called."
+    ]
+  }
+}

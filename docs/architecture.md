@@ -14,6 +14,11 @@ Mirror the parts of `rrradio.org` that fit:
 - **Tests around contracts:** pure parsing and normalization logic should be
   heavily tested before UI tests.
 
+The import backend is intentionally optional for the GitHub Pages MVP. The
+production architecture for YouTube extraction, AI normalization, local worker
+testing, and paid-user gating is defined in
+[`import-backend-architecture.md`](import-backend-architecture.md).
+
 ## Proposed Source Layout
 
 ```text
@@ -30,6 +35,7 @@ rrrecipe/
     architecture.md
     data-model.md
     import-pipeline.md
+    import-backend-architecture.md
     development-setup.md
     open-decisions.md
 ```

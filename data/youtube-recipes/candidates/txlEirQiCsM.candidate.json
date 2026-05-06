@@ -1,0 +1,88 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-05-05T13:33:43.961Z",
+  "sourceTextKind": "saved transcript",
+  "sourceTextLength": 504,
+  "metadataRefreshed": true,
+  "candidate": {
+    "id": "candidate-9e01550a-5622-471c-86e3-5f9c0b5c0165",
+    "source": {
+      "id": "source-e8593840-a142-4a42-a59f-c7fb932e32aa",
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=txlEirQiCsM",
+      "title": "Hot honey! 🌶️🍯",
+      "author": "Andy Cooks",
+      "retrievedAt": "2026-05-05T13:33:44.063Z",
+      "media": {
+        "provider": "youtube",
+        "videoId": "txlEirQiCsM",
+        "channelId": "UCqNkn5PNeSqbQTAR5RP-L-Q",
+        "channelTitle": "Andy Cooks",
+        "channelHandle": "@andy_cooks",
+        "durationSeconds": 29,
+        "thumbnailUrl": "https://i.ytimg.com/vi/txlEirQiCsM/hqdefault.jpg",
+        "canonicalUrl": "https://www.youtube.com/watch?v=txlEirQiCsM"
+      }
+    },
+    "title": "Hot honey! 🌶️🍯",
+    "language": "en",
+    "description": "",
+    "yield": {
+      "raw": "",
+      "quantity": 0,
+      "unit": ""
+    },
+    "times": {
+      "prepMinutes": 0,
+      "cookMinutes": 0,
+      "totalMinutes": 1
+    },
+    "ingredients": [],
+    "steps": [
+      {
+        "id": "step-004cf63c-0326-496f-9e66-7481c2988059",
+        "position": 1,
+        "text": "Heat your honey. Now, we're not",
+        "language": "en",
+        "mediaAnchors": [
+          {
+            "sourceId": "source-e8593840-a142-4a42-a59f-c7fb932e32aa",
+            "startSeconds": 0,
+            "label": "heat your honey. now, we're not",
+            "confidence": "estimated"
+          }
+        ]
+      },
+      {
+        "id": "step-4321c7a6-c186-4940-93ae-a117aeee184d",
+        "position": 2,
+        "text": "Stir",
+        "language": "en",
+        "mediaAnchors": [
+          {
+            "sourceId": "source-e8593840-a142-4a42-a59f-c7fb932e32aa",
+            "startSeconds": 45,
+            "label": "stir",
+            "confidence": "estimated"
+          }
+        ]
+      }
+    ],
+    "notes": [
+      "Created from saved transcript."
+    ],
+    "tags": [
+      "youtube",
+      "import"
+    ],
+    "confidence": {
+      "source": 0.95,
+      "ingredients": 0.12,
+      "steps": 0.58,
+      "overall": 0.24
+    },
+    "warnings": [
+      "No ingredient-like lines were detected. AI refinement or manual review is needed."
+    ]
+  }
+}

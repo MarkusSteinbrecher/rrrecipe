@@ -13,6 +13,11 @@ build/
 *.log
 npm-debug.log*
 
+# Generated research data
+data/youtube-recipes/raw/
+data/youtube-recipes/transcripts/
+data/youtube-recipes/ai-inputs/
+
 # Playwright / test output
 test-results/
 playwright-report/
@@ -27,4 +32,3 @@ DerivedData/
 *.xcworkspace/xcuserdata/
 *.xcodeproj/xcuserdata/
 *.xcodeproj/project.xcworkspace/xcuserdata/
-

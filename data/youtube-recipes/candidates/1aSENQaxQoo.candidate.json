@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-05-05T16:30:00.000Z",
+  "sourceTextKind": "youtube description",
+  "sourceTextLength": 1039,
+  "evidenceTextLength": 1039,
+  "metadataRefreshed": false,
+  "candidate": {
+    "id": "candidate-banoffee-pie-cookies-manual-v1",
+    "source": {
+      "id": "source-youtube-1aSENQaxQoo",
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=1aSENQaxQoo",
+      "title": "Banoffee Pie Cookies Recipe | Cupcake Jemma",
+      "author": "CupcakeJemma",
+      "licenseNote": "Drafted from the YouTube description in the local backlog.",
+      "retrievedAt": "2026-05-05T16:30:00.000Z",
+      "media": {
+        "provider": "youtube",
+        "videoId": "1aSENQaxQoo",
+        "channelId": "UCoMum0pwewO8_WtTlUQxGHw",
+        "channelTitle": "CupcakeJemma",
+        "channelHandle": "@cupcakejemma",
+        "durationSeconds": 884,
+        "thumbnailUrl": "https://i.ytimg.com/vi/1aSENQaxQoo/hqdefault.jpg",
+        "canonicalUrl": "https://www.youtube.com/watch?v=1aSENQaxQoo"
+      }
+    },
+    "title": "Banoffee Pie Cookies",
+    "language": "en",
+    "description": "Banana and browned-butter chocolate chip cookies finished with vanilla buttercream and dulce de leche.",
+    "yield": {
+      "raw": "about 12 cookies",
+      "quantity": 12,
+      "unit": "cookies"
+    },
+    "times": {
+      "prepMinutes": 45,
+      "cookMinutes": 14,
+      "totalMinutes": 120
+    },
+    "ingredients": [
+      { "id": "ing-banoffee-01", "section": "cookie dough", "raw": "220g cool liquid browned butter", "language": "en", "quantity": "220", "unit": "g", "item": "browned butter", "preparation": "cool and liquid" },
+      { "id": "ing-banoffee-02", "section": "cookie dough", "raw": "100g caster sugar", "language": "en", "quantity": "100", "unit": "g", "item": "caster sugar" },
+      { "id": "ing-banoffee-03", "section": "cookie dough", "raw": "150g light soft brown sugar", "language": "en", "quantity": "150", "unit": "g", "item": "light soft brown sugar" },
+      { "id": "ing-banoffee-04", "section": "cookie dough", "raw": "1 tsp vanilla extract", "language": "en", "quantity": "1", "unit": "tsp", "item": "vanilla extract" },
+      { "id": "ing-banoffee-05", "section": "cookie dough", "raw": "1 egg yolk", "language": "en", "quantity": "1", "unit": "egg yolk", "item": "egg yolk" },
+      { "id": "ing-banoffee-06", "section": "cookie dough", "raw": "100g mashed banana", "language": "en", "quantity": "100", "unit": "g", "item": "mashed banana" },
+      { "id": "ing-banoffee-07", "section": "cookie dough", "raw": "320g plain flour", "language": "en", "quantity": "320", "unit": "g", "item": "plain flour" },
+      { "id": "ing-banoffee-08", "section": "cookie dough", "raw": "1/2 tsp baking powder", "language": "en", "quantity": "1/2", "unit": "tsp", "item": "baking powder" },
+      { "id": "ing-banoffee-09", "section": "cookie dough", "raw": "1/2 tsp sea salt", "language": "en", "quantity": "1/2", "unit": "tsp", "item": "sea salt" },
+      { "id": "ing-banoffee-10", "section": "cookie dough", "raw": "1 tsp bicarbonate of soda", "language": "en", "quantity": "1", "unit": "tsp", "item": "bicarbonate of soda" },
+      { "id": "ing-banoffee-11", "section": "cookie dough", "raw": "20g toasted milk powder", "language": "en", "quantity": "20", "unit": "g", "item": "toasted milk powder" },
+      { "id": "ing-banoffee-12", "section": "cookie dough", "raw": "80g milk chocolate chips", "language": "en", "quantity": "80", "unit": "g", "item": "milk chocolate chips" },
+      { "id": "ing-banoffee-13", "section": "cookie dough", "raw": "80g dark chocolate chips", "language": "en", "quantity": "80", "unit": "g", "item": "dark chocolate chips" },
+      { "id": "ing-banoffee-14", "section": "buttercream", "raw": "145g unsalted butter, soft", "language": "en", "quantity": "145", "unit": "g", "item": "unsalted butter", "preparation": "soft" },
+      { "id": "ing-banoffee-15", "section": "buttercream", "raw": "225g icing sugar, sifted", "language": "en", "quantity": "225", "unit": "g", "item": "icing sugar", "preparation": "sifted" },
+      { "id": "ing-banoffee-16", "section": "buttercream", "raw": "1/2 tsp vanilla extract", "language": "en", "quantity": "1/2", "unit": "tsp", "item": "vanilla extract" },
+      { "id": "ing-banoffee-17", "section": "buttercream", "raw": "2-3 tbsp double cream", "language": "en", "quantity": "2-3", "unit": "tbsp", "item": "double cream" },
+      { "id": "ing-banoffee-18", "section": "topping", "raw": "dulce de leche, shop bought or homemade", "language": "en", "item": "dulce de leche", "preparation": "shop bought or homemade" }
+    ],
+    "steps": [
+      { "id": "step-banoffee-01", "section": "cookie dough", "position": 1, "text": "Brown the butter, then let it cool until liquid but no longer hot.", "language": "en" },
+      { "id": "step-banoffee-02", "section": "cookie dough", "position": 2, "text": "Mix the cooled browned butter with caster sugar, light soft brown sugar, vanilla, egg yolk, and mashed banana until combined.", "language": "en" },
+      { "id": "step-banoffee-03", "section": "cookie dough", "position": 3, "text": "In a separate bowl, combine plain flour, baking powder, sea salt, bicarbonate of soda, and toasted milk powder.", "language": "en" },
+      { "id": "step-banoffee-04", "section": "cookie dough", "position": 4, "text": "Fold the dry ingredients into the banana butter mixture, then fold in the milk and dark chocolate chips.", "language": "en" },
+      { "id": "step-banoffee-05", "section": "cookie dough", "position": 5, "text": "Portion the dough into large cookie balls and chill until firm.", "language": "en", "timerSeconds": 3600 },
+      { "id": "step-banoffee-06", "section": "bake", "position": 6, "text": "Bake the chilled cookies on lined trays until spread, golden at the edges, and just set in the centre. Cool completely before decorating.", "language": "en" },
+      { "id": "step-banoffee-07", "section": "buttercream", "position": 7, "text": "Beat the soft butter until smooth, then add sifted icing sugar and vanilla and beat until pale.", "language": "en" },
+      { "id": "step-banoffee-08", "section": "buttercream", "position": 8, "text": "Beat in 2-3 tablespoons double cream until the buttercream is smooth and pipeable.", "language": "en" },
+      { "id": "step-banoffee-09", "section": "finish", "position": 9, "text": "Pipe or spoon buttercream onto each cooled cookie, then finish with dulce de leche.", "language": "en" }
+    ],
+    "notes": [
+      "The ingredient list is from the local YouTube backlog description.",
+      "The description does not include baking temperature, baking time, or exact yield; those fields are inferred for a reviewable draft."
+    ],
+    "tags": ["youtube", "cupcake jemma", "baking", "cookies", "banoffee", "dessert"],
+    "confidence": {
+      "overall": 0.74,
+      "source": 0.82,
+      "ingredients": 0.9,
+      "steps": 0.58
+    },
+    "warnings": [
+      "No local transcript file is stored for this video; method steps are manually normalized from the available ingredient sections and standard cookie workflow.",
+      "Bake temperature, bake time, and yield are not stated in the YouTube description and need review against the video or a written recipe."
+    ]
+  }
+}

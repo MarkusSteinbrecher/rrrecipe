@@ -7,7 +7,17 @@
     "node": ">=20.0.0"
   },
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --host 0.0.0.0",
+    "dev:api": "node apps/worker/dev-server.mjs",
+    "youtube:collect": "node scripts/youtube/collect-recipes.mjs",
+    "youtube:backlog": "node scripts/youtube/backlog.mjs",
+    "youtube:expand-channel": "node scripts/youtube/expand-channel.mjs",
+    "youtube:probe-video-api": "node scripts/youtube/probe-video-api.mjs",
+    "youtube:build-ai-inputs": "node scripts/youtube/build-ai-inputs.mjs",
+    "youtube:normalize-transcripts": "node scripts/youtube/normalize-transcripts.mjs",
+    "youtube:reconcile-workflow": "node scripts/youtube/reconcile-workflow-status.mjs",
+    "youtube:captions": "node scripts/youtube/fetch-authorized-captions.mjs",
+    "themealdb:collect": "node scripts/themealdb/collect.mjs",
     "build": "tsc && vite build",
     "preview": "vite preview",
     "typecheck": "tsc --noEmit"

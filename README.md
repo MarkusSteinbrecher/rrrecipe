@@ -7,6 +7,15 @@ SwiftUI iOS client next, shared data contracts, small backend surfaces only
 where the browser or mobile clients should not hold secrets or perform brittle
 imports.
 
+Canonical recipe data starts in [src/data/app-snapshot.json](src/data/app-snapshot.json).
+The baseline recipe catalogue lives in [src/data/baseline-catalog.ts](src/data/baseline-catalog.ts)
+and uses the same recipe/version/source structure as imported recipes. The web
+app merges those baseline records into IndexedDB for local runtime edits.
+Baseline expansion is tracked in [data/baseline-recipes/backlog.json](data/baseline-recipes/backlog.json)
+and planned in [docs/baseline-catalog-plan.md](docs/baseline-catalog-plan.md).
+TheMealDB is stored as an additional external source in
+[data/themealdb-recipes/catalog.json](data/themealdb-recipes/catalog.json).
+
 ## Goals
 
 - Save, search, cook, annotate, and organize personal recipes.

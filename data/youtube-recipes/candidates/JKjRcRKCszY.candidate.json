@@ -1,0 +1,1096 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-05-05T14:35:34.150Z",
+  "sourceTextKind": "linked recipe page",
+  "sourceTextLength": 13521,
+  "metadataRefreshed": true,
+  "candidate": {
+    "id": "candidate-9bd928ed-b248-4aa4-bb0a-f7ffcb6960c5",
+    "source": {
+      "id": "source-0c325bed-9276-4881-a863-fd1cbe9152f3",
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=JKjRcRKCszY",
+      "title": "Focaccia Is Easier Than You Think",
+      "author": "Andy Cooks",
+      "retrievedAt": "2026-05-05T14:35:34.290Z",
+      "media": {
+        "provider": "youtube",
+        "videoId": "JKjRcRKCszY",
+        "channelId": "UCqNkn5PNeSqbQTAR5RP-L-Q",
+        "channelTitle": "Andy Cooks",
+        "channelHandle": "@andy_cooks",
+        "durationSeconds": 1840,
+        "thumbnailUrl": "https://i.ytimg.com/vi/JKjRcRKCszY/hqdefault.jpg",
+        "canonicalUrl": "https://www.youtube.com/watch?v=JKjRcRKCszY"
+      }
+    },
+    "title": "Focaccia Is Easier Than You Think",
+    "language": "en",
+    "description": "Head to https://squarespace.com/andycooks to save 10% off your first purchase of a website or domain using ANDYCOOKS !\n\nFocaccia is one of my favourite kinds of bread, and it’s a lot easier to make than you think! In this video I’ll go in depth on how to nail your dough every time, and I’ll also show you some ways to turn your focaccia into something special.\n\nCheck out SolSnack here: https://www.youtube.com/@SolSnack\n\nMY PRODUCTS: https://bit.ly/AndyCooksEssentials\nMY COOKBOOK: https://bit.ly/3WVoXAN\n\nRECIPES:\nFocaccia: https://www.andy-cooks.com/blogs/recipes/no-knead-focaccia\nLemon, olive and oregano: https://www.andy-cooks.com/blogs/recipes/lemon-olive-and-oregano-focaccia\nGrandma Pie: https://www.andy-cooks.com/blogs/recipes/grandma-pie\n\nTIMESTAMPS:\n\n00:00 Intro\n00:34 Plain Focaccia\n15:40 Chicken Stock Focaccia\n19:42 Lemon, olive and oregano focaccia \n24:06 Sorta Sicillian Pizza \n\nFOLLOW ME:\nInstagram: https://www.instagram.com/andyhearnden\nTikTok: https://www.tiktok.com/@andy_cooks\nFacebook: https://www.facebook.com/andy.h.cooks\nWebsite with all my recipes: https://www.andy-cooks.com/\n\nPot wash: Andy\nProducer: Caleb Dawkins\nVideographer: Ben Hasic\nEditor: Liam Craig",
+    "yield": {
+      "raw": "",
+      "quantity": 0,
+      "unit": ""
+    },
+    "times": {
+      "prepMinutes": 0,
+      "cookMinutes": 0,
+      "totalMinutes": 31
+    },
+    "ingredients": [
+      {
+        "id": "ing-8a2284d7-8d84-4d02-a4e1-bb3a1d1bf9ae",
+        "raw": "600g (1 lb 5 oz) bread flour",
+        "language": "en",
+        "quantity": "600",
+        "unit": "g",
+        "item": "(1 lb 5 oz) bread flour",
+        "normalized": {
+          "unitSystem": "unknown"
+        },
+        "conversion": {
+          "confidence": "unknown"
+        }
+      },
+      {
+        "id": "ing-48f98668-0dad-4035-a3c0-7853de034630",
+        "raw": "475ml of warm water",
+        "language": "en",
+        "quantity": "475",
+        "unit": "ml",
+        "item": "of warm water",
+        "normalized": {
+          "unitSystem": "unknown"
+        },
+        "conversion": {
+          "confidence": "unknown"
+        }
+      },
+      {
+        "id": "ing-fe52221b-2f37-4ac5-aba6-35fefb7160d7",
+        "raw": "7g (2 ¼ tsp) dry yeast",
+        "language": "en",
+        "quantity": "7",
+        "unit": "g",
+        "item": "(2 ¼ tsp) dry yeast",
+        "normalized": {
+          "unitSystem": "unknown"
+        },
+        "conversion": {
+          "confidence": "unknown"
+        }
+      },
+      {
+        "id": "ing-e810743c-923c-4141-9fc7-6715da9233e0",
+        "raw": "12g (2 ½ tsp) cooking salt (kosher salt)",
+        "language": "en",
+        "quantity": "12",
+        "unit": "g",
+        "item": "(2 ½ tsp) cooking salt (kosher salt)",
+        "normalized": {
+          "unitSystem": "unknown"
+        },
+        "conversion": {
+          "confidence": "unknown"
+        }
+      },
+      {
+        "id": "ing-a9a8df20-46d9-4e4e-9f55-77b0fea80cce",
+        "raw": "60ml (4 tbsp) olive oil",
+        "language": "en",
+        "quantity": "60",
+        "unit": "ml",
+        "item": "(4 tbsp) olive oil",
+        "normalized": {
+          "unitSystem": "unknown"
+        },
+        "conversion": {
+          "confidence": "unknown"
+        }
+      },
+      {
+        "id": "ing-581a7091-ec7b-40f8-917d-53388fe97277",
+        "raw": "big pinch of flaky salt",
+        "language": "en",
+        "unit": "big",
+        "item": "pinch of flaky salt",
+        "normalized": {
+          "unitSystem": "unknown"
+        },
+        "conversion": {
+          "confidence": "unknown"
+        }
+      },
+      {
+        "id": "ing-9918c745-28bb-47f3-af88-03281fd05825",
+        "raw": "7g (2¼ tsp) dry yeast",
+        "language": "en",
+        "quantity": "7",
+        "unit": "g",
+        "item": "(2¼ tsp) dry yeast",
+        "normalized": {
+          "unitSystem": "unknown"
+        },
+        "conversion": {
+          "confidence": "unknown"
+        }
+      },
+      {
+        "id": "ing-3cc347b7-1158-46aa-8fac-6346bc0a1114",
+        "raw": "475ml warm water (32°C/90°F)",
+        "language": "en",
+        "quantity": "475",
+        "unit": "ml",
+        "item": "warm water (32°C/90°F)",
+        "normalized": {
+          "unitSystem": "unknown"
+        },
+        "conversion": {
+          "confidence": "unknown"
+        }
+      },
+      {
+        "id": "ing-5b7038bb-2ae0-481e-a89b-22a537145308",
+        "raw": "60ml (¼ cup) olive oil",
+        "language": "en",
+        "quantity": "60",
+        "unit": "ml",
+        "item": "(¼ cup) olive oil",
+        "normalized": {
+          "unitSystem": "unknown"
+        },
+        "conversion": {
+          "confidence": "unknown"
+        }
+      },
+      {
+        "id": "ing-a56efde7-3817-468f-a764-a6fcecf44370",
+        "raw": "600g (4 cups) bread flour",
+        "language": "en",
+        "quantity": "600",
+        "unit": "g",
+        "item": "(4 cups) bread flour",
+        "normalized": {
+          "unitSystem": "unknown"
+        },
+        "conversion": {
+          "confidence": "unknown"
+        }
+      },
+      {
+        "id": "ing-b272bf56-f9c9-477c-a36f-a55091854d3f",
+        "raw": "12g (2½ tsp) cooking salt (kosher salt)",
+        "language": "en",
+        "quantity": "12",
+        "unit": "g",
+        "item": "(2½ tsp) cooking salt (kosher salt)",
+        "normalized": {
+          "unitSystem": "unknown"
+        },
+        "conversion": {
+          "confidence": "unknown"
+        }
+      },
+      {
+        "id": "ing-361dd6e0-c1af-4f41-9cbd-ff99ec4a4f96",
+        "raw": "​​200g Sicilian green olives",
+        "language": "en",
+        "item": "​​200g Sicilian green olives",
+        "normalized": {
+          "unitSystem": "unknown"
+        },
+        "conversion": {
+          "confidence": "unknown"
+        }
+      },
+      {
+        "id": "ing-b818ea15-7c77-4d82-8373-4b707e5845f9",
+        "raw": "½ a preserved lemon, flesh removed",
+        "language": "en",
+        "quantity": "½",
+        "unit": "a",
+        "item": "preserved lemon, flesh removed",
+        "normalized": {
+          "unitSystem": "unknown"
+        },
+        "conversion": {
+          "confidence": "unknown"
+        }
+      },
+      {
+        "id": "ing-62c7d843-4ffe-4ac6-bd9c-d2e973aa7a46",
+        "raw": "6 sprigs oregano, leaves picked",
+        "language": "en",
+        "quantity": "6",
+        "unit": "sprigs",
+        "item": "oregano, leaves picked",
+        "normalized": {
+          "unitSystem": "unknown"
+        },
+        "conversion": {
+          "confidence": "unknown"
+        }
+      },
+      {
+        "id": "ing-2b1fbade-6f6e-4fc7-b3aa-691ec7faa28f",
+        "raw": "flakey sea salt",
+        "language": "en",
+        "unit": "flakey",
+        "item": "sea salt",
+        "normalized": {
+          "unitSystem": "unknown"
+        },
+        "conversion": {
+          "confidence": "unknown"
+        }
+      },
+      {
+        "id": "ing-56a1b64b-2cea-4618-861e-5bf419b3d2bd",
+        "raw": "7g (2¼ tsp) dry yeast",
+        "language": "en",
+        "quantity": "7",
+        "unit": "g",
+        "item": "(2¼ tsp) dry yeast",
+        "normalized": {
+          "unitSystem": "unknown"
+        },
+        "conversion": {
+          "confidence": "unknown"
+        }
+      },
+      {
+        "id": "ing-d48a55a4-7cf7-47cb-9526-2732ed9c6c60",
+        "raw": "475ml warm water (32°C/90°F)",
+        "language": "en",
+        "quantity": "475",
+        "unit": "ml",
+        "item": "warm water (32°C/90°F)",
+        "normalized": {
+          "unitSystem": "unknown"
+        },
+        "conversion": {
+          "confidence": "unknown"
+        }
+      },
+      {
+        "id": "ing-375788ac-d075-406a-a3e6-52ca88d978ff",
+        "raw": "60ml (¼ cup) olive oil",
+        "language": "en",
+        "quantity": "60",
+        "unit": "ml",
+        "item": "(¼ cup) olive oil",
+        "normalized": {
+          "unitSystem": "unknown"
+        },
+        "conversion": {
+          "confidence": "unknown"
+        }
+      },
+      {
+        "id": "ing-e2d6ea71-4f40-4c4b-86c7-b889e14413b9",
+        "raw": "600g (4 cups) bread flour",
+        "language": "en",
+        "quantity": "600",
+        "unit": "g",
+        "item": "(4 cups) bread flour",
+        "normalized": {
+          "unitSystem": "unknown"
+        },
+        "conversion": {
+          "confidence": "unknown"
+        }
+      },
+      {
+        "id": "ing-522735e5-9dc1-4700-8e57-663d518d4cc2",
+        "raw": "12g (2½ tsp) cooking salt (kosher salt)",
+        "language": "en",
+        "quantity": "12",
+        "unit": "g",
+        "item": "(2½ tsp) cooking salt (kosher salt)",
+        "normalized": {
+          "unitSystem": "unknown"
+        },
+        "conversion": {
+          "confidence": "unknown"
+        }
+      },
+      {
+        "id": "ing-c812224c-b243-4315-a80c-e28aa8fed6a9",
+        "raw": "400g canned whole peeled tomatoes",
+        "language": "en",
+        "quantity": "400",
+        "unit": "g",
+        "item": "canned whole peeled tomatoes",
+        "normalized": {
+          "unitSystem": "unknown"
+        },
+        "conversion": {
+          "confidence": "unknown"
+        }
+      },
+      {
+        "id": "ing-b3389951-6fdf-4bdc-903a-f656b4f398e3",
+        "raw": "5 sprigs basil leaves",
+        "language": "en",
+        "quantity": "5",
+        "unit": "sprigs",
+        "item": "basil leaves",
+        "normalized": {
+          "unitSystem": "unknown"
+        },
+        "conversion": {
+          "confidence": "unknown"
+        }
+      },
+      {
+        "id": "ing-0ad2ad01-e2bb-49fb-8274-0f33ce6bb630",
+        "raw": "¼ tsp dried oregano",
+        "language": "en",
+        "quantity": "¼",
+        "unit": "tsp",
+        "item": "dried oregano",
+        "normalized": {
+          "unitSystem": "unknown"
+        },
+        "conversion": {
+          "confidence": "unknown"
+        }
+      },
+      {
+        "id": "ing-41a0b097-6f32-4b54-b915-101bb0a4cafa",
+        "raw": "Sea salt, to season",
+        "language": "en",
+        "unit": "Sea",
+        "item": "salt, to season",
+        "normalized": {
+          "unitSystem": "unknown"
+        },
+        "conversion": {
+          "confidence": "unknown"
+        }
+      },
+      {
+        "id": "ing-84753b2a-7d9e-4016-9503-db4ab888d538",
+        "raw": "250g buffalo mozzarella ball",
+        "language": "en",
+        "quantity": "250",
+        "unit": "g",
+        "item": "buffalo mozzarella ball",
+        "normalized": {
+          "unitSystem": "unknown"
+        },
+        "conversion": {
+          "confidence": "unknown"
+        }
+      },
+      {
+        "id": "ing-4004eaf8-7118-4a2a-8b6c-e23984d5688c",
+        "raw": "20g (¼ cup) finely grated parmesan",
+        "language": "en",
+        "quantity": "20",
+        "unit": "g",
+        "item": "(¼ cup) finely grated parmesan",
+        "normalized": {
+          "unitSystem": "unknown"
+        },
+        "conversion": {
+          "confidence": "unknown"
+        }
+      }
+    ],
+    "steps": [
+      {
+        "id": "step-6718d770-436c-4f58-81a6-102be198ed5a",
+        "position": 1,
+        "text": "Add your flour to a large bowl. In a smaller bowl or glass measuring jug, add 475ml (16 fl oz) of warm water (32°C / 90°F) and the dry yeast and mix until dissolved.",
+        "language": "en",
+        "mediaAnchors": [
+          {
+            "sourceId": "source-0c325bed-9276-4881-a863-fd1cbe9152f3",
+            "startSeconds": 0,
+            "label": "add your flour to a large bowl. in a",
+            "confidence": "estimated"
+          }
+        ]
+      },
+      {
+        "id": "step-4f2fca65-0a66-4dd0-8839-c70fa8d39ca5",
+        "position": 2,
+        "text": "Add the water yeast mixture to the flour along with 2 tablespoons (30ml) of olive oil. Start mixing and then add in the cooking salt.",
+        "language": "en",
+        "mediaAnchors": [
+          {
+            "sourceId": "source-0c325bed-9276-4881-a863-fd1cbe9152f3",
+            "startSeconds": 45,
+            "label": "add the water yeast mixture to the f",
+            "confidence": "estimated"
+          }
+        ]
+      },
+      {
+        "id": "step-b357cb2a-763e-4812-a35a-ad66577b1cdb",
+        "position": 3,
+        "text": "Mix your dough until combined. This is a high hydration dough, so you're not aiming for a smooth dough just mix until everything is incorporated and the flour is hydrated.",
+        "language": "en",
+        "mediaAnchors": [
+          {
+            "sourceId": "source-0c325bed-9276-4881-a863-fd1cbe9152f3",
+            "startSeconds": 90,
+            "label": "mix your dough until combined. this ",
+            "confidence": "estimated"
+          }
+        ]
+      },
+      {
+        "id": "step-e193e2a3-8487-4ca3-9eb8-3716f374b950",
+        "position": 4,
+        "text": "Cover the bowl with a tea towel and let it rest for 30 minutes.",
+        "language": "en",
+        "timerSeconds": 1800,
+        "mediaAnchors": [
+          {
+            "sourceId": "source-0c325bed-9276-4881-a863-fd1cbe9152f3",
+            "startSeconds": 135,
+            "label": "cover the bowl with a tea towel and ",
+            "confidence": "estimated"
+          }
+        ]
+      },
+      {
+        "id": "step-e0c7d910-1188-405c-9963-124b19fca1a6",
+        "position": 5,
+        "text": "After 30 minutes, uncover the dough. With a wet hand, stretch one corner of the dough and fold it over itself. Repeat 3-4 times until the dough is completely folded over itself.",
+        "language": "en",
+        "timerSeconds": 1800,
+        "mediaAnchors": [
+          {
+            "sourceId": "source-0c325bed-9276-4881-a863-fd1cbe9152f3",
+            "startSeconds": 180,
+            "label": "after 30 minutes, uncover the dough.",
+            "confidence": "estimated"
+          }
+        ]
+      },
+      {
+        "id": "step-62938133-367c-4c91-a2bf-adf0c6044abc",
+        "position": 6,
+        "text": "Cover the dough with a tea towel and let it rest for another 30 minutes. Repeat this process three more times.",
+        "language": "en",
+        "timerSeconds": 1800,
+        "mediaAnchors": [
+          {
+            "sourceId": "source-0c325bed-9276-4881-a863-fd1cbe9152f3",
+            "startSeconds": 225,
+            "label": "cover the dough with a tea towel and",
+            "confidence": "estimated"
+          }
+        ]
+      },
+      {
+        "id": "step-05d104c8-7efb-45d3-8380-1a3f87c335e1",
+        "position": 7,
+        "text": "After the fourth and final round of stretching and folding, let the dough rest for 30 minutes. Prepare your baking tray by drizzling about 2 tablespoons (30ml) of olive oil in the bottom of the tray. Pour in the dough, which should be light and airy by now. Using well-oiled hands, stretch the dough to cover all corners of the tray. If it doesn't stretch fully, cover it with a tea towel, let it rest for 5 minutes, and try again. Once the dough fills the tray, cover with the tea towel and let it proof for 30 minutes.",
+        "language": "en",
+        "timerSeconds": 1800,
+        "mediaAnchors": [
+          {
+            "sourceId": "source-0c325bed-9276-4881-a863-fd1cbe9152f3",
+            "startSeconds": 270,
+            "label": "after the fourth and final round of ",
+            "confidence": "estimated"
+          }
+        ]
+      },
+      {
+        "id": "step-1a061b8a-6309-4507-b8f6-70dc91478109",
+        "position": 8,
+        "text": "Preheat a fan-forced oven to 220°C (428°F) or a conventional oven to 240°C (464°F).",
+        "language": "en",
+        "temperature": {
+          "value": 220,
+          "unit": "c",
+          "raw": "220°C"
+        },
+        "mediaAnchors": [
+          {
+            "sourceId": "source-0c325bed-9276-4881-a863-fd1cbe9152f3",
+            "startSeconds": 315,
+            "label": "preheat a fan-forced oven to 220°c (",
+            "confidence": "estimated"
+          }
+        ]
+      },
+      {
+        "id": "step-de407bc4-ac30-473f-ad23-861ff4df1f49",
+        "position": 9,
+        "text": "After 30 minutes, remove the tea towel. Drizzle some more olive oil over the top and use your fingers to create dimples throughout the dough.",
+        "language": "en",
+        "timerSeconds": 1800,
+        "mediaAnchors": [
+          {
+            "sourceId": "source-0c325bed-9276-4881-a863-fd1cbe9152f3",
+            "startSeconds": 360,
+            "label": "after 30 minutes, remove the tea tow",
+            "confidence": "estimated"
+          }
+        ]
+      },
+      {
+        "id": "step-2833aa4e-93af-4253-8c39-43fe7ef77a94",
+        "position": 10,
+        "text": "Add a big pinch of flaky salt.",
+        "language": "en",
+        "mediaAnchors": [
+          {
+            "sourceId": "source-0c325bed-9276-4881-a863-fd1cbe9152f3",
+            "startSeconds": 405,
+            "label": "add a big pinch of flaky salt.",
+            "confidence": "estimated"
+          }
+        ]
+      },
+      {
+        "id": "step-d1ae8b03-f3ec-40c8-b26d-4e43f1280af9",
+        "position": 11,
+        "text": "Place the bread in the oven and bake for 25-30 minutes or until golden brown and cooked through.",
+        "language": "en",
+        "timerSeconds": 1800,
+        "mediaAnchors": [
+          {
+            "sourceId": "source-0c325bed-9276-4881-a863-fd1cbe9152f3",
+            "startSeconds": 450,
+            "label": "place the bread in the oven and bake",
+            "confidence": "estimated"
+          }
+        ]
+      },
+      {
+        "id": "step-911d2dc2-e2e8-47c9-8f84-abf91e3aecf5",
+        "position": 12,
+        "text": "Place the yeast in a large bowl and mix in water until dissolved.",
+        "language": "en",
+        "mediaAnchors": [
+          {
+            "sourceId": "source-0c325bed-9276-4881-a863-fd1cbe9152f3",
+            "startSeconds": 495,
+            "label": "place the yeast in a large bowl and ",
+            "confidence": "estimated"
+          }
+        ]
+      },
+      {
+        "id": "step-81a7d1cf-95f2-4e68-9ee5-747f5d73df62",
+        "position": 13,
+        "text": "Pour in 30ml of the oil, then add the flour and salt.",
+        "language": "en",
+        "mediaAnchors": [
+          {
+            "sourceId": "source-0c325bed-9276-4881-a863-fd1cbe9152f3",
+            "startSeconds": 540,
+            "label": "pour in 30ml of the oil, then add th",
+            "confidence": "estimated"
+          }
+        ]
+      },
+      {
+        "id": "step-ba6ff365-7aa2-464c-ab6a-0a3b042e2836",
+        "position": 14,
+        "text": "Mix until just combined and the flour is hydrated.",
+        "language": "en",
+        "mediaAnchors": [
+          {
+            "sourceId": "source-0c325bed-9276-4881-a863-fd1cbe9152f3",
+            "startSeconds": 585,
+            "label": "mix until just combined and the flou",
+            "confidence": "estimated"
+          }
+        ]
+      },
+      {
+        "id": "step-aa709850-a78c-4a7b-b0f9-3ff0857e2e4e",
+        "position": 15,
+        "text": "Cover the bowl with a tea towel and let it rest for 30 minutes.",
+        "language": "en",
+        "timerSeconds": 1800,
+        "mediaAnchors": [
+          {
+            "sourceId": "source-0c325bed-9276-4881-a863-fd1cbe9152f3",
+            "startSeconds": 630,
+            "label": "cover the bowl with a tea towel and ",
+            "confidence": "estimated"
+          }
+        ]
+      },
+      {
+        "id": "step-ca0ae841-c8dc-4fe6-a83a-7960a22a9b28",
+        "position": 16,
+        "text": "Uncover the dough, then with a wet hand, stretch one corner of the dough and fold it over itself. Repeat 4 times until the dough is completely folded over itself.",
+        "language": "en",
+        "mediaAnchors": [
+          {
+            "sourceId": "source-0c325bed-9276-4881-a863-fd1cbe9152f3",
+            "startSeconds": 675,
+            "label": "uncover the dough, then with a wet h",
+            "confidence": "estimated"
+          }
+        ]
+      },
+      {
+        "id": "step-8a503ea7-7a8b-49ff-b582-b2a393e913f3",
+        "position": 17,
+        "text": "Cover again with a tea towel and let it rest for another 30 minutes. Repeat this process three more times.",
+        "language": "en",
+        "timerSeconds": 1800,
+        "mediaAnchors": [
+          {
+            "sourceId": "source-0c325bed-9276-4881-a863-fd1cbe9152f3",
+            "startSeconds": 720,
+            "label": "cover again with a tea towel and let",
+            "confidence": "estimated"
+          }
+        ]
+      },
+      {
+        "id": "step-a225852e-4bab-4ad0-b0ec-9ecac814a4ab",
+        "position": 18,
+        "text": "After the fourth and final round of stretching and folding, let the dough rest for 30 minutes.",
+        "language": "en",
+        "timerSeconds": 1800,
+        "mediaAnchors": [
+          {
+            "sourceId": "source-0c325bed-9276-4881-a863-fd1cbe9152f3",
+            "startSeconds": 765,
+            "label": "after the fourth and final round of ",
+            "confidence": "estimated"
+          }
+        ]
+      },
+      {
+        "id": "step-7bc78369-fabd-45e9-8ae4-eb862b25032d",
+        "position": 19,
+        "text": "Preheat the oven to 220°C fan forced (430°F).",
+        "language": "en",
+        "temperature": {
+          "value": 220,
+          "unit": "c",
+          "raw": "220°C"
+        },
+        "mediaAnchors": [
+          {
+            "sourceId": "source-0c325bed-9276-4881-a863-fd1cbe9152f3",
+            "startSeconds": 810,
+            "label": "preheat the oven to 220°c fan forced",
+            "confidence": "estimated"
+          }
+        ]
+      },
+      {
+        "id": "step-1492b9fb-17c3-46b3-b170-18fb949176f4",
+        "position": 20,
+        "text": "Drizzle about 20mls of the oil in the bottom of a 30cm (12in) round heavy based baking dish, I generally use cast iron (standard or enamel coated). Pour in the dough and using well-oiled hands, stretch the dough to cover all corners of the tray.",
+        "language": "en",
+        "mediaAnchors": [
+          {
+            "sourceId": "source-0c325bed-9276-4881-a863-fd1cbe9152f3",
+            "startSeconds": 855,
+            "label": "drizzle about 20mls of the oil in th",
+            "confidence": "estimated"
+          }
+        ]
+      },
+      {
+        "id": "step-04e2c88c-35ed-415d-b651-8a745ec91921",
+        "position": 21,
+        "text": "Cover with a tea towel and let it proof for 30 minutes.",
+        "language": "en",
+        "timerSeconds": 1800,
+        "mediaAnchors": [
+          {
+            "sourceId": "source-0c325bed-9276-4881-a863-fd1cbe9152f3",
+            "startSeconds": 900,
+            "label": "cover with a tea towel and let it pr",
+            "confidence": "estimated"
+          }
+        ]
+      },
+      {
+        "id": "step-990d8a81-0077-420a-a5b8-e9b755fb541b",
+        "position": 22,
+        "text": "Tear the green olives into small pieces and set aside.",
+        "language": "en",
+        "mediaAnchors": [
+          {
+            "sourceId": "source-0c325bed-9276-4881-a863-fd1cbe9152f3",
+            "startSeconds": 945,
+            "label": "tear the green olives into small pie",
+            "confidence": "estimated"
+          }
+        ]
+      },
+      {
+        "id": "step-8e17dccc-daec-4b7b-846c-629caabbb94b",
+        "position": 23,
+        "text": "Remove the flesh from the preserved lemon, then finely slice the rind.",
+        "language": "en",
+        "mediaAnchors": [
+          {
+            "sourceId": "source-0c325bed-9276-4881-a863-fd1cbe9152f3",
+            "startSeconds": 990,
+            "label": "remove the flesh from the preserved ",
+            "confidence": "estimated"
+          }
+        ]
+      },
+      {
+        "id": "step-76e81f91-3231-4680-b55a-207c8261bde1",
+        "position": 24,
+        "text": "Uncover the tray and drizzle over some more oil. Use your fingers to create dimples throughout the dough.",
+        "language": "en",
+        "mediaAnchors": [
+          {
+            "sourceId": "source-0c325bed-9276-4881-a863-fd1cbe9152f3",
+            "startSeconds": 1035,
+            "label": "uncover the tray and drizzle over so",
+            "confidence": "estimated"
+          }
+        ]
+      },
+      {
+        "id": "step-bcacd1e2-3e84-45e7-9dc3-18d5ca0a6031",
+        "position": 25,
+        "text": "Place the oregano all over the top of the dough, then the preserved lemon and olives in the dimples you created. Press into the dough until almost submerged.",
+        "language": "en",
+        "mediaAnchors": [
+          {
+            "sourceId": "source-0c325bed-9276-4881-a863-fd1cbe9152f3",
+            "startSeconds": 1080,
+            "label": "place the oregano all over the top o",
+            "confidence": "estimated"
+          }
+        ]
+      },
+      {
+        "id": "step-726fb6bd-5cfe-4e0f-b162-691d8d2017b9",
+        "position": 26,
+        "text": "Sprinkle over some flakey salt.",
+        "language": "en",
+        "mediaAnchors": [
+          {
+            "sourceId": "source-0c325bed-9276-4881-a863-fd1cbe9152f3",
+            "startSeconds": 1125,
+            "label": "sprinkle over some flakey salt.",
+            "confidence": "estimated"
+          }
+        ]
+      },
+      {
+        "id": "step-d9201887-bb02-4d7c-a2a7-327295ad2fb1",
+        "position": 27,
+        "text": "Bake for 25-30 minutes, or until golden and cooked through. Drizzle with a little extra olive oil and set aside on a wire rack to cool in the tray for 30 minutes, before turning out and serving.",
+        "language": "en",
+        "timerSeconds": 1800,
+        "mediaAnchors": [
+          {
+            "sourceId": "source-0c325bed-9276-4881-a863-fd1cbe9152f3",
+            "startSeconds": 1170,
+            "label": "bake for 25-30 minutes, or until gol",
+            "confidence": "estimated"
+          }
+        ]
+      },
+      {
+        "id": "step-0baf64d4-f8b5-453e-9bbc-8a6817719410",
+        "position": 28,
+        "text": "First, slice the mozzarella into 1cm thick slices and place on some paper towel on a wire rack over a tray. Set aside in the fridge for at least 2 hours to drain and dry out.",
+        "language": "en",
+        "mediaAnchors": [
+          {
+            "sourceId": "source-0c325bed-9276-4881-a863-fd1cbe9152f3",
+            "startSeconds": 1215,
+            "label": "first, slice the mozzarella into 1cm",
+            "confidence": "estimated"
+          }
+        ]
+      },
+      {
+        "id": "step-ad306f3c-da41-4a89-bb00-49b10541c852",
+        "position": 29,
+        "text": "Now, place the yeast in a large bowl and mix in water until dissolved.",
+        "language": "en",
+        "mediaAnchors": [
+          {
+            "sourceId": "source-0c325bed-9276-4881-a863-fd1cbe9152f3",
+            "startSeconds": 1260,
+            "label": "now, place the yeast in a large bowl",
+            "confidence": "estimated"
+          }
+        ]
+      },
+      {
+        "id": "step-c73547de-0c36-48a2-b428-cf1bac7abf73",
+        "position": 30,
+        "text": "Pour in 30ml of the oil, then add the flour and salt.",
+        "language": "en",
+        "mediaAnchors": [
+          {
+            "sourceId": "source-0c325bed-9276-4881-a863-fd1cbe9152f3",
+            "startSeconds": 1305,
+            "label": "pour in 30ml of the oil, then add th",
+            "confidence": "estimated"
+          }
+        ]
+      },
+      {
+        "id": "step-bc27a7f5-641d-4878-b363-844414b719aa",
+        "position": 31,
+        "text": "Mix until just combined and the flour is hydrated.",
+        "language": "en",
+        "mediaAnchors": [
+          {
+            "sourceId": "source-0c325bed-9276-4881-a863-fd1cbe9152f3",
+            "startSeconds": 1350,
+            "label": "mix until just combined and the flou",
+            "confidence": "estimated"
+          }
+        ]
+      },
+      {
+        "id": "step-2e640f2f-139e-4d99-9937-18e0a4238220",
+        "position": 32,
+        "text": "Cover the bowl with a tea towel and let it rest for 30 minutes.",
+        "language": "en",
+        "timerSeconds": 1800,
+        "mediaAnchors": [
+          {
+            "sourceId": "source-0c325bed-9276-4881-a863-fd1cbe9152f3",
+            "startSeconds": 1395,
+            "label": "cover the bowl with a tea towel and ",
+            "confidence": "estimated"
+          }
+        ]
+      },
+      {
+        "id": "step-f932f8c6-616b-46b0-a0ac-45f6971b51fd",
+        "position": 33,
+        "text": "Uncover the dough, then with a wet hand, stretch one corner of the dough and fold it over itself. Repeat 4 times until the dough is completely folded over itself.",
+        "language": "en",
+        "mediaAnchors": [
+          {
+            "sourceId": "source-0c325bed-9276-4881-a863-fd1cbe9152f3",
+            "startSeconds": 1440,
+            "label": "uncover the dough, then with a wet h",
+            "confidence": "estimated"
+          }
+        ]
+      },
+      {
+        "id": "step-c62cf942-33af-4d96-a404-383f607ece33",
+        "position": 34,
+        "text": "Cover again with a tea towel and let it rest for another 30 minutes. Repeat this process three more times.",
+        "language": "en",
+        "timerSeconds": 1800,
+        "mediaAnchors": [
+          {
+            "sourceId": "source-0c325bed-9276-4881-a863-fd1cbe9152f3",
+            "startSeconds": 1485,
+            "label": "cover again with a tea towel and let",
+            "confidence": "estimated"
+          }
+        ]
+      },
+      {
+        "id": "step-778b9f49-8725-451d-98e7-0b127d32b469",
+        "position": 35,
+        "text": "After the fourth and final round of stretching and folding, let the dough rest for 30 minutes.",
+        "language": "en",
+        "timerSeconds": 1800,
+        "mediaAnchors": [
+          {
+            "sourceId": "source-0c325bed-9276-4881-a863-fd1cbe9152f3",
+            "startSeconds": 1530,
+            "label": "after the fourth and final round of ",
+            "confidence": "estimated"
+          }
+        ]
+      },
+      {
+        "id": "step-e94bb0b0-1939-45db-a79d-aadafac18798",
+        "position": 36,
+        "text": "Place the tomatoes and basil in a medium saucepan and crush them with your hand for a few minutes, until really well crushed.",
+        "language": "en",
+        "mediaAnchors": [
+          {
+            "sourceId": "source-0c325bed-9276-4881-a863-fd1cbe9152f3",
+            "startSeconds": 1575,
+            "label": "place the tomatoes and basil in a me",
+            "confidence": "estimated"
+          }
+        ]
+      },
+      {
+        "id": "step-1ec60577-3701-4fa0-9177-7481bf2ed671",
+        "position": 37,
+        "text": "Add the oregano and a pinch of salt and place over a medium heat. Bring to a simmer, then cook for 10 minutes, stirring occasionally.",
+        "language": "en",
+        "timerSeconds": 600,
+        "mediaAnchors": [
+          {
+            "sourceId": "source-0c325bed-9276-4881-a863-fd1cbe9152f3",
+            "startSeconds": 1620,
+            "label": "add the oregano and a pinch of salt ",
+            "confidence": "estimated"
+          }
+        ]
+      },
+      {
+        "id": "step-baf908be-085c-429f-93d6-e63f024909f6",
+        "position": 38,
+        "text": "Transfer to a bowl and set aside to cool to room temperature.",
+        "language": "en",
+        "mediaAnchors": [
+          {
+            "sourceId": "source-0c325bed-9276-4881-a863-fd1cbe9152f3",
+            "startSeconds": 1665,
+            "label": "transfer to a bowl and set aside to ",
+            "confidence": "estimated"
+          }
+        ]
+      },
+      {
+        "id": "step-a6595edc-40d1-4e1d-8a35-19ff5af40a15",
+        "position": 39,
+        "text": "Preheat the oven to 220°C fan forced (428°F).",
+        "language": "en",
+        "temperature": {
+          "value": 220,
+          "unit": "c",
+          "raw": "220°C"
+        },
+        "mediaAnchors": [
+          {
+            "sourceId": "source-0c325bed-9276-4881-a863-fd1cbe9152f3",
+            "startSeconds": 1710,
+            "label": "preheat the oven to 220°c fan forced",
+            "confidence": "estimated"
+          }
+        ]
+      },
+      {
+        "id": "step-6de96e5d-d38b-42c4-9379-ab6583403b0e",
+        "position": 40,
+        "text": "Drizzle about 20mls of the oil in the bottom of a heavy based baking tray. Pour in the dough and using well-oiled hands, stretch the dough to cover all corners of the tray.",
+        "language": "en",
+        "mediaAnchors": [
+          {
+            "sourceId": "source-0c325bed-9276-4881-a863-fd1cbe9152f3",
+            "startSeconds": 1755,
+            "label": "drizzle about 20mls of the oil in th",
+            "confidence": "estimated"
+          }
+        ]
+      },
+      {
+        "id": "step-1c87a8de-ddf9-45ac-8463-2ffc94ce4f0a",
+        "position": 41,
+        "text": "Cover with a tea towel and let it proof for 30 minutes.",
+        "language": "en",
+        "timerSeconds": 1800,
+        "mediaAnchors": [
+          {
+            "sourceId": "source-0c325bed-9276-4881-a863-fd1cbe9152f3",
+            "startSeconds": 1800,
+            "label": "cover with a tea towel and let it pr",
+            "confidence": "estimated"
+          }
+        ]
+      },
+      {
+        "id": "step-458e0249-3bd9-49c9-9a0c-0e5b5ed8c384",
+        "position": 42,
+        "text": "Uncover the tray and drizzle over a little more oil, then use your fingers to create little dimples throughout the dough.",
+        "language": "en",
+        "mediaAnchors": [
+          {
+            "sourceId": "source-0c325bed-9276-4881-a863-fd1cbe9152f3",
+            "startSeconds": 1845,
+            "label": "uncover the tray and drizzle over a ",
+            "confidence": "estimated"
+          }
+        ]
+      },
+      {
+        "id": "step-df50f7ce-8f77-4cb0-81b6-a91731d461a7",
+        "position": 43,
+        "text": "Bake for 15 minutes, then remove from the oven to a wire rack.",
+        "language": "en",
+        "timerSeconds": 900,
+        "mediaAnchors": [
+          {
+            "sourceId": "source-0c325bed-9276-4881-a863-fd1cbe9152f3",
+            "startSeconds": 1890,
+            "label": "bake for 15 minutes, then remove fro",
+            "confidence": "estimated"
+          }
+        ]
+      },
+      {
+        "id": "step-2d5e818c-13f4-4c98-9edc-328551cebb0f",
+        "position": 44,
+        "text": "Working quickly, drizzle over the tomato sauce and spread gently. Top with the remaining basil leaves, the parmesan, then the sliced mozzarella.",
+        "language": "en",
+        "mediaAnchors": [
+          {
+            "sourceId": "source-0c325bed-9276-4881-a863-fd1cbe9152f3",
+            "startSeconds": 1935,
+            "label": "working quickly, drizzle over the to",
+            "confidence": "estimated"
+          }
+        ]
+      },
+      {
+        "id": "step-06978992-1963-4db5-a136-f502c7413f44",
+        "position": 45,
+        "text": "Return to the oven for a further 15 minutes, until golden and cooked through.",
+        "language": "en",
+        "timerSeconds": 900,
+        "mediaAnchors": [
+          {
+            "sourceId": "source-0c325bed-9276-4881-a863-fd1cbe9152f3",
+            "startSeconds": 1980,
+            "label": "return to the oven for a further 15 ",
+            "confidence": "estimated"
+          }
+        ]
+      },
+      {
+        "id": "step-0b9ce986-2793-4ea3-9e2d-031ebdc8040c",
+        "position": 46,
+        "text": "Set aside on a wire rack to cool in the tray for 10 minutes, before turning out and slicing to serve.",
+        "language": "en",
+        "timerSeconds": 600,
+        "mediaAnchors": [
+          {
+            "sourceId": "source-0c325bed-9276-4881-a863-fd1cbe9152f3",
+            "startSeconds": 2025,
+            "label": "set aside on a wire rack to cool in ",
+            "confidence": "estimated"
+          }
+        ]
+      }
+    ],
+    "notes": [
+      "Created from linked recipe page."
+    ],
+    "tags": [
+      "youtube",
+      "import"
+    ],
+    "confidence": {
+      "source": 0.95,
+      "ingredients": 0.62,
+      "steps": 0.58,
+      "overall": 0.62
+    },
+    "warnings": []
+  }
+}

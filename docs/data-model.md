@@ -2,6 +2,43 @@
 
 ## Core Entities
 
+Related research: [`research/schema-org-recipe.md`](../research/schema-org-recipe.md)
+
+Canonical recipe data lives in repository files. The current MVP source file is
+`src/data/app-snapshot.json`, which contains an `AppSnapshot` with recipes,
+versions, variants, sources, and default settings.
+
+Baseline catalogue recipes live in `src/data/baseline-catalog.ts`. They use the
+same `Recipe`, `RecipeVersion`, `RecipeVariant`, `Source`, `IngredientLine`, and
+`InstructionStep` shapes as user/imported recipes, but are marked with the
+`baseline` tag and grouped through `collections` such as `Baking`, `Cooking`,
+`Pasta`, `Bread`, `Soup`, and `Vegetarian`.
+
+Baseline catalogue planning and promotion state lives in
+`data/baseline-recipes/backlog.json`. It tracks common recipe identities under a
+virtual `baseline-common-recipes` channel, with items moving from `backlog` to
+`drafted` to `promoted` as they become stable records in
+`src/data/baseline-catalog.ts`.
+
+TheMealDB is tracked as a separate external source in
+`data/themealdb-recipes/catalog.json`. Its records can be loaded as import drafts
+and saved as recipes with `Source.type = "themealdb"`. The `Source.external`
+object stores the MealDB id, API URL, page URL, original source URL, image URL,
+category, and area.
+
+At runtime the browser copies that snapshot into IndexedDB. User edits are saved
+there as local working state until we add an explicit file import/export or dev
+write-back workflow.
+
+When the app loads, it adds any missing baseline catalogue records into the
+IndexedDB snapshot without replacing existing user edits or imported YouTube
+recipes.
+
+YouTube imports should remain separate recipe records unless the user chooses to
+save them as an edit or variant. Future YouTube matching can store a reference to
+the stable baseline recipe id, for example `recipe-baseline-focaccia`, while
+leaving unmatched videos unlinked.
+
 ### Recipe
 
 - `id`
@@ -72,13 +109,14 @@ immutable `RecipeVersion`.
 ### Source
 
 - `id`
-- `type`: `web`, `youtube`, `text`, `pdf`, `image`, `manual`
+- `type`: `web`, `youtube`, `themealdb`, `text`, `pdf`, `image`, `manual`
 - `url`
 - `title`
 - `author`
 - `publishedAt`
 - `retrievedAt`
 - `licenseNote`
+- `external`
 - `rawTextRef`
 - `media`
 
@@ -86,6 +124,10 @@ For video sources, `media` can hold:
 
 - `provider`: `youtube`
 - `videoId`
+- `channelId`
+- `channelTitle`
+- `channelHandle`
+- `channelUrl`
 - `durationSeconds`
 - `thumbnailUrl`
 - `canonicalUrl`
@@ -167,6 +209,28 @@ special case in the step model.
 - `createdAt`
 - `updatedAt`
 
+### YouTubeBacklogVideo.sourcePages
+
+Local YouTube ingestion stores linked recipe page extraction separately from
+transcripts and candidates:
+
+- `status`: `not_started`, `found`, `retrieved`, `unavailable`, `failed`
+- `pages[]`
+- `pages[].url`
+- `pages[].title`
+- `pages[].siteName`
+- `pages[].status`
+- `pages[].localPath`
+- `pages[].ingredientCount`
+- `pages[].stepCount`
+- `updatedAt`
+
+Parsed page records live in:
+
+```text
+data/youtube-recipes/source-pages/VIDEO_ID/PAGE_SLUG.json
+```
+
 ## MVP Search Fields
 
 - title
@@ -183,6 +247,7 @@ Settings affect display, not saved recipe data:
 - `recipeLanguageMode`: `original`, `translated`, or a target locale
 - `measurementSystem`: `original`, `metric`, `us`, `hybrid`
 - `temperatureUnit`: `c`, `f`, `original`
+- `theme`: `dark`, `light`
 - `numberLocale`: e.g. `en-US`, `de-CH`
 - `cookingMode`: readback, video auto-seek, and command-input preferences
 

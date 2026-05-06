@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-05-05T16:30:00.000Z",
+  "sourceTextKind": "youtube description + linked Andy Cooks recipe page",
+  "sourceTextLength": 681,
+  "evidenceTextLength": 5963,
+  "metadataRefreshed": false,
+  "candidate": {
+    "id": "candidate-lasagna-better-than-your-mums-manual-v1",
+    "source": {
+      "id": "source-youtube--__qVqib9Pw",
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=-__qVqib9Pw",
+      "title": "Lasagna Better Than Your Mums",
+      "author": "Andy Cooks",
+      "licenseNote": "Drafted from the YouTube metadata and the linked Andy Cooks recipe page.",
+      "retrievedAt": "2026-05-05T16:30:00.000Z",
+      "media": {
+        "provider": "youtube",
+        "videoId": "-__qVqib9Pw",
+        "channelId": "UCqNkn5PNeSqbQTAR5RP-L-Q",
+        "channelTitle": "Andy Cooks",
+        "channelHandle": "@andy_cooks",
+        "durationSeconds": 1424,
+        "thumbnailUrl": "https://i.ytimg.com/vi/-__qVqib9Pw/hqdefault.jpg",
+        "canonicalUrl": "https://www.youtube.com/watch?v=-__qVqib9Pw"
+      }
+    },
+    "title": "Lasagna Better Than Your Mums",
+    "language": "en",
+    "description": "A proper homemade lasagne with spinach pasta sheets, slow-cooked pork and beef ragu, bechamel, mozzarella, Parmesan, and basil.",
+    "yield": {
+      "raw": "8 servings",
+      "quantity": 8,
+      "unit": "servings"
+    },
+    "times": {
+      "prepMinutes": 120,
+      "cookMinutes": 180,
+      "totalMinutes": 300
+    },
+    "ingredients": [
+      { "id": "ing-lasagne-01", "section": "ragu", "raw": "2 sticks celery, diced", "language": "en", "quantity": "2", "unit": "sticks", "item": "celery", "preparation": "diced" },
+      { "id": "ing-lasagne-02", "section": "ragu", "raw": "1 large carrot, diced", "language": "en", "quantity": "1", "unit": "large", "item": "carrot", "preparation": "diced" },
+      { "id": "ing-lasagne-03", "section": "ragu", "raw": "1 brown onion, diced", "language": "en", "quantity": "1", "unit": "brown", "item": "onion", "preparation": "diced" },
+      { "id": "ing-lasagne-04", "section": "ragu", "raw": "4 cloves garlic, finely diced", "language": "en", "quantity": "4", "unit": "cloves", "item": "garlic", "preparation": "finely diced" },
+      { "id": "ing-lasagne-05", "section": "ragu", "raw": "500g pork mince", "language": "en", "quantity": "500", "unit": "g", "item": "pork mince" },
+      { "id": "ing-lasagne-06", "section": "ragu", "raw": "500g beef mince", "language": "en", "quantity": "500", "unit": "g", "item": "beef mince" },
+      { "id": "ing-lasagne-07", "section": "ragu", "raw": "700g tomato passata", "language": "en", "quantity": "700", "unit": "g", "item": "tomato passata" },
+      { "id": "ing-lasagne-08", "section": "ragu", "raw": "250ml red wine", "language": "en", "quantity": "250", "unit": "ml", "item": "red wine" },
+      { "id": "ing-lasagne-09", "section": "ragu", "raw": "50ml olive oil, plus extra for frying", "language": "en", "quantity": "50", "unit": "ml", "item": "olive oil", "preparation": "plus extra for frying" },
+      { "id": "ing-lasagne-10", "section": "ragu", "raw": "salt, to taste", "language": "en", "item": "salt", "preparation": "to taste" },
+      { "id": "ing-lasagne-11", "section": "spinach pasta", "raw": "250g baby spinach", "language": "en", "quantity": "250", "unit": "g", "item": "baby spinach" },
+      { "id": "ing-lasagne-12", "section": "spinach pasta", "raw": "3 large eggs", "language": "en", "quantity": "3", "unit": "large", "item": "eggs" },
+      { "id": "ing-lasagne-13", "section": "spinach pasta", "raw": "320g Tipo 00 flour, plus extra for dusting", "language": "en", "quantity": "320", "unit": "g", "item": "Tipo 00 flour", "preparation": "plus extra for dusting" },
+      { "id": "ing-lasagne-14", "section": "bechamel", "raw": "50g butter", "language": "en", "quantity": "50", "unit": "g", "item": "butter" },
+      { "id": "ing-lasagne-15", "section": "bechamel", "raw": "50g flour", "language": "en", "quantity": "50", "unit": "g", "item": "flour" },
+      { "id": "ing-lasagne-16", "section": "bechamel", "raw": "600ml milk, plus an extra 100ml for the ragu", "language": "en", "quantity": "700", "unit": "ml", "item": "milk", "preparation": "600ml for bechamel and 100ml for ragu" },
+      { "id": "ing-lasagne-17", "section": "bechamel", "raw": "1/4 tsp ground fresh nutmeg", "language": "en", "quantity": "1/4", "unit": "tsp", "item": "ground fresh nutmeg" },
+      { "id": "ing-lasagne-18", "section": "assembly", "raw": "350g mozzarella, grated", "language": "en", "quantity": "350", "unit": "g", "item": "mozzarella", "preparation": "grated" },
+      { "id": "ing-lasagne-19", "section": "assembly", "raw": "100g Parmesan, grated, plus rind", "language": "en", "quantity": "100", "unit": "g", "item": "Parmesan", "preparation": "grated, rind reserved" },
+      { "id": "ing-lasagne-20", "section": "assembly", "raw": "small bunch basil", "language": "en", "quantity": "1", "unit": "small bunch", "item": "basil" }
+    ],
+    "steps": [
+      { "id": "step-lasagne-01", "section": "ragu", "position": 1, "text": "Heat about 50ml olive oil in a large pan. Add onion, carrot, celery, and a big pinch of salt, then saute for 4-5 minutes.", "language": "en", "timerSeconds": 300 },
+      { "id": "step-lasagne-02", "section": "ragu", "position": 2, "text": "Add the garlic, cook for 1 minute, then remove the sofrito from the pan and set it aside.", "language": "en", "timerSeconds": 60 },
+      { "id": "step-lasagne-03", "section": "ragu", "position": 3, "text": "Return the pan to the heat with a little more olive oil. Add pork and beef mince, season with salt, and cook for 3-4 minutes to colour the underside before breaking it up.", "language": "en", "timerSeconds": 240 },
+      { "id": "step-lasagne-04", "section": "ragu", "position": 4, "text": "Add red wine and reduce by at least 80 percent. Return the sofrito, add passata and Parmesan rind, bring to a simmer, cover, and cook gently for 2-3 hours, stirring occasionally.", "language": "en", "timerSeconds": 9000 },
+      { "id": "step-lasagne-05", "section": "ragu", "position": 5, "text": "Stir 100ml milk into the ragu near the end of cooking, then adjust seasoning.", "language": "en" },
+      { "id": "step-lasagne-06", "section": "spinach pasta", "position": 6, "text": "Blanch the spinach in boiling salted water for 20 seconds, then chill in ice water. Drain, squeeze dry, and blend with the eggs until smooth.", "language": "en", "timerSeconds": 20 },
+      { "id": "step-lasagne-07", "section": "spinach pasta", "position": 7, "text": "Make a well in the Tipo 00 flour, add the spinach egg mixture and a pinch of salt, then work into a dough. Knead until smooth, about 8-10 minutes, and rest for at least 45 minutes.", "language": "en", "timerSeconds": 2700 },
+      { "id": "step-lasagne-08", "section": "spinach pasta", "position": 8, "text": "Roll the pasta to about 2mm thick, cut into sheets, blanch for 2 minutes, cool in water, and hold on an oiled tray.", "language": "en", "timerSeconds": 120 },
+      { "id": "step-lasagne-09", "section": "bechamel", "position": 9, "text": "Melt butter in a pot over medium heat. Stir in flour and cook for 2 minutes.", "language": "en", "timerSeconds": 120 },
+      { "id": "step-lasagne-10", "section": "bechamel", "position": 10, "text": "Whisk in 600ml cold milk in stages until smooth, then simmer for 10 minutes. Season with salt, pepper, and nutmeg.", "language": "en", "timerSeconds": 600 },
+      { "id": "step-lasagne-11", "section": "assembly", "position": 11, "text": "Heat the oven to 180C. In a 23 x 30cm oven dish, layer ragu, pasta, bechamel, mozzarella, and Parmesan, repeating until used.", "language": "en", "temperature": { "value": 180, "unit": "c", "raw": "180C" } },
+      { "id": "step-lasagne-12", "section": "assembly", "position": 12, "text": "Finish with pasta and a little passata on top, cover with foil, and bake for 30 minutes.", "language": "en", "timerSeconds": 1800, "temperature": { "value": 180, "unit": "c", "raw": "180C" } },
+      { "id": "step-lasagne-13", "section": "assembly", "position": 13, "text": "Remove the foil, top with basil, mozzarella, and Parmesan, then bake for another 15 minutes. Grill briefly if needed until golden.", "language": "en", "timerSeconds": 900 },
+      { "id": "step-lasagne-14", "section": "serve", "position": 14, "text": "Rest for 10-15 minutes before slicing and serving.", "language": "en", "timerSeconds": 900 }
+    ],
+    "notes": [
+      "Linked recipe page: https://www.andy-cooks.com/blogs/recipes/lasagne",
+      "The YouTube backlog does not currently include a local transcript for this video."
+    ],
+    "tags": ["youtube", "andy cooks", "cooking", "pasta", "lasagne", "dinner"],
+    "confidence": {
+      "overall": 0.88,
+      "source": 0.9,
+      "ingredients": 0.94,
+      "steps": 0.86
+    },
+    "warnings": [
+      "No local transcript file is stored for this video; the draft uses YouTube metadata and the linked recipe page."
+    ]
+  }
+}

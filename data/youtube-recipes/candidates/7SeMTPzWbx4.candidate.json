@@ -1,0 +1,242 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-05-05T17:07:43.565Z",
+  "sourceTextKind": "youtube metadata description",
+  "sourceTextLength": 1026,
+  "evidenceTextLength": 8746,
+  "metadataRefreshed": true,
+  "candidate": {
+    "id": "candidate-036d2b25-a4c6-4fc3-b02a-e7b319b9b564",
+    "source": {
+      "id": "source-381069a8-3913-49fe-abeb-432284721aed",
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=7SeMTPzWbx4",
+      "title": "Caramelised White Chocolate & Pecan Flapjacks Recipe & Tutorial | Cupcake Jemma",
+      "author": "CupcakeJemma",
+      "retrievedAt": "2026-05-05T17:07:43.661Z",
+      "media": {
+        "provider": "youtube",
+        "videoId": "7SeMTPzWbx4",
+        "channelId": "UCoMum0pwewO8_WtTlUQxGHw",
+        "channelTitle": "CupcakeJemma",
+        "channelHandle": "@cupcakejemma",
+        "durationSeconds": 493,
+        "thumbnailUrl": "https://i.ytimg.com/vi/7SeMTPzWbx4/hqdefault.jpg",
+        "canonicalUrl": "https://www.youtube.com/watch?v=7SeMTPzWbx4"
+      }
+    },
+    "title": "Caramelised White Chocolate & Pecan Flapjacks Recipe & Tutorial | Cupcake Jemma",
+    "language": "en",
+    "description": "We've got a simple lil Flapjack recipe for you. Well, simple in method but seriously COMPLEX in flavour. These Caramelised White Chocolate and Pecan Flapjacks can be adapted to suit you (maybe you don't have time to caramelise the white chocolate or want it to have dark chocolate instead? Go for it!) and take no time at all to whip up. They're also great for family baking days!\n\nHappy Baking! x\n\n8\" Square Tin (or something similar)\n\nIngredients\n250g Oats\n125g Soft Unsalted Butter\n125g Light Brown Sugar\n65g Golden Syrup\nPinch of Sea Salt\n1/2 tsp Cinnamon\n60g Toasted Pecan Nuts\n60g Caramelised White Chocolate\n\n-----------\nBecome a Patreon BAKE CLUB member for a pdf download of this and other recipes, as well as Bake-Alongs, extra content, baking tips and more.\n\nBAKE CLUB: http://patreon.com/cupcakejemma\nBAKE AT HOME: http://cupcakejemma\nCAKES: http://www.crumbsanddoilies.co.uk \nINSTAGRAM: @cupcakejemma \nCAKESTAGRAM: @crumbsanddoilies",
+    "yield": {
+      "raw": "",
+      "quantity": 0,
+      "unit": ""
+    },
+    "times": {
+      "prepMinutes": 0,
+      "cookMinutes": 0,
+      "totalMinutes": 8
+    },
+    "ingredients": [
+      {
+        "id": "ing-46ad755a-3ac3-4b7e-add9-343d32102558",
+        "raw": "8\" Square Tin (or something similar)",
+        "language": "en",
+        "item": "8\" Square Tin (or something similar)",
+        "normalized": {
+          "unitSystem": "unknown"
+        },
+        "conversion": {
+          "confidence": "unknown"
+        }
+      },
+      {
+        "id": "ing-02fae03f-408d-46d0-9c28-2a09a52c6b41",
+        "raw": "250g Oats",
+        "language": "en",
+        "quantity": "250",
+        "unit": "g",
+        "item": "Oats",
+        "normalized": {
+          "unitSystem": "unknown"
+        },
+        "conversion": {
+          "confidence": "unknown"
+        }
+      },
+      {
+        "id": "ing-ef4ca7a1-9768-42b7-b684-c4df3de45c2b",
+        "raw": "125g Soft Unsalted Butter",
+        "language": "en",
+        "quantity": "125",
+        "unit": "g",
+        "item": "Soft Unsalted Butter",
+        "normalized": {
+          "unitSystem": "unknown"
+        },
+        "conversion": {
+          "confidence": "unknown"
+        }
+      },
+      {
+        "id": "ing-8e8087ba-67a9-4184-b55d-9b24e9871cf9",
+        "raw": "125g Light Brown Sugar",
+        "language": "en",
+        "quantity": "125",
+        "unit": "g",
+        "item": "Light Brown Sugar",
+        "normalized": {
+          "unitSystem": "unknown"
+        },
+        "conversion": {
+          "confidence": "unknown"
+        }
+      },
+      {
+        "id": "ing-57a2d077-417a-40a5-af36-bcc4a5b4bc72",
+        "raw": "65g Golden Syrup",
+        "language": "en",
+        "quantity": "65",
+        "unit": "g",
+        "item": "Golden Syrup",
+        "normalized": {
+          "unitSystem": "unknown"
+        },
+        "conversion": {
+          "confidence": "unknown"
+        }
+      },
+      {
+        "id": "ing-181e8b40-9475-4ef5-9458-78445c49f104",
+        "raw": "Pinch of Sea Salt",
+        "language": "en",
+        "unit": "Pinch",
+        "item": "of Sea Salt",
+        "normalized": {
+          "unitSystem": "unknown"
+        },
+        "conversion": {
+          "confidence": "unknown"
+        }
+      },
+      {
+        "id": "ing-10eab9d5-e77b-46b8-9914-e91997945f58",
+        "raw": "1/2 tsp Cinnamon",
+        "language": "en",
+        "quantity": "1/2",
+        "unit": "tsp",
+        "item": "Cinnamon",
+        "normalized": {
+          "unitSystem": "unknown"
+        },
+        "conversion": {
+          "confidence": "unknown"
+        }
+      },
+      {
+        "id": "ing-88be73e9-3c9c-4072-b9cf-361dbf0d098e",
+        "raw": "60g Toasted Pecan Nuts",
+        "language": "en",
+        "quantity": "60",
+        "unit": "g",
+        "item": "Toasted Pecan Nuts",
+        "normalized": {
+          "unitSystem": "unknown"
+        },
+        "conversion": {
+          "confidence": "unknown"
+        }
+      },
+      {
+        "id": "ing-cc5257be-17fa-4187-8410-62b8b6dddeac",
+        "raw": "60g Caramelised White Chocolate",
+        "language": "en",
+        "quantity": "60",
+        "unit": "g",
+        "item": "Caramelised White Chocolate",
+        "normalized": {
+          "unitSystem": "unknown"
+        },
+        "conversion": {
+          "confidence": "unknown"
+        }
+      }
+    ],
+    "steps": [
+      {
+        "id": "step-ed9ad592-084e-45cd-8254-cf89b7bd56c8",
+        "position": 1,
+        "text": "And then pop the lid on. And I'm going to pulse that until it all comes together. Great. So, it's all kind of come together. I don't want it to like become one solid lump because I do need to stir some extra things through it.",
+        "language": "en",
+        "mediaAnchors": [
+          {
+            "sourceId": "source-local-mock",
+            "startSeconds": 0,
+            "label": "and then pop the lid on. and i'm goi",
+            "confidence": "estimated"
+          }
+        ]
+      },
+      {
+        "id": "step-d0cfbc8c-8497-40da-b49e-81a06e6268ce",
+        "position": 2,
+        "text": "Let's cut. Going to need a sharp long knife and a little bit of welli. [Music] Look at that.",
+        "language": "en",
+        "mediaAnchors": [
+          {
+            "sourceId": "source-local-mock",
+            "startSeconds": 45,
+            "label": "let's cut. going to need a sharp lon",
+            "confidence": "estimated"
+          }
+        ]
+      },
+      {
+        "id": "step-3c9624f3-0e2c-4bec-800d-99373c4e223d",
+        "position": 3,
+        "text": "Let me know in the comments below.",
+        "language": "en",
+        "mediaAnchors": [
+          {
+            "sourceId": "source-local-mock",
+            "startSeconds": 90,
+            "label": "let me know in the comments below.",
+            "confidence": "estimated"
+          }
+        ]
+      },
+      {
+        "id": "step-27af8df9-d178-44ae-9558-cdc9a77a12c6",
+        "position": 4,
+        "text": "Let the people know.",
+        "language": "en",
+        "mediaAnchors": [
+          {
+            "sourceId": "source-local-mock",
+            "startSeconds": 135,
+            "label": "let the people know.",
+            "confidence": "estimated"
+          }
+        ]
+      }
+    ],
+    "notes": [
+      "Created from youtube metadata description."
+    ],
+    "tags": [
+      "youtube",
+      "import"
+    ],
+    "confidence": {
+      "source": 0.95,
+      "ingredients": 0.72,
+      "steps": 0.68,
+      "overall": 0.7
+    },
+    "warnings": [
+      "Draft uses YouTube Data API metadata only. No automatic transcript is attached.",
+      "Local backend mock refinement ran. This is contract testing only; no external AI provider was called."
+    ]
+  }
+}

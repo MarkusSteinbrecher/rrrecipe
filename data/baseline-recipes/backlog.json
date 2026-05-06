@@ -1,0 +1,1686 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-05-05T00:00:00.000Z",
+  "coverageGoal": "Common household and restaurant-recognizable recipes across major cuisines, excluding highly individual chef signatures and obscure hyperlocal dishes.",
+  "channels": [
+    {
+      "id": "baseline-common-recipes",
+      "title": "Baseline Common Recipes",
+      "type": "baseline",
+      "status": "active",
+      "priority": 1,
+      "notes": "Primary queue for common recipe identities that can become stable baseline recipes and matching targets for imports.",
+      "addedAt": "2026-05-05T00:00:00.000Z",
+      "updatedAt": "2026-05-05T00:00:00.000Z"
+    }
+  ],
+  "statuses": {
+    "backlog": "Known common recipe identity, not drafted yet.",
+    "drafted": "Baseline recipe exists locally but needs review.",
+    "promoted": "Stable baseline recipe exists in src/data/baseline-catalog.ts.",
+    "deferred": "Too broad, duplicate, regional variant, or not common enough for the first coverage pass."
+  },
+  "items": [
+    {
+      "id": "baseline-focaccia",
+      "channelId": "baseline-common-recipes",
+      "title": "Focaccia",
+      "category": "baking",
+      "subcategory": "bread",
+      "cuisine": "italian",
+      "status": "promoted",
+      "priority": 1,
+      "baselineRecipeId": "recipe-baseline-focaccia",
+      "tags": [
+        "bread",
+        "italian",
+        "vegetarian"
+      ],
+      "notes": "Seed baseline exists."
+    },
+    {
+      "id": "baseline-spaghetti-carbonara",
+      "channelId": "baseline-common-recipes",
+      "title": "Spaghetti Carbonara",
+      "category": "cooking",
+      "subcategory": "pasta",
+      "cuisine": "italian",
+      "status": "promoted",
+      "priority": 1,
+      "baselineRecipeId": "recipe-baseline-spaghetti-carbonara",
+      "tags": [
+        "pasta",
+        "quick"
+      ],
+      "notes": "Seed baseline exists."
+    },
+    {
+      "id": "baseline-lasagne",
+      "channelId": "baseline-common-recipes",
+      "title": "Lasagne",
+      "category": "cooking",
+      "subcategory": "pasta",
+      "cuisine": "italian",
+      "status": "promoted",
+      "priority": 1,
+      "baselineRecipeId": "recipe-baseline-lasagne",
+      "tags": [
+        "pasta",
+        "baked"
+      ],
+      "notes": "Seed baseline exists.",
+      "externalSources": [
+        {
+          "provider": "themealdb",
+          "id": "52844",
+          "name": "Lasagne",
+          "url": "https://www.themealdb.com/meal/52844",
+          "apiUrl": "https://www.themealdb.com/api/json/v1/1/lookup.php?i=52844",
+          "sourceUrl": "https://www.bbcgoodfood.com/recipes/classic-lasagne"
+        }
+      ]
+    },
+    {
+      "id": "baseline-margherita-pizza",
+      "channelId": "baseline-common-recipes",
+      "title": "Margherita Pizza",
+      "category": "baking",
+      "subcategory": "pizza",
+      "cuisine": "italian",
+      "status": "promoted",
+      "priority": 1,
+      "baselineRecipeId": "recipe-baseline-margherita-pizza",
+      "tags": [
+        "pizza",
+        "vegetarian"
+      ],
+      "notes": "Seed baseline exists."
+    },
+    {
+      "id": "baseline-banana-bread",
+      "channelId": "baseline-common-recipes",
+      "title": "Banana Bread",
+      "category": "baking",
+      "subcategory": "quick bread",
+      "cuisine": "american",
+      "status": "promoted",
+      "priority": 2,
+      "baselineRecipeId": "recipe-baseline-banana-bread",
+      "tags": [
+        "breakfast",
+        "dessert"
+      ],
+      "notes": "Seed baseline exists."
+    },
+    {
+      "id": "baseline-chocolate-chip-cookies",
+      "channelId": "baseline-common-recipes",
+      "title": "Chocolate Chip Cookies",
+      "category": "baking",
+      "subcategory": "cookies",
+      "cuisine": "american",
+      "status": "promoted",
+      "priority": 2,
+      "baselineRecipeId": "recipe-baseline-chocolate-chip-cookies",
+      "tags": [
+        "dessert",
+        "cookies"
+      ],
+      "notes": "Seed baseline exists."
+    },
+    {
+      "id": "baseline-lentil-soup",
+      "channelId": "baseline-common-recipes",
+      "title": "Lentil Soup",
+      "category": "cooking",
+      "subcategory": "soup",
+      "cuisine": "mediterranean",
+      "status": "promoted",
+      "priority": 2,
+      "baselineRecipeId": "recipe-baseline-lentil-soup",
+      "tags": [
+        "soup",
+        "vegetarian",
+        "vegan"
+      ],
+      "notes": "Seed baseline exists."
+    },
+    {
+      "id": "baseline-chicken-noodle-soup",
+      "channelId": "baseline-common-recipes",
+      "title": "Chicken Noodle Soup",
+      "category": "cooking",
+      "subcategory": "soup",
+      "cuisine": "american",
+      "status": "promoted",
+      "priority": 2,
+      "baselineRecipeId": "recipe-baseline-chicken-noodle-soup",
+      "tags": [
+        "soup",
+        "comfort"
+      ],
+      "notes": "Seed baseline exists."
+    },
+    {
+      "id": "baseline-chicken-tikka-masala",
+      "channelId": "baseline-common-recipes",
+      "title": "Chicken Tikka Masala",
+      "category": "cooking",
+      "subcategory": "curry",
+      "cuisine": "indian-british",
+      "status": "promoted",
+      "priority": 2,
+      "baselineRecipeId": "recipe-baseline-chicken-tikka-masala",
+      "tags": [
+        "curry",
+        "dinner"
+      ],
+      "notes": "Seed baseline exists."
+    },
+    {
+      "id": "baseline-vegetable-curry",
+      "channelId": "baseline-common-recipes",
+      "title": "Vegetable Curry",
+      "category": "cooking",
+      "subcategory": "curry",
+      "cuisine": "global",
+      "status": "promoted",
+      "priority": 2,
+      "baselineRecipeId": "recipe-baseline-vegetable-curry",
+      "tags": [
+        "curry",
+        "vegetarian",
+        "vegan"
+      ],
+      "notes": "Seed baseline exists."
+    },
+    {
+      "id": "baseline-beef-chili",
+      "channelId": "baseline-common-recipes",
+      "title": "Beef Chili",
+      "category": "cooking",
+      "subcategory": "stew",
+      "cuisine": "american",
+      "status": "promoted",
+      "priority": 2,
+      "baselineRecipeId": "recipe-baseline-beef-chili",
+      "tags": [
+        "stew",
+        "batch"
+      ],
+      "notes": "Seed baseline exists."
+    },
+    {
+      "id": "baseline-ratatouille",
+      "channelId": "baseline-common-recipes",
+      "title": "Ratatouille",
+      "category": "cooking",
+      "subcategory": "vegetable",
+      "cuisine": "french",
+      "status": "promoted",
+      "priority": 2,
+      "baselineRecipeId": "recipe-baseline-ratatouille",
+      "tags": [
+        "vegetarian",
+        "vegan"
+      ],
+      "notes": "Seed baseline exists.",
+      "externalSources": [
+        {
+          "provider": "themealdb",
+          "id": "52908",
+          "name": "Ratatouille",
+          "url": "https://www.themealdb.com/meal/52908",
+          "apiUrl": "https://www.themealdb.com/api/json/v1/1/lookup.php?i=52908",
+          "sourceUrl": "https://www.bbcgoodfood.com/recipes/2903/ratatouille"
+        }
+      ]
+    },
+    {
+      "id": "baseline-tomato-risotto",
+      "channelId": "baseline-common-recipes",
+      "title": "Tomato Risotto",
+      "category": "cooking",
+      "subcategory": "rice",
+      "cuisine": "italian",
+      "status": "promoted",
+      "priority": 2,
+      "baselineRecipeId": "recipe-baseline-tomato-risotto",
+      "tags": [
+        "rice",
+        "vegetarian"
+      ],
+      "notes": "Seed baseline exists."
+    },
+    {
+      "id": "baseline-pancakes",
+      "channelId": "baseline-common-recipes",
+      "title": "Pancakes",
+      "category": "cooking",
+      "subcategory": "breakfast",
+      "cuisine": "american",
+      "status": "promoted",
+      "priority": 2,
+      "baselineRecipeId": "recipe-baseline-pancakes",
+      "tags": [
+        "breakfast",
+        "quick"
+      ],
+      "notes": "Seed baseline exists.",
+      "externalSources": [
+        {
+          "provider": "themealdb",
+          "id": "52854",
+          "name": "Pancakes",
+          "url": "https://www.themealdb.com/meal/52854",
+          "apiUrl": "https://www.themealdb.com/api/json/v1/1/lookup.php?i=52854",
+          "sourceUrl": "https://www.bbcgoodfood.com/recipes/2907669/easy-pancakes"
+        }
+      ]
+    },
+    {
+      "id": "baseline-hummus",
+      "channelId": "baseline-common-recipes",
+      "title": "Hummus",
+      "category": "cooking",
+      "subcategory": "mezze",
+      "cuisine": "middle-eastern",
+      "status": "promoted",
+      "priority": 2,
+      "baselineRecipeId": "recipe-baseline-hummus",
+      "tags": [
+        "mezze",
+        "quick",
+        "vegan"
+      ],
+      "notes": "Seed baseline exists.",
+      "externalSources": [
+        {
+          "provider": "themealdb",
+          "id": "53269",
+          "name": "Hummus",
+          "url": "https://www.themealdb.com/meal/53269",
+          "apiUrl": "https://www.themealdb.com/api/json/v1/1/lookup.php?i=53269",
+          "sourceUrl": "https://www.bbcgoodfood.com/recipes/easy-hummus-recipe"
+        }
+      ]
+    },
+    {
+      "id": "baseline-cacio-e-pepe",
+      "channelId": "baseline-common-recipes",
+      "title": "Cacio e Pepe",
+      "category": "cooking",
+      "subcategory": "pasta",
+      "cuisine": "italian",
+      "status": "backlog",
+      "priority": 1,
+      "tags": [
+        "pasta",
+        "quick",
+        "vegetarian"
+      ],
+      "notes": "Core Roman pasta."
+    },
+    {
+      "id": "baseline-amatriciana",
+      "channelId": "baseline-common-recipes",
+      "title": "Pasta all'Amatriciana",
+      "category": "cooking",
+      "subcategory": "pasta",
+      "cuisine": "italian",
+      "status": "backlog",
+      "priority": 1,
+      "tags": [
+        "pasta",
+        "tomato"
+      ],
+      "notes": "Core Roman pasta."
+    },
+    {
+      "id": "baseline-bolognese",
+      "channelId": "baseline-common-recipes",
+      "title": "Ragu alla Bolognese",
+      "category": "cooking",
+      "subcategory": "pasta sauce",
+      "cuisine": "italian",
+      "status": "backlog",
+      "priority": 1,
+      "tags": [
+        "pasta",
+        "sauce",
+        "batch"
+      ],
+      "notes": "High-value matching target; many videos use simplified variants."
+    },
+    {
+      "id": "baseline-pesto-genovese",
+      "channelId": "baseline-common-recipes",
+      "title": "Pesto Genovese",
+      "category": "cooking",
+      "subcategory": "sauce",
+      "cuisine": "italian",
+      "status": "backlog",
+      "priority": 1,
+      "tags": [
+        "sauce",
+        "pasta",
+        "vegetarian"
+      ],
+      "notes": "Common sauce identity."
+    },
+    {
+      "id": "baseline-gnocchi",
+      "channelId": "baseline-common-recipes",
+      "title": "Potato Gnocchi",
+      "category": "cooking",
+      "subcategory": "pasta",
+      "cuisine": "italian",
+      "status": "backlog",
+      "priority": 2,
+      "tags": [
+        "pasta",
+        "vegetarian"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "baseline-risotto-milanese",
+      "channelId": "baseline-common-recipes",
+      "title": "Risotto alla Milanese",
+      "category": "cooking",
+      "subcategory": "rice",
+      "cuisine": "italian",
+      "status": "backlog",
+      "priority": 2,
+      "tags": [
+        "rice",
+        "vegetarian"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "baseline-minestrone",
+      "channelId": "baseline-common-recipes",
+      "title": "Minestrone",
+      "category": "cooking",
+      "subcategory": "soup",
+      "cuisine": "italian",
+      "status": "backlog",
+      "priority": 2,
+      "tags": [
+        "soup",
+        "vegetarian"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "baseline-baguette",
+      "channelId": "baseline-common-recipes",
+      "title": "Baguette",
+      "category": "baking",
+      "subcategory": "bread",
+      "cuisine": "french",
+      "status": "backlog",
+      "priority": 1,
+      "tags": [
+        "bread"
+      ],
+      "notes": "Important for bread-video matching."
+    },
+    {
+      "id": "baseline-sourdough-bread",
+      "channelId": "baseline-common-recipes",
+      "title": "Sourdough Bread",
+      "category": "baking",
+      "subcategory": "bread",
+      "cuisine": "global",
+      "status": "backlog",
+      "priority": 1,
+      "tags": [
+        "bread"
+      ],
+      "notes": "Needs variants later: country loaf, sandwich loaf."
+    },
+    {
+      "id": "baseline-white-sandwich-bread",
+      "channelId": "baseline-common-recipes",
+      "title": "White Sandwich Bread",
+      "category": "baking",
+      "subcategory": "bread",
+      "cuisine": "global",
+      "status": "backlog",
+      "priority": 1,
+      "tags": [
+        "bread"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "baseline-naan",
+      "channelId": "baseline-common-recipes",
+      "title": "Naan",
+      "category": "baking",
+      "subcategory": "flatbread",
+      "cuisine": "indian",
+      "status": "backlog",
+      "priority": 1,
+      "tags": [
+        "bread",
+        "flatbread"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "baseline-pita",
+      "channelId": "baseline-common-recipes",
+      "title": "Pita Bread",
+      "category": "baking",
+      "subcategory": "flatbread",
+      "cuisine": "middle-eastern",
+      "status": "backlog",
+      "priority": 2,
+      "tags": [
+        "bread",
+        "flatbread"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "baseline-tortillas-flour",
+      "channelId": "baseline-common-recipes",
+      "title": "Flour Tortillas",
+      "category": "baking",
+      "subcategory": "flatbread",
+      "cuisine": "mexican",
+      "status": "backlog",
+      "priority": 2,
+      "tags": [
+        "bread",
+        "flatbread"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "baseline-cornbread",
+      "channelId": "baseline-common-recipes",
+      "title": "Cornbread",
+      "category": "baking",
+      "subcategory": "quick bread",
+      "cuisine": "american",
+      "status": "backlog",
+      "priority": 2,
+      "tags": [
+        "bread"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "baseline-brioche",
+      "channelId": "baseline-common-recipes",
+      "title": "Brioche",
+      "category": "baking",
+      "subcategory": "enriched bread",
+      "cuisine": "french",
+      "status": "backlog",
+      "priority": 3,
+      "tags": [
+        "bread",
+        "enriched"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "baseline-croissants",
+      "channelId": "baseline-common-recipes",
+      "title": "Croissants",
+      "category": "baking",
+      "subcategory": "laminated pastry",
+      "cuisine": "french",
+      "status": "backlog",
+      "priority": 3,
+      "tags": [
+        "pastry"
+      ],
+      "notes": "Common but technique-heavy."
+    },
+    {
+      "id": "baseline-french-omelette",
+      "channelId": "baseline-common-recipes",
+      "title": "French Omelette",
+      "category": "cooking",
+      "subcategory": "eggs",
+      "cuisine": "french",
+      "status": "backlog",
+      "priority": 1,
+      "tags": [
+        "eggs",
+        "breakfast",
+        "quick"
+      ],
+      "notes": "",
+      "externalSources": [
+        {
+          "provider": "themealdb",
+          "id": "52915",
+          "name": "French Omelette",
+          "url": "https://www.themealdb.com/meal/52915",
+          "apiUrl": "https://www.themealdb.com/api/json/v1/1/lookup.php?i=52915",
+          "sourceUrl": "https://www.bbcgoodfood.com/recipes/1669/ultimate-french-omelette"
+        }
+      ]
+    },
+    {
+      "id": "baseline-scrambled-eggs",
+      "channelId": "baseline-common-recipes",
+      "title": "Scrambled Eggs",
+      "category": "cooking",
+      "subcategory": "eggs",
+      "cuisine": "global",
+      "status": "backlog",
+      "priority": 1,
+      "tags": [
+        "eggs",
+        "breakfast",
+        "quick"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "baseline-french-toast",
+      "channelId": "baseline-common-recipes",
+      "title": "French Toast",
+      "category": "cooking",
+      "subcategory": "breakfast",
+      "cuisine": "global",
+      "status": "backlog",
+      "priority": 2,
+      "tags": [
+        "breakfast"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "baseline-waffles",
+      "channelId": "baseline-common-recipes",
+      "title": "Waffles",
+      "category": "cooking",
+      "subcategory": "breakfast",
+      "cuisine": "global",
+      "status": "backlog",
+      "priority": 2,
+      "tags": [
+        "breakfast"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "baseline-granola",
+      "channelId": "baseline-common-recipes",
+      "title": "Granola",
+      "category": "baking",
+      "subcategory": "breakfast",
+      "cuisine": "global",
+      "status": "backlog",
+      "priority": 3,
+      "tags": [
+        "breakfast"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "baseline-roast-chicken",
+      "channelId": "baseline-common-recipes",
+      "title": "Roast Chicken",
+      "category": "cooking",
+      "subcategory": "poultry",
+      "cuisine": "global",
+      "status": "backlog",
+      "priority": 1,
+      "tags": [
+        "chicken",
+        "dinner"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "baseline-fried-chicken",
+      "channelId": "baseline-common-recipes",
+      "title": "Fried Chicken",
+      "category": "cooking",
+      "subcategory": "poultry",
+      "cuisine": "american",
+      "status": "backlog",
+      "priority": 1,
+      "tags": [
+        "chicken"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "baseline-chicken-parmesan",
+      "channelId": "baseline-common-recipes",
+      "title": "Chicken Parmesan",
+      "category": "cooking",
+      "subcategory": "poultry",
+      "cuisine": "italian-american",
+      "status": "backlog",
+      "priority": 2,
+      "tags": [
+        "chicken",
+        "baked"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "baseline-chicken-piccata",
+      "channelId": "baseline-common-recipes",
+      "title": "Chicken Piccata",
+      "category": "cooking",
+      "subcategory": "poultry",
+      "cuisine": "italian-american",
+      "status": "backlog",
+      "priority": 2,
+      "tags": [
+        "chicken",
+        "quick"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "baseline-butter-chicken",
+      "channelId": "baseline-common-recipes",
+      "title": "Butter Chicken",
+      "category": "cooking",
+      "subcategory": "curry",
+      "cuisine": "indian",
+      "status": "backlog",
+      "priority": 1,
+      "tags": [
+        "chicken",
+        "curry"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "baseline-chicken-adobo",
+      "channelId": "baseline-common-recipes",
+      "title": "Chicken Adobo",
+      "category": "cooking",
+      "subcategory": "braise",
+      "cuisine": "filipino",
+      "status": "backlog",
+      "priority": 2,
+      "tags": [
+        "chicken",
+        "braise"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "baseline-teriyaki-chicken",
+      "channelId": "baseline-common-recipes",
+      "title": "Teriyaki Chicken",
+      "category": "cooking",
+      "subcategory": "stir fry",
+      "cuisine": "japanese",
+      "status": "backlog",
+      "priority": 2,
+      "tags": [
+        "chicken",
+        "quick"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "baseline-beef-stew",
+      "channelId": "baseline-common-recipes",
+      "title": "Beef Stew",
+      "category": "cooking",
+      "subcategory": "stew",
+      "cuisine": "global",
+      "status": "backlog",
+      "priority": 1,
+      "tags": [
+        "beef",
+        "stew"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "baseline-pot-roast",
+      "channelId": "baseline-common-recipes",
+      "title": "Pot Roast",
+      "category": "cooking",
+      "subcategory": "braise",
+      "cuisine": "american",
+      "status": "backlog",
+      "priority": 2,
+      "tags": [
+        "beef",
+        "braise"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "baseline-burgers",
+      "channelId": "baseline-common-recipes",
+      "title": "Burgers",
+      "category": "cooking",
+      "subcategory": "sandwich",
+      "cuisine": "american",
+      "status": "backlog",
+      "priority": 1,
+      "tags": [
+        "beef",
+        "quick"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "baseline-meatballs",
+      "channelId": "baseline-common-recipes",
+      "title": "Meatballs",
+      "category": "cooking",
+      "subcategory": "ground meat",
+      "cuisine": "global",
+      "status": "backlog",
+      "priority": 1,
+      "tags": [
+        "beef",
+        "pork"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "baseline-shepherds-pie",
+      "channelId": "baseline-common-recipes",
+      "title": "Shepherd's Pie",
+      "category": "cooking",
+      "subcategory": "casserole",
+      "cuisine": "british",
+      "status": "backlog",
+      "priority": 2,
+      "tags": [
+        "lamb",
+        "beef",
+        "baked"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "baseline-boeuf-bourguignon",
+      "channelId": "baseline-common-recipes",
+      "title": "Boeuf Bourguignon",
+      "category": "cooking",
+      "subcategory": "braise",
+      "cuisine": "french",
+      "status": "backlog",
+      "priority": 3,
+      "tags": [
+        "beef",
+        "braise"
+      ],
+      "notes": "Common classic but longer technique."
+    },
+    {
+      "id": "baseline-salmon-pan-seared",
+      "channelId": "baseline-common-recipes",
+      "title": "Pan-Seared Salmon",
+      "category": "cooking",
+      "subcategory": "seafood",
+      "cuisine": "global",
+      "status": "backlog",
+      "priority": 1,
+      "tags": [
+        "fish",
+        "quick"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "baseline-fish-tacos",
+      "channelId": "baseline-common-recipes",
+      "title": "Fish Tacos",
+      "category": "cooking",
+      "subcategory": "tacos",
+      "cuisine": "mexican-american",
+      "status": "backlog",
+      "priority": 2,
+      "tags": [
+        "fish",
+        "tacos"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "baseline-shrimp-scampi",
+      "channelId": "baseline-common-recipes",
+      "title": "Shrimp Scampi",
+      "category": "cooking",
+      "subcategory": "seafood",
+      "cuisine": "italian-american",
+      "status": "backlog",
+      "priority": 2,
+      "tags": [
+        "seafood",
+        "quick",
+        "pasta"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "baseline-fish-and-chips",
+      "channelId": "baseline-common-recipes",
+      "title": "Fish and Chips",
+      "category": "cooking",
+      "subcategory": "fried",
+      "cuisine": "british",
+      "status": "backlog",
+      "priority": 3,
+      "tags": [
+        "fish",
+        "fried"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "baseline-pad-thai",
+      "channelId": "baseline-common-recipes",
+      "title": "Pad Thai",
+      "category": "cooking",
+      "subcategory": "noodles",
+      "cuisine": "thai",
+      "status": "backlog",
+      "priority": 1,
+      "tags": [
+        "noodles",
+        "stir fry"
+      ],
+      "notes": "",
+      "externalSources": [
+        {
+          "provider": "themealdb",
+          "id": "53191",
+          "name": "Pad Thai",
+          "url": "https://www.themealdb.com/meal/53191",
+          "apiUrl": "https://www.themealdb.com/api/json/v1/1/lookup.php?i=53191",
+          "sourceUrl": "https://www.bbcgoodfood.com/recipes/easy-pad-thai"
+        }
+      ]
+    },
+    {
+      "id": "baseline-thai-green-curry",
+      "channelId": "baseline-common-recipes",
+      "title": "Thai Green Curry",
+      "category": "cooking",
+      "subcategory": "curry",
+      "cuisine": "thai",
+      "status": "backlog",
+      "priority": 1,
+      "tags": [
+        "curry"
+      ],
+      "notes": "",
+      "externalSources": [
+        {
+          "provider": "themealdb",
+          "id": "52814",
+          "name": "Thai Green Curry",
+          "url": "https://www.themealdb.com/meal/52814",
+          "apiUrl": "https://www.themealdb.com/api/json/v1/1/lookup.php?i=52814",
+          "sourceUrl": "http://www.bbcgoodfood.com/recipes/3235/thai-green-chicken-curry"
+        }
+      ]
+    },
+    {
+      "id": "baseline-fried-rice",
+      "channelId": "baseline-common-recipes",
+      "title": "Fried Rice",
+      "category": "cooking",
+      "subcategory": "rice",
+      "cuisine": "chinese",
+      "status": "backlog",
+      "priority": 1,
+      "tags": [
+        "rice",
+        "quick"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "baseline-chow-mein",
+      "channelId": "baseline-common-recipes",
+      "title": "Chow Mein",
+      "category": "cooking",
+      "subcategory": "noodles",
+      "cuisine": "chinese",
+      "status": "backlog",
+      "priority": 2,
+      "tags": [
+        "noodles",
+        "stir fry"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "baseline-kung-pao-chicken",
+      "channelId": "baseline-common-recipes",
+      "title": "Kung Pao Chicken",
+      "category": "cooking",
+      "subcategory": "stir fry",
+      "cuisine": "chinese",
+      "status": "backlog",
+      "priority": 2,
+      "tags": [
+        "chicken",
+        "stir fry"
+      ],
+      "notes": "",
+      "externalSources": [
+        {
+          "provider": "themealdb",
+          "id": "52945",
+          "name": "Kung Pao Chicken",
+          "url": "https://www.themealdb.com/meal/52945",
+          "apiUrl": "https://www.themealdb.com/api/json/v1/1/lookup.php?i=52945",
+          "sourceUrl": "http://allrecipes.co.uk/recipe/1773/kung-pao-chicken.aspx"
+        }
+      ]
+    },
+    {
+      "id": "baseline-general-tsos-chicken",
+      "channelId": "baseline-common-recipes",
+      "title": "General Tso's Chicken",
+      "category": "cooking",
+      "subcategory": "fried",
+      "cuisine": "chinese-american",
+      "status": "backlog",
+      "priority": 3,
+      "tags": [
+        "chicken"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "baseline-ramen",
+      "channelId": "baseline-common-recipes",
+      "title": "Ramen",
+      "category": "cooking",
+      "subcategory": "noodle soup",
+      "cuisine": "japanese",
+      "status": "backlog",
+      "priority": 2,
+      "tags": [
+        "noodles",
+        "soup"
+      ],
+      "notes": "Needs variant split later: shoyu, miso, tonkotsu."
+    },
+    {
+      "id": "baseline-miso-soup",
+      "channelId": "baseline-common-recipes",
+      "title": "Miso Soup",
+      "category": "cooking",
+      "subcategory": "soup",
+      "cuisine": "japanese",
+      "status": "backlog",
+      "priority": 2,
+      "tags": [
+        "soup",
+        "quick"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "baseline-sushi-rice",
+      "channelId": "baseline-common-recipes",
+      "title": "Sushi Rice",
+      "category": "cooking",
+      "subcategory": "rice",
+      "cuisine": "japanese",
+      "status": "backlog",
+      "priority": 3,
+      "tags": [
+        "rice"
+      ],
+      "notes": "Foundation recipe for sushi variants."
+    },
+    {
+      "id": "baseline-bibimbap",
+      "channelId": "baseline-common-recipes",
+      "title": "Bibimbap",
+      "category": "cooking",
+      "subcategory": "rice bowl",
+      "cuisine": "korean",
+      "status": "backlog",
+      "priority": 2,
+      "tags": [
+        "rice"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "baseline-kimchi-fried-rice",
+      "channelId": "baseline-common-recipes",
+      "title": "Kimchi Fried Rice",
+      "category": "cooking",
+      "subcategory": "rice",
+      "cuisine": "korean",
+      "status": "backlog",
+      "priority": 2,
+      "tags": [
+        "rice",
+        "quick"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "baseline-bulgogi",
+      "channelId": "baseline-common-recipes",
+      "title": "Bulgogi",
+      "category": "cooking",
+      "subcategory": "grilled meat",
+      "cuisine": "korean",
+      "status": "backlog",
+      "priority": 2,
+      "tags": [
+        "beef"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "baseline-tacos-al-pastor",
+      "channelId": "baseline-common-recipes",
+      "title": "Tacos al Pastor",
+      "category": "cooking",
+      "subcategory": "tacos",
+      "cuisine": "mexican",
+      "status": "backlog",
+      "priority": 2,
+      "tags": [
+        "tacos",
+        "pork"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "baseline-carnitas",
+      "channelId": "baseline-common-recipes",
+      "title": "Carnitas",
+      "category": "cooking",
+      "subcategory": "pork",
+      "cuisine": "mexican",
+      "status": "backlog",
+      "priority": 1,
+      "tags": [
+        "pork",
+        "tacos"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "baseline-guacamole",
+      "channelId": "baseline-common-recipes",
+      "title": "Guacamole",
+      "category": "cooking",
+      "subcategory": "dip",
+      "cuisine": "mexican",
+      "status": "backlog",
+      "priority": 1,
+      "tags": [
+        "dip",
+        "quick",
+        "vegan"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "baseline-pico-de-gallo",
+      "channelId": "baseline-common-recipes",
+      "title": "Pico de Gallo",
+      "category": "cooking",
+      "subcategory": "salsa",
+      "cuisine": "mexican",
+      "status": "backlog",
+      "priority": 2,
+      "tags": [
+        "salsa",
+        "quick",
+        "vegan"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "baseline-enchiladas",
+      "channelId": "baseline-common-recipes",
+      "title": "Enchiladas",
+      "category": "cooking",
+      "subcategory": "casserole",
+      "cuisine": "mexican",
+      "status": "backlog",
+      "priority": 2,
+      "tags": [
+        "baked"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "baseline-quesadillas",
+      "channelId": "baseline-common-recipes",
+      "title": "Quesadillas",
+      "category": "cooking",
+      "subcategory": "quick meal",
+      "cuisine": "mexican",
+      "status": "backlog",
+      "priority": 2,
+      "tags": [
+        "quick",
+        "vegetarian"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "baseline-falafel",
+      "channelId": "baseline-common-recipes",
+      "title": "Falafel",
+      "category": "cooking",
+      "subcategory": "mezze",
+      "cuisine": "middle-eastern",
+      "status": "backlog",
+      "priority": 1,
+      "tags": [
+        "vegan",
+        "mezze"
+      ],
+      "notes": "",
+      "externalSources": [
+        {
+          "provider": "themealdb",
+          "id": "53266",
+          "name": "Falafel",
+          "url": "https://www.themealdb.com/meal/53266",
+          "apiUrl": "https://www.themealdb.com/api/json/v1/1/lookup.php?i=53266",
+          "sourceUrl": "https://www.bbcgoodfood.com/recipes/spicy-falafels"
+        }
+      ]
+    },
+    {
+      "id": "baseline-shakshuka",
+      "channelId": "baseline-common-recipes",
+      "title": "Shakshuka",
+      "category": "cooking",
+      "subcategory": "eggs",
+      "cuisine": "north-african",
+      "status": "backlog",
+      "priority": 1,
+      "tags": [
+        "eggs",
+        "vegetarian"
+      ],
+      "notes": "App snapshot has a YouTube example; still needs proper baseline record.",
+      "externalSources": [
+        {
+          "provider": "themealdb",
+          "id": "52963",
+          "name": "Shakshuka",
+          "url": "https://www.themealdb.com/meal/52963",
+          "apiUrl": "https://www.themealdb.com/api/json/v1/1/lookup.php?i=52963",
+          "sourceUrl": "https://www.bbcgoodfood.com/recipes/7573/spicy-tomato-baked-eggs"
+        }
+      ]
+    },
+    {
+      "id": "baseline-tabbouleh",
+      "channelId": "baseline-common-recipes",
+      "title": "Tabbouleh",
+      "category": "cooking",
+      "subcategory": "salad",
+      "cuisine": "levantine",
+      "status": "backlog",
+      "priority": 2,
+      "tags": [
+        "salad",
+        "vegan"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "baseline-baba-ghanoush",
+      "channelId": "baseline-common-recipes",
+      "title": "Baba Ghanoush",
+      "category": "cooking",
+      "subcategory": "mezze",
+      "cuisine": "middle-eastern",
+      "status": "backlog",
+      "priority": 2,
+      "tags": [
+        "dip",
+        "vegan"
+      ],
+      "notes": "",
+      "externalSources": [
+        {
+          "provider": "themealdb",
+          "id": "53094",
+          "name": "Baba Ghanoush",
+          "url": "https://www.themealdb.com/meal/53094",
+          "apiUrl": "https://www.themealdb.com/api/json/v1/1/lookup.php?i=53094",
+          "sourceUrl": "https://www.allrecipes.com/recipe/244553/chef-johns-baba-ghanoush/"
+        }
+      ]
+    },
+    {
+      "id": "baseline-chicken-shawarma",
+      "channelId": "baseline-common-recipes",
+      "title": "Chicken Shawarma",
+      "category": "cooking",
+      "subcategory": "street food",
+      "cuisine": "middle-eastern",
+      "status": "backlog",
+      "priority": 2,
+      "tags": [
+        "chicken"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "baseline-caesar-salad",
+      "channelId": "baseline-common-recipes",
+      "title": "Caesar Salad",
+      "category": "cooking",
+      "subcategory": "salad",
+      "cuisine": "mexican-american",
+      "status": "backlog",
+      "priority": 1,
+      "tags": [
+        "salad"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "baseline-greek-salad",
+      "channelId": "baseline-common-recipes",
+      "title": "Greek Salad",
+      "category": "cooking",
+      "subcategory": "salad",
+      "cuisine": "greek",
+      "status": "backlog",
+      "priority": 2,
+      "tags": [
+        "salad",
+        "vegetarian"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "baseline-nicoise-salad",
+      "channelId": "baseline-common-recipes",
+      "title": "Nicoise Salad",
+      "category": "cooking",
+      "subcategory": "salad",
+      "cuisine": "french",
+      "status": "backlog",
+      "priority": 3,
+      "tags": [
+        "salad"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "baseline-coleslaw",
+      "channelId": "baseline-common-recipes",
+      "title": "Coleslaw",
+      "category": "cooking",
+      "subcategory": "salad",
+      "cuisine": "american",
+      "status": "backlog",
+      "priority": 2,
+      "tags": [
+        "salad"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "baseline-potato-salad",
+      "channelId": "baseline-common-recipes",
+      "title": "Potato Salad",
+      "category": "cooking",
+      "subcategory": "salad",
+      "cuisine": "global",
+      "status": "backlog",
+      "priority": 2,
+      "tags": [
+        "salad"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "baseline-tomato-soup",
+      "channelId": "baseline-common-recipes",
+      "title": "Tomato Soup",
+      "category": "cooking",
+      "subcategory": "soup",
+      "cuisine": "global",
+      "status": "backlog",
+      "priority": 1,
+      "tags": [
+        "soup",
+        "vegetarian"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "baseline-french-onion-soup",
+      "channelId": "baseline-common-recipes",
+      "title": "French Onion Soup",
+      "category": "cooking",
+      "subcategory": "soup",
+      "cuisine": "french",
+      "status": "backlog",
+      "priority": 2,
+      "tags": [
+        "soup"
+      ],
+      "notes": "",
+      "externalSources": [
+        {
+          "provider": "themealdb",
+          "id": "52903",
+          "name": "French Onion Soup",
+          "url": "https://www.themealdb.com/meal/52903",
+          "apiUrl": "https://www.themealdb.com/api/json/v1/1/lookup.php?i=52903",
+          "sourceUrl": "https://www.bbcgoodfood.com/recipes/3020694/french-onion-soup"
+        }
+      ]
+    },
+    {
+      "id": "baseline-butternut-squash-soup",
+      "channelId": "baseline-common-recipes",
+      "title": "Butternut Squash Soup",
+      "category": "cooking",
+      "subcategory": "soup",
+      "cuisine": "global",
+      "status": "backlog",
+      "priority": 2,
+      "tags": [
+        "soup",
+        "vegetarian"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "baseline-clam-chowder",
+      "channelId": "baseline-common-recipes",
+      "title": "Clam Chowder",
+      "category": "cooking",
+      "subcategory": "soup",
+      "cuisine": "american",
+      "status": "backlog",
+      "priority": 3,
+      "tags": [
+        "soup",
+        "seafood"
+      ],
+      "notes": "",
+      "externalSources": [
+        {
+          "provider": "themealdb",
+          "id": "52840",
+          "name": "Clam chowder",
+          "url": "https://www.themealdb.com/meal/52840",
+          "apiUrl": "https://www.themealdb.com/api/json/v1/1/lookup.php?i=52840",
+          "sourceUrl": "https://www.bbcgoodfood.com/recipes/clam-chowder"
+        }
+      ]
+    },
+    {
+      "id": "baseline-gazpacho",
+      "channelId": "baseline-common-recipes",
+      "title": "Gazpacho",
+      "category": "cooking",
+      "subcategory": "cold soup",
+      "cuisine": "spanish",
+      "status": "backlog",
+      "priority": 3,
+      "tags": [
+        "soup",
+        "vegan"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "baseline-mashed-potatoes",
+      "channelId": "baseline-common-recipes",
+      "title": "Mashed Potatoes",
+      "category": "cooking",
+      "subcategory": "side",
+      "cuisine": "global",
+      "status": "backlog",
+      "priority": 1,
+      "tags": [
+        "side",
+        "vegetarian"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "baseline-roasted-potatoes",
+      "channelId": "baseline-common-recipes",
+      "title": "Roasted Potatoes",
+      "category": "cooking",
+      "subcategory": "side",
+      "cuisine": "global",
+      "status": "backlog",
+      "priority": 1,
+      "tags": [
+        "side",
+        "vegan"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "baseline-macaroni-and-cheese",
+      "channelId": "baseline-common-recipes",
+      "title": "Macaroni and Cheese",
+      "category": "cooking",
+      "subcategory": "pasta",
+      "cuisine": "american",
+      "status": "backlog",
+      "priority": 1,
+      "tags": [
+        "pasta",
+        "baked",
+        "vegetarian"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "baseline-green-bean-casserole",
+      "channelId": "baseline-common-recipes",
+      "title": "Green Bean Casserole",
+      "category": "cooking",
+      "subcategory": "casserole",
+      "cuisine": "american",
+      "status": "backlog",
+      "priority": 3,
+      "tags": [
+        "side",
+        "baked"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "baseline-gratin-dauphinois",
+      "channelId": "baseline-common-recipes",
+      "title": "Gratin Dauphinois",
+      "category": "cooking",
+      "subcategory": "side",
+      "cuisine": "french",
+      "status": "backlog",
+      "priority": 3,
+      "tags": [
+        "potato",
+        "baked"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "baseline-apple-pie",
+      "channelId": "baseline-common-recipes",
+      "title": "Apple Pie",
+      "category": "baking",
+      "subcategory": "pie",
+      "cuisine": "american",
+      "status": "backlog",
+      "priority": 1,
+      "tags": [
+        "dessert",
+        "pie"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "baseline-brownies",
+      "channelId": "baseline-common-recipes",
+      "title": "Brownies",
+      "category": "baking",
+      "subcategory": "bars",
+      "cuisine": "american",
+      "status": "backlog",
+      "priority": 1,
+      "tags": [
+        "dessert",
+        "chocolate"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "baseline-cheesecake",
+      "channelId": "baseline-common-recipes",
+      "title": "Cheesecake",
+      "category": "baking",
+      "subcategory": "cake",
+      "cuisine": "american",
+      "status": "backlog",
+      "priority": 1,
+      "tags": [
+        "dessert",
+        "cake"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "baseline-carrot-cake",
+      "channelId": "baseline-common-recipes",
+      "title": "Carrot Cake",
+      "category": "baking",
+      "subcategory": "cake",
+      "cuisine": "american",
+      "status": "backlog",
+      "priority": 2,
+      "tags": [
+        "dessert",
+        "cake"
+      ],
+      "notes": "",
+      "externalSources": [
+        {
+          "provider": "themealdb",
+          "id": "52897",
+          "name": "Carrot Cake",
+          "url": "https://www.themealdb.com/meal/52897",
+          "apiUrl": "https://www.themealdb.com/api/json/v1/1/lookup.php?i=52897",
+          "sourceUrl": "https://www.bbc.co.uk/food/recipes/classic_carrot_cake_08513"
+        }
+      ]
+    },
+    {
+      "id": "baseline-pound-cake",
+      "channelId": "baseline-common-recipes",
+      "title": "Pound Cake",
+      "category": "baking",
+      "subcategory": "cake",
+      "cuisine": "british-american",
+      "status": "backlog",
+      "priority": 2,
+      "tags": [
+        "dessert",
+        "cake"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "baseline-vanilla-cupcakes",
+      "channelId": "baseline-common-recipes",
+      "title": "Vanilla Cupcakes",
+      "category": "baking",
+      "subcategory": "cake",
+      "cuisine": "american",
+      "status": "backlog",
+      "priority": 2,
+      "tags": [
+        "dessert",
+        "cake"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "baseline-cinnamon-rolls",
+      "channelId": "baseline-common-recipes",
+      "title": "Cinnamon Rolls",
+      "category": "baking",
+      "subcategory": "enriched bread",
+      "cuisine": "american",
+      "status": "backlog",
+      "priority": 2,
+      "tags": [
+        "dessert",
+        "breakfast"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "baseline-tiramisu",
+      "channelId": "baseline-common-recipes",
+      "title": "Tiramisu",
+      "category": "cooking",
+      "subcategory": "dessert",
+      "cuisine": "italian",
+      "status": "backlog",
+      "priority": 2,
+      "tags": [
+        "dessert"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "baseline-creme-brulee",
+      "channelId": "baseline-common-recipes",
+      "title": "Creme Brulee",
+      "category": "cooking",
+      "subcategory": "dessert",
+      "cuisine": "french",
+      "status": "backlog",
+      "priority": 3,
+      "tags": [
+        "dessert",
+        "custard"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "baseline-panna-cotta",
+      "channelId": "baseline-common-recipes",
+      "title": "Panna Cotta",
+      "category": "cooking",
+      "subcategory": "dessert",
+      "cuisine": "italian",
+      "status": "backlog",
+      "priority": 3,
+      "tags": [
+        "dessert"
+      ],
+      "notes": ""
+    }
+  ]
+}

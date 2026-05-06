@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-05-05T13:06:55.589Z",
+  "sourceTextKind": "youtube description",
+  "candidate": {
+    "id": "candidate-551acdb6-d138-4dee-b545-4fa938441921",
+    "source": {
+      "id": "source-31cdeb2d-0d94-4bd6-bf44-469c2de8e089",
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=94vnzj2J42M",
+      "title": "Here's how to nail tornado eggs at home using a stainless steel pan with @AustralianEggs #Masterchef",
+      "author": "Andy Cooks",
+      "retrievedAt": "2026-05-05T13:06:55.592Z",
+      "media": {
+        "provider": "youtube",
+        "videoId": "94vnzj2J42M",
+        "channelId": "UCqNkn5PNeSqbQTAR5RP-L-Q",
+        "channelTitle": "Andy Cooks",
+        "channelHandle": "@andy_cooks",
+        "durationSeconds": 44,
+        "thumbnailUrl": "https://i.ytimg.com/vi/94vnzj2J42M/hqdefault.jpg",
+        "canonicalUrl": "https://www.youtube.com/watch?v=94vnzj2J42M"
+      }
+    },
+    "title": "Here's how to nail tornado eggs at home using a stainless steel pan with @AustralianEggs #Masterchef",
+    "language": "en",
+    "description": "",
+    "yield": {
+      "raw": "",
+      "quantity": 0,
+      "unit": ""
+    },
+    "times": {
+      "prepMinutes": 0,
+      "cookMinutes": 0,
+      "totalMinutes": 1
+    },
+    "ingredients": [],
+    "steps": [],
+    "notes": [
+      "Created from youtube description."
+    ],
+    "tags": [
+      "youtube",
+      "import"
+    ],
+    "confidence": {
+      "source": 0.95,
+      "ingredients": 0.12,
+      "steps": 0.12,
+      "overall": 0.24
+    },
+    "warnings": [
+      "No transcript is saved yet. This draft uses the video description and may be incomplete.",
+      "Local backend mock refinement ran. This is contract testing only; no external AI provider was called."
+    ]
+  }
+}

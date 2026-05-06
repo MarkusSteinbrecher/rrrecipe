@@ -36,15 +36,32 @@ Fallback path:
 
 Use YouTube as a source, but be careful about transcript access.
 
+MVP implementation status:
+
+1. `src/importers/youtube.ts` parses normal YouTube, youtu.be, shorts, embed,
+   and raw video IDs.
+2. The browser creates a reviewable `RecipeCandidate`; it does not silently save
+   the import.
+3. The candidate preserves the YouTube `Source`, thumbnail URL, canonical URL,
+   and step-level `mediaAnchors`.
+4. The first known fixture is
+   `https://www.youtube.com/watch?v=SzECOCrCSWg`, used to validate the end-to-end
+   recipe save path.
+5. Unknown videos can still produce a low-confidence draft when the user pastes
+   the video description, transcript, or NotebookLM output under the URL.
+
 Reliable path:
 
 1. Parse the video ID from the URL.
 2. Fetch video title, channel, description, thumbnail, and duration through the
    official YouTube Data API.
-3. Look for recipe-like structure in the description first.
-4. If timestamps or chapters exist in the description, convert them into
+3. Extract likely recipe page links from the description and fetch/parse those
+   pages first. Prefer JSON-LD `Recipe` data when a page provides it.
+4. Look for recipe-like structure in the description if no linked recipe page is
+   available.
+5. If timestamps or chapters exist in the description, convert them into
    step/media anchor candidates.
-5. If the user provides a transcript, normalize it through the same LLM pipeline
+6. If transcript text is available, normalize it through the same LLM pipeline
    and estimate step timestamps where confidence is high enough.
 
 Allowed transcript paths:
@@ -63,8 +80,8 @@ Avoid as a product dependency:
   account and use case.
 
 YouTube imports should preserve the video as a source even when the recipe text
-comes from the description or a pasted transcript. The saved recipe can then
-link individual steps back to video timestamps.
+comes from a linked recipe page, the description, or a transcript. The saved
+recipe can then link individual steps back to video timestamps.
 
 ### Plain Text
 

@@ -1,0 +1,2809 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-05-05T13:17:26.723Z",
+  "source": "YouTube Data API videos.list",
+  "request": {
+    "part": [
+      "snippet",
+      "contentDetails",
+      "statistics",
+      "status",
+      "topicDetails",
+      "recordingDetails",
+      "player",
+      "localizations",
+      "liveStreamingDetails",
+      "paidProductPlacementDetails"
+    ],
+    "ids": [
+      "txlEirQiCsM",
+      "W4xnM5Q_eho",
+      "94vnzj2J42M",
+      "-__qVqib9Pw",
+      "0CLxmrvtWI8",
+      "Z3NUsSSut1w",
+      "zIsowpXIt3Q",
+      "OXaG2uLosYU",
+      "EguvuZXD9uE",
+      "BcgnokQDGtI"
+    ],
+    "omittedOwnerOnlyParts": [
+      "fileDetails",
+      "processingDetails",
+      "suggestions"
+    ]
+  },
+  "notes": [
+    "This is public API-key data only.",
+    "The official YouTube Data API does not return arbitrary public video transcripts.",
+    "Some requested parts only appear when applicable, for example liveStreamingDetails or localizations."
+  ],
+  "records": [
+    {
+      "selection": {
+        "channelTitle": "Andy Cooks",
+        "videoId": "txlEirQiCsM",
+        "backlogTitle": "Hot honey! 🌶️🍯",
+        "backlogDescriptionLength": 0,
+        "backlogViewCount": 1511348,
+        "backlogDurationSeconds": 29,
+        "url": "https://www.youtube.com/watch?v=txlEirQiCsM"
+      },
+      "api": {
+        "kind": "youtube#video",
+        "etag": "24KMbbAQbinT8tsu9vhzsx15ooU",
+        "id": "txlEirQiCsM",
+        "snippet": {
+          "publishedAt": "2026-05-01T10:45:00Z",
+          "channelId": "UCqNkn5PNeSqbQTAR5RP-L-Q",
+          "title": "Hot honey! 🌶️🍯",
+          "description": "",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/txlEirQiCsM/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/txlEirQiCsM/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/txlEirQiCsM/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/txlEirQiCsM/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/txlEirQiCsM/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            }
+          },
+          "channelTitle": "Andy Cooks",
+          "categoryId": "26",
+          "liveBroadcastContent": "none",
+          "defaultLanguage": "en",
+          "localized": {
+            "title": "Hot honey! 🌶️🍯",
+            "description": ""
+          },
+          "defaultAudioLanguage": "en-GB"
+        },
+        "contentDetails": {
+          "duration": "PT29S",
+          "dimension": "2d",
+          "definition": "hd",
+          "caption": "false",
+          "licensedContent": true,
+          "contentRating": {},
+          "projection": "rectangular"
+        },
+        "status": {
+          "uploadStatus": "processed",
+          "privacyStatus": "public",
+          "license": "youtube",
+          "embeddable": true,
+          "publicStatsViewable": true,
+          "madeForKids": false
+        },
+        "statistics": {
+          "viewCount": "1511348",
+          "likeCount": "24793",
+          "favoriteCount": "0",
+          "commentCount": "358"
+        },
+        "player": {
+          "embedHtml": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/txlEirQiCsM\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+        },
+        "topicDetails": {
+          "topicCategories": [
+            "https://en.wikipedia.org/wiki/Food",
+            "https://en.wikipedia.org/wiki/Lifestyle_(sociology)"
+          ]
+        },
+        "recordingDetails": {},
+        "localizations": {
+          "ja": {
+            "title": "ホットハニー！🌶️🍯",
+            "description": ""
+          },
+          "en": {
+            "title": "Hot honey! 🌶️🍯",
+            "description": ""
+          },
+          "ar": {
+            "title": "عسل حار! 🌶️🍯",
+            "description": ""
+          },
+          "ta": {
+            "title": "சூடான தேனே! 🌶️🍯",
+            "description": ""
+          },
+          "it": {
+            "title": "Miele piccante! 🌶️🍯",
+            "description": ""
+          },
+          "de-DE": {
+            "title": "Heißer Honig! 🌶️🍯",
+            "description": ""
+          },
+          "pt-BR": {
+            "title": "Mel picante! 🌶️🍯",
+            "description": ""
+          },
+          "nl-NL": {
+            "title": "Heerlijke honing! 🌶️🍯",
+            "description": ""
+          },
+          "ko": {
+            "title": "따끈따끈한 꿀! 🌶️🍯",
+            "description": ""
+          },
+          "pl": {
+            "title": "Gorący miód! 🌶️🍯",
+            "description": ""
+          },
+          "pa": {
+            "title": "ਗਰਮ ਸ਼ਹਿਦ! 🌶️🍯",
+            "description": ""
+          },
+          "es-US": {
+            "title": "¡Miel caliente! 🌶️🍯",
+            "description": ""
+          },
+          "id": {
+            "title": "Madu panas! 🌶️🍯",
+            "description": ""
+          },
+          "fr-FR": {
+            "title": "Miel chaud ! 🌶️🍯",
+            "description": ""
+          },
+          "hi": {
+            "title": "वाह! 🌶️🍯",
+            "description": ""
+          },
+          "uk": {
+            "title": "Гарячий мед! 🌶️🍯",
+            "description": ""
+          },
+          "bn": {
+            "title": "হট হানি! 🌶️🍯",
+            "description": ""
+          },
+          "iw": {
+            "title": "דבש חם! 🌶️🍯",
+            "description": ""
+          },
+          "ml": {
+            "title": "ചൂടുള്ള തേൻ! 🌶️🍯",
+            "description": ""
+          },
+          "ru": {
+            "title": "Горячий мед! 🌶️🍯",
+            "description": ""
+          }
+        },
+        "paidProductPlacementDetails": {
+          "hasPaidProductPlacement": false
+        }
+      },
+      "inventory": {
+        "presentParts": [
+          "snippet",
+          "contentDetails",
+          "statistics",
+          "status",
+          "topicDetails",
+          "recordingDetails",
+          "player",
+          "localizations",
+          "paidProductPlacementDetails"
+        ],
+        "fieldPaths": [
+          "contentDetails",
+          "contentDetails.caption",
+          "contentDetails.contentRating",
+          "contentDetails.definition",
+          "contentDetails.dimension",
+          "contentDetails.duration",
+          "contentDetails.licensedContent",
+          "contentDetails.projection",
+          "etag",
+          "id",
+          "kind",
+          "localizations",
+          "localizations.ar",
+          "localizations.ar.description",
+          "localizations.ar.title",
+          "localizations.bn",
+          "localizations.bn.description",
+          "localizations.bn.title",
+          "localizations.de-DE",
+          "localizations.de-DE.description",
+          "localizations.de-DE.title",
+          "localizations.en",
+          "localizations.en.description",
+          "localizations.en.title",
+          "localizations.es-US",
+          "localizations.es-US.description",
+          "localizations.es-US.title",
+          "localizations.fr-FR",
+          "localizations.fr-FR.description",
+          "localizations.fr-FR.title",
+          "localizations.hi",
+          "localizations.hi.description",
+          "localizations.hi.title",
+          "localizations.id",
+          "localizations.id.description",
+          "localizations.id.title",
+          "localizations.it",
+          "localizations.it.description",
+          "localizations.it.title",
+          "localizations.iw",
+          "localizations.iw.description",
+          "localizations.iw.title",
+          "localizations.ja",
+          "localizations.ja.description",
+          "localizations.ja.title",
+          "localizations.ko",
+          "localizations.ko.description",
+          "localizations.ko.title",
+          "localizations.ml",
+          "localizations.ml.description",
+          "localizations.ml.title",
+          "localizations.nl-NL",
+          "localizations.nl-NL.description",
+          "localizations.nl-NL.title",
+          "localizations.pa",
+          "localizations.pa.description",
+          "localizations.pa.title",
+          "localizations.pl",
+          "localizations.pl.description",
+          "localizations.pl.title",
+          "localizations.pt-BR",
+          "localizations.pt-BR.description",
+          "localizations.pt-BR.title",
+          "localizations.ru",
+          "localizations.ru.description",
+          "localizations.ru.title",
+          "localizations.ta",
+          "localizations.ta.description",
+          "localizations.ta.title",
+          "localizations.uk",
+          "localizations.uk.description",
+          "localizations.uk.title",
+          "paidProductPlacementDetails",
+          "paidProductPlacementDetails.hasPaidProductPlacement",
+          "player",
+          "player.embedHtml",
+          "recordingDetails",
+          "snippet",
+          "snippet.categoryId",
+          "snippet.channelId",
+          "snippet.channelTitle",
+          "snippet.defaultAudioLanguage",
+          "snippet.defaultLanguage",
+          "snippet.description",
+          "snippet.liveBroadcastContent",
+          "snippet.localized",
+          "snippet.localized.description",
+          "snippet.localized.title",
+          "snippet.publishedAt",
+          "snippet.thumbnails",
+          "snippet.thumbnails.default",
+          "snippet.thumbnails.default.height",
+          "snippet.thumbnails.default.url",
+          "snippet.thumbnails.default.width",
+          "snippet.thumbnails.high",
+          "snippet.thumbnails.high.height",
+          "snippet.thumbnails.high.url",
+          "snippet.thumbnails.high.width",
+          "snippet.thumbnails.maxres",
+          "snippet.thumbnails.maxres.height",
+          "snippet.thumbnails.maxres.url",
+          "snippet.thumbnails.maxres.width",
+          "snippet.thumbnails.medium",
+          "snippet.thumbnails.medium.height",
+          "snippet.thumbnails.medium.url",
+          "snippet.thumbnails.medium.width",
+          "snippet.thumbnails.standard",
+          "snippet.thumbnails.standard.height",
+          "snippet.thumbnails.standard.url",
+          "snippet.thumbnails.standard.width",
+          "snippet.title",
+          "statistics",
+          "statistics.commentCount",
+          "statistics.favoriteCount",
+          "statistics.likeCount",
+          "statistics.viewCount",
+          "status",
+          "status.embeddable",
+          "status.license",
+          "status.madeForKids",
+          "status.privacyStatus",
+          "status.publicStatsViewable",
+          "status.uploadStatus",
+          "topicDetails",
+          "topicDetails.topicCategories"
+        ]
+      },
+      "recipeSignals": {
+        "title": "Hot honey! 🌶️🍯",
+        "channelTitle": "Andy Cooks",
+        "descriptionLength": 0,
+        "descriptionHasIngredientsHeader": false,
+        "descriptionHasMethodHeader": false,
+        "tagCount": 0,
+        "durationIso8601": "PT29S",
+        "captionFlag": "false",
+        "viewCount": 1511348,
+        "likeCount": 24793,
+        "commentCount": 358
+      }
+    },
+    {
+      "selection": {
+        "channelTitle": "Andy Cooks",
+        "videoId": "W4xnM5Q_eho",
+        "backlogTitle": "Breakfast sandwiches with Andy Allan 🍳￼",
+        "backlogDescriptionLength": 0,
+        "backlogViewCount": 961340,
+        "backlogDurationSeconds": 108,
+        "url": "https://www.youtube.com/watch?v=W4xnM5Q_eho"
+      },
+      "api": {
+        "kind": "youtube#video",
+        "etag": "qs-FrMU4Q5nD44vu4cCoFad6JlU",
+        "id": "W4xnM5Q_eho",
+        "snippet": {
+          "publishedAt": "2026-05-03T10:30:00Z",
+          "channelId": "UCqNkn5PNeSqbQTAR5RP-L-Q",
+          "title": "Breakfast sandwiches with Andy Allan 🍳￼",
+          "description": "",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/W4xnM5Q_eho/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/W4xnM5Q_eho/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/W4xnM5Q_eho/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/W4xnM5Q_eho/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/W4xnM5Q_eho/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            }
+          },
+          "channelTitle": "Andy Cooks",
+          "categoryId": "26",
+          "liveBroadcastContent": "none",
+          "defaultLanguage": "en",
+          "localized": {
+            "title": "Breakfast sandwiches with Andy Allan 🍳￼",
+            "description": ""
+          },
+          "defaultAudioLanguage": "en-GB"
+        },
+        "contentDetails": {
+          "duration": "PT1M48S",
+          "dimension": "2d",
+          "definition": "hd",
+          "caption": "false",
+          "licensedContent": true,
+          "contentRating": {},
+          "projection": "rectangular"
+        },
+        "status": {
+          "uploadStatus": "processed",
+          "privacyStatus": "public",
+          "license": "youtube",
+          "embeddable": true,
+          "publicStatsViewable": true,
+          "madeForKids": false
+        },
+        "statistics": {
+          "viewCount": "963914",
+          "likeCount": "32580",
+          "favoriteCount": "0",
+          "commentCount": "246"
+        },
+        "player": {
+          "embedHtml": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/W4xnM5Q_eho\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+        },
+        "topicDetails": {
+          "topicCategories": [
+            "https://en.wikipedia.org/wiki/Food",
+            "https://en.wikipedia.org/wiki/Lifestyle_(sociology)"
+          ]
+        },
+        "recordingDetails": {},
+        "localizations": {
+          "ja": {
+            "title": "アンディ・アランと朝食サンドイッチ🍳",
+            "description": ""
+          },
+          "en": {
+            "title": "Breakfast sandwiches with Andy Allan 🍳￼",
+            "description": ""
+          },
+          "ar": {
+            "title": "سندويشات فطور مع آندي آلان 🍳",
+            "description": ""
+          },
+          "pt-BR": {
+            "title": "Sanduíches de café da manhã com Andy Allan 🍳",
+            "description": ""
+          },
+          "it": {
+            "title": "Panini per la colazione con Andy Allan 🍳￼",
+            "description": ""
+          },
+          "de-DE": {
+            "title": "Frühstückssandwiches mit Andy Allan 🍳￼",
+            "description": ""
+          },
+          "nl-NL": {
+            "title": "Ontbijtsandwiches met Andy Allan 🍳",
+            "description": ""
+          },
+          "ko": {
+            "title": "앤디 앨런과 함께하는 아침 샌드위치 🍳",
+            "description": ""
+          },
+          "pl": {
+            "title": "Kanapki śniadaniowe z Andym Allanem 🍳￼",
+            "description": ""
+          },
+          "id": {
+            "title": "Sandwich sarapan bersama Andy Allan 🍳",
+            "description": ""
+          },
+          "es-US": {
+            "title": "Bocadillos para el desayuno con Andy Allan 🍳",
+            "description": ""
+          },
+          "fr-FR": {
+            "title": "Sandwichs du petit-déjeuner avec Andy Allan 🍳￼",
+            "description": ""
+          },
+          "hi": {
+            "title": "एंडी एलन के साथ नाश्ते के सैंडविच 🍳￼",
+            "description": ""
+          },
+          "uk": {
+            "title": "Сніданкові сендвічі з Енді Алланом 🍳￼",
+            "description": ""
+          },
+          "bn": {
+            "title": "অ্যান্ডি অ্যালানের সাথে সকালের নাস্তার স্যান্ডউইচ 🍳",
+            "description": ""
+          },
+          "ml": {
+            "title": "ആൻഡി അലനൊപ്പം പ്രാതൽ സാൻഡ്‌വിച്ചുകൾ 🍳￼",
+            "description": ""
+          },
+          "iw": {
+            "title": "כריכי ארוחת בוקר עם אנדי אלן 🍳￼",
+            "description": ""
+          },
+          "ru": {
+            "title": "Завтрак в виде сэндвичей с Энди Алланом 🍳",
+            "description": ""
+          }
+        },
+        "paidProductPlacementDetails": {
+          "hasPaidProductPlacement": false
+        }
+      },
+      "inventory": {
+        "presentParts": [
+          "snippet",
+          "contentDetails",
+          "statistics",
+          "status",
+          "topicDetails",
+          "recordingDetails",
+          "player",
+          "localizations",
+          "paidProductPlacementDetails"
+        ],
+        "fieldPaths": [
+          "contentDetails",
+          "contentDetails.caption",
+          "contentDetails.contentRating",
+          "contentDetails.definition",
+          "contentDetails.dimension",
+          "contentDetails.duration",
+          "contentDetails.licensedContent",
+          "contentDetails.projection",
+          "etag",
+          "id",
+          "kind",
+          "localizations",
+          "localizations.ar",
+          "localizations.ar.description",
+          "localizations.ar.title",
+          "localizations.bn",
+          "localizations.bn.description",
+          "localizations.bn.title",
+          "localizations.de-DE",
+          "localizations.de-DE.description",
+          "localizations.de-DE.title",
+          "localizations.en",
+          "localizations.en.description",
+          "localizations.en.title",
+          "localizations.es-US",
+          "localizations.es-US.description",
+          "localizations.es-US.title",
+          "localizations.fr-FR",
+          "localizations.fr-FR.description",
+          "localizations.fr-FR.title",
+          "localizations.hi",
+          "localizations.hi.description",
+          "localizations.hi.title",
+          "localizations.id",
+          "localizations.id.description",
+          "localizations.id.title",
+          "localizations.it",
+          "localizations.it.description",
+          "localizations.it.title",
+          "localizations.iw",
+          "localizations.iw.description",
+          "localizations.iw.title",
+          "localizations.ja",
+          "localizations.ja.description",
+          "localizations.ja.title",
+          "localizations.ko",
+          "localizations.ko.description",
+          "localizations.ko.title",
+          "localizations.ml",
+          "localizations.ml.description",
+          "localizations.ml.title",
+          "localizations.nl-NL",
+          "localizations.nl-NL.description",
+          "localizations.nl-NL.title",
+          "localizations.pl",
+          "localizations.pl.description",
+          "localizations.pl.title",
+          "localizations.pt-BR",
+          "localizations.pt-BR.description",
+          "localizations.pt-BR.title",
+          "localizations.ru",
+          "localizations.ru.description",
+          "localizations.ru.title",
+          "localizations.uk",
+          "localizations.uk.description",
+          "localizations.uk.title",
+          "paidProductPlacementDetails",
+          "paidProductPlacementDetails.hasPaidProductPlacement",
+          "player",
+          "player.embedHtml",
+          "recordingDetails",
+          "snippet",
+          "snippet.categoryId",
+          "snippet.channelId",
+          "snippet.channelTitle",
+          "snippet.defaultAudioLanguage",
+          "snippet.defaultLanguage",
+          "snippet.description",
+          "snippet.liveBroadcastContent",
+          "snippet.localized",
+          "snippet.localized.description",
+          "snippet.localized.title",
+          "snippet.publishedAt",
+          "snippet.thumbnails",
+          "snippet.thumbnails.default",
+          "snippet.thumbnails.default.height",
+          "snippet.thumbnails.default.url",
+          "snippet.thumbnails.default.width",
+          "snippet.thumbnails.high",
+          "snippet.thumbnails.high.height",
+          "snippet.thumbnails.high.url",
+          "snippet.thumbnails.high.width",
+          "snippet.thumbnails.maxres",
+          "snippet.thumbnails.maxres.height",
+          "snippet.thumbnails.maxres.url",
+          "snippet.thumbnails.maxres.width",
+          "snippet.thumbnails.medium",
+          "snippet.thumbnails.medium.height",
+          "snippet.thumbnails.medium.url",
+          "snippet.thumbnails.medium.width",
+          "snippet.thumbnails.standard",
+          "snippet.thumbnails.standard.height",
+          "snippet.thumbnails.standard.url",
+          "snippet.thumbnails.standard.width",
+          "snippet.title",
+          "statistics",
+          "statistics.commentCount",
+          "statistics.favoriteCount",
+          "statistics.likeCount",
+          "statistics.viewCount",
+          "status",
+          "status.embeddable",
+          "status.license",
+          "status.madeForKids",
+          "status.privacyStatus",
+          "status.publicStatsViewable",
+          "status.uploadStatus",
+          "topicDetails",
+          "topicDetails.topicCategories"
+        ]
+      },
+      "recipeSignals": {
+        "title": "Breakfast sandwiches with Andy Allan 🍳￼",
+        "channelTitle": "Andy Cooks",
+        "descriptionLength": 0,
+        "descriptionHasIngredientsHeader": false,
+        "descriptionHasMethodHeader": false,
+        "tagCount": 0,
+        "durationIso8601": "PT1M48S",
+        "captionFlag": "false",
+        "viewCount": 963914,
+        "likeCount": 32580,
+        "commentCount": 246
+      }
+    },
+    {
+      "selection": {
+        "channelTitle": "Andy Cooks",
+        "videoId": "94vnzj2J42M",
+        "backlogTitle": "Here's how to nail tornado eggs at home using a stainless steel pan with @AustralianEggs #Masterchef",
+        "backlogDescriptionLength": 0,
+        "backlogViewCount": 513341,
+        "backlogDurationSeconds": 44,
+        "url": "https://www.youtube.com/watch?v=94vnzj2J42M"
+      },
+      "api": {
+        "kind": "youtube#video",
+        "etag": "uaLpAj1tWAhTo3GsGoGvfMbswPU",
+        "id": "94vnzj2J42M",
+        "snippet": {
+          "publishedAt": "2026-05-04T10:30:00Z",
+          "channelId": "UCqNkn5PNeSqbQTAR5RP-L-Q",
+          "title": "Here's how to nail tornado eggs at home using a stainless steel pan with @AustralianEggs #Masterchef",
+          "description": "",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/94vnzj2J42M/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/94vnzj2J42M/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/94vnzj2J42M/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/94vnzj2J42M/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/94vnzj2J42M/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            }
+          },
+          "channelTitle": "Andy Cooks",
+          "categoryId": "26",
+          "liveBroadcastContent": "none",
+          "defaultLanguage": "en",
+          "localized": {
+            "title": "Here's how to nail tornado eggs at home using a stainless steel pan with @AustralianEggs #Masterchef",
+            "description": ""
+          },
+          "defaultAudioLanguage": "en-GB"
+        },
+        "contentDetails": {
+          "duration": "PT44S",
+          "dimension": "2d",
+          "definition": "hd",
+          "caption": "false",
+          "licensedContent": true,
+          "contentRating": {},
+          "projection": "rectangular"
+        },
+        "status": {
+          "uploadStatus": "processed",
+          "privacyStatus": "public",
+          "license": "youtube",
+          "embeddable": true,
+          "publicStatsViewable": true,
+          "madeForKids": false
+        },
+        "statistics": {
+          "viewCount": "516179",
+          "likeCount": "13117",
+          "favoriteCount": "0",
+          "commentCount": "180"
+        },
+        "player": {
+          "embedHtml": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/94vnzj2J42M\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+        },
+        "topicDetails": {
+          "topicCategories": [
+            "https://en.wikipedia.org/wiki/Food",
+            "https://en.wikipedia.org/wiki/Lifestyle_(sociology)"
+          ]
+        },
+        "recordingDetails": {},
+        "localizations": {
+          "en": {
+            "title": "Here's how to nail tornado eggs at home using a stainless steel pan with @AustralianEggs #Masterchef",
+            "description": ""
+          },
+          "ja": {
+            "title": "ステンレス製のフライパンと@AustralianEggsを使って、自宅でトルネードエッグを完璧に作る方法をご紹介します。#Masterchef",
+            "description": ""
+          },
+          "ar": {
+            "title": "إليكِ طريقة تحضير بيض التورنادو في المنزل باستخدام مقلاة من الفولاذ المقاوم للصدأ مع بيض أسترالي ...",
+            "description": ""
+          },
+          "pl": {
+            "title": "Oto jak przygotować jajka tornado w domu, używając patelni ze stali nierdzewnej z @AustralianEggs...",
+            "description": ""
+          },
+          "ko": {
+            "title": "스테인리스 팬과 호주산 달걀을 사용해서 집에서 완벽한 토네이도 에그를 만드는 방법을 알려드립니다! #마스터셰프",
+            "description": ""
+          },
+          "nl-NL": {
+            "title": "Zo maak je thuis perfecte tornado-eieren in een roestvrijstalen pan, met behulp van @AustralianEg...",
+            "description": ""
+          },
+          "it": {
+            "title": "Ecco come preparare delle uova a tornado perfette a casa usando una padella in acciaio inox con @...",
+            "description": ""
+          },
+          "pt-BR": {
+            "title": "Veja como preparar ovos tornado perfeitos em casa usando uma frigideira de aço inoxidável com @Au...",
+            "description": ""
+          },
+          "de-DE": {
+            "title": "So gelingen Tornado-Eier zu Hause mit einer Edelstahlpfanne und @AustralianEggs #Masterchef",
+            "description": ""
+          },
+          "fr-FR": {
+            "title": "Voici comment réussir des œufs tornade à la maison avec une poêle en inox et les œufs @Australian...",
+            "description": ""
+          },
+          "es-US": {
+            "title": "Aquí te mostramos cómo preparar huevos tornado perfectos en casa usando una sartén de acero inoxi...",
+            "description": ""
+          },
+          "id": {
+            "title": "Berikut cara membuat telur tornado yang sempurna di rumah menggunakan wajan stainless steel bersa...",
+            "description": ""
+          },
+          "uk": {
+            "title": "Ось як приготувати яйця торнадо вдома, використовуючи сковороду з нержавіючої сталі, з @Australia...",
+            "description": ""
+          },
+          "hi": {
+            "title": "यहां जानिए @AustralianEggs के साथ स्टेनलेस स्टील पैन का उपयोग करके घर पर टॉरनेडो अंडे कैसे बनाएं ...",
+            "description": ""
+          },
+          "bn": {
+            "title": "@AustralianEggs-এর সাথে #Masterchef ব্যবহার করে স্টেইনলেস স্টিলের প্যানে বাড়িতে নিখুঁতভাবে টর্নে...",
+            "description": ""
+          },
+          "ru": {
+            "title": "Вот как приготовить яйца «торнадо» в домашних условиях, используя сковороду из нержавеющей стали,...",
+            "description": ""
+          },
+          "iw": {
+            "title": "כך תדביקו ביצי טורנדו בבית בעזרת מחבת נירוסטה עם @AustralianEggs #Masterchef",
+            "description": ""
+          },
+          "ml": {
+            "title": "@AustralianEggs #Masterchef ഉപയോഗിച്ച് സ്റ്റെയിൻലെസ് സ്റ്റീൽ പാൻ ഉപയോഗിച്ച് വീട്ടിൽ തന്നെ ടൊർണാഡോ...",
+            "description": ""
+          }
+        },
+        "paidProductPlacementDetails": {
+          "hasPaidProductPlacement": true
+        }
+      },
+      "inventory": {
+        "presentParts": [
+          "snippet",
+          "contentDetails",
+          "statistics",
+          "status",
+          "topicDetails",
+          "recordingDetails",
+          "player",
+          "localizations",
+          "paidProductPlacementDetails"
+        ],
+        "fieldPaths": [
+          "contentDetails",
+          "contentDetails.caption",
+          "contentDetails.contentRating",
+          "contentDetails.definition",
+          "contentDetails.dimension",
+          "contentDetails.duration",
+          "contentDetails.licensedContent",
+          "contentDetails.projection",
+          "etag",
+          "id",
+          "kind",
+          "localizations",
+          "localizations.ar",
+          "localizations.ar.description",
+          "localizations.ar.title",
+          "localizations.bn",
+          "localizations.bn.description",
+          "localizations.bn.title",
+          "localizations.de-DE",
+          "localizations.de-DE.description",
+          "localizations.de-DE.title",
+          "localizations.en",
+          "localizations.en.description",
+          "localizations.en.title",
+          "localizations.es-US",
+          "localizations.es-US.description",
+          "localizations.es-US.title",
+          "localizations.fr-FR",
+          "localizations.fr-FR.description",
+          "localizations.fr-FR.title",
+          "localizations.hi",
+          "localizations.hi.description",
+          "localizations.hi.title",
+          "localizations.id",
+          "localizations.id.description",
+          "localizations.id.title",
+          "localizations.it",
+          "localizations.it.description",
+          "localizations.it.title",
+          "localizations.iw",
+          "localizations.iw.description",
+          "localizations.iw.title",
+          "localizations.ja",
+          "localizations.ja.description",
+          "localizations.ja.title",
+          "localizations.ko",
+          "localizations.ko.description",
+          "localizations.ko.title",
+          "localizations.ml",
+          "localizations.ml.description",
+          "localizations.ml.title",
+          "localizations.nl-NL",
+          "localizations.nl-NL.description",
+          "localizations.nl-NL.title",
+          "localizations.pl",
+          "localizations.pl.description",
+          "localizations.pl.title",
+          "localizations.pt-BR",
+          "localizations.pt-BR.description",
+          "localizations.pt-BR.title",
+          "localizations.ru",
+          "localizations.ru.description",
+          "localizations.ru.title",
+          "localizations.uk",
+          "localizations.uk.description",
+          "localizations.uk.title",
+          "paidProductPlacementDetails",
+          "paidProductPlacementDetails.hasPaidProductPlacement",
+          "player",
+          "player.embedHtml",
+          "recordingDetails",
+          "snippet",
+          "snippet.categoryId",
+          "snippet.channelId",
+          "snippet.channelTitle",
+          "snippet.defaultAudioLanguage",
+          "snippet.defaultLanguage",
+          "snippet.description",
+          "snippet.liveBroadcastContent",
+          "snippet.localized",
+          "snippet.localized.description",
+          "snippet.localized.title",
+          "snippet.publishedAt",
+          "snippet.thumbnails",
+          "snippet.thumbnails.default",
+          "snippet.thumbnails.default.height",
+          "snippet.thumbnails.default.url",
+          "snippet.thumbnails.default.width",
+          "snippet.thumbnails.high",
+          "snippet.thumbnails.high.height",
+          "snippet.thumbnails.high.url",
+          "snippet.thumbnails.high.width",
+          "snippet.thumbnails.maxres",
+          "snippet.thumbnails.maxres.height",
+          "snippet.thumbnails.maxres.url",
+          "snippet.thumbnails.maxres.width",
+          "snippet.thumbnails.medium",
+          "snippet.thumbnails.medium.height",
+          "snippet.thumbnails.medium.url",
+          "snippet.thumbnails.medium.width",
+          "snippet.thumbnails.standard",
+          "snippet.thumbnails.standard.height",
+          "snippet.thumbnails.standard.url",
+          "snippet.thumbnails.standard.width",
+          "snippet.title",
+          "statistics",
+          "statistics.commentCount",
+          "statistics.favoriteCount",
+          "statistics.likeCount",
+          "statistics.viewCount",
+          "status",
+          "status.embeddable",
+          "status.license",
+          "status.madeForKids",
+          "status.privacyStatus",
+          "status.publicStatsViewable",
+          "status.uploadStatus",
+          "topicDetails",
+          "topicDetails.topicCategories"
+        ]
+      },
+      "recipeSignals": {
+        "title": "Here's how to nail tornado eggs at home using a stainless steel pan with @AustralianEggs #Masterchef",
+        "channelTitle": "Andy Cooks",
+        "descriptionLength": 0,
+        "descriptionHasIngredientsHeader": false,
+        "descriptionHasMethodHeader": false,
+        "tagCount": 0,
+        "durationIso8601": "PT44S",
+        "captionFlag": "false",
+        "viewCount": 516179,
+        "likeCount": 13117,
+        "commentCount": 180
+      }
+    },
+    {
+      "selection": {
+        "channelTitle": "Andy Cooks",
+        "videoId": "-__qVqib9Pw",
+        "backlogTitle": "Lasagna Better Than Your Mums",
+        "backlogDescriptionLength": 752,
+        "backlogViewCount": 280209,
+        "backlogDurationSeconds": 1424,
+        "url": "https://www.youtube.com/watch?v=-__qVqib9Pw"
+      },
+      "api": {
+        "kind": "youtube#video",
+        "etag": "W2Mg-jLBjV-YjzZNFdXW38x9vog",
+        "id": "-__qVqib9Pw",
+        "snippet": {
+          "publishedAt": "2026-04-30T07:00:00Z",
+          "channelId": "UCqNkn5PNeSqbQTAR5RP-L-Q",
+          "title": "Lasagna Better Than Your Mums",
+          "description": "Head to https://squarespace.com/andycooks to save 10% off your first purchase of a website or domain using ANDYCOOKS !\n\nIn this video I’m going to run you through everything you need to know to make the ultimate lasagna at home. It’s a dish I think that’s better off made at home for a few reasons. \n\nRECIPE: https://www.andy-cooks.com/blogs/recipes/lasagne\n\nMY PRODUCTS: https://bit.ly/AndyCooksEssentials\nMY COOKBOOK: https://bit.ly/3WVoXAN\n\nFOLLOW ME:\nInstagram: instagram.com/andyhearnden\nTikTok: tiktok.com/@andy_cooks\nFacebook: facebook.com/andy.h.cooks\nWebsite with all my recipes: www.andy-cooks.com/\n\nChef: Andy\nProducer: Caleb Dawkins\nVideographer: Ben Hasic\nGraphic Designer: Jayden Gocher\nKitchen Manager: Sarah Allchurch\nEditor: Liam Craig",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/-__qVqib9Pw/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/-__qVqib9Pw/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/-__qVqib9Pw/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/-__qVqib9Pw/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/-__qVqib9Pw/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            }
+          },
+          "channelTitle": "Andy Cooks",
+          "tags": [
+            "Cooking",
+            "food",
+            "dinner",
+            "lunch",
+            "meal ideas",
+            "dinner ideas",
+            "recipe",
+            "home cooking",
+            "lasagna",
+            "lasagne",
+            "bolognese",
+            "bechamel",
+            "white sauce",
+            "meat sauce",
+            "pasta",
+            "baked pasta",
+            "italian food",
+            "italian recipes",
+            "comfort food",
+            "how to make lasagna",
+            "lasagna recipe",
+            "homemade lasagna",
+            "lasagna from scratch",
+            "lasagna technique",
+            "pasta bake",
+            "easy lasagna",
+            "best lasagna",
+            "layering lasagna",
+            "pasta sheets",
+            "fresh pasta",
+            "dried pasta",
+            "ragù",
+            "cheese sauce",
+            "mozzarella",
+            "parmesan",
+            "sunday dinner",
+            "weekend cooking",
+            "batch cook"
+          ],
+          "categoryId": "26",
+          "liveBroadcastContent": "none",
+          "defaultLanguage": "en",
+          "localized": {
+            "title": "Lasagna Better Than Your Mums",
+            "description": "Head to https://squarespace.com/andycooks to save 10% off your first purchase of a website or domain using ANDYCOOKS !\n\nIn this video I’m going to run you through everything you need to know to make the ultimate lasagna at home. It’s a dish I think that’s better off made at home for a few reasons. \n\nRECIPE: https://www.andy-cooks.com/blogs/recipes/lasagne\n\nMY PRODUCTS: https://bit.ly/AndyCooksEssentials\nMY COOKBOOK: https://bit.ly/3WVoXAN\n\nFOLLOW ME:\nInstagram: instagram.com/andyhearnden\nTikTok: tiktok.com/@andy_cooks\nFacebook: facebook.com/andy.h.cooks\nWebsite with all my recipes: www.andy-cooks.com/\n\nChef: Andy\nProducer: Caleb Dawkins\nVideographer: Ben Hasic\nGraphic Designer: Jayden Gocher\nKitchen Manager: Sarah Allchurch\nEditor: Liam Craig"
+          },
+          "defaultAudioLanguage": "en-GB"
+        },
+        "contentDetails": {
+          "duration": "PT23M44S",
+          "dimension": "2d",
+          "definition": "hd",
+          "caption": "false",
+          "licensedContent": true,
+          "contentRating": {},
+          "projection": "rectangular"
+        },
+        "status": {
+          "uploadStatus": "processed",
+          "privacyStatus": "public",
+          "license": "youtube",
+          "embeddable": true,
+          "publicStatsViewable": true,
+          "madeForKids": false
+        },
+        "statistics": {
+          "viewCount": "280209",
+          "likeCount": "9450",
+          "favoriteCount": "0",
+          "commentCount": "551"
+        },
+        "player": {
+          "embedHtml": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/-__qVqib9Pw\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+        },
+        "topicDetails": {
+          "topicCategories": [
+            "https://en.wikipedia.org/wiki/Food",
+            "https://en.wikipedia.org/wiki/Lifestyle_(sociology)"
+          ]
+        },
+        "recordingDetails": {},
+        "localizations": {
+          "uk": {
+            "title": "Лазанья краща, ніж у твоєї мами",
+            "description": "Перейдіть на https://squarespace.com/andycooks, щоб заощадити 10% на першій покупці веб-сайту або домену за допомогою ANDYCOOKS!\n\nУ цьому відео я розповім вам усе, що потрібно знати, щоб приготувати ідеальну лазанью вдома. Я вважаю, що цю страву краще готувати вдома з кількох причин.\n\nРЕЦЕПТ: https://www.andy-cooks.com/blogs/recipes/lasagne\n\nМОЇ ПРОДУКТИ: https://bit.ly/AndyCooksEssentials\nМОЯ КУЛІНАРНА КНИГА: https://bit.ly/3WVoXAN\n\nПІДПИСУЙТЕСЬ НА МЕНЮ:\nInstagram: instagram.com/andyhearnden\nTikTok: tiktok.com/@andy_cooks\nFacebook: facebook.com/andy.h.cooks\nВебсайт з усіма моїми рецептами: www.andy-cooks.com/\n\nШеф-кухар: Енді\nПродюсер: Калеб Докінз\nВідеограф: Бен Хасік\nГрафічний дизайнер: Джейден Гочер\nМенеджер кухні: Сара Олчерч\nРедактор: Ліам Крейг"
+          },
+          "hi": {
+            "title": "आपकी माँ के बनाए लज़ान्या से भी बेहतर।",
+            "description": "अपनी पहली वेबसाइट या डोमेन की खरीदारी पर 10% की छूट पाने के लिए https://squarespace.com/andycooks पर जाएं और ANDYCOOKS कोड का इस्तेमाल करें!\n\nइस वीडियो में मैं आपको घर पर बेहतरीन लज़ान्या बनाने के लिए ज़रूरी सभी चीज़ें बताऊँगा। मुझे लगता है कि कुछ कारणों से इसे घर पर बनाना ही सबसे अच्छा है।\n\nरेसिपी: https://www.andy-cooks.com/blogs/recipes/lasagne\n\nमेरे उत्पाद: https://bit.ly/AndyCooksEssentials\nमेरी कुकबुक: https://bit.ly/3WVoXAN\n\nमुझे फॉलो करें:\nइंस्टाग्राम: instagram.com/andyhearnden\nटिकटॉक: tiktok.com/@andy_cooks\nफेसबुक: facebook.com/andy.h.cooks\nमेरी सभी रेसिपी वाली वेबसाइट: www.andy-cooks.com/\n\nशेफ: एंडी\nप्रोड्यूसर: कालेब डॉकिन्स\nवीडियोोग्राफर: बेन हैसिक\nग्राफिक डिजाइनर: जेडन गोचर\nकिचन मैनेजर: सारा ऑलचर्च\nएडिटर: लियाम क्रेग"
+          },
+          "ml": {
+            "title": "നിങ്ങളുടെ അമ്മമാരേക്കാൾ നല്ലത് ലസാഗ്ന",
+            "description": "ANDYCOOKS ഉപയോഗിച്ച് ഒരു വെബ്‌സൈറ്റോ ഡൊമെയ്‌നോ ആദ്യമായി വാങ്ങുമ്പോൾ 10% കിഴിവ് നേടാൻ https://squarespace.com/andycooks സന്ദർശിക്കുക!\n\nഈ വീഡിയോയിൽ, വീട്ടിൽ തന്നെ ഏറ്റവും മികച്ച ലസാഗ്ന ഉണ്ടാക്കാൻ നിങ്ങൾ അറിയേണ്ടതെല്ലാം ഞാൻ നിങ്ങൾക്ക് കാണിച്ചുതരാം. ചില കാരണങ്ങളാൽ വീട്ടിൽ തന്നെ ഉണ്ടാക്കുന്നതാണ് നല്ലതെന്ന് ഞാൻ കരുതുന്ന ഒരു വിഭവമാണിത്. \n\nപാചകക്കുറിപ്പ്: https://www.andy-cooks.com/blogs/recipes/lasagne\n\nഎന്റെ ഉൽപ്പന്നങ്ങൾ: https://bit.ly/AndyCooksEssentials\nഎന്റെ പാചകക്കുറിപ്പ്: https://bit.ly/3WVoXAN\n\nഎന്നെ പിന്തുടരുക:\nInstagram: instagram.com/andyhearnden\nTikTok: tiktok.com/@andy_cooks\nFacebook: facebook.com/andy.h.cooks\nഎന്റെ എല്ലാ പാചകക്കുറിപ്പുകളും അടങ്ങിയ വെബ്സൈറ്റ്: www.andy-cooks.com/\n\nഷെഫ്: ആൻഡി\nനിർമ്മാതാവ്: കാലേബ് ഡോക്കിൻസ്\nവീഡിയോഗ്രാഫർ: ബെൻ ഹാസിക്\nഗ്രാഫിക് ഡിസൈനർ: ജെയ്ഡൻ ഗോച്ചർ\nഅടുക്കള മാനേജർ: സാറാ ആൽചർച്ച്\nഎഡിറ്റർ: ലിയാം ക്രെയ്ഗ്"
+          },
+          "iw": {
+            "title": "לזניה טובה יותר מהאמא שלך",
+            "description": "כנסו לאתר https://squarespace.com/andycooks כדי לחסוך 10% ברכישה הראשונה שלכם של אתר אינטרנט או דומיין באמצעות ANDYCOOKS!\n\nבסרטון הזה אני הולך להסביר לכם את כל מה שאתם צריכים לדעת כדי להכין את הלזניה האולטימטיבית בבית. זו מנה שלדעתי עדיף להכין בבית מכמה סיבות.\n\nמתכון: https://www.andy-cooks.com/blogs/recipes/lasagne\n\nהמוצרים שלי: https://bit.ly/AndyCooksEssentials\nספר הבישול שלי: https://bit.ly/3WVoXAN\n\nעקבו אחריי:\nאינסטגרם: instagram.com/andyhearnden\nטיקטוק: tiktok.com/@andy_cooks\nפייסבוק: facebook.com/andy.h.cooks\nאתר עם כל המתכונים שלי: www.andy-cooks.com/\n\nשף: אנדי\nמפיק: קיילב דוקינס\nצלם וידאו: בן האסיק\nמעצב גרפי: ג'יידן גוכר\nמנהל מטבח: שרה אלצ'רץ'\nעורך: ליאם קרייג"
+          },
+          "bn": {
+            "title": "আপনার মায়ের চেয়েও ভালো লাজানিয়া",
+            "description": "ANDYCOOKS ব্যবহার করে আপনার প্রথম ওয়েবসাইট বা ডোমেইন ক্রয়ে ১০% ছাড় পেতে https://squarespace.com/andycooks-এ যান!\n\nএই ভিডিওতে আমি আপনাদেরকে বাড়িতে সেরা লাজানিয়া তৈরির জন্য প্রয়োজনীয় সবকিছু ধাপে ধাপে দেখিয়ে দেব। আমার মতে, কয়েকটি কারণে এই খাবারটি বাড়িতে তৈরি করাই শ্রেয়।\n\nরেসিপি: https://www.andy-cooks.com/blogs/recipes/lasagne\n\nআমার পণ্যসমূহ: https://bit.ly/AndyCooksEssentials\nআমার রান্নার বই: https://bit.ly/3WVoXAN\n\nআমাকে অনুসরণ করুন:\nইনস্টাগ্রাম: instagram.com/andyhearnden\nটিকটক: tiktok.com/@andy_cooks\nফেসবুক: facebook.com/andy.h.cooks\nআমার সমস্ত রেসিপি সহ ওয়েবসাইট: www.andy-cooks.com/\n\nশেফ: অ্যান্ডি\nপ্রযোজক: ক্যালেব ডকিন্স\nভিডিওগ্রাফার: বেন হাসিক\nগ্রাফিক ডিজাইনার: জেডেন গোচার\nকিচেন ম্যানেজার: সারাহ অলচার্চ\nসম্পাদক: লিয়াম ক্রেগ"
+          },
+          "ar": {
+            "title": "لازانيا ألذ من لازانيا والدتك",
+            "description": "تفضل بزيارة https://squarespace.com/andycooks للحصول على خصم ١٠٪ على أول عملية شراء لموقع إلكتروني أو نطاق باستخدام ANDYCOOKS!\n\nفي هذا الفيديو، سأشرح لك كل ما تحتاج معرفته لإعداد أشهى لازانيا في المنزل. أعتقد أن تحضيرها في المنزل أفضل لعدة أسباب.\n\nالوصفة: https://www.andy-cooks.com/blogs/recipes/lasagne\n\nمنتجاتي: https://bit.ly/AndyCooksEssentials\nكتاب الطبخ الخاص بي: https://bit.ly/3WVoXAN\n\nتابعوني على:\nإنستغرام: instagram.com/andyhearnden\nتيك توك: tiktok.com/@andy_cooks\nفيسبوك: facebook.com/andy.h.cooks\nموقعي الإلكتروني الذي يضم جميع وصفاتي: www.andy-cooks.com/\n\nالشيف: آندي\nالمنتج: كاليب دوكينز\nمصور الفيديو: بن هاسيك\nمصمم الجرافيك: جايدن غوتشر\nمديرة المطبخ: سارة ألتشيرش\nالمحرر: ليام كريغ"
+          },
+          "ja": {
+            "title": "お母さんのラザニアより美味しい",
+            "description": "https://squarespace.com/andycooks にアクセスして、ANDYCOOKS を利用してウェブサイトまたはドメインを初めて購入すると、10% オフになります！\n\nこのビデオでは、自宅で最高のラザニアを作るために必要なすべてを解説します。ラザニアは、いくつかの理由から、自宅で作るのが一番美味しい料理だと私は考えています。\n\n\nレシピ：https://www.andy-cooks.com/blogs/recipes/lasagne\n\n私の製品：https://bit.ly/AndyCooksEssentials\n私の料理本：https://bit.ly/3WVoXAN\n\nフォローしてください：\nInstagram：instagram.com/andyhearnden\nTikTok：tiktok.com/@andy_cooks\nFacebook：facebook.com/andy.h.cooks\nすべてのレシピを掲載したウェブサイト：www.andy-cooks.com/\n\nシェフ：アンディ\nプロデューサー：ケイレブ・ドーキンス\nビデオグラファー：ベン・ハシック\nグラフィックデザイナー：ジェイデン・ゴーチャー\nキッチンマネージャー：サラ・オールチャーチ\n編集：リアム・クレイグ"
+          },
+          "en": {
+            "title": "Lasagna Better Than Your Mums",
+            "description": "Head to https://squarespace.com/andycooks to save 10% off your first purchase of a website or domain using ANDYCOOKS !\n\nIn this video I’m going to run you through everything you need to know to make the ultimate lasagna at home. It’s a dish I think that’s better off made at home for a few reasons. \n\nRECIPE: https://www.andy-cooks.com/blogs/recipes/lasagne\n\nMY PRODUCTS: https://bit.ly/AndyCooksEssentials\nMY COOKBOOK: https://bit.ly/3WVoXAN\n\nFOLLOW ME:\nInstagram: instagram.com/andyhearnden\nTikTok: tiktok.com/@andy_cooks\nFacebook: facebook.com/andy.h.cooks\nWebsite with all my recipes: www.andy-cooks.com/\n\nChef: Andy\nProducer: Caleb Dawkins\nVideographer: Ben Hasic\nGraphic Designer: Jayden Gocher\nKitchen Manager: Sarah Allchurch\nEditor: Liam Craig"
+          },
+          "fr-FR": {
+            "title": "Des lasagnes meilleures que celles de votre mère",
+            "description": "Rendez-vous sur https://squarespace.com/andycooks pour bénéficier de 10 % de réduction sur votre premier achat de site web ou de domaine avec ANDYCOOKS !\n\nDans cette vidéo, je vous explique tout ce qu’il faut savoir pour préparer de délicieuses lasagnes maison. C’est un plat qui, à mon avis, est meilleur fait maison pour plusieurs raisons.\n\nRECETTE : https://www.andy-cooks.com/blogs/recipes/lasagne\n\nMES PRODUITS : https://bit.ly/AndyCooksEssentials\nMON LIVRE DE RECETTES : https://bit.ly/3WVoXAN\n\nSUIVEZ-MOI :\n\nInstagram : instagram.com/andyhearnden\nTikTok : tiktok.com/@andy_cooks\nFacebook : facebook.com/andy.h.cooks\nSite web avec toutes mes recettes : www.andy-cooks.com/\n\nChef : Andy\nProducteur : Caleb Dawkins\nVidéaste : Ben Hasic\nGraphiste : Jayden Gocher\nResponsable de la cuisine : Sarah Allchurch\nMonteur : Liam Craig"
+          },
+          "id": {
+            "title": "Lasagna yang Lebih Enak dari Buatan Ibu Anda",
+            "description": "Kunjungi https://squarespace.com/andycooks untuk mendapatkan diskon 10% untuk pembelian pertama situs web atau domain Anda menggunakan kode ANDYCOOKS!\n\nDalam video ini, saya akan memandu Anda melalui semua yang perlu Anda ketahui untuk membuat lasagna terbaik di rumah. Menurut saya, hidangan ini lebih baik dibuat di rumah karena beberapa alasan.\n\nRESEP: https://www.andy-cooks.com/blogs/recipes/lasagne\n\nPRODUK SAYA: https://bit.ly/AndyCooksEssentials\nBUKU MASAK SAYA: https://bit.ly/3WVoXAN\n\nIKUTI SAYA:\nInstagram: instagram.com/andyhearnden\nTikTok: tiktok.com/@andy_cooks\nFacebook: facebook.com/andy.h.cooks\nSitus web dengan semua resep saya: www.andy-cooks.com/\n\nKoki: Andy\nProduser: Caleb Dawkins\nVideografer: Ben Hasic\nDesainer Grafis: Jayden Gocher\nManajer Dapur: Sarah Allchurch\nEditor: Liam Craig"
+          },
+          "es-US": {
+            "title": "Lasaña mejor que la de tu madre",
+            "description": "Visita https://squarespace.com/andycooks para obtener un 10 % de descuento en tu primera compra de un sitio web o dominio con ANDYCOOKS.\n\nEn este video te explicaré todo lo que necesitas saber para preparar la lasaña perfecta en casa. Creo que es un plato que se disfruta mejor en casa por varias razones.\n\nRECETA: https://www.andy-cooks.com/blogs/recipes/lasagne\n\nMIS PRODUCTOS: https://bit.ly/AndyCooksEssentials\nMI LIBRO DE COCINA: https://bit.ly/3WVoXAN\n\nSÍGUEME:\nInstagram: instagram.com/andyhearnden\nTikTok: tiktok.com/@andy_cooks\nFacebook: facebook.com/andy.h.cooks\nSitio web con todas mis recetas: www.andy-cooks.com/\nChef: Andy\nProductor: Caleb Dawkins\nVideógrafo: Ben Hasic\nDiseñador gráfico: Jayden Gocher\nJefa de cocina: Sarah Allchurch\nEditor: Liam Craig"
+          },
+          "nl-NL": {
+            "title": "Lasagne beter dan die van je moeder",
+            "description": "Ga naar https://squarespace.com/andycooks en bespaar 10% op je eerste aankoop van een website of domein met ANDYCOOKS!\n\nIn deze video laat ik je alles zien wat je moet weten om thuis de ultieme lasagne te maken. Ik vind dat je dit gerecht om verschillende redenen het beste thuis kunt bereiden.\n\nRECEPT: https://www.andy-cooks.com/blogs/recipes/lasagne\n\nMIJN PRODUCTEN: https://bit.ly/AndyCooksEssentials\nMIJN KOOKBOEK: https://bit.ly/3WVoXAN\n\nVOLG MIJ:\nInstagram: instagram.com/andyhearnden\nTikTok: tiktok.com/@andy_cooks\nFacebook: facebook.com/andy.h.cooks\nWebsite met al mijn recepten: www.andy-cooks.com/\n\nChef: Andy\nProducent: Caleb Dawkins\nVideograaf: Ben Hasic\nGrafisch ontwerper: Jayden Gocher\nKeukenmanager: Sarah Allchurch\nRedacteur: Liam Craig"
+          },
+          "pl": {
+            "title": "Lasagne lepsze niż u Twojej mamy",
+            "description": "Wejdź na https://squarespace.com/andycooks i zaoszczędź 10% na pierwszym zakupie strony internetowej lub domeny za pośrednictwem ANDYCOOKS!\n\nW tym filmie pokażę Ci wszystko, co musisz wiedzieć, aby przygotować w domu idealną lasagne. Uważam, że to danie lepiej smakuje w domu z kilku powodów.\n\nPRZEPIS: https://www.andy-cooks.com/blogs/recipes/lasagne\n\nMOJE PRODUKTY: https://bit.ly/AndyCooksEssentials\nMOJA KSIĄŻKA KUCHARSKA: https://bit.ly/3WVoXAN\n\nOBSERWUJ MNIE:\nInstagram: instagram.com/andyhearnden\nTikTok: tiktok.com/@andy_cooks\nFacebook: facebook.com/andy.h.cooks\nStrona internetowa ze wszystkimi moimi przepisami: www.andy-cooks.com/\n\nSzef kuchni: Andy\nProducent: Caleb Dawkins\nWideograf: Ben Hasic\nGrafik: Jayden Gocher\nKierownik kuchni: Sarah Allchurch\nRedaktor: Liam Craig"
+          },
+          "ko": {
+            "title": "엄마가 만든 것보다 더 맛있는 라자냐",
+            "description": "https://squarespace.com/andycooks 에서 ANDYCOOKS 코드를 사용하여 웹사이트 또는 도메인을 처음 구매하시면 10% 할인을 받으실 수 있습니다!\n\n이번 영상에서는 집에서 최고의 라자냐를 만드는 데 필요한 모든 정보를 알려드리겠습니다. 라자냐는 몇 가지 이유로 집에서 직접 만드는 것이 훨씬 맛있다고 생각합니다.\n\n레시피: https://www.andy-cooks.com/blogs/recipes/lasagne\n\n내 제품: https://bit.ly/AndyCooksEssentials\n내 요리책: https://bit.ly/3WVoXAN\n\n팔로우하기:\n인스타그램: instagram.com/andyhearnden\n틱톡: tiktok.com/@andy_cooks\n페이스북: facebook.com/andy.h.cooks\n모든 레시피가 있는 웹사이트: www.andy-cooks.com/\n\n셰프: 앤디\n프로듀서: 케일럽 도킨스\n비디오 촬영: 벤 하시크\n그래픽 디자이너: 제이든 고처\n주방 관리자: 사라 올처치\n편집: 리암 크레이그"
+          },
+          "pt-BR": {
+            "title": "Lasanha melhor que a da sua mãe",
+            "description": "Acesse https://squarespace.com/andycooks para economizar 10% na sua primeira compra de um site ou domínio usando o ANDYCOOKS!\n\nNeste vídeo, vou te mostrar tudo o que você precisa saber para fazer a lasanha perfeita em casa. É um prato que, na minha opinião, fica melhor se feito em casa por alguns motivos.\n\nRECEITA: https://www.andy-cooks.com/blogs/recipes/lasagne\n\nMEUS PRODUTOS: https://bit.ly/AndyCooksEssentials\nMEU LIVRO DE RECEITAS: https://bit.ly/3WVoXAN\n\nSIGA-ME:\nInstagram: instagram.com/andyhearnden\nTikTok: tiktok.com/@andy_cooks\nFacebook: facebook.com/andy.h.cooks\nSite com todas as minhas receitas: www.andy-cooks.com/\n\nChef: Andy\nProdutor: Caleb Dawkins\nVideógrafo: Ben Hasic\nDesigner Gráfico: Jayden Gocher\nGerente de Cozinha: Sarah Allchurch\nEditor: Liam Craig"
+          },
+          "de-DE": {
+            "title": "Lasagne besser als die deiner Mutter",
+            "description": "Besuche https://squarespace.com/andycooks und spare 10 % auf deinen ersten Website- oder Domainkauf mit ANDYCOOKS!\n\nIn diesem Video zeige ich dir alles, was du wissen musst, um die perfekte Lasagne zu Hause zuzubereiten. Ich finde, dieses Gericht schmeckt aus mehreren Gründen am besten selbstgemacht.\n\nREZEPT: https://www.andy-cooks.com/blogs/recipes/lasagne\n\nMEINE PRODUKTE: https://bit.ly/AndyCooksEssentials\nMEIN KOCHBUCH: https://bit.ly/3WVoXAN\n\nFOLGE MIR:\nInstagram: instagram.com/andyhearnden\nTikTok: tiktok.com/@andy_cooks\nFacebook: facebook.com/andy.h.cooks\nWebsite mit all meinen Rezepten: www.andy-cooks.com/\n\nKoch: Andy\nProduzent: Caleb Dawkins\nKameramann: Ben Hasic\nGrafikdesigner: Jayden Gocher\nKüchenleitung: Sarah Allchurch\nSchnitt: Liam Craig"
+          },
+          "it": {
+            "title": "Lasagna più buona di quella di tua madre",
+            "description": "Visita https://squarespace.com/andycooks per ottenere uno sconto del 10% sul tuo primo acquisto di un sito web o di un dominio utilizzando il codice ANDYCOOKS!\n\nIn questo video ti spiegherò tutto ciò che devi sapere per preparare la lasagna perfetta a casa. È un piatto che, secondo me, è meglio preparare in casa per diversi motivi.\n\nRICETTA: https://www.andy-cooks.com/blogs/recipes/lasagne\n\nI MIEI PRODOTTI: https://bit.ly/AndyCooksEssentials\nIL MIO LIBRO DI RICETTE: https://bit.ly/3WVoXAN\n\nSEGUIMI:\nInstagram: instagram.com/andyhearnden\nTikTok: tiktok.com/@andy_cooks\nFacebook: facebook.com/andy.h.cooks\nSito web con tutte le mie ricette: www.andy-cooks.com/\n\nChef: Andy\nProduttore: Caleb Dawkins\nVideografo: Ben Hasic\nGrafico: Jayden Gocher\nResponsabile di cucina: Sarah Allchurch\nMontaggio: Liam Craig"
+          }
+        },
+        "paidProductPlacementDetails": {
+          "hasPaidProductPlacement": true
+        }
+      },
+      "inventory": {
+        "presentParts": [
+          "snippet",
+          "contentDetails",
+          "statistics",
+          "status",
+          "topicDetails",
+          "recordingDetails",
+          "player",
+          "localizations",
+          "paidProductPlacementDetails"
+        ],
+        "fieldPaths": [
+          "contentDetails",
+          "contentDetails.caption",
+          "contentDetails.contentRating",
+          "contentDetails.definition",
+          "contentDetails.dimension",
+          "contentDetails.duration",
+          "contentDetails.licensedContent",
+          "contentDetails.projection",
+          "etag",
+          "id",
+          "kind",
+          "localizations",
+          "localizations.ar",
+          "localizations.ar.description",
+          "localizations.ar.title",
+          "localizations.bn",
+          "localizations.bn.description",
+          "localizations.bn.title",
+          "localizations.de-DE",
+          "localizations.de-DE.description",
+          "localizations.de-DE.title",
+          "localizations.en",
+          "localizations.en.description",
+          "localizations.en.title",
+          "localizations.es-US",
+          "localizations.es-US.description",
+          "localizations.es-US.title",
+          "localizations.fr-FR",
+          "localizations.fr-FR.description",
+          "localizations.fr-FR.title",
+          "localizations.hi",
+          "localizations.hi.description",
+          "localizations.hi.title",
+          "localizations.id",
+          "localizations.id.description",
+          "localizations.id.title",
+          "localizations.it",
+          "localizations.it.description",
+          "localizations.it.title",
+          "localizations.iw",
+          "localizations.iw.description",
+          "localizations.iw.title",
+          "localizations.ja",
+          "localizations.ja.description",
+          "localizations.ja.title",
+          "localizations.ko",
+          "localizations.ko.description",
+          "localizations.ko.title",
+          "localizations.ml",
+          "localizations.ml.description",
+          "localizations.ml.title",
+          "localizations.nl-NL",
+          "localizations.nl-NL.description",
+          "localizations.nl-NL.title",
+          "localizations.pl",
+          "localizations.pl.description",
+          "localizations.pl.title",
+          "localizations.pt-BR",
+          "localizations.pt-BR.description",
+          "localizations.pt-BR.title",
+          "localizations.uk",
+          "localizations.uk.description",
+          "localizations.uk.title",
+          "paidProductPlacementDetails",
+          "paidProductPlacementDetails.hasPaidProductPlacement",
+          "player",
+          "player.embedHtml",
+          "recordingDetails",
+          "snippet",
+          "snippet.categoryId",
+          "snippet.channelId",
+          "snippet.channelTitle",
+          "snippet.defaultAudioLanguage",
+          "snippet.defaultLanguage",
+          "snippet.description",
+          "snippet.liveBroadcastContent",
+          "snippet.localized",
+          "snippet.localized.description",
+          "snippet.localized.title",
+          "snippet.publishedAt",
+          "snippet.tags",
+          "snippet.thumbnails",
+          "snippet.thumbnails.default",
+          "snippet.thumbnails.default.height",
+          "snippet.thumbnails.default.url",
+          "snippet.thumbnails.default.width",
+          "snippet.thumbnails.high",
+          "snippet.thumbnails.high.height",
+          "snippet.thumbnails.high.url",
+          "snippet.thumbnails.high.width",
+          "snippet.thumbnails.maxres",
+          "snippet.thumbnails.maxres.height",
+          "snippet.thumbnails.maxres.url",
+          "snippet.thumbnails.maxres.width",
+          "snippet.thumbnails.medium",
+          "snippet.thumbnails.medium.height",
+          "snippet.thumbnails.medium.url",
+          "snippet.thumbnails.medium.width",
+          "snippet.thumbnails.standard",
+          "snippet.thumbnails.standard.height",
+          "snippet.thumbnails.standard.url",
+          "snippet.thumbnails.standard.width",
+          "snippet.title",
+          "statistics",
+          "statistics.commentCount",
+          "statistics.favoriteCount",
+          "statistics.likeCount",
+          "statistics.viewCount",
+          "status",
+          "status.embeddable",
+          "status.license",
+          "status.madeForKids",
+          "status.privacyStatus",
+          "status.publicStatsViewable",
+          "status.uploadStatus",
+          "topicDetails",
+          "topicDetails.topicCategories"
+        ]
+      },
+      "recipeSignals": {
+        "title": "Lasagna Better Than Your Mums",
+        "channelTitle": "Andy Cooks",
+        "descriptionLength": 752,
+        "descriptionHasIngredientsHeader": false,
+        "descriptionHasMethodHeader": false,
+        "tagCount": 38,
+        "durationIso8601": "PT23M44S",
+        "captionFlag": "false",
+        "viewCount": 280209,
+        "likeCount": 9450,
+        "commentCount": 551
+      }
+    },
+    {
+      "selection": {
+        "channelTitle": "Andy Cooks",
+        "videoId": "0CLxmrvtWI8",
+        "backlogTitle": null,
+        "backlogDescriptionLength": 0,
+        "backlogViewCount": null,
+        "backlogDurationSeconds": null,
+        "url": "https://www.youtube.com/watch?v=0CLxmrvtWI8"
+      },
+      "api": {
+        "kind": "youtube#video",
+        "etag": "6VXJKHtywDnVwcRRSGbkZXD319U",
+        "id": "0CLxmrvtWI8",
+        "snippet": {
+          "publishedAt": "2026-04-29T11:00:00Z",
+          "channelId": "UCqNkn5PNeSqbQTAR5RP-L-Q",
+          "title": "Why Dry Brine? and what is it??? 🥩",
+          "description": "",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/0CLxmrvtWI8/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/0CLxmrvtWI8/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/0CLxmrvtWI8/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/0CLxmrvtWI8/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/0CLxmrvtWI8/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            }
+          },
+          "channelTitle": "Andy Cooks",
+          "categoryId": "26",
+          "liveBroadcastContent": "none",
+          "defaultLanguage": "en",
+          "localized": {
+            "title": "Why Dry Brine? and what is it??? 🥩",
+            "description": ""
+          },
+          "defaultAudioLanguage": "en-GB"
+        },
+        "contentDetails": {
+          "duration": "PT49S",
+          "dimension": "2d",
+          "definition": "hd",
+          "caption": "false",
+          "licensedContent": true,
+          "contentRating": {},
+          "projection": "rectangular"
+        },
+        "status": {
+          "uploadStatus": "processed",
+          "privacyStatus": "public",
+          "license": "youtube",
+          "embeddable": true,
+          "publicStatsViewable": true,
+          "madeForKids": false
+        },
+        "statistics": {
+          "viewCount": "954941",
+          "likeCount": "19431",
+          "favoriteCount": "0",
+          "commentCount": "318"
+        },
+        "player": {
+          "embedHtml": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/0CLxmrvtWI8\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+        },
+        "topicDetails": {
+          "topicCategories": [
+            "https://en.wikipedia.org/wiki/Food",
+            "https://en.wikipedia.org/wiki/Lifestyle_(sociology)"
+          ]
+        },
+        "recordingDetails": {},
+        "localizations": {
+          "hi": {
+            "title": "ड्राई ब्राइन क्यों? और यह क्या है??? 🥩",
+            "description": ""
+          },
+          "uk": {
+            "title": "Чому сухий розсіл? і що це таке??? 🥩",
+            "description": ""
+          },
+          "ml": {
+            "title": "എന്തിനാണ് ഡ്രൈ ബ്രൈൻ? എന്താണ് അത്??? 🥩",
+            "description": ""
+          },
+          "iw": {
+            "title": "למה מי מלח יבשים? ומה זה בכלל??? 🥩",
+            "description": ""
+          },
+          "ru": {
+            "title": "Почему именно сухой рассол? И что это такое??? 🥩",
+            "description": ""
+          },
+          "bn": {
+            "title": "ড্রাই ব্রাইন কেন? এবং এটা কী??? 🥩",
+            "description": ""
+          },
+          "ar": {
+            "title": "لماذا التمليح الجاف؟ وما هو بالضبط؟؟؟ 🥩",
+            "description": ""
+          },
+          "en": {
+            "title": "Why Dry Brine? and what is it??? 🥩",
+            "description": ""
+          },
+          "id": {
+            "title": "Mengapa menggunakan air garam kering? Dan apa itu??? 🥩",
+            "description": ""
+          },
+          "pa": {
+            "title": "ਡਰਾਈ ਬਰਾਈਨ ਕਿਉਂ? ਅਤੇ ਇਹ ਕੀ ਹੈ??? ​​🥩",
+            "description": ""
+          },
+          "es-US": {
+            "title": "¿Por qué usar salmuera seca? ¿Y qué es exactamente? 🥩",
+            "description": ""
+          },
+          "fr-FR": {
+            "title": "Pourquoi la saumure sèche ? Et qu'est-ce que c'est ? 🥩",
+            "description": ""
+          },
+          "te": {
+            "title": "డ్రై బ్రైన్ ఎందుకు? మరియు అది ఏమిటి??? 🥩",
+            "description": ""
+          },
+          "pt-BR": {
+            "title": "Por que fazer dry brine? E o que é isso??? 🥩",
+            "description": ""
+          },
+          "it": {
+            "title": "Perché la salamoia secca? E cos'è??? 🥩",
+            "description": ""
+          },
+          "de-DE": {
+            "title": "Warum Trockenpökeln? Und was ist das überhaupt??? 🥩",
+            "description": ""
+          },
+          "nl-NL": {
+            "title": "Waarom droog pekelwater? En wat is het precies??? 🥩",
+            "description": ""
+          },
+          "pl": {
+            "title": "Dlaczego solanka sucha? I co to jest??? 🥩",
+            "description": ""
+          },
+          "ko": {
+            "title": "드라이 브라인은 왜 필요한가요? 그리고 드라이 브라인은 무엇인가요??? 🥩",
+            "description": ""
+          }
+        },
+        "paidProductPlacementDetails": {
+          "hasPaidProductPlacement": false
+        }
+      },
+      "inventory": {
+        "presentParts": [
+          "snippet",
+          "contentDetails",
+          "statistics",
+          "status",
+          "topicDetails",
+          "recordingDetails",
+          "player",
+          "localizations",
+          "paidProductPlacementDetails"
+        ],
+        "fieldPaths": [
+          "contentDetails",
+          "contentDetails.caption",
+          "contentDetails.contentRating",
+          "contentDetails.definition",
+          "contentDetails.dimension",
+          "contentDetails.duration",
+          "contentDetails.licensedContent",
+          "contentDetails.projection",
+          "etag",
+          "id",
+          "kind",
+          "localizations",
+          "localizations.ar",
+          "localizations.ar.description",
+          "localizations.ar.title",
+          "localizations.bn",
+          "localizations.bn.description",
+          "localizations.bn.title",
+          "localizations.de-DE",
+          "localizations.de-DE.description",
+          "localizations.de-DE.title",
+          "localizations.en",
+          "localizations.en.description",
+          "localizations.en.title",
+          "localizations.es-US",
+          "localizations.es-US.description",
+          "localizations.es-US.title",
+          "localizations.fr-FR",
+          "localizations.fr-FR.description",
+          "localizations.fr-FR.title",
+          "localizations.hi",
+          "localizations.hi.description",
+          "localizations.hi.title",
+          "localizations.id",
+          "localizations.id.description",
+          "localizations.id.title",
+          "localizations.it",
+          "localizations.it.description",
+          "localizations.it.title",
+          "localizations.iw",
+          "localizations.iw.description",
+          "localizations.iw.title",
+          "localizations.ko",
+          "localizations.ko.description",
+          "localizations.ko.title",
+          "localizations.ml",
+          "localizations.ml.description",
+          "localizations.ml.title",
+          "localizations.nl-NL",
+          "localizations.nl-NL.description",
+          "localizations.nl-NL.title",
+          "localizations.pa",
+          "localizations.pa.description",
+          "localizations.pa.title",
+          "localizations.pl",
+          "localizations.pl.description",
+          "localizations.pl.title",
+          "localizations.pt-BR",
+          "localizations.pt-BR.description",
+          "localizations.pt-BR.title",
+          "localizations.ru",
+          "localizations.ru.description",
+          "localizations.ru.title",
+          "localizations.te",
+          "localizations.te.description",
+          "localizations.te.title",
+          "localizations.uk",
+          "localizations.uk.description",
+          "localizations.uk.title",
+          "paidProductPlacementDetails",
+          "paidProductPlacementDetails.hasPaidProductPlacement",
+          "player",
+          "player.embedHtml",
+          "recordingDetails",
+          "snippet",
+          "snippet.categoryId",
+          "snippet.channelId",
+          "snippet.channelTitle",
+          "snippet.defaultAudioLanguage",
+          "snippet.defaultLanguage",
+          "snippet.description",
+          "snippet.liveBroadcastContent",
+          "snippet.localized",
+          "snippet.localized.description",
+          "snippet.localized.title",
+          "snippet.publishedAt",
+          "snippet.thumbnails",
+          "snippet.thumbnails.default",
+          "snippet.thumbnails.default.height",
+          "snippet.thumbnails.default.url",
+          "snippet.thumbnails.default.width",
+          "snippet.thumbnails.high",
+          "snippet.thumbnails.high.height",
+          "snippet.thumbnails.high.url",
+          "snippet.thumbnails.high.width",
+          "snippet.thumbnails.maxres",
+          "snippet.thumbnails.maxres.height",
+          "snippet.thumbnails.maxres.url",
+          "snippet.thumbnails.maxres.width",
+          "snippet.thumbnails.medium",
+          "snippet.thumbnails.medium.height",
+          "snippet.thumbnails.medium.url",
+          "snippet.thumbnails.medium.width",
+          "snippet.thumbnails.standard",
+          "snippet.thumbnails.standard.height",
+          "snippet.thumbnails.standard.url",
+          "snippet.thumbnails.standard.width",
+          "snippet.title",
+          "statistics",
+          "statistics.commentCount",
+          "statistics.favoriteCount",
+          "statistics.likeCount",
+          "statistics.viewCount",
+          "status",
+          "status.embeddable",
+          "status.license",
+          "status.madeForKids",
+          "status.privacyStatus",
+          "status.publicStatsViewable",
+          "status.uploadStatus",
+          "topicDetails",
+          "topicDetails.topicCategories"
+        ]
+      },
+      "recipeSignals": {
+        "title": "Why Dry Brine? and what is it??? 🥩",
+        "channelTitle": "Andy Cooks",
+        "descriptionLength": 0,
+        "descriptionHasIngredientsHeader": false,
+        "descriptionHasMethodHeader": false,
+        "tagCount": 0,
+        "durationIso8601": "PT49S",
+        "captionFlag": "false",
+        "viewCount": 954941,
+        "likeCount": 19431,
+        "commentCount": 318
+      }
+    },
+    {
+      "selection": {
+        "channelTitle": "CupcakeJemma",
+        "videoId": "Z3NUsSSut1w",
+        "backlogTitle": "Will you be trying this with your next cake?",
+        "backlogDescriptionLength": 0,
+        "backlogViewCount": 24396388,
+        "backlogDurationSeconds": 37,
+        "url": "https://www.youtube.com/watch?v=Z3NUsSSut1w"
+      },
+      "api": {
+        "kind": "youtube#video",
+        "etag": "00uS3Fr-SWYqRcxHFJYJ60uU-bE",
+        "id": "Z3NUsSSut1w",
+        "snippet": {
+          "publishedAt": "2024-07-13T10:00:28Z",
+          "channelId": "UCoMum0pwewO8_WtTlUQxGHw",
+          "title": "Will you be trying this with your next cake?",
+          "description": "",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/Z3NUsSSut1w/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/Z3NUsSSut1w/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/Z3NUsSSut1w/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/Z3NUsSSut1w/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/Z3NUsSSut1w/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            }
+          },
+          "channelTitle": "CupcakeJemma",
+          "categoryId": "26",
+          "liveBroadcastContent": "none",
+          "defaultLanguage": "en-GB",
+          "localized": {
+            "title": "Will you be trying this with your next cake?",
+            "description": ""
+          },
+          "defaultAudioLanguage": "en-GB"
+        },
+        "contentDetails": {
+          "duration": "PT37S",
+          "dimension": "2d",
+          "definition": "hd",
+          "caption": "false",
+          "licensedContent": true,
+          "contentRating": {},
+          "projection": "rectangular"
+        },
+        "status": {
+          "uploadStatus": "processed",
+          "privacyStatus": "public",
+          "license": "youtube",
+          "embeddable": true,
+          "publicStatsViewable": true,
+          "madeForKids": false
+        },
+        "statistics": {
+          "viewCount": "24396437",
+          "likeCount": "1092301",
+          "favoriteCount": "0",
+          "commentCount": "3229"
+        },
+        "player": {
+          "embedHtml": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/Z3NUsSSut1w\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+        },
+        "topicDetails": {
+          "topicCategories": [
+            "https://en.wikipedia.org/wiki/Food",
+            "https://en.wikipedia.org/wiki/Hobby",
+            "https://en.wikipedia.org/wiki/Lifestyle_(sociology)"
+          ]
+        },
+        "recordingDetails": {
+          "locationDescription": "Crumbs & Doilies",
+          "location": {
+            "latitude": 51.5122349,
+            "longitude": -0.1383886,
+            "altitude": 0
+          }
+        },
+        "localizations": {
+          "en-GB": {
+            "title": "Will you be trying this with your next cake?",
+            "description": ""
+          }
+        },
+        "paidProductPlacementDetails": {
+          "hasPaidProductPlacement": false
+        }
+      },
+      "inventory": {
+        "presentParts": [
+          "snippet",
+          "contentDetails",
+          "statistics",
+          "status",
+          "topicDetails",
+          "recordingDetails",
+          "player",
+          "localizations",
+          "paidProductPlacementDetails"
+        ],
+        "fieldPaths": [
+          "contentDetails",
+          "contentDetails.caption",
+          "contentDetails.contentRating",
+          "contentDetails.definition",
+          "contentDetails.dimension",
+          "contentDetails.duration",
+          "contentDetails.licensedContent",
+          "contentDetails.projection",
+          "etag",
+          "id",
+          "kind",
+          "localizations",
+          "localizations.en-GB",
+          "localizations.en-GB.description",
+          "localizations.en-GB.title",
+          "paidProductPlacementDetails",
+          "paidProductPlacementDetails.hasPaidProductPlacement",
+          "player",
+          "player.embedHtml",
+          "recordingDetails",
+          "recordingDetails.location",
+          "recordingDetails.location.altitude",
+          "recordingDetails.location.latitude",
+          "recordingDetails.location.longitude",
+          "recordingDetails.locationDescription",
+          "snippet",
+          "snippet.categoryId",
+          "snippet.channelId",
+          "snippet.channelTitle",
+          "snippet.defaultAudioLanguage",
+          "snippet.defaultLanguage",
+          "snippet.description",
+          "snippet.liveBroadcastContent",
+          "snippet.localized",
+          "snippet.localized.description",
+          "snippet.localized.title",
+          "snippet.publishedAt",
+          "snippet.thumbnails",
+          "snippet.thumbnails.default",
+          "snippet.thumbnails.default.height",
+          "snippet.thumbnails.default.url",
+          "snippet.thumbnails.default.width",
+          "snippet.thumbnails.high",
+          "snippet.thumbnails.high.height",
+          "snippet.thumbnails.high.url",
+          "snippet.thumbnails.high.width",
+          "snippet.thumbnails.maxres",
+          "snippet.thumbnails.maxres.height",
+          "snippet.thumbnails.maxres.url",
+          "snippet.thumbnails.maxres.width",
+          "snippet.thumbnails.medium",
+          "snippet.thumbnails.medium.height",
+          "snippet.thumbnails.medium.url",
+          "snippet.thumbnails.medium.width",
+          "snippet.thumbnails.standard",
+          "snippet.thumbnails.standard.height",
+          "snippet.thumbnails.standard.url",
+          "snippet.thumbnails.standard.width",
+          "snippet.title",
+          "statistics",
+          "statistics.commentCount",
+          "statistics.favoriteCount",
+          "statistics.likeCount",
+          "statistics.viewCount",
+          "status",
+          "status.embeddable",
+          "status.license",
+          "status.madeForKids",
+          "status.privacyStatus",
+          "status.publicStatsViewable",
+          "status.uploadStatus",
+          "topicDetails",
+          "topicDetails.topicCategories"
+        ]
+      },
+      "recipeSignals": {
+        "title": "Will you be trying this with your next cake?",
+        "channelTitle": "CupcakeJemma",
+        "descriptionLength": 0,
+        "descriptionHasIngredientsHeader": false,
+        "descriptionHasMethodHeader": false,
+        "tagCount": 0,
+        "durationIso8601": "PT37S",
+        "captionFlag": "false",
+        "viewCount": 24396437,
+        "likeCount": 1092301,
+        "commentCount": 3229
+      }
+    },
+    {
+      "selection": {
+        "channelTitle": "CupcakeJemma",
+        "videoId": "zIsowpXIt3Q",
+        "backlogTitle": "Cookies & Cream New York Cookies Recipe | Cupcake Jemma",
+        "backlogDescriptionLength": 1377,
+        "backlogViewCount": 693860,
+        "backlogDurationSeconds": 536,
+        "url": "https://www.youtube.com/watch?v=zIsowpXIt3Q"
+      },
+      "api": {
+        "kind": "youtube#video",
+        "etag": "Di4bsbJz84bajoTXfyYA2c8T0pY",
+        "id": "zIsowpXIt3Q",
+        "snippet": {
+          "publishedAt": "2024-04-09T18:30:47Z",
+          "channelId": "UCoMum0pwewO8_WtTlUQxGHw",
+          "title": "Cookies & Cream New York Cookies Recipe | Cupcake Jemma",
+          "description": "Order delicious NY Cookies for UK wide delivery here 👉🏼 https://www.crumbsanddoilies.co.uk/collections/cookies\nCAKES: http://www.crumbsanddoilies.co.uk \nINSTAGRAM: @cupcakejemma \nCAKESTAGRAM: @crumbsanddoilies\n\nEver since we put this cookie in our London Soho Bakery, you guys have been salivating for it. It's finally here! A dark double chocolate chip cookie, laced with Oreo crumble, white chocolate chips, 54% chocolate chips, filled with a molten creamy white chocolate filling. We love these cookies because they're thick, ooey, gooey and that perfect balance between a crisp outer and a dense, soft, almost underbaked centre. \n\nOur Cookie & Cream Cookies will be in store all this week, so come by and grab one, or a few! \n\nC&D Soho:\n1 Kingly Court, \nCarnaby \nW1B 5PW\n\nINGREDIENTS:\n\n12 tbsp White Chocolate Spread\n230g Cold, Chopped Butter\n160g Light Brown Sugar\n160g Caster Sugar\n300g White Chocolate Chips\n100g Dark Chocolate Chips \n50g Crushed Oreo Crumbs \n300g Plain Flour\n130g Self Raising Flour \n70g Black Cocoa Powder \n1 tsp Sea Salt\n2 tsp Baking Powder\n2 Eggs\n1 Egg Yolk\n50g Crushed Oreo Cookies for Rolling\nMakes 12 Cookies\n\n-----------\nBecome a Patreon BAKE CLUB member for a pdf download of this and other recipes, as well as Bake-Alongs, extra content, baking tips and more.\n\nBAKE CLUB: http://patreon.com/cupcakejemma\nBAKE AT HOME: http://cupcakejemma.com",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/zIsowpXIt3Q/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/zIsowpXIt3Q/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/zIsowpXIt3Q/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/zIsowpXIt3Q/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/zIsowpXIt3Q/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            }
+          },
+          "channelTitle": "CupcakeJemma",
+          "tags": [
+            "Cupcake",
+            "cupcake jemma",
+            "jemma",
+            "gemma",
+            "cupcakes",
+            "bake",
+            "baking",
+            "how to make",
+            "recipe",
+            "crumbs & doilies",
+            "baker",
+            "buttercream",
+            "cake",
+            "cakes",
+            "vanilla",
+            "chocolate",
+            "jemma wilson",
+            "crumbs and doilies",
+            "bakery",
+            "perfect",
+            "easy",
+            "home made",
+            "hand made",
+            "simple",
+            "fool proof",
+            "dessert",
+            "New York",
+            "cookies",
+            "New York cookies",
+            "levain",
+            "levain cookies",
+            "cookies and cream",
+            "cookies & cream",
+            "oreo",
+            "Oreo cookie",
+            "oreo cookies",
+            "oreo bakes",
+            "soho",
+            "London bakery",
+            "London",
+            "double chocolate",
+            "funny face",
+            "crumbl",
+            "crumbl cookie",
+            "crumbl cookies"
+          ],
+          "categoryId": "26",
+          "liveBroadcastContent": "none",
+          "defaultLanguage": "en-GB",
+          "localized": {
+            "title": "Cookies & Cream New York Cookies Recipe | Cupcake Jemma",
+            "description": "Order delicious NY Cookies for UK wide delivery here 👉🏼 https://www.crumbsanddoilies.co.uk/collections/cookies\nCAKES: http://www.crumbsanddoilies.co.uk \nINSTAGRAM: @cupcakejemma \nCAKESTAGRAM: @crumbsanddoilies\n\nEver since we put this cookie in our London Soho Bakery, you guys have been salivating for it. It's finally here! A dark double chocolate chip cookie, laced with Oreo crumble, white chocolate chips, 54% chocolate chips, filled with a molten creamy white chocolate filling. We love these cookies because they're thick, ooey, gooey and that perfect balance between a crisp outer and a dense, soft, almost underbaked centre. \n\nOur Cookie & Cream Cookies will be in store all this week, so come by and grab one, or a few! \n\nC&D Soho:\n1 Kingly Court, \nCarnaby \nW1B 5PW\n\nINGREDIENTS:\n\n12 tbsp White Chocolate Spread\n230g Cold, Chopped Butter\n160g Light Brown Sugar\n160g Caster Sugar\n300g White Chocolate Chips\n100g Dark Chocolate Chips \n50g Crushed Oreo Crumbs \n300g Plain Flour\n130g Self Raising Flour \n70g Black Cocoa Powder \n1 tsp Sea Salt\n2 tsp Baking Powder\n2 Eggs\n1 Egg Yolk\n50g Crushed Oreo Cookies for Rolling\nMakes 12 Cookies\n\n-----------\nBecome a Patreon BAKE CLUB member for a pdf download of this and other recipes, as well as Bake-Alongs, extra content, baking tips and more.\n\nBAKE CLUB: http://patreon.com/cupcakejemma\nBAKE AT HOME: http://cupcakejemma.com"
+          },
+          "defaultAudioLanguage": "en-GB"
+        },
+        "contentDetails": {
+          "duration": "PT8M56S",
+          "dimension": "2d",
+          "definition": "hd",
+          "caption": "false",
+          "licensedContent": true,
+          "contentRating": {},
+          "projection": "rectangular"
+        },
+        "status": {
+          "uploadStatus": "processed",
+          "privacyStatus": "public",
+          "license": "youtube",
+          "embeddable": true,
+          "publicStatsViewable": true,
+          "madeForKids": false
+        },
+        "statistics": {
+          "viewCount": "693859",
+          "likeCount": "30359",
+          "favoriteCount": "0",
+          "commentCount": "448"
+        },
+        "player": {
+          "embedHtml": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/zIsowpXIt3Q\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+        },
+        "topicDetails": {
+          "topicCategories": [
+            "https://en.wikipedia.org/wiki/Food",
+            "https://en.wikipedia.org/wiki/Lifestyle_(sociology)"
+          ]
+        },
+        "recordingDetails": {},
+        "localizations": {
+          "en-GB": {
+            "title": "Cookies & Cream New York Cookies Recipe | Cupcake Jemma",
+            "description": "Order delicious NY Cookies for UK wide delivery here 👉🏼 https://www.crumbsanddoilies.co.uk/collections/cookies\nCAKES: http://www.crumbsanddoilies.co.uk \nINSTAGRAM: @cupcakejemma \nCAKESTAGRAM: @crumbsanddoilies\n\nEver since we put this cookie in our London Soho Bakery, you guys have been salivating for it. It's finally here! A dark double chocolate chip cookie, laced with Oreo crumble, white chocolate chips, 54% chocolate chips, filled with a molten creamy white chocolate filling. We love these cookies because they're thick, ooey, gooey and that perfect balance between a crisp outer and a dense, soft, almost underbaked centre. \n\nOur Cookie & Cream Cookies will be in store all this week, so come by and grab one, or a few! \n\nC&D Soho:\n1 Kingly Court, \nCarnaby \nW1B 5PW\n\nINGREDIENTS:\n\n12 tbsp White Chocolate Spread\n230g Cold, Chopped Butter\n160g Light Brown Sugar\n160g Caster Sugar\n300g White Chocolate Chips\n100g Dark Chocolate Chips \n50g Crushed Oreo Crumbs \n300g Plain Flour\n130g Self Raising Flour \n70g Black Cocoa Powder \n1 tsp Sea Salt\n2 tsp Baking Powder\n2 Eggs\n1 Egg Yolk\n50g Crushed Oreo Cookies for Rolling\nMakes 12 Cookies\n\n-----------\nBecome a Patreon BAKE CLUB member for a pdf download of this and other recipes, as well as Bake-Alongs, extra content, baking tips and more.\n\nBAKE CLUB: http://patreon.com/cupcakejemma\nBAKE AT HOME: http://cupcakejemma.com"
+          }
+        },
+        "paidProductPlacementDetails": {
+          "hasPaidProductPlacement": false
+        }
+      },
+      "inventory": {
+        "presentParts": [
+          "snippet",
+          "contentDetails",
+          "statistics",
+          "status",
+          "topicDetails",
+          "recordingDetails",
+          "player",
+          "localizations",
+          "paidProductPlacementDetails"
+        ],
+        "fieldPaths": [
+          "contentDetails",
+          "contentDetails.caption",
+          "contentDetails.contentRating",
+          "contentDetails.definition",
+          "contentDetails.dimension",
+          "contentDetails.duration",
+          "contentDetails.licensedContent",
+          "contentDetails.projection",
+          "etag",
+          "id",
+          "kind",
+          "localizations",
+          "localizations.en-GB",
+          "localizations.en-GB.description",
+          "localizations.en-GB.title",
+          "paidProductPlacementDetails",
+          "paidProductPlacementDetails.hasPaidProductPlacement",
+          "player",
+          "player.embedHtml",
+          "recordingDetails",
+          "snippet",
+          "snippet.categoryId",
+          "snippet.channelId",
+          "snippet.channelTitle",
+          "snippet.defaultAudioLanguage",
+          "snippet.defaultLanguage",
+          "snippet.description",
+          "snippet.liveBroadcastContent",
+          "snippet.localized",
+          "snippet.localized.description",
+          "snippet.localized.title",
+          "snippet.publishedAt",
+          "snippet.tags",
+          "snippet.thumbnails",
+          "snippet.thumbnails.default",
+          "snippet.thumbnails.default.height",
+          "snippet.thumbnails.default.url",
+          "snippet.thumbnails.default.width",
+          "snippet.thumbnails.high",
+          "snippet.thumbnails.high.height",
+          "snippet.thumbnails.high.url",
+          "snippet.thumbnails.high.width",
+          "snippet.thumbnails.maxres",
+          "snippet.thumbnails.maxres.height",
+          "snippet.thumbnails.maxres.url",
+          "snippet.thumbnails.maxres.width",
+          "snippet.thumbnails.medium",
+          "snippet.thumbnails.medium.height",
+          "snippet.thumbnails.medium.url",
+          "snippet.thumbnails.medium.width",
+          "snippet.thumbnails.standard",
+          "snippet.thumbnails.standard.height",
+          "snippet.thumbnails.standard.url",
+          "snippet.thumbnails.standard.width",
+          "snippet.title",
+          "statistics",
+          "statistics.commentCount",
+          "statistics.favoriteCount",
+          "statistics.likeCount",
+          "statistics.viewCount",
+          "status",
+          "status.embeddable",
+          "status.license",
+          "status.madeForKids",
+          "status.privacyStatus",
+          "status.publicStatsViewable",
+          "status.uploadStatus",
+          "topicDetails",
+          "topicDetails.topicCategories"
+        ]
+      },
+      "recipeSignals": {
+        "title": "Cookies & Cream New York Cookies Recipe | Cupcake Jemma",
+        "channelTitle": "CupcakeJemma",
+        "descriptionLength": 1377,
+        "descriptionHasIngredientsHeader": true,
+        "descriptionHasMethodHeader": false,
+        "tagCount": 45,
+        "durationIso8601": "PT8M56S",
+        "captionFlag": "false",
+        "viewCount": 693859,
+        "likeCount": 30359,
+        "commentCount": 448
+      }
+    },
+    {
+      "selection": {
+        "channelTitle": "CupcakeJemma",
+        "videoId": "OXaG2uLosYU",
+        "backlogTitle": "Super Cute Bento Cakes | Full Baking Recipe and Decorating Tutorial | Cupcake Jemma",
+        "backlogDescriptionLength": 1585,
+        "backlogViewCount": 400954,
+        "backlogDurationSeconds": 1549,
+        "url": "https://www.youtube.com/watch?v=OXaG2uLosYU"
+      },
+      "api": {
+        "kind": "youtube#video",
+        "etag": "0tVqHHYpCL8dKtxDh-H8D2QOXR8",
+        "id": "OXaG2uLosYU",
+        "snippet": {
+          "publishedAt": "2022-05-26T15:00:25Z",
+          "channelId": "UCoMum0pwewO8_WtTlUQxGHw",
+          "title": "Super Cute Bento Cakes | Full Baking Recipe and Decorating Tutorial | Cupcake Jemma",
+          "description": "Order Cakes & Cupcakes for Delivery and Collection just here https://www.crumbsanddoilies.co.uk/collections/cakes\nhttps://www.crumbsanddoilies.co.uk/collections/cupcakes\n\nOh my gaaaaad, are these not the cutest little cakes you ever did see?! Sally & Jemma called first dibs to bake in the new studio space and they did not come to play - they're bringing you these beautiful Bento cakes! Don't forget to use the hashtag #cupcakejemma when you recreate these over on Instagram and tag us in your snaps! \n\nHow do you like the new studio? Check out the full reveal tour here: https://youtu.be/dHtCGIOt0oc\n\nYou're gunna need some burger boxes for these cutie pies - we just had a search online to find the ones we like the look of most. \n\nYou can get all the equipment we used PLUS sprinkles over at http://cupcakejemma.com \n\nFor some piping tutorials check this video out: \nPiped buttercream cake masterclass: https://youtu.be/vNYeAEHk-Bo\n\nMake your own Self Raising Flour: https://youtu.be/6rCrGw0_lGU\n----------------------------------\n\nFor the sponges: \n2 9x13 (Note Sally said the wrong size, soz!!)\nPreheat oven to 175C fan assisted (195C non fan)\n250g Unsalted Butter\n250g Caster Sugar\n4 Eggs\n250g SR Flour\n3tbsp Milk\n1/2 tsp Vanilla\n\nFor the Vanilla Buttercream:\n250g Unsalted Butter\n400g Icing Sugar\n3-4tbsp Milk\n1/2 tsp Vanilla\nPinch of Salt\n\nJOIN THE BAKE CLUB FOR FULL DOWNLOADS: http://patreon.com/cupcakejemma.com\nBAKE AT HOME KITS & MERCH: http://cupcakejemma.com \nCAKES & COOKIES: http://www.crumbsanddoilies.co.uk \nINSTAGRAM: @cupcakejemma \nCAKESTAGRAM: @crumbsanddoilies",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/OXaG2uLosYU/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/OXaG2uLosYU/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/OXaG2uLosYU/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/OXaG2uLosYU/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/OXaG2uLosYU/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            }
+          },
+          "channelTitle": "CupcakeJemma",
+          "tags": [
+            "Cupcake",
+            "cupcake jemma",
+            "jemma",
+            "gemma",
+            "cupcakes",
+            "bake",
+            "baking",
+            "how to make",
+            "recipe",
+            "crumbs & doilies",
+            "baker",
+            "buttercream",
+            "cake",
+            "cakes",
+            "vanilla",
+            "chocolate",
+            "jemma wilson",
+            "crumbs and doilies",
+            "bakery",
+            "perfect",
+            "easy",
+            "home made",
+            "hand made",
+            "simple",
+            "fool proof",
+            "dessert"
+          ],
+          "categoryId": "26",
+          "liveBroadcastContent": "none",
+          "defaultLanguage": "en-GB",
+          "localized": {
+            "title": "Super Cute Bento Cakes | Full Baking Recipe and Decorating Tutorial | Cupcake Jemma",
+            "description": "Order Cakes & Cupcakes for Delivery and Collection just here https://www.crumbsanddoilies.co.uk/collections/cakes\nhttps://www.crumbsanddoilies.co.uk/collections/cupcakes\n\nOh my gaaaaad, are these not the cutest little cakes you ever did see?! Sally & Jemma called first dibs to bake in the new studio space and they did not come to play - they're bringing you these beautiful Bento cakes! Don't forget to use the hashtag #cupcakejemma when you recreate these over on Instagram and tag us in your snaps! \n\nHow do you like the new studio? Check out the full reveal tour here: https://youtu.be/dHtCGIOt0oc\n\nYou're gunna need some burger boxes for these cutie pies - we just had a search online to find the ones we like the look of most. \n\nYou can get all the equipment we used PLUS sprinkles over at http://cupcakejemma.com \n\nFor some piping tutorials check this video out: \nPiped buttercream cake masterclass: https://youtu.be/vNYeAEHk-Bo\n\nMake your own Self Raising Flour: https://youtu.be/6rCrGw0_lGU\n----------------------------------\n\nFor the sponges: \n2 9x13 (Note Sally said the wrong size, soz!!)\nPreheat oven to 175C fan assisted (195C non fan)\n250g Unsalted Butter\n250g Caster Sugar\n4 Eggs\n250g SR Flour\n3tbsp Milk\n1/2 tsp Vanilla\n\nFor the Vanilla Buttercream:\n250g Unsalted Butter\n400g Icing Sugar\n3-4tbsp Milk\n1/2 tsp Vanilla\nPinch of Salt\n\nJOIN THE BAKE CLUB FOR FULL DOWNLOADS: http://patreon.com/cupcakejemma.com\nBAKE AT HOME KITS & MERCH: http://cupcakejemma.com \nCAKES & COOKIES: http://www.crumbsanddoilies.co.uk \nINSTAGRAM: @cupcakejemma \nCAKESTAGRAM: @crumbsanddoilies"
+          },
+          "defaultAudioLanguage": "en-GB"
+        },
+        "contentDetails": {
+          "duration": "PT25M49S",
+          "dimension": "2d",
+          "definition": "hd",
+          "caption": "false",
+          "licensedContent": true,
+          "contentRating": {},
+          "projection": "rectangular"
+        },
+        "status": {
+          "uploadStatus": "processed",
+          "privacyStatus": "public",
+          "license": "youtube",
+          "embeddable": true,
+          "publicStatsViewable": true,
+          "madeForKids": false
+        },
+        "statistics": {
+          "viewCount": "400969",
+          "likeCount": "9977",
+          "favoriteCount": "0",
+          "commentCount": "296"
+        },
+        "player": {
+          "embedHtml": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/OXaG2uLosYU\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+        },
+        "topicDetails": {
+          "topicCategories": [
+            "https://en.wikipedia.org/wiki/Food",
+            "https://en.wikipedia.org/wiki/Hobby",
+            "https://en.wikipedia.org/wiki/Lifestyle_(sociology)"
+          ]
+        },
+        "recordingDetails": {},
+        "localizations": {
+          "en-GB": {
+            "title": "Super Cute Bento Cakes | Full Baking Recipe and Decorating Tutorial | Cupcake Jemma",
+            "description": "Order Cakes & Cupcakes for Delivery and Collection just here https://www.crumbsanddoilies.co.uk/collections/cakes\nhttps://www.crumbsanddoilies.co.uk/collections/cupcakes\n\nOh my gaaaaad, are these not the cutest little cakes you ever did see?! Sally & Jemma called first dibs to bake in the new studio space and they did not come to play - they're bringing you these beautiful Bento cakes! Don't forget to use the hashtag #cupcakejemma when you recreate these over on Instagram and tag us in your snaps! \n\nHow do you like the new studio? Check out the full reveal tour here: https://youtu.be/dHtCGIOt0oc\n\nYou're gunna need some burger boxes for these cutie pies - we just had a search online to find the ones we like the look of most. \n\nYou can get all the equipment we used PLUS sprinkles over at http://cupcakejemma.com \n\nFor some piping tutorials check this video out: \nPiped buttercream cake masterclass: https://youtu.be/vNYeAEHk-Bo\n\nMake your own Self Raising Flour: https://youtu.be/6rCrGw0_lGU\n----------------------------------\n\nFor the sponges: \n2 9x13 (Note Sally said the wrong size, soz!!)\nPreheat oven to 175C fan assisted (195C non fan)\n250g Unsalted Butter\n250g Caster Sugar\n4 Eggs\n250g SR Flour\n3tbsp Milk\n1/2 tsp Vanilla\n\nFor the Vanilla Buttercream:\n250g Unsalted Butter\n400g Icing Sugar\n3-4tbsp Milk\n1/2 tsp Vanilla\nPinch of Salt\n\nJOIN THE BAKE CLUB FOR FULL DOWNLOADS: http://patreon.com/cupcakejemma.com\nBAKE AT HOME KITS & MERCH: http://cupcakejemma.com \nCAKES & COOKIES: http://www.crumbsanddoilies.co.uk \nINSTAGRAM: @cupcakejemma \nCAKESTAGRAM: @crumbsanddoilies"
+          }
+        },
+        "paidProductPlacementDetails": {
+          "hasPaidProductPlacement": false
+        }
+      },
+      "inventory": {
+        "presentParts": [
+          "snippet",
+          "contentDetails",
+          "statistics",
+          "status",
+          "topicDetails",
+          "recordingDetails",
+          "player",
+          "localizations",
+          "paidProductPlacementDetails"
+        ],
+        "fieldPaths": [
+          "contentDetails",
+          "contentDetails.caption",
+          "contentDetails.contentRating",
+          "contentDetails.definition",
+          "contentDetails.dimension",
+          "contentDetails.duration",
+          "contentDetails.licensedContent",
+          "contentDetails.projection",
+          "etag",
+          "id",
+          "kind",
+          "localizations",
+          "localizations.en-GB",
+          "localizations.en-GB.description",
+          "localizations.en-GB.title",
+          "paidProductPlacementDetails",
+          "paidProductPlacementDetails.hasPaidProductPlacement",
+          "player",
+          "player.embedHtml",
+          "recordingDetails",
+          "snippet",
+          "snippet.categoryId",
+          "snippet.channelId",
+          "snippet.channelTitle",
+          "snippet.defaultAudioLanguage",
+          "snippet.defaultLanguage",
+          "snippet.description",
+          "snippet.liveBroadcastContent",
+          "snippet.localized",
+          "snippet.localized.description",
+          "snippet.localized.title",
+          "snippet.publishedAt",
+          "snippet.tags",
+          "snippet.thumbnails",
+          "snippet.thumbnails.default",
+          "snippet.thumbnails.default.height",
+          "snippet.thumbnails.default.url",
+          "snippet.thumbnails.default.width",
+          "snippet.thumbnails.high",
+          "snippet.thumbnails.high.height",
+          "snippet.thumbnails.high.url",
+          "snippet.thumbnails.high.width",
+          "snippet.thumbnails.maxres",
+          "snippet.thumbnails.maxres.height",
+          "snippet.thumbnails.maxres.url",
+          "snippet.thumbnails.maxres.width",
+          "snippet.thumbnails.medium",
+          "snippet.thumbnails.medium.height",
+          "snippet.thumbnails.medium.url",
+          "snippet.thumbnails.medium.width",
+          "snippet.thumbnails.standard",
+          "snippet.thumbnails.standard.height",
+          "snippet.thumbnails.standard.url",
+          "snippet.thumbnails.standard.width",
+          "snippet.title",
+          "statistics",
+          "statistics.commentCount",
+          "statistics.favoriteCount",
+          "statistics.likeCount",
+          "statistics.viewCount",
+          "status",
+          "status.embeddable",
+          "status.license",
+          "status.madeForKids",
+          "status.privacyStatus",
+          "status.publicStatsViewable",
+          "status.uploadStatus",
+          "topicDetails",
+          "topicDetails.topicCategories"
+        ]
+      },
+      "recipeSignals": {
+        "title": "Super Cute Bento Cakes | Full Baking Recipe and Decorating Tutorial | Cupcake Jemma",
+        "channelTitle": "CupcakeJemma",
+        "descriptionLength": 1585,
+        "descriptionHasIngredientsHeader": false,
+        "descriptionHasMethodHeader": false,
+        "tagCount": 26,
+        "durationIso8601": "PT25M49S",
+        "captionFlag": "false",
+        "viewCount": 400969,
+        "likeCount": 9977,
+        "commentCount": 296
+      }
+    },
+    {
+      "selection": {
+        "channelTitle": "CupcakeJemma",
+        "videoId": "EguvuZXD9uE",
+        "backlogTitle": "Classic Coffee & Walnut Layer Cake Recipe | Cupcake Jemma",
+        "backlogDescriptionLength": 1947,
+        "backlogViewCount": 267306,
+        "backlogDurationSeconds": 1396,
+        "url": "https://www.youtube.com/watch?v=EguvuZXD9uE"
+      },
+      "api": {
+        "kind": "youtube#video",
+        "etag": "QxVlqpWbgvZD_OoFcEi4HUX_hIU",
+        "id": "EguvuZXD9uE",
+        "snippet": {
+          "publishedAt": "2022-02-17T16:00:04Z",
+          "channelId": "UCoMum0pwewO8_WtTlUQxGHw",
+          "title": "Classic Coffee & Walnut Layer Cake Recipe | Cupcake Jemma",
+          "description": "How we have gone this long without sharing this classic recipe for Coffee & Walnut cake we don't quite know! But alas, here it is in all its perfectly simple glory; layers of coffee and walnut sponge filled and decorated with coffee buttercream and topped off with more walnuts. This is a perfect tea time cake and we guarantee you will absolutely love it. \n\nLet us know how you get on and what you're baking by tagging us in your Instagram posts using #cupcakejemma \n\nAnd to join our awesome Bake Club where you can find extra content, exclusive behind the scenes and beautiful downloadable pdf's of all the recipes we put here on YouTube head to: \nhttps://www.patreon.com/cupcakejemma\n\n-------------------------\nPreheat Oven to 170C fan assisted (190C non fan) \nFor the 3 layer 7\" cake that Sally makes in the video:\nThis quantity will also work for 2 x 8\" sponge, see below for 6\"\n\n250g Softened Unsalted Butter\n250g Caster Sugar\n4 Eggs \n250g Self Raising Flour \n50g Chopped Walnuts \n3tbsp cold good quality Espresso (or 1tbsp instant coffee granules mixed with 3tbsp water)\n \nCoffee Buttercream: \n250g softened Unsalted Butter \n400g Icing Sugar \n3-4 tbsp cold good quality Espresso (or 1tbsp instant coffee granules mixed with 4tbsp water)\n\nWalnuts to decorate!\n--------------------------\nFor 2 layers of 6\" sponge: \n125g Softened Unsalted Butter\n125g Caster Sugar\n2 Eggs \n125g Self Raising Flour \n25g Chopped Walnuts \n1.5tbsp cold good quality Espresso (or 0.5tbsp instant coffee granules mixed with 1.5tbsp water)\n \nCoffee Buttercream: \n125g softened Unsalted Butter \n200g Icing Sugar \n1-2 tbsp cold good quality Espresso (or 1/2tbsp instant coffee granules mixed with 2tbsp water)\n----------------------------\n\nBAKE AT HOME KITS AND MERCH!: http://cupcakejemma.com \nSUBSCRIBE FOR WEEKLY VIDS: https://www.youtube.com/user/CupcakeJemma\nMORE CAKE: http://www.crumbsanddoilies.co.uk \nMY INSTAGRAM: @cupcakejemma \nCAKESTAGRAM: @crumbsanddoilies",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/EguvuZXD9uE/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/EguvuZXD9uE/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/EguvuZXD9uE/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/EguvuZXD9uE/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/EguvuZXD9uE/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            }
+          },
+          "channelTitle": "CupcakeJemma",
+          "tags": [
+            "Cupcake",
+            "cupcake jemma",
+            "jemma",
+            "gemma",
+            "cupcakes",
+            "bake",
+            "baking",
+            "how to make",
+            "recipe",
+            "crumbs & doilies",
+            "baker",
+            "buttercream",
+            "cake",
+            "cakes",
+            "vanilla",
+            "chocolate",
+            "jemma wilson",
+            "crumbs and doilies",
+            "bakery",
+            "perfect",
+            "easy",
+            "home made",
+            "hand made",
+            "simple",
+            "fool proof",
+            "dessert",
+            "coffee cake",
+            "coffee and walnut",
+            "classic baking"
+          ],
+          "categoryId": "26",
+          "liveBroadcastContent": "none",
+          "defaultLanguage": "en-GB",
+          "localized": {
+            "title": "Classic Coffee & Walnut Layer Cake Recipe | Cupcake Jemma",
+            "description": "How we have gone this long without sharing this classic recipe for Coffee & Walnut cake we don't quite know! But alas, here it is in all its perfectly simple glory; layers of coffee and walnut sponge filled and decorated with coffee buttercream and topped off with more walnuts. This is a perfect tea time cake and we guarantee you will absolutely love it. \n\nLet us know how you get on and what you're baking by tagging us in your Instagram posts using #cupcakejemma \n\nAnd to join our awesome Bake Club where you can find extra content, exclusive behind the scenes and beautiful downloadable pdf's of all the recipes we put here on YouTube head to: \nhttps://www.patreon.com/cupcakejemma\n\n-------------------------\nPreheat Oven to 170C fan assisted (190C non fan) \nFor the 3 layer 7\" cake that Sally makes in the video:\nThis quantity will also work for 2 x 8\" sponge, see below for 6\"\n\n250g Softened Unsalted Butter\n250g Caster Sugar\n4 Eggs \n250g Self Raising Flour \n50g Chopped Walnuts \n3tbsp cold good quality Espresso (or 1tbsp instant coffee granules mixed with 3tbsp water)\n \nCoffee Buttercream: \n250g softened Unsalted Butter \n400g Icing Sugar \n3-4 tbsp cold good quality Espresso (or 1tbsp instant coffee granules mixed with 4tbsp water)\n\nWalnuts to decorate!\n--------------------------\nFor 2 layers of 6\" sponge: \n125g Softened Unsalted Butter\n125g Caster Sugar\n2 Eggs \n125g Self Raising Flour \n25g Chopped Walnuts \n1.5tbsp cold good quality Espresso (or 0.5tbsp instant coffee granules mixed with 1.5tbsp water)\n \nCoffee Buttercream: \n125g softened Unsalted Butter \n200g Icing Sugar \n1-2 tbsp cold good quality Espresso (or 1/2tbsp instant coffee granules mixed with 2tbsp water)\n----------------------------\n\nBAKE AT HOME KITS AND MERCH!: http://cupcakejemma.com \nSUBSCRIBE FOR WEEKLY VIDS: https://www.youtube.com/user/CupcakeJemma\nMORE CAKE: http://www.crumbsanddoilies.co.uk \nMY INSTAGRAM: @cupcakejemma \nCAKESTAGRAM: @crumbsanddoilies"
+          },
+          "defaultAudioLanguage": "en-GB"
+        },
+        "contentDetails": {
+          "duration": "PT23M16S",
+          "dimension": "2d",
+          "definition": "hd",
+          "caption": "false",
+          "licensedContent": true,
+          "contentRating": {},
+          "projection": "rectangular"
+        },
+        "status": {
+          "uploadStatus": "processed",
+          "privacyStatus": "public",
+          "license": "youtube",
+          "embeddable": true,
+          "publicStatsViewable": true,
+          "madeForKids": false
+        },
+        "statistics": {
+          "viewCount": "267307",
+          "likeCount": "5811",
+          "favoriteCount": "0",
+          "commentCount": "237"
+        },
+        "player": {
+          "embedHtml": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/EguvuZXD9uE\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+        },
+        "topicDetails": {
+          "topicCategories": [
+            "https://en.wikipedia.org/wiki/Food",
+            "https://en.wikipedia.org/wiki/Hobby",
+            "https://en.wikipedia.org/wiki/Lifestyle_(sociology)"
+          ]
+        },
+        "recordingDetails": {},
+        "localizations": {
+          "en-GB": {
+            "title": "Classic Coffee & Walnut Layer Cake Recipe | Cupcake Jemma",
+            "description": "How we have gone this long without sharing this classic recipe for Coffee & Walnut cake we don't quite know! But alas, here it is in all its perfectly simple glory; layers of coffee and walnut sponge filled and decorated with coffee buttercream and topped off with more walnuts. This is a perfect tea time cake and we guarantee you will absolutely love it. \n\nLet us know how you get on and what you're baking by tagging us in your Instagram posts using #cupcakejemma \n\nAnd to join our awesome Bake Club where you can find extra content, exclusive behind the scenes and beautiful downloadable pdf's of all the recipes we put here on YouTube head to: \nhttps://www.patreon.com/cupcakejemma\n\n-------------------------\nPreheat Oven to 170C fan assisted (190C non fan) \nFor the 3 layer 7\" cake that Sally makes in the video:\nThis quantity will also work for 2 x 8\" sponge, see below for 6\"\n\n250g Softened Unsalted Butter\n250g Caster Sugar\n4 Eggs \n250g Self Raising Flour \n50g Chopped Walnuts \n3tbsp cold good quality Espresso (or 1tbsp instant coffee granules mixed with 3tbsp water)\n \nCoffee Buttercream: \n250g softened Unsalted Butter \n400g Icing Sugar \n3-4 tbsp cold good quality Espresso (or 1tbsp instant coffee granules mixed with 4tbsp water)\n\nWalnuts to decorate!\n--------------------------\nFor 2 layers of 6\" sponge: \n125g Softened Unsalted Butter\n125g Caster Sugar\n2 Eggs \n125g Self Raising Flour \n25g Chopped Walnuts \n1.5tbsp cold good quality Espresso (or 0.5tbsp instant coffee granules mixed with 1.5tbsp water)\n \nCoffee Buttercream: \n125g softened Unsalted Butter \n200g Icing Sugar \n1-2 tbsp cold good quality Espresso (or 1/2tbsp instant coffee granules mixed with 2tbsp water)\n----------------------------\n\nBAKE AT HOME KITS AND MERCH!: http://cupcakejemma.com \nSUBSCRIBE FOR WEEKLY VIDS: https://www.youtube.com/user/CupcakeJemma\nMORE CAKE: http://www.crumbsanddoilies.co.uk \nMY INSTAGRAM: @cupcakejemma \nCAKESTAGRAM: @crumbsanddoilies"
+          }
+        },
+        "paidProductPlacementDetails": {
+          "hasPaidProductPlacement": false
+        }
+      },
+      "inventory": {
+        "presentParts": [
+          "snippet",
+          "contentDetails",
+          "statistics",
+          "status",
+          "topicDetails",
+          "recordingDetails",
+          "player",
+          "localizations",
+          "paidProductPlacementDetails"
+        ],
+        "fieldPaths": [
+          "contentDetails",
+          "contentDetails.caption",
+          "contentDetails.contentRating",
+          "contentDetails.definition",
+          "contentDetails.dimension",
+          "contentDetails.duration",
+          "contentDetails.licensedContent",
+          "contentDetails.projection",
+          "etag",
+          "id",
+          "kind",
+          "localizations",
+          "localizations.en-GB",
+          "localizations.en-GB.description",
+          "localizations.en-GB.title",
+          "paidProductPlacementDetails",
+          "paidProductPlacementDetails.hasPaidProductPlacement",
+          "player",
+          "player.embedHtml",
+          "recordingDetails",
+          "snippet",
+          "snippet.categoryId",
+          "snippet.channelId",
+          "snippet.channelTitle",
+          "snippet.defaultAudioLanguage",
+          "snippet.defaultLanguage",
+          "snippet.description",
+          "snippet.liveBroadcastContent",
+          "snippet.localized",
+          "snippet.localized.description",
+          "snippet.localized.title",
+          "snippet.publishedAt",
+          "snippet.tags",
+          "snippet.thumbnails",
+          "snippet.thumbnails.default",
+          "snippet.thumbnails.default.height",
+          "snippet.thumbnails.default.url",
+          "snippet.thumbnails.default.width",
+          "snippet.thumbnails.high",
+          "snippet.thumbnails.high.height",
+          "snippet.thumbnails.high.url",
+          "snippet.thumbnails.high.width",
+          "snippet.thumbnails.maxres",
+          "snippet.thumbnails.maxres.height",
+          "snippet.thumbnails.maxres.url",
+          "snippet.thumbnails.maxres.width",
+          "snippet.thumbnails.medium",
+          "snippet.thumbnails.medium.height",
+          "snippet.thumbnails.medium.url",
+          "snippet.thumbnails.medium.width",
+          "snippet.thumbnails.standard",
+          "snippet.thumbnails.standard.height",
+          "snippet.thumbnails.standard.url",
+          "snippet.thumbnails.standard.width",
+          "snippet.title",
+          "statistics",
+          "statistics.commentCount",
+          "statistics.favoriteCount",
+          "statistics.likeCount",
+          "statistics.viewCount",
+          "status",
+          "status.embeddable",
+          "status.license",
+          "status.madeForKids",
+          "status.privacyStatus",
+          "status.publicStatsViewable",
+          "status.uploadStatus",
+          "topicDetails",
+          "topicDetails.topicCategories"
+        ]
+      },
+      "recipeSignals": {
+        "title": "Classic Coffee & Walnut Layer Cake Recipe | Cupcake Jemma",
+        "channelTitle": "CupcakeJemma",
+        "descriptionLength": 1947,
+        "descriptionHasIngredientsHeader": false,
+        "descriptionHasMethodHeader": false,
+        "tagCount": 29,
+        "durationIso8601": "PT23M16S",
+        "captionFlag": "false",
+        "viewCount": 267307,
+        "likeCount": 5811,
+        "commentCount": 237
+      }
+    },
+    {
+      "selection": {
+        "channelTitle": "CupcakeJemma",
+        "videoId": "BcgnokQDGtI",
+        "backlogTitle": "Lemon & Cream Cheese Pound Cake Recipe | Cupcake Jemma",
+        "backlogDescriptionLength": 871,
+        "backlogViewCount": 266534,
+        "backlogDurationSeconds": 918,
+        "url": "https://www.youtube.com/watch?v=BcgnokQDGtI"
+      },
+      "api": {
+        "kind": "youtube#video",
+        "etag": "y27TWHl-2L4til_mqUIm2nePcHI",
+        "id": "BcgnokQDGtI",
+        "snippet": {
+          "publishedAt": "2022-01-20T16:00:05Z",
+          "channelId": "UCoMum0pwewO8_WtTlUQxGHw",
+          "title": "Lemon & Cream Cheese Pound Cake Recipe | Cupcake Jemma",
+          "description": "Ok ok so it looks kinda simple but this Lemon and Cream Cheese Pound Cake is pretty life changing! It’s soft, light, tangy, sweet and completely melts in your mouth. There is no need for any icing with cake, it already has it all. \n\nJoin our Bake Club for exclusive recipes, videos, behind the scenes actions as well as downloadable pdfs of all our recipes! \n\nhttps://www.patreon.com/cupcakejemma/posts\n\n—————-\nPreheat oven to 170C \nAfter 10 minutes of baking reduce temp to 150C \n\n290g Soft Butter \n1 Lemon Zest\n185g Cream Cheese\n415g Caster Sugar\n5 Eggs\n290g Plain Flour\n1/2tsp Baking Powder \nPinch of Salt\n1/2 tsp Vanilla extract \n\n————-\n\nBAKE AT HOME KITS AND MERCH!: http://cupcakejemma.com \nSUBSCRIBE FOR WEEKLY VIDS: https://www.youtube.com/user/CupcakeJemma\nMORE CAKE: http://www.crumbsanddoilies.co.uk \nMY INSTAGRAM: @cupcakejemma \nCAKESTAGRAM: @crumbsanddoilies",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/BcgnokQDGtI/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/BcgnokQDGtI/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/BcgnokQDGtI/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/BcgnokQDGtI/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/BcgnokQDGtI/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            }
+          },
+          "channelTitle": "CupcakeJemma",
+          "tags": [
+            "Cupcake",
+            "cupcake jemma",
+            "jemma",
+            "gemma",
+            "cupcakes",
+            "bake",
+            "baking",
+            "how to make",
+            "recipe",
+            "crumbs & doilies",
+            "baker",
+            "buttercream",
+            "cake",
+            "cakes",
+            "vanilla",
+            "chocolate",
+            "jemma wilson",
+            "crumbs and doilies",
+            "bakery",
+            "perfect",
+            "easy",
+            "home made",
+            "hand made",
+            "simple",
+            "fool proof",
+            "dessert",
+            "Pound cake",
+            "Simple baking"
+          ],
+          "categoryId": "26",
+          "liveBroadcastContent": "none",
+          "defaultLanguage": "en-GB",
+          "localized": {
+            "title": "Lemon & Cream Cheese Pound Cake Recipe | Cupcake Jemma",
+            "description": "Ok ok so it looks kinda simple but this Lemon and Cream Cheese Pound Cake is pretty life changing! It’s soft, light, tangy, sweet and completely melts in your mouth. There is no need for any icing with cake, it already has it all. \n\nJoin our Bake Club for exclusive recipes, videos, behind the scenes actions as well as downloadable pdfs of all our recipes! \n\nhttps://www.patreon.com/cupcakejemma/posts\n\n—————-\nPreheat oven to 170C \nAfter 10 minutes of baking reduce temp to 150C \n\n290g Soft Butter \n1 Lemon Zest\n185g Cream Cheese\n415g Caster Sugar\n5 Eggs\n290g Plain Flour\n1/2tsp Baking Powder \nPinch of Salt\n1/2 tsp Vanilla extract \n\n————-\n\nBAKE AT HOME KITS AND MERCH!: http://cupcakejemma.com \nSUBSCRIBE FOR WEEKLY VIDS: https://www.youtube.com/user/CupcakeJemma\nMORE CAKE: http://www.crumbsanddoilies.co.uk \nMY INSTAGRAM: @cupcakejemma \nCAKESTAGRAM: @crumbsanddoilies"
+          },
+          "defaultAudioLanguage": "en-GB"
+        },
+        "contentDetails": {
+          "duration": "PT15M18S",
+          "dimension": "2d",
+          "definition": "hd",
+          "caption": "false",
+          "licensedContent": true,
+          "contentRating": {},
+          "projection": "rectangular"
+        },
+        "status": {
+          "uploadStatus": "processed",
+          "privacyStatus": "public",
+          "license": "youtube",
+          "embeddable": true,
+          "publicStatsViewable": true,
+          "madeForKids": false
+        },
+        "statistics": {
+          "viewCount": "266536",
+          "likeCount": "6257",
+          "favoriteCount": "0",
+          "commentCount": "298"
+        },
+        "player": {
+          "embedHtml": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/BcgnokQDGtI\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+        },
+        "topicDetails": {
+          "topicCategories": [
+            "https://en.wikipedia.org/wiki/Food",
+            "https://en.wikipedia.org/wiki/Hobby",
+            "https://en.wikipedia.org/wiki/Lifestyle_(sociology)"
+          ]
+        },
+        "recordingDetails": {},
+        "localizations": {
+          "en-GB": {
+            "title": "Lemon & Cream Cheese Pound Cake Recipe | Cupcake Jemma",
+            "description": "Ok ok so it looks kinda simple but this Lemon and Cream Cheese Pound Cake is pretty life changing! It’s soft, light, tangy, sweet and completely melts in your mouth. There is no need for any icing with cake, it already has it all. \n\nJoin our Bake Club for exclusive recipes, videos, behind the scenes actions as well as downloadable pdfs of all our recipes! \n\nhttps://www.patreon.com/cupcakejemma/posts\n\n—————-\nPreheat oven to 170C \nAfter 10 minutes of baking reduce temp to 150C \n\n290g Soft Butter \n1 Lemon Zest\n185g Cream Cheese\n415g Caster Sugar\n5 Eggs\n290g Plain Flour\n1/2tsp Baking Powder \nPinch of Salt\n1/2 tsp Vanilla extract \n\n————-\n\nBAKE AT HOME KITS AND MERCH!: http://cupcakejemma.com \nSUBSCRIBE FOR WEEKLY VIDS: https://www.youtube.com/user/CupcakeJemma\nMORE CAKE: http://www.crumbsanddoilies.co.uk \nMY INSTAGRAM: @cupcakejemma \nCAKESTAGRAM: @crumbsanddoilies"
+          }
+        },
+        "paidProductPlacementDetails": {
+          "hasPaidProductPlacement": false
+        }
+      },
+      "inventory": {
+        "presentParts": [
+          "snippet",
+          "contentDetails",
+          "statistics",
+          "status",
+          "topicDetails",
+          "recordingDetails",
+          "player",
+          "localizations",
+          "paidProductPlacementDetails"
+        ],
+        "fieldPaths": [
+          "contentDetails",
+          "contentDetails.caption",
+          "contentDetails.contentRating",
+          "contentDetails.definition",
+          "contentDetails.dimension",
+          "contentDetails.duration",
+          "contentDetails.licensedContent",
+          "contentDetails.projection",
+          "etag",
+          "id",
+          "kind",
+          "localizations",
+          "localizations.en-GB",
+          "localizations.en-GB.description",
+          "localizations.en-GB.title",
+          "paidProductPlacementDetails",
+          "paidProductPlacementDetails.hasPaidProductPlacement",
+          "player",
+          "player.embedHtml",
+          "recordingDetails",
+          "snippet",
+          "snippet.categoryId",
+          "snippet.channelId",
+          "snippet.channelTitle",
+          "snippet.defaultAudioLanguage",
+          "snippet.defaultLanguage",
+          "snippet.description",
+          "snippet.liveBroadcastContent",
+          "snippet.localized",
+          "snippet.localized.description",
+          "snippet.localized.title",
+          "snippet.publishedAt",
+          "snippet.tags",
+          "snippet.thumbnails",
+          "snippet.thumbnails.default",
+          "snippet.thumbnails.default.height",
+          "snippet.thumbnails.default.url",
+          "snippet.thumbnails.default.width",
+          "snippet.thumbnails.high",
+          "snippet.thumbnails.high.height",
+          "snippet.thumbnails.high.url",
+          "snippet.thumbnails.high.width",
+          "snippet.thumbnails.maxres",
+          "snippet.thumbnails.maxres.height",
+          "snippet.thumbnails.maxres.url",
+          "snippet.thumbnails.maxres.width",
+          "snippet.thumbnails.medium",
+          "snippet.thumbnails.medium.height",
+          "snippet.thumbnails.medium.url",
+          "snippet.thumbnails.medium.width",
+          "snippet.thumbnails.standard",
+          "snippet.thumbnails.standard.height",
+          "snippet.thumbnails.standard.url",
+          "snippet.thumbnails.standard.width",
+          "snippet.title",
+          "statistics",
+          "statistics.commentCount",
+          "statistics.favoriteCount",
+          "statistics.likeCount",
+          "statistics.viewCount",
+          "status",
+          "status.embeddable",
+          "status.license",
+          "status.madeForKids",
+          "status.privacyStatus",
+          "status.publicStatsViewable",
+          "status.uploadStatus",
+          "topicDetails",
+          "topicDetails.topicCategories"
+        ]
+      },
+      "recipeSignals": {
+        "title": "Lemon & Cream Cheese Pound Cake Recipe | Cupcake Jemma",
+        "channelTitle": "CupcakeJemma",
+        "descriptionLength": 871,
+        "descriptionHasIngredientsHeader": false,
+        "descriptionHasMethodHeader": false,
+        "tagCount": 28,
+        "durationIso8601": "PT15M18S",
+        "captionFlag": "false",
+        "viewCount": 266536,
+        "likeCount": 6257,
+        "commentCount": 298
+      }
+    }
+  ]
+}
