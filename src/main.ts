@@ -1,8 +1,4 @@
 import "./style.css";
-import baselineBacklog from "../data/baseline-recipes/backlog.json";
-import mealDbCatalogUrl from "../data/themealdb-recipes/catalog.json?url";
-import youtubeBacklog from "../data/youtube-recipes/backlog.json";
-import youtubeCatalog from "../data/youtube-recipes/catalog.json";
 import { formatTimestamp, speakStep, textareaLines, uid, youtubeTimestampUrl } from "./format";
 import { hasAiImportEndpoint, refineCandidateWithAi } from "./importers/ai";
 import { addChannelToBacklog, hasBacklogEndpoint, processBacklogVideo, readBacklogVideoTranscript, retrieveBacklogVideoSourcePages, retrieveBacklogVideoTranscript, retrieveChannelVideos, saveBacklogVideoTranscript } from "./importers/backlog";
@@ -144,11 +140,6 @@ declare global {
 
 const filters = ["all", "baseline", "cooking", "baking", "pasta", "bread", "vegetarian", "quick"];
 const importSourceFilters: ImportSourceFilter[] = ["all", "baseline", "themealdb", "youtube"];
-const baselineRecipeImageSlugs: Record<string, string> = {
-  "recipe-baseline-focaccia": "focaccia",
-  "recipe-baseline-spaghetti-carbonara": "spaghetti-carbonara",
-  "recipe-baseline-lasagne": "lasagne",
-};
 const detailWorkflowSections = ["workflow-overview", "workflow-shop", "workflow-prep", "workflow-cook"];
 type BrowseRow = {
   id: string;
@@ -183,9 +174,27 @@ type MealDbRecordGroup = {
   records: TheMealDBRecord[];
 };
 
-const collectedBacklog = youtubeBacklog as YouTubeRecipeBacklog;
-const collectedCatalog = youtubeCatalog as YouTubeRecipeCatalog;
-const collectedBaselineBacklog = baselineBacklog as BaselineRecipeBacklog;
+// Research datasets (YouTube backlog/catalog, TheMealDB, baseline backlog) used to be
+// imported into the SPA. They moved out of the build per ADR 0001 — research lives
+// under tools/ and research/, not in the cooking app. The workbench UI still renders
+// against these structures; they're empty stubs so the build stays small.
+const collectedBacklog: YouTubeRecipeBacklog = { schemaVersion: 1, updatedAt: null, videos: [], channels: [] };
+const collectedCatalog: YouTubeRecipeCatalog = {
+  schemaVersion: 1,
+  generatedAt: null,
+  targetCount: 0,
+  sort: "viewCount_desc",
+  source: "",
+  records: [],
+};
+const collectedBaselineBacklog: BaselineRecipeBacklog = {
+  schemaVersion: 1,
+  updatedAt: null,
+  coverageGoal: "",
+  channels: [],
+  statuses: {},
+  items: [],
+};
 const emptyMealDbCatalog: TheMealDBCatalog = {
   schemaVersion: 1,
   generatedAt: "",
@@ -197,10 +206,10 @@ const emptyMealDbCatalog: TheMealDBCatalog = {
   recordCount: 0,
   records: [],
 };
-const localTranscriptFiles = Object.keys(import.meta.glob("../data/youtube-recipes/transcripts/*", { query: "?url", import: "default", eager: true }));
-const localCandidateModules = import.meta.glob("../data/youtube-recipes/candidates/*.candidate.json", { import: "default", eager: true }) as Record<string, { candidate?: RecipeCandidate }>;
-const localCandidateFiles = Object.keys(localCandidateModules);
-const localSourcePageFiles = Object.keys(import.meta.glob("../data/youtube-recipes/source-pages/**/*.json", { query: "?url", import: "default", eager: true }));
+const localTranscriptFiles: string[] = [];
+const localCandidateModules: Record<string, { candidate?: RecipeCandidate }> = {};
+const localCandidateFiles: string[] = [];
+const localSourcePageFiles: string[] = [];
 const importUiSessionKey = "rrrecipe:import-ui";
 
 const state: UiState = {
@@ -258,7 +267,6 @@ void boot();
 
 async function boot(): Promise<void> {
   state.snapshot = await loadSnapshot();
-  state.mealDbCatalog = await loadMealDbCatalog();
   if (state.snapshot.recipes.length === 1 && state.snapshot.recipes[0]?.id === "recipe-focaccia") {
     state.snapshot = await resetSnapshot();
   }
@@ -267,16 +275,6 @@ async function boot(): Promise<void> {
   selectFirstRecipe();
   restoreImportUiSession();
   render();
-}
-
-async function loadMealDbCatalog(): Promise<TheMealDBCatalog> {
-  try {
-    const response = await fetch(mealDbCatalogUrl);
-    if (!response.ok) return emptyMealDbCatalog;
-    return (await response.json()) as TheMealDBCatalog;
-  } catch {
-    return emptyMealDbCatalog;
-  }
 }
 
 function selectFirstRecipe(): void {
@@ -1797,8 +1795,8 @@ function renderWorkflowOverview(version: RecipeVersion, totalMinutes: number, ac
 }
 
 function recipeVisualUrl(version: RecipeVersion): string | undefined {
-  const baselineImageSlug = baselineRecipeImageSlugs[version.recipeId];
-  if (baselineImageSlug) return `${import.meta.env.BASE_URL}data/baseline-recipes/images/${baselineImageSlug}.png`;
+  // Baseline recipes use the design-spec striped placeholder (no image).
+  // Real food photography is intentional out-of-scope per the design canon.
   const visualSource = version.sourceIds.map(sourceById).find((source) => source?.external?.imageUrl || source?.media?.thumbnailUrl);
   return visualSource?.external?.imageUrl ?? visualSource?.media?.thumbnailUrl;
 }

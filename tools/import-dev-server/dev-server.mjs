@@ -1,7 +1,7 @@
 import http from "node:http";
 import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, resolve } from "node:path";
-import { normalizeTranscriptSegments, transcriptBlocksToText } from "../../scripts/lib/transcripts.mjs";
+import { normalizeTranscriptSegments, transcriptBlocksToText } from "../lib/transcripts.mjs";
 
 loadDevVars();
 
