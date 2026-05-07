@@ -6,6 +6,7 @@ import { hasAiImportEndpoint, refineCandidateWithAi } from "./importers/ai";
 import { addChannelToBacklog, hasBacklogEndpoint, processBacklogVideo, readBacklogVideoTranscript, retrieveBacklogVideoSourcePages, retrieveBacklogVideoTranscript, retrieveChannelVideos, saveBacklogVideoTranscript } from "./importers/backlog";
 import { createMealDbCandidate } from "./importers/themealdb";
 import { createYouTubeCandidate, createYouTubeCandidateFromCatalog, sampleYouTubeImportUrl } from "./importers/youtube";
+import { BROWSE_FILTERS, BROWSE_FRAGMENT, browseRefsFromDocument, renderBrowse, renderBrowseList, type BrowseFilters } from "./render-browse";
 import { loadSnapshot, resetSnapshot, saveSnapshot } from "./storage";
 import type {
   AppSnapshot,
@@ -140,19 +141,8 @@ declare global {
   }
 }
 
-const filters = ["all", "baseline", "cooking", "baking", "pasta", "bread", "vegetarian", "quick"];
 const importSourceFilters: ImportSourceFilter[] = ["all", "baseline", "themealdb", "youtube"];
 const detailWorkflowSections = ["workflow-overview", "workflow-shop", "workflow-prep", "workflow-cook"];
-type BrowseRow = {
-  id: string;
-  title: string;
-  tags: string;
-  filterText: string;
-  sourceFilters: ImportSourceFilter[];
-  mark: string;
-  tone: string;
-  curated: boolean;
-};
 
 type BacklogChannelGroup = {
   key: string;
@@ -403,6 +393,7 @@ function render(options: RenderOptions = {}): void {
 
   const scrollTop = options.preserveScroll ? document.querySelector<HTMLElement>(".rr-screen-scroll")?.scrollTop : undefined;
   appEl.innerHTML = renderScreen(snapshot);
+  if (state.screen === "library") renderCurrentBrowse(snapshot);
   bindEvents();
   syncTimerInterval();
   if (scrollTop !== undefined) {
@@ -518,78 +509,22 @@ function renderAppChrome(active: "import" | "browse" | "recipe"): string {
 }
 
 function renderLibrary(snapshot: AppSnapshot): string {
-  const query = state.search.trim().toLowerCase();
-  const rows = browseRows(snapshot);
-  const visibleRows = rows.filter((row) => {
-    const matchesFilter = state.activeFilter === "all" || row.filterText.includes(state.activeFilter);
-    const matchesSource = state.recipeSourceFilter === "all" || row.sourceFilters.includes(state.recipeSourceFilter);
-    const matchesSearch = !query || row.filterText.includes(query);
-    return matchesFilter && matchesSource && matchesSearch;
-  });
-  return renderApp(
-    `
-      <div class="rr-topbar">
-        <div class="rr-search-wrap">
-          ${icon("search")}
-          <input class="rr-search" data-action="search" value="${escapeHtml(state.search)}" placeholder="search recipes, ingredients" />
-        </div>
-        <div class="rr-filter-row rr-recipe-source-filter-row">
-          ${importSourceFilters.map((filter) => `<button class="rr-chip ${state.recipeSourceFilter === filter ? "is-active" : ""}" data-action="recipe-source-filter" data-recipe-source-filter="${filter}">${filter === "themealdb" ? "TheMealDB" : filter === "youtube" ? "YT" : filter}</button>`).join("")}
-        </div>
-        <div class="rr-filter-row">
-          ${filters.map((filter) => `<button class="rr-chip ${state.activeFilter === filter ? "is-active" : ""}" data-action="filter" data-filter="${filter}">${filter}</button>`).join("")}
-        </div>
-      </div>
-
-      <div class="rr-content rr-browse-content rr-browse-content--plain">
-        <div class="rr-section-label"><span>library</span><span class="count" data-browse-count>${visibleRows.length} RECIPES</span></div>
-        <div class="rr-browse-list" data-browse-list>
-          ${visibleRows.map((row, index) => renderBrowseRow(row, index)).join("")}
-        </div>
-      </div>
-    `,
-    "browse",
-  );
+  void snapshot;
+  return renderApp(BROWSE_FRAGMENT, "browse");
 }
 
-function browseRows(snapshot: AppSnapshot): BrowseRow[] {
-  const recipeRows = snapshot.recipes.map((recipe, index) => {
-    const version = snapshot.versions.find((item) => item.id === recipe.currentVersionId);
-    const title = version?.title.toLowerCase() ?? "untitled recipe";
-    const minutes = version?.times?.totalMinutes ? `${version.times.totalMinutes}min` : "recipe";
-    const tags = [...(version?.tags.slice(0, 2) ?? []), minutes].join(" · ");
-    const versionSources = version?.sourceIds.map((id) => snapshot.sources.find((source) => source.id === id)).filter((source): source is Source => Boolean(source)) ?? [];
-    const sourceFilters: ImportSourceFilter[] = [
-      version?.tags.includes("baseline") || version?.collections.includes("Baseline") ? "baseline" : undefined,
-      versionSources.some((source) => source.type === "themealdb") ? "themealdb" : undefined,
-      versionSources.some((source) => source.type === "youtube") ? "youtube" : undefined,
-    ].filter((filter): filter is ImportSourceFilter => Boolean(filter));
-    const filterText = [
-      title,
-      ...(version?.tags ?? []),
-      ...(version?.collections ?? []),
-      ...(version?.ingredients.map((ingredient) => `${ingredient.raw} ${ingredient.item ?? ""}`) ?? []),
-    ]
-      .join(" ")
-      .toLowerCase();
-    const mark = title
-      .split(/\s+/)
-      .slice(0, 2)
-      .map((word) => word[0]?.toUpperCase() ?? "")
-      .join("")
-      .slice(0, 2);
-    return {
-      id: recipe.id,
-      title,
-      tags,
-      filterText,
-      sourceFilters,
-      mark: mark || "RR",
-      tone: index % 2 === 0 ? "warm" : "",
-      curated: version?.sourceIds.some((id) => snapshot.sources.find((source) => source.id === id)?.type === "youtube") ?? false,
-    };
-  });
-  return recipeRows;
+function currentBrowseFilters(): BrowseFilters {
+  return {
+    query: state.search,
+    activeFilter: state.activeFilter,
+    recipeSourceFilter: state.recipeSourceFilter,
+    filters: BROWSE_FILTERS,
+    sourceFilters: importSourceFilters,
+  };
+}
+
+function renderCurrentBrowse(snapshot: AppSnapshot): void {
+  renderBrowse(browseRefsFromDocument(), snapshot, currentBrowseFilters());
 }
 
 function renderImport(): string {
@@ -1693,22 +1628,6 @@ function renderCandidateStep(step: InstructionStep): string {
       </div>
       <div class="t">${anchor ? formatTimestamp(anchor.startSeconds) : "—"}</div>
     </div>
-  `;
-}
-
-function renderBrowseRow(row: BrowseRow, index: number): string {
-  return `
-    <button class="rr-row ${index === 0 ? "is-active" : ""}" data-action="open-recipe" data-recipe-id="${row.id}">
-      <div class="rr-fav ${row.tone}">${escapeHtml(row.mark)}</div>
-      <div class="rr-row-info">
-        <div class="rr-row-name">${escapeHtml(row.title)}</div>
-        <div class="rr-row-tags">${escapeHtml(row.tags)}</div>
-      </div>
-      <div class="rr-row-right">
-        ${row.curated ? icon("star", 13) : ""}
-        <span class="${index === 0 ? "rr-heart-on" : ""}">${icon("heart", 13)}</span>
-      </div>
-    </button>
   `;
 }
 
@@ -2957,19 +2876,10 @@ function createQueuedBaselineCandidate(item: BaselineRecipeBacklogItem): RecipeC
 }
 
 function updateBrowseRows(): void {
-  const list = document.querySelector<HTMLElement>("[data-browse-list]");
-  const count = document.querySelector<HTMLElement>("[data-browse-count]");
-  if (!list || !count || !state.snapshot) return;
-  const query = state.search.trim().toLowerCase();
-  const visibleRows = browseRows(state.snapshot).filter((row) => {
-    const matchesFilter = state.activeFilter === "all" || row.filterText.includes(state.activeFilter);
-    const matchesSource = state.recipeSourceFilter === "all" || row.sourceFilters.includes(state.recipeSourceFilter);
-    const matchesSearch = !query || row.filterText.includes(query);
-    return matchesFilter && matchesSource && matchesSearch;
-  });
-  count.textContent = `${visibleRows.length} RECIPES`;
-  list.innerHTML = visibleRows.map((row, index) => renderBrowseRow(row, index)).join("");
-  bindBrowseRowEvents(list);
+  if (!state.snapshot) return;
+  const refs = browseRefsFromDocument();
+  renderBrowseList(refs, state.snapshot, currentBrowseFilters());
+  bindBrowseRowEvents(refs.list);
 }
 
 function bindBrowseRowEvents(root: ParentNode = document): void {
