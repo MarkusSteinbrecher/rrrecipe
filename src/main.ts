@@ -1741,6 +1741,7 @@ function renderDetail(): string {
             ${renderWorkflowRow("prep", "prep", `${state.miseChecked.size} / ${version.ingredients.length} ready`, renderWorkflowPrep(version, multiplier))}
             ${renderWorkflowRow("cook", "cook", `${version.steps.length} steps`, renderWorkflowCook(version))}
           </section>
+          <div class="rr-padded"><button class="rr-action rr-action-flush" data-action="start-cooking">${icon("flame", 12)} begin cooking</button></div>
           <section class="rr-history">
             <div class="rr-section-label"><span>versions</span><span class="count">${versions.length}</span></div>
             ${versions.map((item) => renderVersionItem(item, version.id)).join("")}
