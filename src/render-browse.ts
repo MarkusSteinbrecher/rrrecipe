@@ -1,3 +1,4 @@
+import { icon, iconElement } from "./icons";
 import type { AppSnapshot, Source } from "./types";
 
 export type BrowseSourceFilter = "all" | "baseline" | "themealdb" | "youtube";
@@ -50,13 +51,11 @@ export const BROWSE_REF_IDS = {
   emptyState: "browse-empty-state",
 } as const;
 
-const searchIcon = `<svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.6" fill="currentColor"><circle cx="11" cy="11" r="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="m20 20-3.5-3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
-
 export const BROWSE_FRAGMENT = `
 <section id="${BROWSE_REF_IDS.root}">
   <div class="rr-topbar">
     <div class="rr-search-wrap">
-      ${searchIcon}
+      ${icon("search")}
       <input id="${BROWSE_REF_IDS.search}" class="rr-search" data-action="search" placeholder="search recipes, ingredients" />
     </div>
     <div id="${BROWSE_REF_IDS.sourceFilters}" class="rr-filter-row rr-recipe-source-filter-row"></div>
@@ -179,10 +178,10 @@ function renderBrowseRow(row: BrowseRow, index: number): HTMLElement {
 
   const right = document.createElement("div");
   right.className = "rr-row-right";
-  if (row.curated) right.append(svgIcon("star", 13));
+  if (row.curated) right.append(iconElement("star", 13));
   const heart = document.createElement("span");
   if (index === 0) heart.className = "rr-heart-on";
-  heart.append(svgIcon("heart", 13));
+  heart.append(iconElement("heart", 13));
   right.append(heart);
   button.append(right);
 
@@ -193,16 +192,6 @@ function browseFilterLabel(value: string): string {
   if (value === "themealdb") return "TheMealDB";
   if (value === "youtube") return "YT";
   return value;
-}
-
-function svgIcon(name: "heart" | "star", size: number): SVGElement {
-  const paths = {
-    heart: `<path d="M12 20s-7-4.5-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 10c0 5.5-7 10-7 10z" fill="none" stroke-linejoin="round"/>`,
-    star: `<path d="M12 3l2.5 6 6.5.5-5 4.5 1.5 6.5-5.5-3.5L6.5 20.5 8 14 3 9.5l6.5-.5L12 3z" fill="none" stroke-linejoin="round"/>`,
-  };
-  const template = document.createElement("template");
-  template.innerHTML = `<svg aria-hidden="true" width="${size}" height="${size}" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.6" fill="currentColor">${paths[name]}</svg>`;
-  return template.content.firstElementChild as SVGElement;
 }
 
 function byId(root: ParentNode, id: string): HTMLElement {
