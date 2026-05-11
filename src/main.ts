@@ -8,6 +8,7 @@ import { createMealDbCandidate } from "./importers/themealdb";
 import { createYouTubeCandidate, createYouTubeCandidateFromCatalog, sampleYouTubeImportUrl } from "./importers/youtube";
 import { icon } from "./icons";
 import { BROWSE_FILTERS, BROWSE_FRAGMENT, browseRefsFromDocument, renderBrowse, renderBrowseList, type BrowseFilters } from "./render-browse";
+import { IMPORT_FRAGMENT, importRefsFromDocument, renderImport as renderImportView, type ImportIntakeState, type ImportSourceFilter } from "./render-import";
 import { loadSnapshot, resetSnapshot, saveSnapshot } from "./storage";
 import type {
   AppSnapshot,
@@ -103,8 +104,6 @@ type UiState = {
   deletedBacklogChannelKeys: Set<string>;
   mealDbCatalog: TheMealDBCatalog;
 };
-
-type ImportSourceFilter = "all" | "baseline" | "themealdb" | "youtube";
 
 type ImportUiSession = {
   screen?: Screen;
@@ -365,6 +364,7 @@ function render(options: RenderOptions = {}): void {
   const scrollTop = options.preserveScroll ? document.querySelector<HTMLElement>(".rr-screen-scroll")?.scrollTop : undefined;
   appEl.innerHTML = renderScreen(snapshot);
   if (state.screen === "library") renderCurrentBrowse(snapshot);
+  if (state.screen === "import") renderCurrentImport(snapshot);
   bindEvents();
   syncTimerInterval();
   if (scrollTop !== undefined) {
@@ -499,19 +499,28 @@ function renderCurrentBrowse(snapshot: AppSnapshot): void {
 }
 
 function renderImport(): string {
-  const candidate = state.importCandidate;
-  return renderApp(
-    `
-      <main class="rr-import-shell">
-        ${renderImportWorkbench()}
-        ${candidate ? `<section class="rr-import-panel">${renderImportCandidate(candidate)}</section>` : ""}
-      </main>
-    `,
-    "import",
-  );
+  return renderApp(IMPORT_FRAGMENT, "import");
 }
 
-function renderImportWorkbench(): string {
+function currentImportIntake(): ImportIntakeState {
+  return {
+    channelInput: state.channelBacklogInput,
+    channelStatus: state.channelBacklogStatus,
+    backlogEndpointAvailable: hasBacklogEndpoint(),
+    search: state.importSearch,
+    sourceFilter: state.importSourceFilter,
+    sourceFilters: importSourceFilters,
+    sourceSections: renderImportSourceSections(),
+    candidate: state.importCandidate,
+    candidateHtml: state.importCandidate ? renderImportCandidate(state.importCandidate) : undefined,
+  };
+}
+
+function renderCurrentImport(snapshot: AppSnapshot): void {
+  renderImportView(importRefsFromDocument(), snapshot, currentImportIntake());
+}
+
+function renderImportSourceSections(): ImportIntakeState["sourceSections"] {
   const youtubeGroups = filteredBacklogChannelGroups();
   const totalVideos = youtubeGroups.reduce((sum, group) => sum + group.videos.length, 0);
   const baselineGroups = baselineBacklogGroups(filteredBaselineBacklogItems());
@@ -528,27 +537,9 @@ function renderImportWorkbench(): string {
   const youtubeEmptyMessage = backlogEndpointAvailable
     ? "No YouTube videos yet."
     : "Import API offline. Start `npm run research:dev-api` on the workstation to add channels.";
-  return `
-    <section class="rr-import-panel rr-import-workbench">
-      <section class="rr-add-channel">
-        <div class="rr-section-label"><span>add video or channel</span><span class="count">${backlogEndpointAvailable ? "local api" : "import api offline"}</span></div>
-        <div class="rr-add-channel-row">
-          <input data-action="update-channel-backlog-input" value="${escapeHtml(state.channelBacklogInput)}" placeholder="paste a YouTube video URL, @handle, channel URL, or channel ID">
-          <button class="rr-mini-action" data-action="add-backlog-channel">add source</button>
-        </div>
-      </section>
-
-      <section class="rr-import-source-list">
-        <div class="rr-import-toolbar">
-          <div class="rr-search-wrap">
-            ${icon("search")}
-            <input class="rr-search" data-action="import-search" value="${escapeHtml(state.importSearch)}" placeholder="search baseline, themealdb, youtube">
-          </div>
-          <div class="rr-filter-row rr-import-filter-row">
-            ${importSourceFilters.map((filter) => `<button class="rr-chip ${state.importSourceFilter === filter ? "is-active" : ""}" data-action="import-source-filter" data-import-source-filter="${filter}">${filter === "themealdb" ? "TheMealDB" : filter === "youtube" ? "YT" : filter}</button>`).join("")}
-          </div>
-        </div>
-        ${showYouTube ? `
+  return {
+    showYouTube,
+    youtubeHtml: showYouTube ? `
         ${renderImportSourceHeader("youtube", `${youtubeGroups.length} groups · ${totalVideos + collectedCatalog.records.length} videos`, "source:youtube", youtubeExpanded)}
         ${youtubeExpanded ? `
           <div data-import-backlog-list>
@@ -556,28 +547,23 @@ function renderImportWorkbench(): string {
             ${collectedCatalog.records.length ? renderYouTubeCatalogGroup() : ""}
           </div>
         ` : ""}
-        ` : ""}
-      </section>
-
-      ${showBaseline ? `
-      <section class="rr-import-source-list rr-import-baseline-list">
+      ` : "",
+    showBaseline,
+    baselineHtml: showBaseline ? `
         ${renderImportSourceHeader("baseline", `${baselineCount} / ${collectedBaselineBacklog.items.length} recipes`, "baseline", baselineExpanded)}
         ${baselineExpanded ? `
           ${baselineGroups.map(renderBaselineBacklogGroup).join("")}
         ` : ""}
-      </section>
-      ` : ""}
-
-      ${showMealDb ? `
-      <section class="rr-import-source-list rr-import-catalog-list">
+      ` : "",
+    showMealDb,
+    mealDbHtml: showMealDb ? `
         ${renderImportSourceHeader("themealdb", `${mealDbCount} / ${state.mealDbCatalog.recordCount} recipes`, "themealdb", mealDbExpanded)}
         ${mealDbExpanded ? `
           ${mealDbGroups.map(renderMealDbRecordGroup).join("")}
         ` : ""}
-      </section>
-      ` : ""}
-    </section>
-  `;
+      ` : "",
+    emptyMessage: state.importSearch.trim() ? "No YouTube videos match this search." : youtubeEmptyMessage,
+  };
 }
 
 function renderImportSourceHeader(title: string, count: string, key: string, expanded: boolean): string {
