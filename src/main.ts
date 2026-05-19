@@ -10,6 +10,7 @@ import { icon } from "./icons";
 import { BROWSE_FILTERS, BROWSE_FRAGMENT, browseRefsFromDocument, renderBrowse, renderBrowseList, type BrowseFilters } from "./render-browse";
 import { DETAIL_FRAGMENT, detailRefsFromDocument, renderDetail as renderDetailView, type DetailViewState } from "./render-detail";
 import { IMPORT_FRAGMENT, importRefsFromDocument, renderImport as renderImportView, type ImportIntakeState, type ImportSourceFilter } from "./render-import";
+import { SHOP_FRAGMENT, shopRefsFromDocument, renderShop as renderShopView } from "./render-shop";
 import { loadSnapshot, resetSnapshot, saveSnapshot } from "./storage";
 import type {
   AppSnapshot,
@@ -367,6 +368,7 @@ function render(options: RenderOptions = {}): void {
   if (state.screen === "library") renderCurrentBrowse(snapshot);
   if (state.screen === "import") renderCurrentImport(snapshot);
   if (state.screen === "detail") renderCurrentDetail(snapshot);
+  if (state.screen === "shop") renderCurrentShop();
   bindEvents();
   syncTimerInterval();
   if (scrollTop !== undefined) {
@@ -1654,22 +1656,13 @@ function renderRecipeWorkflow(active?: "shop" | "prep" | "cook"): string {
 function renderShop(): string {
   const version = currentVersion();
   if (!version) return renderMissing();
-  return renderApp(
-    `
-      <div class="rr-mise-head">
-        <h1>shop once.<br><span>cook calmly.</span></h1>
-      </div>
-      <div class="rr-mise-rail">
-        <div class="rr-section-label"><span>shopping list</span><span class="count">${version.ingredients.length} ITEMS</span></div>
-        <div class="rr-content rr-mise-list">
-          ${version.ingredients.map((ingredient) => renderIngredientRow(ingredient, { mode: "plain" })).join("")}
-          <div class="rr-padded"><button class="rr-action rr-action-flush" data-action="start-mise">prep ingredients ${icon("chevR", 12)}</button></div>
-        </div>
-      </div>
-    `,
-    "recipe",
-    "shop",
-  );
+  return renderApp(SHOP_FRAGMENT, "recipe", "shop");
+}
+
+function renderCurrentShop(): void {
+  const version = currentVersion();
+  if (!version) return;
+  renderShopView(shopRefsFromDocument(), version);
 }
 
 function renderMise(): string {
