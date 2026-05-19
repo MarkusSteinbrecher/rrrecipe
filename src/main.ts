@@ -9,6 +9,7 @@ import { createYouTubeCandidate, createYouTubeCandidateFromCatalog, sampleYouTub
 import { icon } from "./icons";
 import { BROWSE_FILTERS, BROWSE_FRAGMENT, browseRefsFromDocument, renderBrowse, renderBrowseList, type BrowseFilters } from "./render-browse";
 import { DETAIL_FRAGMENT, detailRefsFromDocument, renderDetail as renderDetailView, type DetailViewState } from "./render-detail";
+import { EDITOR_FRAGMENT, editorRefsFromDocument, renderEditor as renderEditorView } from "./render-editor";
 import { IMPORT_FRAGMENT, importRefsFromDocument, renderImport as renderImportView, type ImportIntakeState, type ImportSourceFilter } from "./render-import";
 import { loadSnapshot, resetSnapshot, saveSnapshot } from "./storage";
 import type {
@@ -367,6 +368,7 @@ function render(options: RenderOptions = {}): void {
   if (state.screen === "library") renderCurrentBrowse(snapshot);
   if (state.screen === "import") renderCurrentImport(snapshot);
   if (state.screen === "detail") renderCurrentDetail(snapshot);
+  if (state.screen === "edit") renderCurrentEditor();
   bindEvents();
   syncTimerInterval();
   if (scrollTop !== undefined) {
@@ -1703,22 +1705,14 @@ function renderEditor(): string {
   if (!recipe) return renderMissing();
   const version = versionFor(recipe);
   if (!version) return renderMissing();
+  return renderApp(EDITOR_FRAGMENT, "recipe");
+}
 
-  return renderApp(
-    `
-      <form id="recipe-editor" class="rr-editor" data-form="recipe-editor">
-        <div class="rr-editor-actions">
-          <button class="rr-mini-action" type="button" data-action="cancel-edit">cancel</button>
-          <button class="rr-mini-action" type="submit">save version</button>
-        </div>
-        <label>title<input name="title" value="${escapeHtml(version.title)}"></label>
-        <label>change note<input name="changeSummary" value="adjusted recipe"></label>
-        <label>ingredients<textarea name="ingredients" rows="9">${escapeHtml(version.ingredients.map((item) => item.raw).join("\n"))}</textarea></label>
-        <label>steps<textarea name="steps" rows="9">${escapeHtml(version.steps.map((item) => item.text).join("\n"))}</textarea></label>
-      </form>
-    `,
-    "recipe",
-  );
+function renderCurrentEditor(): void {
+  const recipe = currentRecipe();
+  const version = recipe ? versionFor(recipe) : undefined;
+  if (!version) return;
+  renderEditorView(editorRefsFromDocument(), version);
 }
 
 function renderCookingMode(): string {
