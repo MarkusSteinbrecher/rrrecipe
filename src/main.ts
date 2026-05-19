@@ -10,6 +10,7 @@ import { icon } from "./icons";
 import { BROWSE_FILTERS, BROWSE_FRAGMENT, browseRefsFromDocument, renderBrowse, renderBrowseList, type BrowseFilters } from "./render-browse";
 import { DETAIL_FRAGMENT, detailRefsFromDocument, renderDetail as renderDetailView, type DetailViewState } from "./render-detail";
 import { IMPORT_FRAGMENT, importRefsFromDocument, renderImport as renderImportView, type ImportIntakeState, type ImportSourceFilter } from "./render-import";
+import { MISE_FRAGMENT, miseRefsFromDocument, renderMise as renderMiseView } from "./render-mise";
 import { loadSnapshot, resetSnapshot, saveSnapshot } from "./storage";
 import type {
   AppSnapshot,
@@ -367,6 +368,7 @@ function render(options: RenderOptions = {}): void {
   if (state.screen === "library") renderCurrentBrowse(snapshot);
   if (state.screen === "import") renderCurrentImport(snapshot);
   if (state.screen === "detail") renderCurrentDetail(snapshot);
+  if (state.screen === "mise") renderCurrentMise();
   bindEvents();
   syncTimerInterval();
   if (scrollTop !== undefined) {
@@ -1675,27 +1677,13 @@ function renderShop(): string {
 function renderMise(): string {
   const version = currentVersion();
   if (!version) return renderMissing();
-  const total = version.ingredients.length;
-  const checked = state.miseChecked.size;
-  const pct = total ? Math.round((checked / total) * 100) : 0;
+  return renderApp(MISE_FRAGMENT, "recipe", "prep");
+}
 
-  return renderApp(
-    `
-      <div class="rr-mise-head">
-        <h1>set yourself up.<br><span>then cook.</span></h1>
-      </div>
-      <div class="rr-mise-rail">
-        <div class="rr-mise-meta"><span>${checked} of ${total} ready</span><span>${pct}%</span></div>
-        <div class="rr-progress"><i style="width:${pct}%"></i></div>
-        <div class="rr-content rr-mise-list">
-          ${version.ingredients.map((ingredient) => renderIngredientRow(ingredient, { checked: state.miseChecked.has(ingredient.id), mode: "checklist" })).join("")}
-          <div class="rr-padded"><button class="rr-action rr-action-flush" data-action="start-cooking">begin cooking ${icon("chevR", 12)}</button></div>
-        </div>
-      </div>
-    `,
-    "recipe",
-    "prep",
-  );
+function renderCurrentMise(): void {
+  const version = currentVersion();
+  if (!version) return;
+  renderMiseView(miseRefsFromDocument(), version, state.miseChecked);
 }
 
 function renderEditor(): string {
