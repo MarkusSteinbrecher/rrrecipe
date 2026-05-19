@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-05-05T00:00:00.000Z",
+  "updatedAt": "2026-05-19T00:00:00.000Z",
   "coverageGoal": "Common household and restaurant-recognizable recipes across major cuisines, excluding highly individual chef signatures and obscure hyperlocal dishes.",
   "channels": [
     {
@@ -81,20 +81,54 @@
       ]
     },
     {
+      "id": "baseline-pasta-primavera",
+      "channelId": "baseline-common-recipes",
+      "title": "Pasta Primavera",
+      "category": "cooking",
+      "subcategory": "pasta",
+      "cuisine": "italian-american",
+      "status": "promoted",
+      "priority": 1,
+      "baselineRecipeId": "recipe-baseline-pasta-primavera",
+      "tags": [
+        "pasta",
+        "vegetarian",
+        "quick"
+      ],
+      "notes": "Seed baseline exists."
+    },
+    {
+      "id": "baseline-garlic-bread",
+      "channelId": "baseline-common-recipes",
+      "title": "Garlic Bread",
+      "category": "baking",
+      "subcategory": "bread",
+      "cuisine": "italian-american",
+      "status": "promoted",
+      "priority": 1,
+      "baselineRecipeId": "recipe-baseline-garlic-bread",
+      "tags": [
+        "bread",
+        "side",
+        "quick",
+        "vegetarian"
+      ],
+      "notes": "Seed baseline exists."
+    },
+    {
       "id": "baseline-margherita-pizza",
       "channelId": "baseline-common-recipes",
       "title": "Margherita Pizza",
       "category": "baking",
       "subcategory": "pizza",
       "cuisine": "italian",
-      "status": "promoted",
+      "status": "backlog",
       "priority": 1,
-      "baselineRecipeId": "recipe-baseline-margherita-pizza",
       "tags": [
         "pizza",
         "vegetarian"
       ],
-      "notes": "Seed baseline exists."
+      "notes": "Listed but no catalog entry yet — needs drafting."
     },
     {
       "id": "baseline-banana-bread",
@@ -103,14 +137,13 @@
       "category": "baking",
       "subcategory": "quick bread",
       "cuisine": "american",
-      "status": "promoted",
+      "status": "backlog",
       "priority": 2,
-      "baselineRecipeId": "recipe-baseline-banana-bread",
       "tags": [
         "breakfast",
         "dessert"
       ],
-      "notes": "Seed baseline exists."
+      "notes": "Listed but no catalog entry yet — needs drafting."
     },
     {
       "id": "baseline-chocolate-chip-cookies",
@@ -135,15 +168,14 @@
       "category": "cooking",
       "subcategory": "soup",
       "cuisine": "mediterranean",
-      "status": "promoted",
+      "status": "backlog",
       "priority": 2,
-      "baselineRecipeId": "recipe-baseline-lentil-soup",
       "tags": [
         "soup",
         "vegetarian",
         "vegan"
       ],
-      "notes": "Seed baseline exists."
+      "notes": "Listed but no catalog entry yet — needs drafting."
     },
     {
       "id": "baseline-chicken-noodle-soup",
@@ -152,14 +184,13 @@
       "category": "cooking",
       "subcategory": "soup",
       "cuisine": "american",
-      "status": "promoted",
+      "status": "backlog",
       "priority": 2,
-      "baselineRecipeId": "recipe-baseline-chicken-noodle-soup",
       "tags": [
         "soup",
         "comfort"
       ],
-      "notes": "Seed baseline exists."
+      "notes": "Listed but no catalog entry yet — needs drafting."
     },
     {
       "id": "baseline-chicken-tikka-masala",
@@ -168,14 +199,13 @@
       "category": "cooking",
       "subcategory": "curry",
       "cuisine": "indian-british",
-      "status": "promoted",
+      "status": "backlog",
       "priority": 2,
-      "baselineRecipeId": "recipe-baseline-chicken-tikka-masala",
       "tags": [
         "curry",
         "dinner"
       ],
-      "notes": "Seed baseline exists."
+      "notes": "Listed but no catalog entry yet — needs drafting."
     },
     {
       "id": "baseline-vegetable-curry",
@@ -184,15 +214,14 @@
       "category": "cooking",
       "subcategory": "curry",
       "cuisine": "global",
-      "status": "promoted",
+      "status": "backlog",
       "priority": 2,
-      "baselineRecipeId": "recipe-baseline-vegetable-curry",
       "tags": [
         "curry",
         "vegetarian",
         "vegan"
       ],
-      "notes": "Seed baseline exists."
+      "notes": "Listed but no catalog entry yet — needs drafting."
     },
     {
       "id": "baseline-beef-chili",
@@ -201,14 +230,13 @@
       "category": "cooking",
       "subcategory": "stew",
       "cuisine": "american",
-      "status": "promoted",
+      "status": "backlog",
       "priority": 2,
-      "baselineRecipeId": "recipe-baseline-beef-chili",
       "tags": [
         "stew",
         "batch"
       ],
-      "notes": "Seed baseline exists."
+      "notes": "Listed but no catalog entry yet — needs drafting."
     },
     {
       "id": "baseline-ratatouille",
@@ -217,14 +245,13 @@
       "category": "cooking",
       "subcategory": "vegetable",
       "cuisine": "french",
-      "status": "promoted",
+      "status": "backlog",
       "priority": 2,
-      "baselineRecipeId": "recipe-baseline-ratatouille",
       "tags": [
         "vegetarian",
         "vegan"
       ],
-      "notes": "Seed baseline exists.",
+      "notes": "Listed but no catalog entry yet — needs drafting.",
       "externalSources": [
         {
           "provider": "themealdb",
@@ -243,14 +270,13 @@
       "category": "cooking",
       "subcategory": "rice",
       "cuisine": "italian",
-      "status": "promoted",
+      "status": "backlog",
       "priority": 2,
-      "baselineRecipeId": "recipe-baseline-tomato-risotto",
       "tags": [
         "rice",
         "vegetarian"
       ],
-      "notes": "Seed baseline exists."
+      "notes": "Listed but no catalog entry yet — needs drafting."
     },
     {
       "id": "baseline-pancakes",
@@ -259,14 +285,13 @@
       "category": "cooking",
       "subcategory": "breakfast",
       "cuisine": "american",
-      "status": "promoted",
+      "status": "backlog",
       "priority": 2,
-      "baselineRecipeId": "recipe-baseline-pancakes",
       "tags": [
         "breakfast",
         "quick"
       ],
-      "notes": "Seed baseline exists.",
+      "notes": "Listed but no catalog entry yet — needs drafting.",
       "externalSources": [
         {
           "provider": "themealdb",
@@ -285,15 +310,14 @@
       "category": "cooking",
       "subcategory": "mezze",
       "cuisine": "middle-eastern",
-      "status": "promoted",
+      "status": "backlog",
       "priority": 2,
-      "baselineRecipeId": "recipe-baseline-hummus",
       "tags": [
         "mezze",
         "quick",
         "vegan"
       ],
-      "notes": "Seed baseline exists.",
+      "notes": "Listed but no catalog entry yet — needs drafting.",
       "externalSources": [
         {
           "provider": "themealdb",
@@ -1211,13 +1235,14 @@
       "category": "cooking",
       "subcategory": "eggs",
       "cuisine": "north-african",
-      "status": "backlog",
+      "status": "promoted",
       "priority": 1,
+      "baselineRecipeId": "recipe-baseline-shakshuka",
       "tags": [
         "eggs",
         "vegetarian"
       ],
-      "notes": "App snapshot has a YouTube example; still needs proper baseline record.",
+      "notes": "Seed baseline exists.",
       "externalSources": [
         {
           "provider": "themealdb",
