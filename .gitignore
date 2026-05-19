@@ -22,6 +22,12 @@ data/youtube-recipes/ai-inputs/
 test-results/
 playwright-report/
 coverage/
+.playwright-mcp/
+
+# Ad-hoc screenshots captured during agent sessions.
+# Keepers live under session-logs/assets/<slug>/; root-level captures are throwaway.
+/*-before.png
+/*-after.png
 
 # Cloudflare
 .wrangler/
