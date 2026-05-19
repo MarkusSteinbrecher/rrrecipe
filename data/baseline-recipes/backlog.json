@@ -81,6 +81,23 @@
       ]
     },
     {
+      "id": "baseline-ragu-bolognese",
+      "channelId": "baseline-common-recipes",
+      "title": "Ragù alla Bolognese",
+      "category": "cooking",
+      "subcategory": "pasta sauce",
+      "cuisine": "italian",
+      "status": "promoted",
+      "priority": 1,
+      "baselineRecipeId": "recipe-baseline-ragu-bolognese",
+      "tags": [
+        "pasta",
+        "meat",
+        "slow"
+      ],
+      "notes": "Quality-bar canary — first recipe drafted to the new bar."
+    },
+    {
       "id": "baseline-pasta-primavera",
       "channelId": "baseline-common-recipes",
       "title": "Pasta Primavera",
