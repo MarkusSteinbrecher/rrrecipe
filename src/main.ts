@@ -8,6 +8,7 @@ import { createMealDbCandidate } from "./importers/themealdb";
 import { createYouTubeCandidate, createYouTubeCandidateFromCatalog, sampleYouTubeImportUrl } from "./importers/youtube";
 import { icon } from "./icons";
 import { BROWSE_FILTERS, BROWSE_FRAGMENT, browseRefsFromDocument, renderBrowse, renderBrowseList, type BrowseFilters } from "./render-browse";
+import { DETAIL_FRAGMENT, detailRefsFromDocument, renderDetail as renderDetailView, type DetailViewState } from "./render-detail";
 import { IMPORT_FRAGMENT, importRefsFromDocument, renderImport as renderImportView, type ImportIntakeState, type ImportSourceFilter } from "./render-import";
 import { loadSnapshot, resetSnapshot, saveSnapshot } from "./storage";
 import type {
@@ -365,6 +366,7 @@ function render(options: RenderOptions = {}): void {
   appEl.innerHTML = renderScreen(snapshot);
   if (state.screen === "library") renderCurrentBrowse(snapshot);
   if (state.screen === "import") renderCurrentImport(snapshot);
+  if (state.screen === "detail") renderCurrentDetail(snapshot);
   bindEvents();
   syncTimerInterval();
   if (scrollTop !== undefined) {
@@ -1593,41 +1595,24 @@ function renderDetail(): string {
   const snapshot = state.snapshot;
   const version = recipe ? versionFor(recipe) : undefined;
   if (!recipe || !snapshot || !version) return renderMissing();
+  return renderApp(DETAIL_FRAGMENT, "recipe");
+}
 
-  const versions = snapshot.versions
-    .filter((item) => item.recipeId === recipe.id)
-    .sort((a, b) => b.createdAt.localeCompare(a.createdAt));
-  const totalMinutes = version.times?.totalMinutes ?? 0;
-  const activeMinutes = version.times?.prepMinutes ?? Math.min(15, totalMinutes || 15);
+function currentDetailView(recipe: Recipe, version: RecipeVersion): DetailViewState {
   const baseServings = version.yield?.quantity ?? 1;
-  const servings = state.servingsByRecipe[recipe.id] ?? baseServings;
-  const multiplier = servings / baseServings;
+  return {
+    servings: state.servingsByRecipe[recipe.id] ?? baseServings,
+    miseCheckedIds: state.miseChecked,
+    expandedSections: state.expandedSections,
+    cookStepIndex: state.cookStepIndex,
+  };
+}
 
-  return renderApp(
-    `
-      <div class="rr-content rr-detail-content rr-detail-content--plain">
-        <div class="rr-detail-titlebar">
-          <button class="rr-recipe-back" data-action="go-library" aria-label="back to recipes">${icon("back", 13)}</button>
-          <h1>${escapeHtml(version.title.toLowerCase())}</h1>
-        </div>
-        <div class="rr-recipe-scroll">
-          <section class="rr-workflow-rows">
-            ${renderWorkflowRow("overview", "overview", `${totalMinutes || 35} min total`, renderWorkflowOverview(version, totalMinutes, activeMinutes, servings))}
-            ${renderWorkflowRow("shop", "shop", `${version.ingredients.length} ingredients`, renderWorkflowShop(version, multiplier, servings))}
-            ${renderWorkflowRow("prep", "prep", `${state.miseChecked.size} / ${version.ingredients.length} ready`, renderWorkflowPrep(version, multiplier))}
-            ${renderWorkflowRow("cook", "cook", `${version.steps.length} steps`, renderWorkflowCook(version))}
-          </section>
-          <div class="rr-padded"><button class="rr-action rr-action-flush" data-action="start-cooking">${icon("flame", 12)} begin cooking</button></div>
-          <section class="rr-history">
-            <div class="rr-section-label"><span>versions</span><span class="count">${versions.length}</span></div>
-            ${versions.map((item) => renderVersionItem(item, version.id)).join("")}
-          </section>
-        </div>
-      </div>
-    `,
-    "recipe",
-    undefined,
-  );
+function renderCurrentDetail(snapshot: AppSnapshot): void {
+  const recipe = currentRecipe();
+  const version = recipe ? versionFor(recipe) : undefined;
+  if (!recipe || !version) return;
+  renderDetailView(detailRefsFromDocument(), snapshot, recipe, version, currentDetailView(recipe, version));
 }
 
 function renderIngredientRow(
@@ -1644,116 +1629,6 @@ function renderIngredientRow(
       <div class="qty">${escapeHtml(formatScaledQuantity(ingredient, multiplier) || "—")}</div>
       <div class="name">${escapeHtml(name || renderIngredient(ingredient))}</div>
       ${mode === "checklist" ? `<div class="check">${checked ? icon("check", 10) : ""}</div>` : ""}
-    </button>
-  `;
-}
-
-function renderWorkflowOverview(version: RecipeVersion, totalMinutes: number, activeMinutes: number, servings: number): string {
-  const imageUrl = recipeVisualUrl(version);
-  const keyword = version.tags.find((tag) => tag !== "baseline") ?? version.collections[0] ?? "recipe";
-  return `
-    <div class="rr-overview-panel">
-      <div class="rr-overview-copy">
-        <div class="rr-kicker">${version.tags.map((tag) => tag.toLowerCase()).join(" · ")}</div>
-        <p>${escapeHtml(version.description ?? version.subtitle ?? "")}</p>
-        <div class="rr-overview-facts" aria-label="Recipe facts">
-          <span><strong>${totalMinutes || 35}</strong> min total</span>
-          <span><strong>${activeMinutes}</strong> min active</span>
-          <span><strong>${escapeHtml(servingsLabel(servings, version.yield?.unit))}</strong></span>
-        </div>
-        <div class="rr-detail-actions rr-detail-actions--flush">
-          <button class="rr-mini-action" data-action="edit-recipe">edit</button>
-          <button class="rr-mini-action" data-action="reset-demo">reset demo</button>
-        </div>
-      </div>
-      <div class="rr-overview-media" aria-label="Recipe visual">
-        ${
-          imageUrl
-            ? `<img src="${escapeHtml(imageUrl)}" alt="${escapeHtml(version.title)}">`
-            : `<div class="rr-overview-placeholder"><span>${escapeHtml(keyword.toLowerCase())}</span><strong>${escapeHtml(version.title.toLowerCase())}</strong></div>`
-        }
-      </div>
-    </div>
-  `;
-}
-
-function recipeVisualUrl(version: RecipeVersion): string | undefined {
-  // Baseline recipes use the design-spec striped placeholder (no image).
-  // Real food photography is intentional out-of-scope per the design canon.
-  const visualSource = version.sourceIds.map(sourceById).find((source) => source?.external?.imageUrl || source?.media?.thumbnailUrl);
-  return visualSource?.external?.imageUrl ?? visualSource?.media?.thumbnailUrl;
-}
-
-function renderWorkflowShop(version: RecipeVersion, multiplier: number, servings: number): string {
-  return `
-    <div class="rr-workflow-list">
-      <div class="rr-shop-control">
-        <span>${escapeHtml(version.yield?.raw ?? "recipe yield")}</span>
-        <span class="rr-serving-stepper"><button class="rr-icon-btn" data-action="servings-minus" data-stop-propagation>${icon("minus", 11)}</button><span>${servingsLabel(servings, version.yield?.unit)}</span><button class="rr-icon-btn" data-action="servings-plus" data-stop-propagation>${icon("plus", 11)}</button></span>
-      </div>
-      ${version.ingredients.map((ingredient) => renderIngredientRow(ingredient, { multiplier, mode: "plain" })).join("")}
-    </div>
-  `;
-}
-
-function renderWorkflowPrep(version: RecipeVersion, multiplier: number): string {
-  return `
-    <div class="rr-workflow-list">
-      ${version.ingredients
-        .map((ingredient) =>
-          renderIngredientRow(ingredient, { checked: state.miseChecked.has(ingredient.id), multiplier, mode: "checklist" }),
-        )
-        .join("")}
-    </div>
-  `;
-}
-
-function renderWorkflowCook(version: RecipeVersion): string {
-  return `
-    <div class="rr-workflow-list">
-      ${version.steps.map((step) => renderInlineCookStep(step)).join("")}
-    </div>
-  `;
-}
-
-function renderInlineCookStep(step: InstructionStep): string {
-  const index = step.position - 1;
-  const timer = step.timerSeconds ? `${Math.round(step.timerSeconds / 60)}m` : "—";
-  return `
-    <button class="rr-step-row rr-step-row-inline ${state.cookStepIndex === index ? "is-active" : ""}" data-action="select-cook-step" data-step-index="${index}">
-      <div class="n">${String(step.position).padStart(2, "0")}</div>
-      <div>
-        <div class="title">${escapeHtml(stepLabel(step))}</div>
-        <div class="detail">${escapeHtml(step.text)}</div>
-      </div>
-      <div class="t">${timer}</div>
-    </button>
-  `;
-}
-
-function renderWorkflowRow(key: string, title: string, meta: string, content: string): string {
-  const expanded = state.expandedSections[`workflow-${key}`] ?? key === "overview";
-  const stepNumber = ({ overview: "01", shop: "02", prep: "03", cook: "04" } as Record<string, string>)[key] ?? "00";
-  return `
-    <section class="rr-workflow-row rr-workflow-row--${escapeHtml(key)}" id="workflow-${escapeHtml(key)}">
-      <button class="rr-section-label rr-expand-trigger" data-action="toggle-workflow-section" data-section="workflow-${key}" role="button" tabindex="0" aria-expanded="${expanded}">
-        <span class="rr-workflow-title"><span class="rr-workflow-index">${stepNumber}</span><span>${escapeHtml(title)}</span></span>
-        <span class="rr-expand-right"><span class="count">${escapeHtml(meta)}</span><span class="rr-caret">${expanded ? "-" : "+"}</span></span>
-      </button>
-      ${expanded ? `
-        <div class="rr-workflow-row-body">
-          ${content}
-        </div>
-      ` : ""}
-    </section>
-  `;
-}
-
-function renderVersionItem(version: RecipeVersion, activeId: string): string {
-  return `
-    <button class="rr-version-line ${version.id === activeId ? "active" : ""}" data-action="select-version" data-version-id="${version.id}">
-      <span>${escapeHtml(version.changeSummary ?? version.origin)}</span>
-      <small>${new Date(version.createdAt).toLocaleString()}</small>
     </button>
   `;
 }
@@ -1932,11 +1807,6 @@ function renderIngredient(ingredient: IngredientLine): string {
   if (ingredient.conversion?.canonicalGrams) return `${ingredient.raw} (${ingredient.conversion.canonicalGrams} g)`;
   if (ingredient.conversion?.canonicalMilliliters) return `${ingredient.raw} (${ingredient.conversion.canonicalMilliliters} ml)`;
   return ingredient.raw;
-}
-
-function servingsLabel(servings: number, unit?: string): string {
-  const rounded = Number.isInteger(servings) ? String(servings) : servings.toFixed(1);
-  return `${rounded} ${unit ?? "servings"}`;
 }
 
 function stepLabel(step: InstructionStep): string {
