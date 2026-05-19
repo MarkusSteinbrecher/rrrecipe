@@ -41,6 +41,7 @@ type BaselineSeed = {
   times: NonNullable<RecipeVersion["times"]>;
   ingredients: IngredientSeed[];
   steps: StepSeed[];
+  notes?: string[];
   tags: string[];
   collections: string[];
 };
@@ -137,7 +138,10 @@ function makeRecipe(seed: BaselineSeed): { recipe: Recipe; variant: RecipeVarian
       times: seed.times,
       ingredients: seed.ingredients.map(ingredient),
       steps: seed.steps.map(step),
-      notes: ["Baseline recipe for matching imports. It is not copied from a single published recipe."],
+      notes: [
+        "Baseline recipe for matching imports. It is not copied from a single published recipe.",
+        ...(seed.notes ?? []),
+      ],
       tags: seed.tags,
       collections: seed.collections,
       changeSummary: "Created baseline catalogue entry",
@@ -230,6 +234,59 @@ const seeds: BaselineSeed[] = [
       { id: "rest", text: "Rest for 15 minutes before cutting so the layers hold.", timerSeconds: 900 },
     ],
     tags: ["baseline", "cooking", "pasta", "italian", "baked"],
+    collections: ["Baseline", "Cooking", "Pasta", "Italian"],
+  },
+  {
+    slug: "ragu-bolognese",
+    title: "Ragù alla Bolognese",
+    subtitle: "Slow-cooked meat sauce from Bologna, served on tagliatelle",
+    description: "A long-simmered meat sauce built on soffritto, two cuts of pork and beef, white wine, and milk. Tomato is a seasoning, not the base — the finished sauce is glossy and brown-orange, not red. Tagliatelle is the canonical pasta; the ribbon's rough surface is what carries the ragù.",
+    yield: { quantity: 6, unit: "servings", raw: "6 servings (sauce; toss with 500 g tagliatelle)" },
+    times: { prepMinutes: 25, cookMinutes: 180, totalMinutes: 205 },
+    ingredients: [
+      { id: "pancetta", raw: "100 g pancetta, finely diced", quantity: "100", unit: "g", item: "pancetta, finely diced", section: "Soffritto and meat" },
+      { id: "olive-oil", raw: "2 tbsp olive oil", quantity: "2", unit: "tbsp", item: "olive oil", section: "Soffritto and meat" },
+      { id: "butter", raw: "30 g unsalted butter", quantity: "30", unit: "g", item: "unsalted butter", section: "Soffritto and meat" },
+      { id: "onion", raw: "1 medium onion (about 100 g), finely diced", quantity: "1", unit: "medium", item: "onion, finely diced", section: "Soffritto and meat" },
+      { id: "carrot", raw: "1 medium carrot (about 100 g), finely diced", quantity: "1", unit: "medium", item: "carrot, finely diced", section: "Soffritto and meat" },
+      { id: "celery", raw: "1 celery stalk (about 100 g), finely diced", quantity: "1", unit: "medium", item: "celery stalk, finely diced", section: "Soffritto and meat" },
+      { id: "ground-beef", raw: "400 g ground beef (chuck), not too lean", quantity: "400", unit: "g", item: "ground beef (chuck)", section: "Soffritto and meat" },
+      { id: "ground-pork", raw: "200 g ground pork", quantity: "200", unit: "g", item: "ground pork", section: "Soffritto and meat" },
+      { id: "white-wine", raw: "200 ml dry white wine", quantity: "200", unit: "ml", item: "dry white wine", section: "Sauce" },
+      { id: "tomato-paste", raw: "2 tbsp tomato paste", quantity: "2", unit: "tbsp", item: "tomato paste", section: "Sauce" },
+      { id: "passata", raw: "300 ml tomato passata", quantity: "300", unit: "ml", item: "tomato passata", section: "Sauce" },
+      { id: "broth", raw: "500 ml beef or chicken broth, warm, plus more as needed", quantity: "500", unit: "ml", item: "beef or chicken broth, warm", section: "Sauce" },
+      { id: "milk", raw: "250 ml whole milk", quantity: "250", unit: "ml", item: "whole milk", section: "Sauce" },
+      { id: "bay-leaf", raw: "1 bay leaf", quantity: "1", unit: "", item: "bay leaf", section: "Sauce" },
+      { id: "nutmeg", raw: "1 pinch freshly grated nutmeg", item: "freshly grated nutmeg", section: "Sauce" },
+      { id: "salt", raw: "fine salt, to taste", item: "fine salt", section: "Sauce" },
+      { id: "pepper", raw: "freshly ground black pepper, to taste", item: "freshly ground black pepper", section: "Sauce" },
+      { id: "tagliatelle", raw: "500 g fresh or dried tagliatelle", quantity: "500", unit: "g", item: "tagliatelle", section: "To serve" },
+      { id: "pasta-salt", raw: "coarse salt, for the pasta water", item: "coarse salt", section: "To serve" },
+      { id: "parmesan", raw: "60 g parmigiano reggiano, finely grated, plus more to serve", quantity: "60", unit: "g", item: "parmigiano reggiano, finely grated", section: "To serve" },
+    ],
+    steps: [
+      { id: "render-pancetta", section: "Soffritto and meat", text: "Render the pancetta in a heavy pot with the olive oil and butter over medium-low heat until the fat is clear and the pieces are pale gold.", timerSeconds: 420, ingredientRefs: ["pancetta", "olive-oil", "butter"] },
+      { id: "soffritto", section: "Soffritto and meat", text: "Add the onion, carrot, and celery. Cook gently, stirring often, until the vegetables are soft and sweet but not coloured.", timerSeconds: 600, ingredientRefs: ["onion", "carrot", "celery"] },
+      { id: "brown-meat", section: "Soffritto and meat", text: "Raise the heat to medium-high and add the beef and pork. Break the meat apart and cook until every bit has lost its raw colour and the liquid the meat releases has cooked off — the meat should sizzle in fat, not steam.", timerSeconds: 720, ingredientRefs: ["ground-beef", "ground-pork"] },
+      { id: "season", section: "Soffritto and meat", text: "Season generously with salt, pepper, and a pinch of nutmeg.", ingredientRefs: ["salt", "pepper", "nutmeg"] },
+      { id: "wine", section: "Sauce", text: "Pour in the white wine and let it bubble briskly until the alcohol smell is gone and the bottom of the pot is almost dry.", timerSeconds: 240, ingredientRefs: ["white-wine"] },
+      { id: "tomato", section: "Sauce", text: "Stir in the tomato paste and cook for a minute to take the raw edge off, then add the passata and bay leaf.", timerSeconds: 60, ingredientRefs: ["tomato-paste", "passata", "bay-leaf"] },
+      { id: "broth-simmer", section: "Sauce", text: "Pour in enough warm broth to just cover the meat. Bring to a bare simmer, partially cover, and cook at the laziest bubble you can hold — top up with more broth whenever the surface looks dry.", timerSeconds: 7200, ingredientRefs: ["broth"] },
+      { id: "milk", section: "Sauce", text: "Add the milk and continue to simmer uncovered until the sauce is thick, glossy, and a deep brown-orange. Taste and adjust salt.", timerSeconds: 2400, ingredientRefs: ["milk", "salt"] },
+      { id: "rest-sauce", section: "Sauce", text: "Pull off the heat and let the sauce settle while you cook the pasta. Skim any pooled fat from the surface if you like." },
+      { id: "boil-pasta", section: "To serve", text: "Bring a large pot of well-salted water to a rolling boil and cook the tagliatelle until just shy of al dente. Reserve a mug of pasta water before draining.", ingredientRefs: ["tagliatelle", "pasta-salt"] },
+      { id: "toss", section: "To serve", text: "Return the sauce to low heat, lift the pasta straight into it, and toss with a splash of pasta water until every ribbon is coated and the sauce clings.", ingredientRefs: ["tagliatelle"] },
+      { id: "finish", section: "To serve", text: "Off the heat, fold in half the parmesan. Serve immediately with the rest of the parmesan at the table.", ingredientRefs: ["parmesan"] },
+    ],
+    notes: [
+      "Tagliatelle is the canonical pasta for ragù in Bologna — the rough ribbon surface holds the sauce. Spaghetti is not traditional. Pappardelle is fine; short pasta with ridges (rigatoni, mezze maniche) also works.",
+      "Brown the meat properly. If it steams in its own juice you will end up with grey crumbles and a thin sauce. Use a wide heavy pot, give the meat space, and walk away from it until it has actually browned.",
+      "Variation — wine. White wine is traditional in Bologna and gives a cleaner finish. Red wine is common in modern cooking and gives a deeper colour and a heartier sauce. Use what you would drink.",
+      "Variation — milk. Adding milk near the end softens the acidity and gives a velvety texture. Some traditions add it at the start with the wine instead. Both work; do not skip it entirely.",
+      "Make ahead. Ragù tastes better the next day. Cool quickly, refrigerate up to 4 days, freeze up to 3 months. Reheat gently with a splash of broth or water.",
+    ],
+    tags: ["baseline", "cooking", "pasta", "italian", "meat", "slow"],
     collections: ["Baseline", "Cooking", "Pasta", "Italian"],
   },
   {
