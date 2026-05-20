@@ -155,13 +155,14 @@
       "category": "baking",
       "subcategory": "quick bread",
       "cuisine": "american",
-      "status": "backlog",
+      "status": "promoted",
       "priority": 2,
+      "baselineRecipeId": "recipe-baseline-banana-bread",
       "tags": [
         "breakfast",
         "dessert"
       ],
-      "notes": "Listed but no catalog entry yet — needs drafting."
+      "notes": "Drafted by Phase 3 agent batch 12 (sweet baking)."
     },
     {
       "id": "baseline-chocolate-chip-cookies",
@@ -309,13 +310,14 @@
       "category": "cooking",
       "subcategory": "breakfast",
       "cuisine": "american",
-      "status": "backlog",
+      "status": "promoted",
       "priority": 2,
+      "baselineRecipeId": "recipe-baseline-pancakes",
       "tags": [
         "breakfast",
         "quick"
       ],
-      "notes": "Listed but no catalog entry yet — needs drafting.",
+      "notes": "Drafted by Phase 3 agent batch 10 (eggs & breakfast).",
       "externalSources": [
         {
           "provider": "themealdb",
@@ -475,12 +477,13 @@
       "category": "baking",
       "subcategory": "bread",
       "cuisine": "french",
-      "status": "backlog",
+      "status": "promoted",
       "priority": 1,
+      "baselineRecipeId": "recipe-baseline-baguette",
       "tags": [
         "bread"
       ],
-      "notes": "Important for bread-video matching."
+      "notes": "Drafted by Phase 3 agent batch 11 (savory baking & flatbreads)."
     },
     {
       "id": "baseline-sourdough-bread",
@@ -489,12 +492,13 @@
       "category": "baking",
       "subcategory": "bread",
       "cuisine": "global",
-      "status": "backlog",
+      "status": "promoted",
       "priority": 1,
+      "baselineRecipeId": "recipe-baseline-sourdough-bread",
       "tags": [
         "bread"
       ],
-      "notes": "Needs variants later: country loaf, sandwich loaf."
+      "notes": "Drafted by Phase 3 agent batch 11 (savory baking & flatbreads)."
     },
     {
       "id": "baseline-white-sandwich-bread",
@@ -503,12 +507,13 @@
       "category": "baking",
       "subcategory": "bread",
       "cuisine": "global",
-      "status": "backlog",
+      "status": "promoted",
       "priority": 1,
+      "baselineRecipeId": "recipe-baseline-white-sandwich-bread",
       "tags": [
         "bread"
       ],
-      "notes": ""
+      "notes": "Drafted by Phase 3 agent batch 11 (savory baking & flatbreads)."
     },
     {
       "id": "baseline-naan",
@@ -517,13 +522,14 @@
       "category": "baking",
       "subcategory": "flatbread",
       "cuisine": "indian",
-      "status": "backlog",
+      "status": "promoted",
       "priority": 1,
+      "baselineRecipeId": "recipe-baseline-naan",
       "tags": [
         "bread",
         "flatbread"
       ],
-      "notes": ""
+      "notes": "Drafted by Phase 3 agent batch 11 (savory baking & flatbreads)."
     },
     {
       "id": "baseline-pita",
@@ -532,13 +538,14 @@
       "category": "baking",
       "subcategory": "flatbread",
       "cuisine": "middle-eastern",
-      "status": "backlog",
+      "status": "promoted",
       "priority": 2,
+      "baselineRecipeId": "recipe-baseline-pita",
       "tags": [
         "bread",
         "flatbread"
       ],
-      "notes": ""
+      "notes": "Drafted by Phase 3 agent batch 11 (savory baking & flatbreads)."
     },
     {
       "id": "baseline-tortillas-flour",
@@ -547,13 +554,14 @@
       "category": "baking",
       "subcategory": "flatbread",
       "cuisine": "mexican",
-      "status": "backlog",
+      "status": "promoted",
       "priority": 2,
+      "baselineRecipeId": "recipe-baseline-tortillas-flour",
       "tags": [
         "bread",
         "flatbread"
       ],
-      "notes": ""
+      "notes": "Drafted by Phase 3 agent batch 9 (Mexican)."
     },
     {
       "id": "baseline-cornbread",
@@ -562,12 +570,13 @@
       "category": "baking",
       "subcategory": "quick bread",
       "cuisine": "american",
-      "status": "backlog",
+      "status": "promoted",
       "priority": 2,
+      "baselineRecipeId": "recipe-baseline-cornbread",
       "tags": [
         "bread"
       ],
-      "notes": ""
+      "notes": "Drafted by Phase 3 agent batch 11 (savory baking & flatbreads)."
     },
     {
       "id": "baseline-brioche",
@@ -576,13 +585,14 @@
       "category": "baking",
       "subcategory": "enriched bread",
       "cuisine": "french",
-      "status": "backlog",
+      "status": "promoted",
       "priority": 3,
+      "baselineRecipeId": "recipe-baseline-brioche",
       "tags": [
         "bread",
         "enriched"
       ],
-      "notes": ""
+      "notes": "Drafted by Phase 3 agent batch 11 (savory baking & flatbreads)."
     },
     {
       "id": "baseline-croissants",
@@ -591,12 +601,13 @@
       "category": "baking",
       "subcategory": "laminated pastry",
       "cuisine": "french",
-      "status": "backlog",
+      "status": "promoted",
       "priority": 3,
+      "baselineRecipeId": "recipe-baseline-croissants",
       "tags": [
         "pastry"
       ],
-      "notes": "Common but technique-heavy."
+      "notes": "Drafted by Phase 3 agent batch 12 (sweet baking)."
     },
     {
       "id": "baseline-french-omelette",
@@ -605,14 +616,15 @@
       "category": "cooking",
       "subcategory": "eggs",
       "cuisine": "french",
-      "status": "backlog",
+      "status": "promoted",
       "priority": 1,
+      "baselineRecipeId": "recipe-baseline-french-omelette",
       "tags": [
         "eggs",
         "breakfast",
         "quick"
       ],
-      "notes": "",
+      "notes": "Drafted by Phase 3 agent batch 10 (eggs & breakfast).",
       "externalSources": [
         {
           "provider": "themealdb",
@@ -631,14 +643,15 @@
       "category": "cooking",
       "subcategory": "eggs",
       "cuisine": "global",
-      "status": "backlog",
+      "status": "promoted",
       "priority": 1,
+      "baselineRecipeId": "recipe-baseline-scrambled-eggs",
       "tags": [
         "eggs",
         "breakfast",
         "quick"
       ],
-      "notes": ""
+      "notes": "Drafted by Phase 3 agent batch 10 (eggs & breakfast)."
     },
     {
       "id": "baseline-french-toast",
@@ -647,12 +660,13 @@
       "category": "cooking",
       "subcategory": "breakfast",
       "cuisine": "global",
-      "status": "backlog",
+      "status": "promoted",
       "priority": 2,
+      "baselineRecipeId": "recipe-baseline-french-toast",
       "tags": [
         "breakfast"
       ],
-      "notes": ""
+      "notes": "Drafted by Phase 3 agent batch 10 (eggs & breakfast)."
     },
     {
       "id": "baseline-waffles",
@@ -661,12 +675,13 @@
       "category": "cooking",
       "subcategory": "breakfast",
       "cuisine": "global",
-      "status": "backlog",
+      "status": "promoted",
       "priority": 2,
+      "baselineRecipeId": "recipe-baseline-waffles",
       "tags": [
         "breakfast"
       ],
-      "notes": ""
+      "notes": "Drafted by Phase 3 agent batch 10 (eggs & breakfast)."
     },
     {
       "id": "baseline-granola",
@@ -675,12 +690,13 @@
       "category": "baking",
       "subcategory": "breakfast",
       "cuisine": "global",
-      "status": "backlog",
+      "status": "promoted",
       "priority": 3,
+      "baselineRecipeId": "recipe-baseline-granola",
       "tags": [
         "breakfast"
       ],
-      "notes": ""
+      "notes": "Drafted by Phase 3 agent batch 10 (eggs & breakfast)."
     },
     {
       "id": "baseline-roast-chicken",
@@ -908,13 +924,14 @@
       "category": "cooking",
       "subcategory": "tacos",
       "cuisine": "mexican-american",
-      "status": "backlog",
+      "status": "promoted",
       "priority": 2,
+      "baselineRecipeId": "recipe-baseline-fish-tacos",
       "tags": [
         "fish",
         "tacos"
       ],
-      "notes": ""
+      "notes": "Drafted by Phase 3 agent batch 9 (Mexican)."
     },
     {
       "id": "baseline-shrimp-scampi",
@@ -1171,13 +1188,14 @@
       "category": "cooking",
       "subcategory": "tacos",
       "cuisine": "mexican",
-      "status": "backlog",
+      "status": "promoted",
       "priority": 2,
+      "baselineRecipeId": "recipe-baseline-tacos-al-pastor",
       "tags": [
         "tacos",
         "pork"
       ],
-      "notes": ""
+      "notes": "Drafted by Phase 3 agent batch 9 (Mexican)."
     },
     {
       "id": "baseline-carnitas",
@@ -1186,13 +1204,14 @@
       "category": "cooking",
       "subcategory": "pork",
       "cuisine": "mexican",
-      "status": "backlog",
+      "status": "promoted",
       "priority": 1,
+      "baselineRecipeId": "recipe-baseline-carnitas",
       "tags": [
         "pork",
         "tacos"
       ],
-      "notes": ""
+      "notes": "Drafted by Phase 3 agent batch 9 (Mexican)."
     },
     {
       "id": "baseline-guacamole",
@@ -1201,14 +1220,15 @@
       "category": "cooking",
       "subcategory": "dip",
       "cuisine": "mexican",
-      "status": "backlog",
+      "status": "promoted",
       "priority": 1,
+      "baselineRecipeId": "recipe-baseline-guacamole",
       "tags": [
         "dip",
         "quick",
         "vegan"
       ],
-      "notes": ""
+      "notes": "Drafted by Phase 3 agent batch 9 (Mexican)."
     },
     {
       "id": "baseline-pico-de-gallo",
@@ -1217,14 +1237,15 @@
       "category": "cooking",
       "subcategory": "salsa",
       "cuisine": "mexican",
-      "status": "backlog",
+      "status": "promoted",
       "priority": 2,
+      "baselineRecipeId": "recipe-baseline-pico-de-gallo",
       "tags": [
         "salsa",
         "quick",
         "vegan"
       ],
-      "notes": ""
+      "notes": "Drafted by Phase 3 agent batch 9 (Mexican)."
     },
     {
       "id": "baseline-enchiladas",
@@ -1233,12 +1254,13 @@
       "category": "cooking",
       "subcategory": "casserole",
       "cuisine": "mexican",
-      "status": "backlog",
+      "status": "promoted",
       "priority": 2,
+      "baselineRecipeId": "recipe-baseline-enchiladas",
       "tags": [
         "baked"
       ],
-      "notes": ""
+      "notes": "Drafted by Phase 3 agent batch 9 (Mexican)."
     },
     {
       "id": "baseline-quesadillas",
@@ -1247,13 +1269,14 @@
       "category": "cooking",
       "subcategory": "quick meal",
       "cuisine": "mexican",
-      "status": "backlog",
+      "status": "promoted",
       "priority": 2,
+      "baselineRecipeId": "recipe-baseline-quesadillas",
       "tags": [
         "quick",
         "vegetarian"
       ],
-      "notes": ""
+      "notes": "Drafted by Phase 3 agent batch 9 (Mexican)."
     },
     {
       "id": "baseline-falafel",
@@ -1618,13 +1641,14 @@
       "category": "baking",
       "subcategory": "pie",
       "cuisine": "american",
-      "status": "backlog",
+      "status": "promoted",
       "priority": 1,
+      "baselineRecipeId": "recipe-baseline-apple-pie",
       "tags": [
         "dessert",
         "pie"
       ],
-      "notes": ""
+      "notes": "Drafted by Phase 3 agent batch 12 (sweet baking)."
     },
     {
       "id": "baseline-brownies",
@@ -1633,13 +1657,14 @@
       "category": "baking",
       "subcategory": "bars",
       "cuisine": "american",
-      "status": "backlog",
+      "status": "promoted",
       "priority": 1,
+      "baselineRecipeId": "recipe-baseline-brownies",
       "tags": [
         "dessert",
         "chocolate"
       ],
-      "notes": ""
+      "notes": "Drafted by Phase 3 agent batch 12 (sweet baking)."
     },
     {
       "id": "baseline-cheesecake",
@@ -1648,13 +1673,14 @@
       "category": "baking",
       "subcategory": "cake",
       "cuisine": "american",
-      "status": "backlog",
+      "status": "promoted",
       "priority": 1,
+      "baselineRecipeId": "recipe-baseline-cheesecake",
       "tags": [
         "dessert",
         "cake"
       ],
-      "notes": ""
+      "notes": "Drafted by Phase 3 agent batch 12 (sweet baking)."
     },
     {
       "id": "baseline-carrot-cake",
@@ -1663,13 +1689,14 @@
       "category": "baking",
       "subcategory": "cake",
       "cuisine": "american",
-      "status": "backlog",
+      "status": "promoted",
       "priority": 2,
+      "baselineRecipeId": "recipe-baseline-carrot-cake",
       "tags": [
         "dessert",
         "cake"
       ],
-      "notes": "",
+      "notes": "Drafted by Phase 3 agent batch 12 (sweet baking).",
       "externalSources": [
         {
           "provider": "themealdb",
@@ -1688,13 +1715,14 @@
       "category": "baking",
       "subcategory": "cake",
       "cuisine": "british-american",
-      "status": "backlog",
+      "status": "promoted",
       "priority": 2,
+      "baselineRecipeId": "recipe-baseline-pound-cake",
       "tags": [
         "dessert",
         "cake"
       ],
-      "notes": ""
+      "notes": "Drafted by Phase 3 agent batch 12 (sweet baking)."
     },
     {
       "id": "baseline-vanilla-cupcakes",
@@ -1703,13 +1731,14 @@
       "category": "baking",
       "subcategory": "cake",
       "cuisine": "american",
-      "status": "backlog",
+      "status": "promoted",
       "priority": 2,
+      "baselineRecipeId": "recipe-baseline-vanilla-cupcakes",
       "tags": [
         "dessert",
         "cake"
       ],
-      "notes": ""
+      "notes": "Drafted by Phase 3 agent batch 12 (sweet baking)."
     },
     {
       "id": "baseline-cinnamon-rolls",
@@ -1718,13 +1747,14 @@
       "category": "baking",
       "subcategory": "enriched bread",
       "cuisine": "american",
-      "status": "backlog",
+      "status": "promoted",
       "priority": 2,
+      "baselineRecipeId": "recipe-baseline-cinnamon-rolls",
       "tags": [
         "dessert",
         "breakfast"
       ],
-      "notes": ""
+      "notes": "Drafted by Phase 3 agent batch 11 (savory baking & flatbreads)."
     },
     {
       "id": "baseline-tiramisu",
@@ -1748,13 +1778,14 @@
       "category": "cooking",
       "subcategory": "dessert",
       "cuisine": "french",
-      "status": "backlog",
+      "status": "promoted",
       "priority": 3,
+      "baselineRecipeId": "recipe-baseline-creme-brulee",
       "tags": [
         "dessert",
         "custard"
       ],
-      "notes": ""
+      "notes": "Drafted by Phase 3 agent batch 12 (sweet baking)."
     },
     {
       "id": "baseline-panna-cotta",
