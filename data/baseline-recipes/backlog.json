@@ -269,13 +269,14 @@
       "category": "cooking",
       "subcategory": "vegetable",
       "cuisine": "french",
-      "status": "backlog",
+      "status": "promoted",
       "priority": 2,
+      "baselineRecipeId": "recipe-baseline-ratatouille",
       "tags": [
         "vegetarian",
         "vegan"
       ],
-      "notes": "Listed but no catalog entry yet — needs drafting.",
+      "notes": "Drafted by Phase 3 agent batch 13 (salads + sides + vegetable).",
       "externalSources": [
         {
           "provider": "themealdb",
@@ -705,13 +706,14 @@
       "category": "cooking",
       "subcategory": "poultry",
       "cuisine": "global",
-      "status": "backlog",
+      "status": "promoted",
       "priority": 1,
+      "baselineRecipeId": "recipe-baseline-roast-chicken",
       "tags": [
         "chicken",
         "dinner"
       ],
-      "notes": ""
+      "notes": "Drafted by Phase 3 agent batch 14 (meat & seafood mains)."
     },
     {
       "id": "baseline-fried-chicken",
@@ -720,12 +722,13 @@
       "category": "cooking",
       "subcategory": "poultry",
       "cuisine": "american",
-      "status": "backlog",
+      "status": "promoted",
       "priority": 1,
+      "baselineRecipeId": "recipe-baseline-fried-chicken",
       "tags": [
         "chicken"
       ],
-      "notes": ""
+      "notes": "Drafted by Phase 3 agent batch 14 (meat & seafood mains)."
     },
     {
       "id": "baseline-chicken-parmesan",
@@ -846,13 +849,14 @@
       "category": "cooking",
       "subcategory": "sandwich",
       "cuisine": "american",
-      "status": "backlog",
+      "status": "promoted",
       "priority": 1,
+      "baselineRecipeId": "recipe-baseline-burgers",
       "tags": [
         "beef",
         "quick"
       ],
-      "notes": ""
+      "notes": "Drafted by Phase 3 agent batch 14 (meat & seafood mains)."
     },
     {
       "id": "baseline-meatballs",
@@ -861,13 +865,14 @@
       "category": "cooking",
       "subcategory": "ground meat",
       "cuisine": "global",
-      "status": "backlog",
+      "status": "promoted",
       "priority": 1,
+      "baselineRecipeId": "recipe-baseline-meatballs",
       "tags": [
         "beef",
         "pork"
       ],
-      "notes": ""
+      "notes": "Drafted by Phase 3 agent batch 14 (meat & seafood mains)."
     },
     {
       "id": "baseline-shepherds-pie",
@@ -909,13 +914,14 @@
       "category": "cooking",
       "subcategory": "seafood",
       "cuisine": "global",
-      "status": "backlog",
+      "status": "promoted",
       "priority": 1,
+      "baselineRecipeId": "recipe-baseline-salmon-pan-seared",
       "tags": [
         "fish",
         "quick"
       ],
-      "notes": ""
+      "notes": "Drafted by Phase 3 agent batch 14 (meat & seafood mains)."
     },
     {
       "id": "baseline-fish-tacos",
@@ -957,13 +963,14 @@
       "category": "cooking",
       "subcategory": "fried",
       "cuisine": "british",
-      "status": "backlog",
+      "status": "promoted",
       "priority": 3,
+      "baselineRecipeId": "recipe-baseline-fish-and-chips",
       "tags": [
         "fish",
         "fried"
       ],
-      "notes": ""
+      "notes": "Drafted by Phase 3 agent batch 14 (meat & seafood mains)."
     },
     {
       "id": "baseline-pad-thai",
@@ -1081,12 +1088,13 @@
       "category": "cooking",
       "subcategory": "fried",
       "cuisine": "chinese-american",
-      "status": "backlog",
+      "status": "promoted",
       "priority": 3,
+      "baselineRecipeId": "recipe-baseline-general-tsos-chicken",
       "tags": [
         "chicken"
       ],
-      "notes": ""
+      "notes": "Drafted by Phase 3 agent batch 14 (meat & seafood mains)."
     },
     {
       "id": "baseline-ramen",
@@ -1394,12 +1402,13 @@
       "category": "cooking",
       "subcategory": "salad",
       "cuisine": "mexican-american",
-      "status": "backlog",
+      "status": "promoted",
       "priority": 1,
+      "baselineRecipeId": "recipe-baseline-caesar-salad",
       "tags": [
         "salad"
       ],
-      "notes": ""
+      "notes": "Drafted by Phase 3 agent batch 13 (salads + sides + vegetable)."
     },
     {
       "id": "baseline-greek-salad",
@@ -1408,13 +1417,14 @@
       "category": "cooking",
       "subcategory": "salad",
       "cuisine": "greek",
-      "status": "backlog",
+      "status": "promoted",
       "priority": 2,
+      "baselineRecipeId": "recipe-baseline-greek-salad",
       "tags": [
         "salad",
         "vegetarian"
       ],
-      "notes": ""
+      "notes": "Drafted by Phase 3 agent batch 13 (salads + sides + vegetable)."
     },
     {
       "id": "baseline-nicoise-salad",
@@ -1423,12 +1433,13 @@
       "category": "cooking",
       "subcategory": "salad",
       "cuisine": "french",
-      "status": "backlog",
+      "status": "promoted",
       "priority": 3,
+      "baselineRecipeId": "recipe-baseline-nicoise-salad",
       "tags": [
         "salad"
       ],
-      "notes": ""
+      "notes": "Drafted by Phase 3 agent batch 13 (salads + sides + vegetable)."
     },
     {
       "id": "baseline-coleslaw",
@@ -1437,12 +1448,13 @@
       "category": "cooking",
       "subcategory": "salad",
       "cuisine": "american",
-      "status": "backlog",
+      "status": "promoted",
       "priority": 2,
+      "baselineRecipeId": "recipe-baseline-coleslaw",
       "tags": [
         "salad"
       ],
-      "notes": ""
+      "notes": "Drafted by Phase 3 agent batch 13 (salads + sides + vegetable)."
     },
     {
       "id": "baseline-potato-salad",
@@ -1451,12 +1463,13 @@
       "category": "cooking",
       "subcategory": "salad",
       "cuisine": "global",
-      "status": "backlog",
+      "status": "promoted",
       "priority": 2,
+      "baselineRecipeId": "recipe-baseline-potato-salad",
       "tags": [
         "salad"
       ],
-      "notes": ""
+      "notes": "Drafted by Phase 3 agent batch 13 (salads + sides + vegetable)."
     },
     {
       "id": "baseline-tomato-soup",
@@ -1564,13 +1577,14 @@
       "category": "cooking",
       "subcategory": "side",
       "cuisine": "global",
-      "status": "backlog",
+      "status": "promoted",
       "priority": 1,
+      "baselineRecipeId": "recipe-baseline-mashed-potatoes",
       "tags": [
         "side",
         "vegetarian"
       ],
-      "notes": ""
+      "notes": "Drafted by Phase 3 agent batch 13 (salads + sides + vegetable)."
     },
     {
       "id": "baseline-roasted-potatoes",
@@ -1579,13 +1593,14 @@
       "category": "cooking",
       "subcategory": "side",
       "cuisine": "global",
-      "status": "backlog",
+      "status": "promoted",
       "priority": 1,
+      "baselineRecipeId": "recipe-baseline-roasted-potatoes",
       "tags": [
         "side",
         "vegan"
       ],
-      "notes": ""
+      "notes": "Drafted by Phase 3 agent batch 13 (salads + sides + vegetable)."
     },
     {
       "id": "baseline-macaroni-and-cheese",
@@ -1611,13 +1626,14 @@
       "category": "cooking",
       "subcategory": "casserole",
       "cuisine": "american",
-      "status": "backlog",
+      "status": "promoted",
       "priority": 3,
+      "baselineRecipeId": "recipe-baseline-green-bean-casserole",
       "tags": [
         "side",
         "baked"
       ],
-      "notes": ""
+      "notes": "Drafted by Phase 3 agent batch 14 (meat & seafood mains)."
     },
     {
       "id": "baseline-gratin-dauphinois",
@@ -1626,13 +1642,14 @@
       "category": "cooking",
       "subcategory": "side",
       "cuisine": "french",
-      "status": "backlog",
+      "status": "promoted",
       "priority": 3,
+      "baselineRecipeId": "recipe-baseline-gratin-dauphinois",
       "tags": [
         "potato",
         "baked"
       ],
-      "notes": ""
+      "notes": "Drafted by Phase 3 agent batch 13 (salads + sides + vegetable)."
     },
     {
       "id": "baseline-apple-pie",
