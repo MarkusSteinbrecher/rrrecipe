@@ -11,6 +11,7 @@ import { icon } from "./icons";
 import { BROWSE_FILTERS, BROWSE_FRAGMENT, browseRefsFromDocument, renderBrowse, renderBrowseList, type BrowseFilters } from "./render-browse";
 import { DETAIL_FRAGMENT, detailRefsFromDocument, renderDetail as renderDetailView, type DetailViewState } from "./render-detail";
 import { IMPORT_FRAGMENT, importRefsFromDocument, renderImport as renderImportView, type ImportIntakeState, type ImportSourceFilter } from "./render-import";
+import { IMPORT_REVIEW_FRAGMENT, importReviewRefsFromDocument, renderImportReview as renderImportReviewView } from "./render-import-review";
 import { SHOP_FRAGMENT, shopRefsFromDocument, renderShop as renderShopView } from "./render-shop";
 import { loadSnapshot, resetSnapshot, saveSnapshot } from "./storage";
 import type {
@@ -32,7 +33,7 @@ import type {
   YouTubeRecipeCatalog,
 } from "./types";
 
-type Screen = "import" | "library" | "detail" | "shop" | "mise" | "edit" | "cook";
+type Screen = "import" | "import-review" | "library" | "detail" | "shop" | "mise" | "edit" | "cook";
 
 type StepTimer = {
   remaining: number;
@@ -102,6 +103,7 @@ type UiState = {
   refiningImportVideoId?: string;
   finalizingImportVideoId?: string;
   selectedImportVideoId?: string;
+  reviewVideoId?: string;
   selectedBacklogVideoIds: Set<string>;
   deletedBacklogVideoIds: Set<string>;
   deletedBacklogChannelKeys: Set<string>;
@@ -378,6 +380,7 @@ function render(options: RenderOptions = {}): void {
   appEl.innerHTML = renderScreen(snapshot);
   if (state.screen === "library") renderCurrentBrowse(snapshot);
   if (state.screen === "import") renderCurrentImport(snapshot);
+  if (state.screen === "import-review") renderCurrentImportReview();
   if (state.screen === "detail") renderCurrentDetail(snapshot);
   if (state.screen === "shop") renderCurrentShop();
   bindEvents();
@@ -397,6 +400,7 @@ function render(options: RenderOptions = {}): void {
 
 function renderScreen(snapshot: AppSnapshot): string {
   if (state.screen === "import") return renderImport();
+  if (state.screen === "import-review") return renderImportReviewScreen();
   if (state.screen === "library") return renderLibrary(snapshot);
   if (state.screen === "edit") return renderEditor();
   if (state.screen === "shop") return renderShop();
@@ -533,6 +537,26 @@ function currentImportIntake(): ImportIntakeState {
 
 function renderCurrentImport(snapshot: AppSnapshot): void {
   renderImportView(importRefsFromDocument(), snapshot, currentImportIntake());
+}
+
+function renderImportReviewScreen(): string {
+  return renderApp(IMPORT_REVIEW_FRAGMENT, "import");
+}
+
+function reviewCandidate(): RecipeCandidate | undefined {
+  const id = state.reviewVideoId;
+  if (!id) return undefined;
+  return localCandidateForVideo(id) ?? candidateForVideo(id);
+}
+
+function renderCurrentImportReview(): void {
+  const candidate = reviewCandidate();
+  if (!candidate) {
+    state.screen = "import";
+    render();
+    return;
+  }
+  renderImportReviewView(importReviewRefsFromDocument(), candidate);
 }
 
 function renderImportSourceSections(): ImportIntakeState["sourceSections"] {
@@ -731,6 +755,7 @@ function renderBacklogVideoRow(video: YouTubeBacklogVideo): string {
           </span>
         </button>
         ${renderVideoWorkflowDots(video, record)}
+        ${localCandidateForVideo(video.videoId) ? `<button class="rr-video-review-link" data-action="open-import-review" data-video-id="${escapeHtml(video.videoId)}" data-stop-propagation>review</button>` : ""}
         ${importedRecipe ? `<button class="rr-video-recipe-link" data-action="open-recipe" data-recipe-id="${escapeHtml(importedRecipe.recipe.id)}" data-stop-propagation>recipe</button>` : `<span></span>`}
         <a class="rr-video-youtube" href="${escapeHtml(video.url)}" target="_blank" rel="noreferrer" data-stop-propagation aria-label="open ${escapeHtml(title)} on YouTube">${icon("youtubeOfficial", 22)}</a>
         <button class="rr-video-delete" data-action="delete-backlog-video" data-video-id="${escapeHtml(video.videoId)}" data-stop-propagation aria-label="delete ${escapeHtml(title)}">${icon("close", 15)}</button>
@@ -2097,6 +2122,19 @@ async function handleAction(event: Event): Promise<void> {
     const group = videoId ? groupForVideo(videoId) : undefined;
     if (group) state.expandedBacklogChannels[group.key] = true;
     persistImportUiSession();
+  }
+
+  if (action === "open-import-review") {
+    const videoId = target.dataset.videoId;
+    if (videoId) {
+      state.reviewVideoId = videoId;
+      state.screen = "import-review";
+    }
+  }
+
+  if (action === "close-import-review") {
+    state.reviewVideoId = undefined;
+    state.screen = "import";
   }
 
   if (action === "toggle-backlog-video-selection") {

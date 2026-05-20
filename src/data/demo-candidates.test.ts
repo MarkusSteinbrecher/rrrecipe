@@ -44,7 +44,7 @@ describe("demoCandidatesAsBacklogVideos", () => {
     for (const video of videos) {
       expect(video.videoId).toMatch(/^[\w-]+$/);
       expect(video.url).toContain(video.videoId);
-      expect(video.title.length).toBeGreaterThan(0);
+      expect((video.title ?? "").length).toBeGreaterThan(0);
       expect(video.status).toBe("candidate_ready");
       expect(video.candidate?.status).toBe("needs_review");
       expect(video.source).toBe("demo-candidate");
