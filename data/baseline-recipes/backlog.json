@@ -139,13 +139,14 @@
       "category": "baking",
       "subcategory": "pizza",
       "cuisine": "italian",
-      "status": "backlog",
+      "status": "promoted",
       "priority": 1,
+      "baselineRecipeId": "recipe-baseline-margherita-pizza",
       "tags": [
         "pizza",
         "vegetarian"
       ],
-      "notes": "Listed but no catalog entry yet — needs drafting."
+      "notes": "Drafted by Phase 3 agent batch 3 (Italian-American + pizza)."
     },
     {
       "id": "baseline-banana-bread",
@@ -185,14 +186,15 @@
       "category": "cooking",
       "subcategory": "soup",
       "cuisine": "mediterranean",
-      "status": "backlog",
+      "status": "promoted",
       "priority": 2,
+      "baselineRecipeId": "recipe-baseline-lentil-soup",
       "tags": [
         "soup",
         "vegetarian",
         "vegan"
       ],
-      "notes": "Listed but no catalog entry yet — needs drafting."
+      "notes": "Drafted by Phase 3 agent batch 4 (soups)."
     },
     {
       "id": "baseline-chicken-noodle-soup",
@@ -201,13 +203,14 @@
       "category": "cooking",
       "subcategory": "soup",
       "cuisine": "american",
-      "status": "backlog",
+      "status": "promoted",
       "priority": 2,
+      "baselineRecipeId": "recipe-baseline-chicken-noodle-soup",
       "tags": [
         "soup",
         "comfort"
       ],
-      "notes": "Listed but no catalog entry yet — needs drafting."
+      "notes": "Drafted by Phase 3 agent batch 4 (soups)."
     },
     {
       "id": "baseline-chicken-tikka-masala",
@@ -287,13 +290,14 @@
       "category": "cooking",
       "subcategory": "rice",
       "cuisine": "italian",
-      "status": "backlog",
+      "status": "promoted",
       "priority": 2,
+      "baselineRecipeId": "recipe-baseline-tomato-risotto",
       "tags": [
         "rice",
         "vegetarian"
       ],
-      "notes": "Listed but no catalog entry yet — needs drafting."
+      "notes": "Drafted by Phase 3 agent batch 2 (Italian risotto + dessert)."
     },
     {
       "id": "baseline-pancakes",
@@ -435,13 +439,14 @@
       "category": "cooking",
       "subcategory": "rice",
       "cuisine": "italian",
-      "status": "backlog",
+      "status": "promoted",
       "priority": 2,
+      "baselineRecipeId": "recipe-baseline-risotto-milanese",
       "tags": [
         "rice",
         "vegetarian"
       ],
-      "notes": ""
+      "notes": "Drafted by Phase 3 agent batch 2 (Italian risotto + dessert)."
     },
     {
       "id": "baseline-minestrone",
@@ -450,13 +455,14 @@
       "category": "cooking",
       "subcategory": "soup",
       "cuisine": "italian",
-      "status": "backlog",
+      "status": "promoted",
       "priority": 2,
+      "baselineRecipeId": "recipe-baseline-minestrone",
       "tags": [
         "soup",
         "vegetarian"
       ],
-      "notes": ""
+      "notes": "Drafted by Phase 3 agent batch 2 (Italian risotto + dessert)."
     },
     {
       "id": "baseline-baguette",
@@ -708,13 +714,14 @@
       "category": "cooking",
       "subcategory": "poultry",
       "cuisine": "italian-american",
-      "status": "backlog",
+      "status": "promoted",
       "priority": 2,
+      "baselineRecipeId": "recipe-baseline-chicken-parmesan",
       "tags": [
         "chicken",
         "baked"
       ],
-      "notes": ""
+      "notes": "Drafted by Phase 3 agent batch 3 (Italian-American + pizza)."
     },
     {
       "id": "baseline-chicken-piccata",
@@ -723,13 +730,14 @@
       "category": "cooking",
       "subcategory": "poultry",
       "cuisine": "italian-american",
-      "status": "backlog",
+      "status": "promoted",
       "priority": 2,
+      "baselineRecipeId": "recipe-baseline-chicken-piccata",
       "tags": [
         "chicken",
         "quick"
       ],
-      "notes": ""
+      "notes": "Drafted by Phase 3 agent batch 3 (Italian-American + pizza)."
     },
     {
       "id": "baseline-butter-chicken",
@@ -904,14 +912,15 @@
       "category": "cooking",
       "subcategory": "seafood",
       "cuisine": "italian-american",
-      "status": "backlog",
+      "status": "promoted",
       "priority": 2,
+      "baselineRecipeId": "recipe-baseline-shrimp-scampi",
       "tags": [
         "seafood",
         "quick",
         "pasta"
       ],
-      "notes": ""
+      "notes": "Drafted by Phase 3 agent batch 3 (Italian-American + pizza)."
     },
     {
       "id": "baseline-fish-and-chips",
@@ -1068,13 +1077,14 @@
       "category": "cooking",
       "subcategory": "soup",
       "cuisine": "japanese",
-      "status": "backlog",
+      "status": "promoted",
       "priority": 2,
+      "baselineRecipeId": "recipe-baseline-miso-soup",
       "tags": [
         "soup",
         "quick"
       ],
-      "notes": ""
+      "notes": "Drafted by Phase 3 agent batch 4 (soups)."
     },
     {
       "id": "baseline-sushi-rice",
@@ -1407,13 +1417,14 @@
       "category": "cooking",
       "subcategory": "soup",
       "cuisine": "global",
-      "status": "backlog",
+      "status": "promoted",
       "priority": 1,
+      "baselineRecipeId": "recipe-baseline-tomato-soup",
       "tags": [
         "soup",
         "vegetarian"
       ],
-      "notes": ""
+      "notes": "Drafted by Phase 3 agent batch 4 (soups)."
     },
     {
       "id": "baseline-french-onion-soup",
@@ -1422,12 +1433,13 @@
       "category": "cooking",
       "subcategory": "soup",
       "cuisine": "french",
-      "status": "backlog",
+      "status": "promoted",
       "priority": 2,
+      "baselineRecipeId": "recipe-baseline-french-onion-soup",
       "tags": [
         "soup"
       ],
-      "notes": "",
+      "notes": "Drafted by Phase 3 agent batch 4 (soups).",
       "externalSources": [
         {
           "provider": "themealdb",
@@ -1446,13 +1458,14 @@
       "category": "cooking",
       "subcategory": "soup",
       "cuisine": "global",
-      "status": "backlog",
+      "status": "promoted",
       "priority": 2,
+      "baselineRecipeId": "recipe-baseline-butternut-squash-soup",
       "tags": [
         "soup",
         "vegetarian"
       ],
-      "notes": ""
+      "notes": "Drafted by Phase 3 agent batch 4 (soups)."
     },
     {
       "id": "baseline-clam-chowder",
@@ -1461,13 +1474,14 @@
       "category": "cooking",
       "subcategory": "soup",
       "cuisine": "american",
-      "status": "backlog",
+      "status": "promoted",
       "priority": 3,
+      "baselineRecipeId": "recipe-baseline-clam-chowder",
       "tags": [
         "soup",
         "seafood"
       ],
-      "notes": "",
+      "notes": "Drafted by Phase 3 agent batch 4 (soups).",
       "externalSources": [
         {
           "provider": "themealdb",
@@ -1693,12 +1707,13 @@
       "category": "cooking",
       "subcategory": "dessert",
       "cuisine": "italian",
-      "status": "backlog",
+      "status": "promoted",
       "priority": 2,
+      "baselineRecipeId": "recipe-baseline-tiramisu",
       "tags": [
         "dessert"
       ],
-      "notes": ""
+      "notes": "Drafted by Phase 3 agent batch 2 (Italian risotto + dessert)."
     },
     {
       "id": "baseline-creme-brulee",
@@ -1722,12 +1737,13 @@
       "category": "cooking",
       "subcategory": "dessert",
       "cuisine": "italian",
-      "status": "backlog",
+      "status": "promoted",
       "priority": 3,
+      "baselineRecipeId": "recipe-baseline-panna-cotta",
       "tags": [
         "dessert"
       ],
-      "notes": ""
+      "notes": "Drafted by Phase 3 agent batch 2 (Italian risotto + dessert)."
     }
   ]
 }
