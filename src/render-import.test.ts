@@ -160,4 +160,16 @@ describe("renderImport", () => {
     expect(refs.sourceFilters.querySelectorAll(".rr-chip")).toHaveLength(4);
     expect(refs.sourceFilters.querySelector(".is-active")?.textContent).toBe("TheMealDB");
   });
+
+  it("exposes both 'review video' and 'add to backlog' actions next to the URL input", () => {
+    const refs = mountImport();
+    renderImport(refs, snapshotFixture(), intake());
+
+    const review = refs.root.querySelector<HTMLButtonElement>('[data-action="import-video-from-url"]');
+    const backlog = refs.root.querySelector<HTMLButtonElement>('[data-action="add-backlog-channel"]');
+    expect(review).not.toBeNull();
+    expect(review?.textContent?.toLowerCase()).toContain("review");
+    expect(backlog).not.toBeNull();
+    expect(backlog?.textContent?.toLowerCase()).toContain("backlog");
+  });
 });

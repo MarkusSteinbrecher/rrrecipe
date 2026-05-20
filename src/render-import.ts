@@ -74,7 +74,8 @@ export const IMPORT_FRAGMENT = `
       <div class="rr-section-label"><span>add video or channel</span><span id="${IMPORT_REF_IDS.apiStatus}" class="count"></span></div>
       <div class="rr-add-channel-row">
         <input id="${IMPORT_REF_IDS.channelInput}" data-action="update-channel-backlog-input" placeholder="paste a YouTube video URL, @handle, channel URL, or channel ID">
-        <button class="rr-mini-action" data-action="add-backlog-channel">add source</button>
+        <button class="rr-mini-action rr-add-channel-primary" data-action="import-video-from-url">review video</button>
+        <button class="rr-mini-action" data-action="add-backlog-channel">add to backlog</button>
       </div>
       <p id="${IMPORT_REF_IDS.channelStatus}" class="rr-import-status rr-channel-status" hidden></p>
     </section>

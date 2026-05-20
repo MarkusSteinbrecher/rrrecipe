@@ -2173,8 +2173,13 @@ button:disabled {
 .rr-add-channel-row {
   display: grid;
   gap: 10px;
-  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-columns: minmax(0, 1fr) auto auto;
   padding: 0 24px 18px;
+}
+
+.rr-add-channel-primary {
+  background: var(--accent, #ffff00);
+  color: #000;
 }
 
 .rr-add-channel-row input {

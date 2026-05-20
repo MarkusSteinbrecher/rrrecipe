@@ -2179,6 +2179,44 @@ async function handleAction(event: Event): Promise<void> {
     }
   }
 
+  if (action === "import-video-from-url") {
+    const input = state.channelBacklogInput.trim();
+    if (!input) {
+      showToast("Paste a YouTube video URL first.", "error");
+      return;
+    }
+    const candidate = createYouTubeCandidate(input);
+    const videoId = candidate.source.media?.videoId;
+    if (!videoId) {
+      showToast("Could not find a YouTube video ID in that input. Try a normal youtube.com, youtu.be, shorts, or embed URL.", "error");
+      return;
+    }
+    state.reviewVideoId = videoId;
+    state.editingCandidate = candidate;
+    state.screen = "import-review";
+    state.channelBacklogInput = "";
+    if (hasAiImportEndpoint()) {
+      // Fire-and-forget enrichment. When it returns we swap in the refined
+      // candidate, but only if the user is still on the same review session.
+      const startedAt = videoId;
+      showToast("Importing video — fetching transcript and refining…");
+      void refineCandidateWithAi(input, candidate)
+        .then((result) => {
+          if (state.reviewVideoId !== startedAt || !state.editingCandidate) return;
+          state.editingCandidate = result.candidate;
+          showToast(result.usedFallback ? "Imported with local mock — review carefully." : "Import refined.", result.usedFallback ? "info" : "success");
+          render({ preserveScroll: true });
+        })
+        .catch((error) => {
+          if (state.reviewVideoId !== startedAt) return;
+          const message = error instanceof Error ? error.message : String(error);
+          showToast(`Import refinement failed: ${message}. The sparse candidate is editable — fill in by hand.`, "error");
+        });
+    } else {
+      showToast("Import API offline — the candidate is sparse, fill in by hand.", "info");
+    }
+  }
+
   if (action === "close-import-review") {
     state.reviewVideoId = undefined;
     state.editingCandidate = undefined;
