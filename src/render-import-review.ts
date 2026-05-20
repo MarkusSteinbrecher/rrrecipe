@@ -124,7 +124,7 @@ function renderCandidateBody(candidate: RecipeCandidate): string {
     ${renderStepsEditor(candidate.steps)}
     ${renderNotesEditor(candidate.notes)}
     ${renderTagsEditor(candidate.tags)}
-    ${renderSaveBar()}
+    ${renderSaveBar(candidate)}
   `;
 }
 
@@ -342,13 +342,24 @@ function renderTagsEditor(tags: string[]): string {
   `;
 }
 
-function renderSaveBar(): string {
+function renderSaveBar(candidate: RecipeCandidate): string {
+  const disabledReason = saveDisabledReason(candidate);
+  const isDisabled = Boolean(disabledReason);
   return `
     <section class="rr-import-review-save-bar">
+      ${disabledReason ? `<p class="rr-import-review-save-hint">${escapeHtml(disabledReason)}</p>` : ""}
       <button class="rr-mini-action" data-action="close-import-review">discard</button>
-      <button class="rr-action rr-action-flush" data-action="save-import-review" disabled aria-disabled="true">save recipe (phase D)</button>
+      <button class="rr-action rr-action-flush" data-action="save-import-review" ${isDisabled ? `disabled aria-disabled="true"` : ""}>save recipe</button>
     </section>
   `;
+}
+
+export function saveDisabledReason(candidate: RecipeCandidate): string | undefined {
+  if (!candidate.title.trim()) return "Add a recipe title before saving.";
+  if (!candidate.ingredients.length && !candidate.steps.length) {
+    return "Add at least one ingredient or step before saving.";
+  }
+  return undefined;
 }
 
 function formatAnchor(seconds: number): string {

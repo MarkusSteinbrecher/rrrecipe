@@ -2412,10 +2412,25 @@ async function handleAction(event: Event): Promise<void> {
     if (tag) state.editingCandidate.tags = state.editingCandidate.tags.filter((existing) => existing !== tag);
   }
 
-  if (action === "save-import-review") {
-    // Phase D will wire this. Intentionally a no-op so the visible disabled
-    // button cannot accidentally fire anything.
-    return;
+  if (action === "save-import-review" && state.editingCandidate && state.snapshot) {
+    const candidate = state.editingCandidate;
+    if (!candidate.title.trim()) {
+      showToast("Add a recipe title before saving.", "error");
+      return;
+    }
+    if (!candidate.ingredients.length && !candidate.steps.length) {
+      showToast("Add at least one ingredient or step before saving.", "error");
+      return;
+    }
+    const result = buildSnapshotForCandidate(state.snapshot, candidate);
+    state.snapshot = result.snapshot;
+    await saveSnapshot(state.snapshot);
+    state.selectedRecipeId = result.recipeId;
+    state.selectedVersionId = undefined;
+    state.reviewVideoId = undefined;
+    state.editingCandidate = undefined;
+    state.screen = "detail";
+    showToast(result.updatedExistingRecipe ? "Recipe updated from import." : "Recipe saved from import.", "success");
   }
 
   if (action === "toggle-backlog-video-selection") {

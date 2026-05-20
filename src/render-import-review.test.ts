@@ -6,6 +6,7 @@ import {
   importReviewRefsFromDocument,
   parseAnchorInput,
   renderImportReview,
+  saveDisabledReason,
 } from "./render-import-review";
 import { mountIndexFragments } from "./render-test-harness";
 import type { RecipeCandidate } from "./types";
@@ -143,17 +144,53 @@ describe("renderImportReview", () => {
     expect(firstRow?.querySelector('[data-action="remove-step"]')).not.toBeNull();
   });
 
-  it("renders the save bar with a disabled save button and a discard button", () => {
+  it("renders the save bar with an enabled save button for a complete candidate", () => {
     const refs = mountReview();
     renderImportReview(refs, focacciaCandidate());
 
     const save = refs.body.querySelector<HTMLButtonElement>('[data-action="save-import-review"]');
     expect(save).not.toBeNull();
-    expect(save?.disabled).toBe(true);
-    expect(save?.textContent?.toLowerCase()).toContain("phase d");
+    expect(save?.disabled).toBe(false);
+    expect(save?.textContent?.toLowerCase()).toContain("save");
 
     const discard = refs.body.querySelector<HTMLButtonElement>('[data-action="close-import-review"]');
     expect(discard).not.toBeNull();
+  });
+
+  it("disables the save button when the candidate has no title", () => {
+    const refs = mountReview();
+    renderImportReview(refs, { ...focacciaCandidate(), title: "  " });
+
+    const save = refs.body.querySelector<HTMLButtonElement>('[data-action="save-import-review"]');
+    expect(save?.disabled).toBe(true);
+    expect(refs.body.textContent?.toLowerCase()).toContain("title");
+  });
+
+  it("disables the save button when there are no ingredients and no steps", () => {
+    const refs = mountReview();
+    renderImportReview(refs, { ...focacciaCandidate(), ingredients: [], steps: [] });
+
+    const save = refs.body.querySelector<HTMLButtonElement>('[data-action="save-import-review"]');
+    expect(save?.disabled).toBe(true);
+    expect(refs.body.textContent?.toLowerCase()).toContain("ingredient");
+  });
+});
+
+describe("saveDisabledReason", () => {
+  it("returns undefined for a complete candidate", () => {
+    expect(saveDisabledReason(focacciaCandidate())).toBeUndefined();
+  });
+
+  it("flags a missing title", () => {
+    const reason = saveDisabledReason({ ...focacciaCandidate(), title: "" });
+    expect(reason).toBeDefined();
+    expect(reason?.toLowerCase()).toContain("title");
+  });
+
+  it("flags a candidate with no ingredients and no steps", () => {
+    const reason = saveDisabledReason({ ...focacciaCandidate(), ingredients: [], steps: [] });
+    expect(reason).toBeDefined();
+    expect(reason?.toLowerCase()).toMatch(/ingredient|step/);
   });
 });
 
