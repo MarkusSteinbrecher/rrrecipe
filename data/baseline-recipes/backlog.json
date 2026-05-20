@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-05-19T00:00:00.000Z",
+  "updatedAt": "2026-05-20T00:00:00.000Z",
   "coverageGoal": "Common household and restaurant-recognizable recipes across major cuisines, excluding highly individual chef signatures and obscure hyperlocal dishes.",
   "channels": [
     {
@@ -353,14 +353,15 @@
       "category": "cooking",
       "subcategory": "pasta",
       "cuisine": "italian",
-      "status": "backlog",
+      "status": "promoted",
       "priority": 1,
+      "baselineRecipeId": "recipe-baseline-cacio-e-pepe",
       "tags": [
         "pasta",
         "quick",
         "vegetarian"
       ],
-      "notes": "Core Roman pasta."
+      "notes": "Drafted by Phase 3 agent batch 1 (Italian pasta)."
     },
     {
       "id": "baseline-amatriciana",
@@ -369,13 +370,14 @@
       "category": "cooking",
       "subcategory": "pasta",
       "cuisine": "italian",
-      "status": "backlog",
+      "status": "promoted",
       "priority": 1,
+      "baselineRecipeId": "recipe-baseline-amatriciana",
       "tags": [
         "pasta",
         "tomato"
       ],
-      "notes": "Core Roman pasta."
+      "notes": "Drafted by Phase 3 agent batch 1 (Italian pasta)."
     },
     {
       "id": "baseline-bolognese",
@@ -384,14 +386,14 @@
       "category": "cooking",
       "subcategory": "pasta sauce",
       "cuisine": "italian",
-      "status": "backlog",
+      "status": "deferred",
       "priority": 1,
       "tags": [
         "pasta",
         "sauce",
         "batch"
       ],
-      "notes": "High-value matching target; many videos use simplified variants."
+      "notes": "Duplicate of baseline-ragu-bolognese (already promoted in catalog)."
     },
     {
       "id": "baseline-pesto-genovese",
@@ -400,14 +402,15 @@
       "category": "cooking",
       "subcategory": "sauce",
       "cuisine": "italian",
-      "status": "backlog",
+      "status": "promoted",
       "priority": 1,
+      "baselineRecipeId": "recipe-baseline-pesto-genovese",
       "tags": [
         "sauce",
         "pasta",
         "vegetarian"
       ],
-      "notes": "Common sauce identity."
+      "notes": "Drafted by Phase 3 agent batch 1 (Italian pasta)."
     },
     {
       "id": "baseline-gnocchi",
@@ -416,13 +419,14 @@
       "category": "cooking",
       "subcategory": "pasta",
       "cuisine": "italian",
-      "status": "backlog",
+      "status": "promoted",
       "priority": 2,
+      "baselineRecipeId": "recipe-baseline-gnocchi",
       "tags": [
         "pasta",
         "vegetarian"
       ],
-      "notes": ""
+      "notes": "Drafted by Phase 3 agent batch 1 (Italian pasta)."
     },
     {
       "id": "baseline-risotto-milanese",
@@ -1527,14 +1531,15 @@
       "category": "cooking",
       "subcategory": "pasta",
       "cuisine": "american",
-      "status": "backlog",
+      "status": "promoted",
       "priority": 1,
+      "baselineRecipeId": "recipe-baseline-macaroni-and-cheese",
       "tags": [
         "pasta",
         "baked",
         "vegetarian"
       ],
-      "notes": ""
+      "notes": "Drafted by Phase 3 agent batch 1 (Italian pasta)."
     },
     {
       "id": "baseline-green-bean-casserole",
