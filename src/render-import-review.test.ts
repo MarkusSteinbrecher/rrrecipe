@@ -4,6 +4,7 @@ import { demoCandidates } from "./data/demo-candidates";
 import {
   IMPORT_REVIEW_REF_IDS,
   importReviewRefsFromDocument,
+  parseAnchorInput,
   renderImportReview,
 } from "./render-import-review";
 import { mountIndexFragments } from "./render-test-harness";
@@ -51,8 +52,8 @@ describe("renderImportReview", () => {
     const candidate = focacciaCandidate();
     renderImportReview(refs, candidate);
 
-    expect(refs.body.querySelectorAll(".rr-import-review-ingredients li").length).toBe(candidate.ingredients.length);
-    expect(refs.body.querySelectorAll(".rr-import-review-steps li").length).toBe(candidate.steps.length);
+    expect(refs.body.querySelectorAll("li[data-ingredient-id]").length).toBe(candidate.ingredients.length);
+    expect(refs.body.querySelectorAll("li[data-step-id]").length).toBe(candidate.steps.length);
   });
 
   it("shows the warnings strip only when the candidate has warnings", () => {
@@ -69,14 +70,16 @@ describe("renderImportReview", () => {
     expect(refs.warnings.textContent).toContain("check the salt twice");
   });
 
-  it("shows an empty hint when there are no steps or ingredients", () => {
+  it("renders empty editable lists with add buttons when there are no steps or ingredients", () => {
     const refs = mountReview();
     const candidate = focacciaCandidate();
     const empty: RecipeCandidate = { ...candidate, ingredients: [], steps: [] };
     renderImportReview(refs, empty);
 
-    expect(refs.body.textContent).toContain("No ingredients extracted yet.");
-    expect(refs.body.textContent).toContain("No steps extracted yet.");
+    expect(refs.body.querySelectorAll("li[data-ingredient-id]").length).toBe(0);
+    expect(refs.body.querySelectorAll("li[data-step-id]").length).toBe(0);
+    expect(refs.body.querySelector('[data-action="add-ingredient"]')).not.toBeNull();
+    expect(refs.body.querySelector('[data-action="add-step"]')).not.toBeNull();
   });
 
   it("falls back to a no-video message when the source has no videoId", () => {
@@ -96,5 +99,86 @@ describe("renderImportReview", () => {
     const refs = mountReview();
     renderImportReview(refs, focacciaCandidate());
     expect(refs.back.dataset.action).toBe("close-import-review");
+  });
+
+  it("renders editable text inputs for the candidate header", () => {
+    const refs = mountReview();
+    renderImportReview(refs, focacciaCandidate());
+
+    const titleInput = refs.body.querySelector<HTMLInputElement>('[data-action="edit-candidate-title"]');
+    expect(titleInput).not.toBeNull();
+    expect(titleInput?.value.toLowerCase()).toContain("focaccia");
+
+    expect(refs.body.querySelector('[data-action="edit-candidate-description"]')).not.toBeNull();
+    expect(refs.body.querySelector('[data-action="edit-candidate-yield-raw"]')).not.toBeNull();
+    expect(refs.body.querySelectorAll('[data-action="edit-candidate-time"]').length).toBe(3);
+    expect(refs.body.querySelector('[data-action="edit-candidate-language"]')).not.toBeNull();
+  });
+
+  it("renders per-ingredient edit controls (raw, optional, reorder, remove)", () => {
+    const refs = mountReview();
+    renderImportReview(refs, focacciaCandidate());
+
+    const firstRow = refs.body.querySelector<HTMLElement>("li[data-ingredient-id]");
+    expect(firstRow).not.toBeNull();
+    expect(firstRow?.querySelector('[data-action="edit-ingredient-raw"]')).not.toBeNull();
+    expect(firstRow?.querySelector('[data-action="toggle-ingredient-optional"]')).not.toBeNull();
+    expect(firstRow?.querySelector('[data-action="move-ingredient-up"]')).not.toBeNull();
+    expect(firstRow?.querySelector('[data-action="move-ingredient-down"]')).not.toBeNull();
+    expect(firstRow?.querySelector('[data-action="remove-ingredient"]')).not.toBeNull();
+  });
+
+  it("renders per-step edit controls (text, timer, temperature, anchors, remove)", () => {
+    const refs = mountReview();
+    renderImportReview(refs, focacciaCandidate());
+
+    const firstRow = refs.body.querySelector<HTMLElement>("li[data-step-id]");
+    expect(firstRow).not.toBeNull();
+    expect(firstRow?.querySelector('[data-action="edit-step-text"]')).not.toBeNull();
+    expect(firstRow?.querySelector('[data-action="edit-step-timer"]')).not.toBeNull();
+    expect(firstRow?.querySelector('[data-action="edit-step-temp-value"]')).not.toBeNull();
+    expect(firstRow?.querySelector('[data-action="edit-step-temp-unit"]')).not.toBeNull();
+    expect(firstRow?.querySelector('[data-action="add-step-anchor"]')).not.toBeNull();
+    expect(firstRow?.querySelector('[data-step-anchor-input]')).not.toBeNull();
+    expect(firstRow?.querySelector('[data-action="remove-step"]')).not.toBeNull();
+  });
+
+  it("renders the save bar with a disabled save button and a discard button", () => {
+    const refs = mountReview();
+    renderImportReview(refs, focacciaCandidate());
+
+    const save = refs.body.querySelector<HTMLButtonElement>('[data-action="save-import-review"]');
+    expect(save).not.toBeNull();
+    expect(save?.disabled).toBe(true);
+    expect(save?.textContent?.toLowerCase()).toContain("phase d");
+
+    const discard = refs.body.querySelector<HTMLButtonElement>('[data-action="close-import-review"]');
+    expect(discard).not.toBeNull();
+  });
+});
+
+describe("parseAnchorInput", () => {
+  it("parses mm:ss form", () => {
+    expect(parseAnchorInput("1:23")).toBe(83);
+    expect(parseAnchorInput("0:30")).toBe(30);
+    expect(parseAnchorInput("10:00")).toBe(600);
+  });
+
+  it("parses hh:mm:ss form", () => {
+    expect(parseAnchorInput("1:00:00")).toBe(3600);
+    expect(parseAnchorInput("0:01:30")).toBe(90);
+  });
+
+  it("parses raw seconds", () => {
+    expect(parseAnchorInput("45")).toBe(45);
+    expect(parseAnchorInput("  120 ")).toBe(120);
+  });
+
+  it("rejects empty and garbage input", () => {
+    expect(parseAnchorInput("")).toBeUndefined();
+    expect(parseAnchorInput("   ")).toBeUndefined();
+    expect(parseAnchorInput("nope")).toBeUndefined();
+    expect(parseAnchorInput("-5")).toBeUndefined();
+    expect(parseAnchorInput("1:abc")).toBeUndefined();
   });
 });

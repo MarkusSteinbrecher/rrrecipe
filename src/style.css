@@ -1801,6 +1801,240 @@ button:disabled {
   color: #000;
 }
 
+.rr-import-review-field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.rr-import-review-field-narrow {
+  max-width: 240px;
+}
+
+.rr-import-review-field-inline {
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+
+.rr-import-review-field-label {
+  color: var(--ink-3);
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.rr-import-review-input,
+.rr-import-review-textarea {
+  background: transparent;
+  border: 1px solid var(--line);
+  color: var(--ink-1);
+  font: inherit;
+  padding: 6px 8px;
+  width: 100%;
+}
+
+.rr-import-review-input-mono {
+  font-family: var(--mono);
+  font-size: 13px;
+}
+
+.rr-import-review-input:focus,
+.rr-import-review-textarea:focus {
+  border-color: var(--accent, #ffff00);
+  outline: none;
+}
+
+.rr-import-review-textarea {
+  resize: vertical;
+}
+
+.rr-import-review-row-three {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr) minmax(0, 1fr);
+}
+
+.rr-import-review-edit-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.rr-import-review-edit-row {
+  align-items: start;
+  border: 1px solid var(--line);
+  display: grid;
+  gap: 8px;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  padding: 8px;
+}
+
+.rr-import-review-edit-row-step {
+  grid-template-columns: auto minmax(0, 1fr) auto;
+}
+
+.rr-import-review-edit-controls {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 28px;
+}
+
+.rr-import-review-edit-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+.rr-import-review-step-number {
+  color: var(--ink-3);
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  padding: 2px 0;
+}
+
+.rr-import-review-step-meta-row {
+  display: grid;
+  gap: 8px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.rr-import-review-anchor-row {
+  align-items: center;
+  display: grid;
+  gap: 6px;
+  grid-template-columns: auto minmax(0, 1fr);
+}
+
+.rr-import-review-anchor-row > .rr-import-review-field-label {
+  grid-column: 1 / -1;
+}
+
+.rr-import-review-anchor-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.rr-import-review-anchor-chip {
+  align-items: center;
+  background: var(--ink-bg2, rgba(255, 255, 0, 0.08));
+  display: inline-flex;
+  font-family: var(--mono);
+  font-size: 11px;
+  gap: 4px;
+  padding: 2px 6px;
+}
+
+.rr-import-review-anchor-empty {
+  color: var(--ink-3);
+  font-family: var(--mono);
+  font-size: 11px;
+}
+
+.rr-import-review-anchor-add {
+  display: grid;
+  gap: 6px;
+  grid-column: 1 / -1;
+  grid-template-columns: minmax(0, 1fr) auto;
+}
+
+.rr-import-review-add-row {
+  display: flex;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.rr-icon-btn {
+  align-items: center;
+  background: transparent;
+  border: 1px solid var(--line);
+  color: var(--ink-2);
+  cursor: pointer;
+  display: inline-flex;
+  height: 22px;
+  justify-content: center;
+  padding: 0;
+  width: 22px;
+}
+
+.rr-icon-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+.rr-icon-btn:not(:disabled):hover {
+  background: var(--accent, #ffff00);
+  color: #000;
+}
+
+.rr-icon-btn-remove {
+  align-self: start;
+}
+
+.rr-icon-btn-tiny {
+  height: 16px;
+  width: 16px;
+}
+
+.rr-import-review-checkbox {
+  align-items: center;
+  color: var(--ink-3);
+  display: inline-flex;
+  font-family: var(--mono);
+  font-size: 10px;
+  gap: 6px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.rr-import-review-tags-edit {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 6px;
+}
+
+.rr-import-review-tag-chip {
+  align-items: center;
+  display: inline-flex;
+  gap: 6px;
+}
+
+.rr-import-review-save-bar {
+  align-items: center;
+  border-top: 1px solid var(--line);
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  margin-top: 8px;
+  padding-top: 14px;
+}
+
+.rr-import-review-save-bar button[disabled] {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+/* The down chevron is the same icon rotated 90 degrees. */
+.rr-import-review-edit-controls button[data-action$="-down"] svg,
+.rr-icon-btn[data-action$="-down"] svg {
+  transform: rotate(90deg);
+}
+
+.rr-import-review-edit-controls button[data-action$="-up"] svg,
+.rr-icon-btn[data-action$="-up"] svg {
+  transform: rotate(-90deg);
+}
+
 .rr-import-source {
   align-items: center;
   display: grid;

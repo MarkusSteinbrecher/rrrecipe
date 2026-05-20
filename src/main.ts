@@ -11,7 +11,7 @@ import { icon } from "./icons";
 import { BROWSE_FILTERS, BROWSE_FRAGMENT, browseRefsFromDocument, renderBrowse, renderBrowseList, type BrowseFilters } from "./render-browse";
 import { DETAIL_FRAGMENT, detailRefsFromDocument, renderDetail as renderDetailView, type DetailViewState } from "./render-detail";
 import { IMPORT_FRAGMENT, importRefsFromDocument, renderImport as renderImportView, type ImportIntakeState, type ImportSourceFilter } from "./render-import";
-import { IMPORT_REVIEW_FRAGMENT, importReviewRefsFromDocument, renderImportReview as renderImportReviewView } from "./render-import-review";
+import { IMPORT_REVIEW_FRAGMENT, importReviewRefsFromDocument, parseAnchorInput, renderImportReview as renderImportReviewView } from "./render-import-review";
 import { SHOP_FRAGMENT, shopRefsFromDocument, renderShop as renderShopView } from "./render-shop";
 import { loadSnapshot, resetSnapshot, saveSnapshot } from "./storage";
 import type {
@@ -104,6 +104,7 @@ type UiState = {
   finalizingImportVideoId?: string;
   selectedImportVideoId?: string;
   reviewVideoId?: string;
+  editingCandidate?: RecipeCandidate;
   selectedBacklogVideoIds: Set<string>;
   deletedBacklogVideoIds: Set<string>;
   deletedBacklogChannelKeys: Set<string>;
@@ -543,14 +544,56 @@ function renderImportReviewScreen(): string {
   return renderApp(IMPORT_REVIEW_FRAGMENT, "import");
 }
 
-function reviewCandidate(): RecipeCandidate | undefined {
-  const id = state.reviewVideoId;
-  if (!id) return undefined;
-  return localCandidateForVideo(id) ?? candidateForVideo(id);
+function cloneCandidate(candidate: RecipeCandidate): RecipeCandidate {
+  return JSON.parse(JSON.stringify(candidate)) as RecipeCandidate;
+}
+
+function moveById<T extends { id: string }>(items: T[], id: string | undefined, direction: 1 | -1): void {
+  if (!id) return;
+  const index = items.findIndex((item) => item.id === id);
+  if (index === -1) return;
+  const target = index + direction;
+  if (target < 0 || target >= items.length) return;
+  const tmp = items[index] as T;
+  items[index] = items[target] as T;
+  items[target] = tmp;
+}
+
+function renumberSteps(steps: InstructionStep[]): void {
+  steps.forEach((step, index) => {
+    step.position = index + 1;
+  });
+}
+
+function updateStepTemperature(step: InstructionStep, change: { value?: string; unit?: "" | "c" | "f" }): void {
+  const current = step.temperature;
+  const value = change.value !== undefined ? change.value.trim() : current ? String(current.value) : "";
+  const unit = change.unit !== undefined ? change.unit : current?.unit ?? "";
+  if (!value || !unit) {
+    step.temperature = undefined;
+    return;
+  }
+  const num = Number(value);
+  if (!Number.isFinite(num)) {
+    step.temperature = undefined;
+    return;
+  }
+  step.temperature = { value: num, unit, raw: `${num} ${unit.toUpperCase()}` };
+}
+
+function cssEscape(value: string): string {
+  if (typeof CSS !== "undefined" && CSS.escape) return CSS.escape(value);
+  return value.replace(/["\\]/g, "\\$&");
+}
+
+function refreshImportReviewHeader(): void {
+  if (state.screen !== "import-review" || !state.editingCandidate) return;
+  const refs = importReviewRefsFromDocument();
+  refs.title.textContent = state.editingCandidate.title.toLowerCase() || "untitled recipe";
 }
 
 function renderCurrentImportReview(): void {
-  const candidate = reviewCandidate();
+  const candidate = state.editingCandidate;
   if (!candidate) {
     state.screen = "import";
     render();
@@ -2127,14 +2170,252 @@ async function handleAction(event: Event): Promise<void> {
   if (action === "open-import-review") {
     const videoId = target.dataset.videoId;
     if (videoId) {
-      state.reviewVideoId = videoId;
-      state.screen = "import-review";
+      const seed = localCandidateForVideo(videoId) ?? candidateForVideo(videoId);
+      if (seed) {
+        state.reviewVideoId = videoId;
+        state.editingCandidate = cloneCandidate(seed);
+        state.screen = "import-review";
+      }
     }
   }
 
   if (action === "close-import-review") {
     state.reviewVideoId = undefined;
+    state.editingCandidate = undefined;
     state.screen = "import";
+  }
+
+  // ---- editing actions (Phase C). Text inputs return early so focus stays. ----
+
+  if (action === "edit-candidate-title" && state.editingCandidate && target instanceof HTMLInputElement) {
+    state.editingCandidate.title = target.value;
+    refreshImportReviewHeader();
+    return;
+  }
+
+  if (action === "edit-candidate-description" && state.editingCandidate && target instanceof HTMLTextAreaElement) {
+    state.editingCandidate.description = target.value || undefined;
+    return;
+  }
+
+  if (action === "edit-candidate-yield-raw" && state.editingCandidate && target instanceof HTMLInputElement) {
+    state.editingCandidate.yield = { ...(state.editingCandidate.yield ?? { raw: "" }), raw: target.value };
+    return;
+  }
+
+  if (action === "edit-candidate-yield-quantity" && state.editingCandidate && target instanceof HTMLInputElement) {
+    const value = target.value.trim();
+    const num = value ? Number(value) : undefined;
+    state.editingCandidate.yield = {
+      ...(state.editingCandidate.yield ?? { raw: "" }),
+      quantity: Number.isFinite(num) ? (num as number) : undefined,
+    };
+    return;
+  }
+
+  if (action === "edit-candidate-yield-unit" && state.editingCandidate && target instanceof HTMLInputElement) {
+    state.editingCandidate.yield = { ...(state.editingCandidate.yield ?? { raw: "" }), unit: target.value || undefined };
+    return;
+  }
+
+  if (action === "edit-candidate-time" && state.editingCandidate && target instanceof HTMLInputElement) {
+    const field = target.dataset.timeField;
+    const value = target.value.trim();
+    const num = value ? Number(value) : undefined;
+    const safe = Number.isFinite(num) ? (num as number) : undefined;
+    state.editingCandidate.times = state.editingCandidate.times ?? {};
+    if (field === "prep") state.editingCandidate.times.prepMinutes = safe;
+    else if (field === "cook") state.editingCandidate.times.cookMinutes = safe;
+    else if (field === "total") state.editingCandidate.times.totalMinutes = safe;
+    return;
+  }
+
+  if (action === "edit-candidate-language" && state.editingCandidate && target instanceof HTMLInputElement) {
+    state.editingCandidate.language = target.value;
+    return;
+  }
+
+  if (action === "edit-ingredient-raw" && state.editingCandidate && target instanceof HTMLInputElement) {
+    const id = target.dataset.ingredientId;
+    const line = state.editingCandidate.ingredients.find((item) => item.id === id);
+    if (line) line.raw = target.value;
+    return;
+  }
+
+  if (action === "edit-ingredient-section" && state.editingCandidate && target instanceof HTMLInputElement) {
+    const id = target.dataset.ingredientId;
+    const line = state.editingCandidate.ingredients.find((item) => item.id === id);
+    if (line) line.section = target.value || undefined;
+    return;
+  }
+
+  if (action === "toggle-ingredient-optional" && state.editingCandidate && target instanceof HTMLInputElement) {
+    const id = target.dataset.ingredientId;
+    const line = state.editingCandidate.ingredients.find((item) => item.id === id);
+    if (line) line.optional = target.checked;
+    // fall through to re-render so the row styling updates
+  }
+
+  if (action === "add-ingredient" && state.editingCandidate) {
+    state.editingCandidate.ingredients.push({
+      id: uid("ing"),
+      raw: "",
+      language: state.editingCandidate.language,
+    });
+  }
+
+  if (action === "add-ingredient-section" && state.editingCandidate) {
+    state.editingCandidate.ingredients.push({
+      id: uid("ing"),
+      raw: "",
+      language: state.editingCandidate.language,
+      section: "new section",
+    });
+  }
+
+  if (action === "remove-ingredient" && state.editingCandidate) {
+    const id = target.dataset.ingredientId;
+    state.editingCandidate.ingredients = state.editingCandidate.ingredients.filter((item) => item.id !== id);
+  }
+
+  if (action === "move-ingredient-up" && state.editingCandidate) {
+    const id = target.dataset.ingredientId;
+    moveById(state.editingCandidate.ingredients, id, -1);
+  }
+
+  if (action === "move-ingredient-down" && state.editingCandidate) {
+    const id = target.dataset.ingredientId;
+    moveById(state.editingCandidate.ingredients, id, 1);
+  }
+
+  if (action === "edit-step-text" && state.editingCandidate && target instanceof HTMLTextAreaElement) {
+    const id = target.dataset.stepId;
+    const step = state.editingCandidate.steps.find((item) => item.id === id);
+    if (step) step.text = target.value;
+    return;
+  }
+
+  if (action === "edit-step-section" && state.editingCandidate && target instanceof HTMLInputElement) {
+    const id = target.dataset.stepId;
+    const step = state.editingCandidate.steps.find((item) => item.id === id);
+    if (step) step.section = target.value || undefined;
+    return;
+  }
+
+  if (action === "edit-step-timer" && state.editingCandidate && target instanceof HTMLInputElement) {
+    const id = target.dataset.stepId;
+    const step = state.editingCandidate.steps.find((item) => item.id === id);
+    if (step) {
+      const value = target.value.trim();
+      const num = value ? Number(value) : undefined;
+      step.timerSeconds = Number.isFinite(num) ? (num as number) : undefined;
+    }
+    return;
+  }
+
+  if (action === "edit-step-temp-value" && state.editingCandidate && target instanceof HTMLInputElement) {
+    const id = target.dataset.stepId;
+    const step = state.editingCandidate.steps.find((item) => item.id === id);
+    if (step) updateStepTemperature(step, { value: target.value });
+    return;
+  }
+
+  if (action === "edit-step-temp-unit" && state.editingCandidate && target instanceof HTMLSelectElement) {
+    const id = target.dataset.stepId;
+    const step = state.editingCandidate.steps.find((item) => item.id === id);
+    if (step) updateStepTemperature(step, { unit: target.value as "" | "c" | "f" });
+    // fall through — unit change re-renders the option states
+  }
+
+  if (action === "add-step" && state.editingCandidate) {
+    const position = state.editingCandidate.steps.length + 1;
+    state.editingCandidate.steps.push({
+      id: uid("step"),
+      position,
+      text: "",
+      language: state.editingCandidate.language,
+    });
+  }
+
+  if (action === "remove-step" && state.editingCandidate) {
+    const id = target.dataset.stepId;
+    state.editingCandidate.steps = state.editingCandidate.steps.filter((item) => item.id !== id);
+    renumberSteps(state.editingCandidate.steps);
+  }
+
+  if (action === "move-step-up" && state.editingCandidate) {
+    const id = target.dataset.stepId;
+    moveById(state.editingCandidate.steps, id, -1);
+    renumberSteps(state.editingCandidate.steps);
+  }
+
+  if (action === "move-step-down" && state.editingCandidate) {
+    const id = target.dataset.stepId;
+    moveById(state.editingCandidate.steps, id, 1);
+    renumberSteps(state.editingCandidate.steps);
+  }
+
+  if (action === "add-step-anchor" && state.editingCandidate) {
+    const id = target.dataset.stepId;
+    const step = state.editingCandidate.steps.find((item) => item.id === id);
+    if (step) {
+      const input = document.querySelector<HTMLInputElement>(`[data-step-anchor-input][data-step-id="${cssEscape(id ?? "")}"]`);
+      const seconds = parseAnchorInput(input?.value ?? "");
+      const sourceId = state.editingCandidate.source.id;
+      if (seconds !== undefined) {
+        step.mediaAnchors = step.mediaAnchors ?? [];
+        step.mediaAnchors.push({ sourceId, startSeconds: seconds, confidence: "manual" });
+        if (input) input.value = "";
+      }
+    }
+  }
+
+  if (action === "remove-step-anchor" && state.editingCandidate) {
+    const id = target.dataset.stepId;
+    const anchorIndex = Number(target.dataset.anchorIndex ?? "-1");
+    const step = state.editingCandidate.steps.find((item) => item.id === id);
+    if (step && step.mediaAnchors && anchorIndex >= 0 && anchorIndex < step.mediaAnchors.length) {
+      step.mediaAnchors.splice(anchorIndex, 1);
+    }
+  }
+
+  if (action === "edit-note" && state.editingCandidate && target instanceof HTMLTextAreaElement) {
+    const index = Number(target.dataset.noteIndex ?? "-1");
+    if (index >= 0 && index < state.editingCandidate.notes.length) {
+      state.editingCandidate.notes[index] = target.value;
+    }
+    return;
+  }
+
+  if (action === "add-note" && state.editingCandidate) {
+    state.editingCandidate.notes.push("");
+  }
+
+  if (action === "remove-note" && state.editingCandidate) {
+    const index = Number(target.dataset.noteIndex ?? "-1");
+    if (index >= 0 && index < state.editingCandidate.notes.length) {
+      state.editingCandidate.notes.splice(index, 1);
+    }
+  }
+
+  if (action === "add-tag" && state.editingCandidate) {
+    const input = document.querySelector<HTMLInputElement>("[data-new-tag-input]");
+    const value = input?.value.trim().toLowerCase() ?? "";
+    if (value && !state.editingCandidate.tags.includes(value)) {
+      state.editingCandidate.tags.push(value);
+      if (input) input.value = "";
+    }
+  }
+
+  if (action === "remove-tag" && state.editingCandidate) {
+    const tag = target.dataset.tag;
+    if (tag) state.editingCandidate.tags = state.editingCandidate.tags.filter((existing) => existing !== tag);
+  }
+
+  if (action === "save-import-review") {
+    // Phase D will wire this. Intentionally a no-op so the visible disabled
+    // button cannot accidentally fire anything.
+    return;
   }
 
   if (action === "toggle-backlog-video-selection") {
