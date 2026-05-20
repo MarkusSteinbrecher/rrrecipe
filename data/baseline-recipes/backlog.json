@@ -219,13 +219,14 @@
       "category": "cooking",
       "subcategory": "curry",
       "cuisine": "indian-british",
-      "status": "backlog",
+      "status": "promoted",
       "priority": 2,
+      "baselineRecipeId": "recipe-baseline-chicken-tikka-masala",
       "tags": [
         "curry",
         "dinner"
       ],
-      "notes": "Listed but no catalog entry yet — needs drafting."
+      "notes": "Drafted by Phase 3 agent batch 6 (curries & Asian rice)."
     },
     {
       "id": "baseline-vegetable-curry",
@@ -234,14 +235,15 @@
       "category": "cooking",
       "subcategory": "curry",
       "cuisine": "global",
-      "status": "backlog",
+      "status": "promoted",
       "priority": 2,
+      "baselineRecipeId": "recipe-baseline-vegetable-curry",
       "tags": [
         "curry",
         "vegetarian",
         "vegan"
       ],
-      "notes": "Listed but no catalog entry yet — needs drafting."
+      "notes": "Drafted by Phase 3 agent batch 6 (curries & Asian rice)."
     },
     {
       "id": "baseline-beef-chili",
@@ -250,13 +252,14 @@
       "category": "cooking",
       "subcategory": "stew",
       "cuisine": "american",
-      "status": "backlog",
+      "status": "promoted",
       "priority": 2,
+      "baselineRecipeId": "recipe-baseline-beef-chili",
       "tags": [
         "stew",
         "batch"
       ],
-      "notes": "Listed but no catalog entry yet — needs drafting."
+      "notes": "Drafted by Phase 3 agent batch 5 (stews & braises)."
     },
     {
       "id": "baseline-ratatouille",
@@ -331,14 +334,15 @@
       "category": "cooking",
       "subcategory": "mezze",
       "cuisine": "middle-eastern",
-      "status": "backlog",
+      "status": "promoted",
       "priority": 2,
+      "baselineRecipeId": "recipe-baseline-hummus",
       "tags": [
         "mezze",
         "quick",
         "vegan"
       ],
-      "notes": "Listed but no catalog entry yet — needs drafting.",
+      "notes": "Drafted by Phase 3 agent batch 8 (Middle-Eastern + gazpacho).",
       "externalSources": [
         {
           "provider": "themealdb",
@@ -746,13 +750,14 @@
       "category": "cooking",
       "subcategory": "curry",
       "cuisine": "indian",
-      "status": "backlog",
+      "status": "promoted",
       "priority": 1,
+      "baselineRecipeId": "recipe-baseline-butter-chicken",
       "tags": [
         "chicken",
         "curry"
       ],
-      "notes": ""
+      "notes": "Drafted by Phase 3 agent batch 6 (curries & Asian rice)."
     },
     {
       "id": "baseline-chicken-adobo",
@@ -761,13 +766,14 @@
       "category": "cooking",
       "subcategory": "braise",
       "cuisine": "filipino",
-      "status": "backlog",
+      "status": "promoted",
       "priority": 2,
+      "baselineRecipeId": "recipe-baseline-chicken-adobo",
       "tags": [
         "chicken",
         "braise"
       ],
-      "notes": ""
+      "notes": "Drafted by Phase 3 agent batch 5 (stews & braises)."
     },
     {
       "id": "baseline-teriyaki-chicken",
@@ -776,13 +782,14 @@
       "category": "cooking",
       "subcategory": "stir fry",
       "cuisine": "japanese",
-      "status": "backlog",
+      "status": "promoted",
       "priority": 2,
+      "baselineRecipeId": "recipe-baseline-teriyaki-chicken",
       "tags": [
         "chicken",
         "quick"
       ],
-      "notes": ""
+      "notes": "Drafted by Phase 3 agent batch 7 (Asian noodles & stir-fry)."
     },
     {
       "id": "baseline-beef-stew",
@@ -791,13 +798,14 @@
       "category": "cooking",
       "subcategory": "stew",
       "cuisine": "global",
-      "status": "backlog",
+      "status": "promoted",
       "priority": 1,
+      "baselineRecipeId": "recipe-baseline-beef-stew",
       "tags": [
         "beef",
         "stew"
       ],
-      "notes": ""
+      "notes": "Drafted by Phase 3 agent batch 5 (stews & braises)."
     },
     {
       "id": "baseline-pot-roast",
@@ -806,13 +814,14 @@
       "category": "cooking",
       "subcategory": "braise",
       "cuisine": "american",
-      "status": "backlog",
+      "status": "promoted",
       "priority": 2,
+      "baselineRecipeId": "recipe-baseline-pot-roast",
       "tags": [
         "beef",
         "braise"
       ],
-      "notes": ""
+      "notes": "Drafted by Phase 3 agent batch 5 (stews & braises)."
     },
     {
       "id": "baseline-burgers",
@@ -851,14 +860,15 @@
       "category": "cooking",
       "subcategory": "casserole",
       "cuisine": "british",
-      "status": "backlog",
+      "status": "promoted",
       "priority": 2,
+      "baselineRecipeId": "recipe-baseline-shepherds-pie",
       "tags": [
         "lamb",
         "beef",
         "baked"
       ],
-      "notes": ""
+      "notes": "Drafted by Phase 3 agent batch 5 (stews & braises)."
     },
     {
       "id": "baseline-boeuf-bourguignon",
@@ -867,13 +877,14 @@
       "category": "cooking",
       "subcategory": "braise",
       "cuisine": "french",
-      "status": "backlog",
+      "status": "promoted",
       "priority": 3,
+      "baselineRecipeId": "recipe-baseline-boeuf-bourguignon",
       "tags": [
         "beef",
         "braise"
       ],
-      "notes": "Common classic but longer technique."
+      "notes": "Drafted by Phase 3 agent batch 5 (stews & braises)."
     },
     {
       "id": "baseline-salmon-pan-seared",
@@ -944,13 +955,14 @@
       "category": "cooking",
       "subcategory": "noodles",
       "cuisine": "thai",
-      "status": "backlog",
+      "status": "promoted",
       "priority": 1,
+      "baselineRecipeId": "recipe-baseline-pad-thai",
       "tags": [
         "noodles",
         "stir fry"
       ],
-      "notes": "",
+      "notes": "Drafted by Phase 3 agent batch 7 (Asian noodles & stir-fry).",
       "externalSources": [
         {
           "provider": "themealdb",
@@ -969,12 +981,13 @@
       "category": "cooking",
       "subcategory": "curry",
       "cuisine": "thai",
-      "status": "backlog",
+      "status": "promoted",
       "priority": 1,
+      "baselineRecipeId": "recipe-baseline-thai-green-curry",
       "tags": [
         "curry"
       ],
-      "notes": "",
+      "notes": "Drafted by Phase 3 agent batch 6 (curries & Asian rice).",
       "externalSources": [
         {
           "provider": "themealdb",
@@ -993,13 +1006,14 @@
       "category": "cooking",
       "subcategory": "rice",
       "cuisine": "chinese",
-      "status": "backlog",
+      "status": "promoted",
       "priority": 1,
+      "baselineRecipeId": "recipe-baseline-fried-rice",
       "tags": [
         "rice",
         "quick"
       ],
-      "notes": ""
+      "notes": "Drafted by Phase 3 agent batch 6 (curries & Asian rice)."
     },
     {
       "id": "baseline-chow-mein",
@@ -1008,13 +1022,14 @@
       "category": "cooking",
       "subcategory": "noodles",
       "cuisine": "chinese",
-      "status": "backlog",
+      "status": "promoted",
       "priority": 2,
+      "baselineRecipeId": "recipe-baseline-chow-mein",
       "tags": [
         "noodles",
         "stir fry"
       ],
-      "notes": ""
+      "notes": "Drafted by Phase 3 agent batch 7 (Asian noodles & stir-fry)."
     },
     {
       "id": "baseline-kung-pao-chicken",
@@ -1023,13 +1038,14 @@
       "category": "cooking",
       "subcategory": "stir fry",
       "cuisine": "chinese",
-      "status": "backlog",
+      "status": "promoted",
       "priority": 2,
+      "baselineRecipeId": "recipe-baseline-kung-pao-chicken",
       "tags": [
         "chicken",
         "stir fry"
       ],
-      "notes": "",
+      "notes": "Drafted by Phase 3 agent batch 7 (Asian noodles & stir-fry).",
       "externalSources": [
         {
           "provider": "themealdb",
@@ -1062,13 +1078,14 @@
       "category": "cooking",
       "subcategory": "noodle soup",
       "cuisine": "japanese",
-      "status": "backlog",
+      "status": "promoted",
       "priority": 2,
+      "baselineRecipeId": "recipe-baseline-ramen",
       "tags": [
         "noodles",
         "soup"
       ],
-      "notes": "Needs variant split later: shoyu, miso, tonkotsu."
+      "notes": "Drafted by Phase 3 agent batch 7 (Asian noodles & stir-fry)."
     },
     {
       "id": "baseline-miso-soup",
@@ -1093,12 +1110,13 @@
       "category": "cooking",
       "subcategory": "rice",
       "cuisine": "japanese",
-      "status": "backlog",
+      "status": "promoted",
       "priority": 3,
+      "baselineRecipeId": "recipe-baseline-sushi-rice",
       "tags": [
         "rice"
       ],
-      "notes": "Foundation recipe for sushi variants."
+      "notes": "Drafted by Phase 3 agent batch 6 (curries & Asian rice)."
     },
     {
       "id": "baseline-bibimbap",
@@ -1107,12 +1125,13 @@
       "category": "cooking",
       "subcategory": "rice bowl",
       "cuisine": "korean",
-      "status": "backlog",
+      "status": "promoted",
       "priority": 2,
+      "baselineRecipeId": "recipe-baseline-bibimbap",
       "tags": [
         "rice"
       ],
-      "notes": ""
+      "notes": "Drafted by Phase 3 agent batch 6 (curries & Asian rice)."
     },
     {
       "id": "baseline-kimchi-fried-rice",
@@ -1121,13 +1140,14 @@
       "category": "cooking",
       "subcategory": "rice",
       "cuisine": "korean",
-      "status": "backlog",
+      "status": "promoted",
       "priority": 2,
+      "baselineRecipeId": "recipe-baseline-kimchi-fried-rice",
       "tags": [
         "rice",
         "quick"
       ],
-      "notes": ""
+      "notes": "Drafted by Phase 3 agent batch 6 (curries & Asian rice)."
     },
     {
       "id": "baseline-bulgogi",
@@ -1136,12 +1156,13 @@
       "category": "cooking",
       "subcategory": "grilled meat",
       "cuisine": "korean",
-      "status": "backlog",
+      "status": "promoted",
       "priority": 2,
+      "baselineRecipeId": "recipe-baseline-bulgogi",
       "tags": [
         "beef"
       ],
-      "notes": ""
+      "notes": "Drafted by Phase 3 agent batch 7 (Asian noodles & stir-fry)."
     },
     {
       "id": "baseline-tacos-al-pastor",
@@ -1241,13 +1262,14 @@
       "category": "cooking",
       "subcategory": "mezze",
       "cuisine": "middle-eastern",
-      "status": "backlog",
+      "status": "promoted",
       "priority": 1,
+      "baselineRecipeId": "recipe-baseline-falafel",
       "tags": [
         "vegan",
         "mezze"
       ],
-      "notes": "",
+      "notes": "Drafted by Phase 3 agent batch 8 (Middle-Eastern + gazpacho).",
       "externalSources": [
         {
           "provider": "themealdb",
@@ -1292,13 +1314,14 @@
       "category": "cooking",
       "subcategory": "salad",
       "cuisine": "levantine",
-      "status": "backlog",
+      "status": "promoted",
       "priority": 2,
+      "baselineRecipeId": "recipe-baseline-tabbouleh",
       "tags": [
         "salad",
         "vegan"
       ],
-      "notes": ""
+      "notes": "Drafted by Phase 3 agent batch 8 (Middle-Eastern + gazpacho)."
     },
     {
       "id": "baseline-baba-ghanoush",
@@ -1307,13 +1330,14 @@
       "category": "cooking",
       "subcategory": "mezze",
       "cuisine": "middle-eastern",
-      "status": "backlog",
+      "status": "promoted",
       "priority": 2,
+      "baselineRecipeId": "recipe-baseline-baba-ghanoush",
       "tags": [
         "dip",
         "vegan"
       ],
-      "notes": "",
+      "notes": "Drafted by Phase 3 agent batch 8 (Middle-Eastern + gazpacho).",
       "externalSources": [
         {
           "provider": "themealdb",
@@ -1332,12 +1356,13 @@
       "category": "cooking",
       "subcategory": "street food",
       "cuisine": "middle-eastern",
-      "status": "backlog",
+      "status": "promoted",
       "priority": 2,
+      "baselineRecipeId": "recipe-baseline-chicken-shawarma",
       "tags": [
         "chicken"
       ],
-      "notes": ""
+      "notes": "Drafted by Phase 3 agent batch 8 (Middle-Eastern + gazpacho)."
     },
     {
       "id": "baseline-caesar-salad",
@@ -1500,13 +1525,14 @@
       "category": "cooking",
       "subcategory": "cold soup",
       "cuisine": "spanish",
-      "status": "backlog",
+      "status": "promoted",
       "priority": 3,
+      "baselineRecipeId": "recipe-baseline-gazpacho",
       "tags": [
         "soup",
         "vegan"
       ],
-      "notes": ""
+      "notes": "Drafted by Phase 3 agent batch 8 (Middle-Eastern + gazpacho)."
     },
     {
       "id": "baseline-mashed-potatoes",
