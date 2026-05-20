@@ -1,4 +1,5 @@
 import "./style.css";
+import { demoCandidatesAsBacklogVideos, demoCandidatesByPath } from "./data/demo-candidates";
 import { formatTimestamp, speakStep, textareaLines, uid, youtubeTimestampUrl } from "./format";
 import { buildSnapshotForCandidate } from "./import-finalize";
 import { formatScaledQuantity } from "./ingredient-scale";
@@ -201,8 +202,8 @@ const emptyMealDbCatalog: TheMealDBCatalog = {
   records: [],
 };
 const localTranscriptFiles: string[] = [];
-const localCandidateModules: Record<string, { candidate?: RecipeCandidate }> = {};
-const localCandidateFiles: string[] = [];
+const localCandidateModules: Record<string, { candidate?: RecipeCandidate }> = demoCandidatesByPath;
+const localCandidateFiles: string[] = Object.keys(demoCandidatesByPath);
 const localSourcePageFiles: string[] = [];
 const importUiSessionKey = "rrrecipe:import-ui";
 
@@ -267,8 +268,18 @@ async function boot(): Promise<void> {
   state.snapshot.settings.theme ??= "dark";
   applyTheme(state.snapshot.settings.theme);
   selectFirstRecipe();
+  seedDemoBacklogVideos();
   restoreImportUiSession();
   render();
+}
+
+function seedDemoBacklogVideos(): void {
+  const existingIds = new Set(state.localBacklogVideos.map((video) => video.videoId));
+  for (const video of demoCandidatesAsBacklogVideos()) {
+    if (existingIds.has(video.videoId)) continue;
+    if (state.deletedBacklogVideoIds.has(video.videoId)) continue;
+    state.localBacklogVideos.push(video);
+  }
 }
 
 function selectFirstRecipe(): void {

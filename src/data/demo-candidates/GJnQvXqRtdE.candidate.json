@@ -1,0 +1,757 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-05-05T15:38:51.380Z",
+  "sourceTextKind": "youtube description + sanitized transcript",
+  "sourceTextLength": 1023,
+  "evidenceTextLength": 13259,
+  "metadataRefreshed": false,
+  "candidate": {
+    "id": "candidate-smores-blondie-manual-v1",
+    "source": {
+      "id": "source-youtube-GJnQvXqRtdE",
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=GJnQvXqRtdE",
+      "title": "S'MORES BLONDIE with Torched Marshmallow | CUPCAKE JEMMA",
+      "author": "CupcakeJemma",
+      "retrievedAt": "2026-05-05T15:38:51.380Z",
+      "media": {
+        "provider": "youtube",
+        "videoId": "GJnQvXqRtdE",
+        "channelId": "UCoMum0pwewO8_WtTlUQxGHw",
+        "channelTitle": "CupcakeJemma",
+        "channelHandle": "@cupcakejemma",
+        "durationSeconds": 725,
+        "thumbnailUrl": "https://i.ytimg.com/vi/GJnQvXqRtdE/hqdefault.jpg",
+        "canonicalUrl": "https://www.youtube.com/watch?v=GJnQvXqRtdE"
+      }
+    },
+    "title": "S'mores Blondie with Torched Marshmallow",
+    "language": "en",
+    "description": "A graham-cracker-inspired blondie with pie crumb, dark chocolate chips, piped marshmallow, torched topping, ganache, and extra crumb.",
+    "yield": {
+      "raw": "1 9x13 inch tray, cut into bars or fingers",
+      "quantity": 1,
+      "unit": "tray"
+    },
+    "times": {
+      "prepMinutes": 75,
+      "cookMinutes": 30,
+      "totalMinutes": 225
+    },
+    "ingredients": [
+      {
+        "id": "ing-smores-01",
+        "section": "graham cracker pie crumb",
+        "raw": "60g plain flour",
+        "language": "en",
+        "quantity": "60",
+        "unit": "g",
+        "item": "plain flour",
+        "normalized": {
+          "unitSystem": "metric"
+        },
+        "conversion": {
+          "confidence": "unknown"
+        }
+      },
+      {
+        "id": "ing-smores-02",
+        "section": "graham cracker pie crumb",
+        "raw": "50g wholemeal flour",
+        "language": "en",
+        "quantity": "50",
+        "unit": "g",
+        "item": "wholemeal flour",
+        "normalized": {
+          "unitSystem": "metric"
+        },
+        "conversion": {
+          "confidence": "unknown"
+        }
+      },
+      {
+        "id": "ing-smores-03",
+        "section": "graham cracker pie crumb",
+        "raw": "25g soft light brown sugar",
+        "language": "en",
+        "quantity": "25",
+        "unit": "g",
+        "item": "soft light brown sugar",
+        "normalized": {
+          "unitSystem": "metric"
+        },
+        "conversion": {
+          "confidence": "unknown"
+        }
+      },
+      {
+        "id": "ing-smores-04",
+        "section": "graham cracker pie crumb",
+        "raw": "10g runny honey",
+        "language": "en",
+        "quantity": "10",
+        "unit": "g",
+        "item": "runny honey",
+        "normalized": {
+          "unitSystem": "metric"
+        },
+        "conversion": {
+          "confidence": "unknown"
+        }
+      },
+      {
+        "id": "ing-smores-05",
+        "section": "graham cracker pie crumb",
+        "raw": "1/2 tsp cinnamon",
+        "language": "en",
+        "quantity": "1/2",
+        "unit": "tsp",
+        "item": "cinnamon",
+        "normalized": {
+          "unitSystem": "metric"
+        },
+        "conversion": {
+          "confidence": "unknown"
+        }
+      },
+      {
+        "id": "ing-smores-06",
+        "section": "graham cracker pie crumb",
+        "raw": "pinch of sea salt",
+        "language": "en",
+        "unit": "pinch",
+        "item": "sea salt",
+        "normalized": {
+          "unitSystem": "metric"
+        },
+        "conversion": {
+          "confidence": "unknown"
+        }
+      },
+      {
+        "id": "ing-smores-07",
+        "section": "graham cracker pie crumb",
+        "raw": "60g melted butter",
+        "language": "en",
+        "quantity": "60",
+        "unit": "g",
+        "item": "melted butter",
+        "normalized": {
+          "unitSystem": "metric"
+        },
+        "conversion": {
+          "confidence": "unknown"
+        }
+      },
+      {
+        "id": "ing-smores-08",
+        "section": "blondie",
+        "raw": "135g browned butter, warm and liquid",
+        "language": "en",
+        "quantity": "135",
+        "unit": "g",
+        "item": "browned butter, warm and liquid",
+        "normalized": {
+          "unitSystem": "metric"
+        },
+        "conversion": {
+          "confidence": "unknown"
+        }
+      },
+      {
+        "id": "ing-smores-09",
+        "section": "blondie",
+        "raw": "335g soft light brown sugar",
+        "language": "en",
+        "quantity": "335",
+        "unit": "g",
+        "item": "soft light brown sugar",
+        "normalized": {
+          "unitSystem": "metric"
+        },
+        "conversion": {
+          "confidence": "unknown"
+        }
+      },
+      {
+        "id": "ing-smores-10",
+        "section": "blondie",
+        "raw": "3 large eggs",
+        "language": "en",
+        "quantity": "3",
+        "unit": "large",
+        "item": "eggs",
+        "normalized": {
+          "unitSystem": "metric"
+        },
+        "conversion": {
+          "confidence": "unknown"
+        }
+      },
+      {
+        "id": "ing-smores-11",
+        "section": "blondie",
+        "raw": "1 tsp vanilla extract",
+        "language": "en",
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "vanilla extract",
+        "normalized": {
+          "unitSystem": "metric"
+        },
+        "conversion": {
+          "confidence": "unknown"
+        }
+      },
+      {
+        "id": "ing-smores-12",
+        "section": "blondie",
+        "raw": "270g plain flour",
+        "language": "en",
+        "quantity": "270",
+        "unit": "g",
+        "item": "plain flour",
+        "normalized": {
+          "unitSystem": "metric"
+        },
+        "conversion": {
+          "confidence": "unknown"
+        }
+      },
+      {
+        "id": "ing-smores-13",
+        "section": "blondie",
+        "raw": "1/4 tsp baking powder",
+        "language": "en",
+        "quantity": "1/4",
+        "unit": "tsp",
+        "item": "baking powder",
+        "normalized": {
+          "unitSystem": "metric"
+        },
+        "conversion": {
+          "confidence": "unknown"
+        }
+      },
+      {
+        "id": "ing-smores-14",
+        "section": "blondie",
+        "raw": "1/3 tsp sea salt",
+        "language": "en",
+        "quantity": "1/3",
+        "unit": "tsp",
+        "item": "sea salt",
+        "normalized": {
+          "unitSystem": "metric"
+        },
+        "conversion": {
+          "confidence": "unknown"
+        }
+      },
+      {
+        "id": "ing-smores-15",
+        "section": "blondie",
+        "raw": "100g dark chocolate chips",
+        "language": "en",
+        "quantity": "100",
+        "unit": "g",
+        "item": "dark chocolate chips",
+        "normalized": {
+          "unitSystem": "metric"
+        },
+        "conversion": {
+          "confidence": "unknown"
+        }
+      },
+      {
+        "id": "ing-smores-16",
+        "section": "blondie",
+        "raw": "80g graham cracker pie crumb",
+        "language": "en",
+        "quantity": "80",
+        "unit": "g",
+        "item": "graham cracker pie crumb",
+        "normalized": {
+          "unitSystem": "metric"
+        },
+        "conversion": {
+          "confidence": "unknown"
+        }
+      },
+      {
+        "id": "ing-smores-17",
+        "section": "marshmallow",
+        "raw": "3 leaves platinum grade gelatine, softened in cold water",
+        "language": "en",
+        "quantity": "3",
+        "unit": "leaves",
+        "item": "platinum grade gelatine, softened in cold water",
+        "normalized": {
+          "unitSystem": "metric"
+        },
+        "conversion": {
+          "confidence": "unknown"
+        }
+      },
+      {
+        "id": "ing-smores-18",
+        "section": "marshmallow",
+        "raw": "225g caster sugar",
+        "language": "en",
+        "quantity": "225",
+        "unit": "g",
+        "item": "caster sugar",
+        "normalized": {
+          "unitSystem": "metric"
+        },
+        "conversion": {
+          "confidence": "unknown"
+        }
+      },
+      {
+        "id": "ing-smores-19",
+        "section": "marshmallow",
+        "raw": "55g water",
+        "language": "en",
+        "quantity": "55",
+        "unit": "g",
+        "item": "water",
+        "normalized": {
+          "unitSystem": "metric"
+        },
+        "conversion": {
+          "confidence": "unknown"
+        }
+      },
+      {
+        "id": "ing-smores-20",
+        "section": "marshmallow",
+        "raw": "40g liquid glucose",
+        "language": "en",
+        "quantity": "40",
+        "unit": "g",
+        "item": "liquid glucose",
+        "normalized": {
+          "unitSystem": "metric"
+        },
+        "conversion": {
+          "confidence": "unknown"
+        }
+      },
+      {
+        "id": "ing-smores-21",
+        "section": "marshmallow",
+        "raw": "40g egg whites",
+        "language": "en",
+        "quantity": "40",
+        "unit": "g",
+        "item": "egg whites",
+        "normalized": {
+          "unitSystem": "metric"
+        },
+        "conversion": {
+          "confidence": "unknown"
+        }
+      },
+      {
+        "id": "ing-smores-22",
+        "section": "finish",
+        "raw": "dark chocolate ganache, 1:1 dark chocolate to cream ratio",
+        "language": "en",
+        "unit": "dark",
+        "item": "chocolate ganache, 1:1 dark chocolate to cream ratio",
+        "normalized": {
+          "unitSystem": "metric"
+        },
+        "conversion": {
+          "confidence": "unknown"
+        }
+      },
+      {
+        "id": "ing-smores-23",
+        "section": "finish",
+        "raw": "extra graham cracker pie crumb",
+        "language": "en",
+        "unit": "extra",
+        "item": "graham cracker pie crumb",
+        "normalized": {
+          "unitSystem": "metric"
+        },
+        "conversion": {
+          "confidence": "unknown"
+        }
+      }
+    ],
+    "steps": [
+      {
+        "id": "step-smores-01",
+        "section": "preparation",
+        "position": 1,
+        "text": "Prepare a lined baking sheet for the crumb and a greased, lined 9x13 inch tin for the blondie. Heat the oven to 170 C.",
+        "language": "en",
+        "temperature": {
+          "value": 170,
+          "unit": "c",
+          "raw": "170 C"
+        },
+        "mediaAnchors": [
+          {
+            "sourceId": "source-youtube-GJnQvXqRtdE",
+            "startSeconds": 145,
+            "label": "prepare a lined baking sheet for the crumb and a",
+            "confidence": "estimated"
+          }
+        ]
+      },
+      {
+        "id": "step-smores-02",
+        "section": "preparation",
+        "position": 2,
+        "text": "Make the graham cracker pie crumb by mixing the plain flour, wholemeal flour, brown sugar, cinnamon, salt, honey, and melted butter until evenly combined.",
+        "language": "en",
+        "mediaAnchors": [
+          {
+            "sourceId": "source-youtube-GJnQvXqRtdE",
+            "startSeconds": 84,
+            "label": "make the graham cracker pie crumb by mixing the ",
+            "confidence": "estimated"
+          }
+        ]
+      },
+      {
+        "id": "step-smores-03",
+        "section": "preparation",
+        "position": 3,
+        "text": "Rub and lightly roll the crumb mixture between your fingers until it forms small rounded nuggets rather than a dusty crumble.",
+        "language": "en",
+        "mediaAnchors": [
+          {
+            "sourceId": "source-youtube-GJnQvXqRtdE",
+            "startSeconds": 105,
+            "label": "rub and lightly roll the crumb mixture between y",
+            "confidence": "estimated"
+          }
+        ]
+      },
+      {
+        "id": "step-smores-04",
+        "section": "execution",
+        "position": 4,
+        "text": "Spread the crumb on the lined tray and bake at 170 C for 10 minutes. Loosen the crumbs while hot, then cool completely and reserve 80g for the blondie batter.",
+        "language": "en",
+        "timerSeconds": 600,
+        "temperature": {
+          "value": 170,
+          "unit": "c",
+          "raw": "170 C"
+        },
+        "mediaAnchors": [
+          {
+            "sourceId": "source-youtube-GJnQvXqRtdE",
+            "startSeconds": 148,
+            "label": "spread the crumb on the lined tray and bake at 1",
+            "confidence": "estimated"
+          }
+        ]
+      },
+      {
+        "id": "step-smores-05",
+        "section": "preparation",
+        "position": 5,
+        "text": "Brown enough butter to leave 135g browned butter. Let it cool for about 15 minutes so it is still liquid but no longer hot.",
+        "language": "en",
+        "timerSeconds": 900,
+        "mediaAnchors": [
+          {
+            "sourceId": "source-youtube-GJnQvXqRtdE",
+            "startSeconds": 177,
+            "label": "brown enough butter to leave 135g browned butter",
+            "confidence": "estimated"
+          }
+        ]
+      },
+      {
+        "id": "step-smores-06",
+        "section": "preparation",
+        "position": 6,
+        "text": "Put the brown sugar in a large bowl, pour in the warm browned butter with the browned milk solids, and stir with a whisk until combined.",
+        "language": "en",
+        "mediaAnchors": [
+          {
+            "sourceId": "source-youtube-GJnQvXqRtdE",
+            "startSeconds": 205,
+            "label": "put the brown sugar in a large bowl, pour in the",
+            "confidence": "estimated"
+          }
+        ]
+      },
+      {
+        "id": "step-smores-07",
+        "section": "preparation",
+        "position": 7,
+        "text": "Add the eggs and vanilla, then whisk until the mixture is smooth.",
+        "language": "en",
+        "mediaAnchors": [
+          {
+            "sourceId": "source-youtube-GJnQvXqRtdE",
+            "startSeconds": 224,
+            "label": "add the eggs and vanilla, then whisk until the m",
+            "confidence": "estimated"
+          }
+        ]
+      },
+      {
+        "id": "step-smores-08",
+        "section": "preparation",
+        "position": 8,
+        "text": "Switch to a spatula and fold in the flour, baking powder, and salt just until almost combined.",
+        "language": "en",
+        "mediaAnchors": [
+          {
+            "sourceId": "source-youtube-GJnQvXqRtdE",
+            "startSeconds": 238,
+            "label": "switch to a spatula and fold in the flour, bakin",
+            "confidence": "estimated"
+          }
+        ]
+      },
+      {
+        "id": "step-smores-09",
+        "section": "preparation",
+        "position": 9,
+        "text": "Fold in the dark chocolate chips and 80g of cooled pie crumb until distributed through the batter.",
+        "language": "en",
+        "mediaAnchors": [
+          {
+            "sourceId": "source-youtube-GJnQvXqRtdE",
+            "startSeconds": 248,
+            "label": "fold in the dark chocolate chips and 80g of cool",
+            "confidence": "estimated"
+          }
+        ]
+      },
+      {
+        "id": "step-smores-10",
+        "section": "execution",
+        "position": 10,
+        "text": "Spread the batter evenly in the prepared 9x13 inch tin and level the top.",
+        "language": "en",
+        "mediaAnchors": [
+          {
+            "sourceId": "source-youtube-GJnQvXqRtdE",
+            "startSeconds": 268,
+            "label": "spread the batter evenly in the prepared 9x13 in",
+            "confidence": "estimated"
+          }
+        ]
+      },
+      {
+        "id": "step-smores-11",
+        "section": "execution",
+        "position": 11,
+        "text": "Bake at 170 C for 17 to 20 minutes, checking from 15 minutes if you want a fudgier blondie.",
+        "language": "en",
+        "timerSeconds": 1020,
+        "temperature": {
+          "value": 170,
+          "unit": "c",
+          "raw": "170 C"
+        },
+        "mediaAnchors": [
+          {
+            "sourceId": "source-youtube-GJnQvXqRtdE",
+            "startSeconds": 272,
+            "label": "bake at 170 c for 17 to 20 minutes, checking fro",
+            "confidence": "estimated"
+          }
+        ]
+      },
+      {
+        "id": "step-smores-12",
+        "section": "execution",
+        "position": 12,
+        "text": "Cool the blondie, then chill for about 1 hour to firm it before cutting into bars or fingers.",
+        "language": "en",
+        "timerSeconds": 3600,
+        "mediaAnchors": [
+          {
+            "sourceId": "source-youtube-GJnQvXqRtdE",
+            "startSeconds": 293,
+            "label": "cool the blondie, then chill for about 1 hour to",
+            "confidence": "estimated"
+          }
+        ]
+      },
+      {
+        "id": "step-smores-13",
+        "section": "preparation",
+        "position": 13,
+        "text": "Soak the gelatine leaves in cold water for about 10 minutes while you begin the sugar syrup.",
+        "language": "en",
+        "timerSeconds": 600,
+        "mediaAnchors": [
+          {
+            "sourceId": "source-youtube-GJnQvXqRtdE",
+            "startSeconds": 421,
+            "label": "soak the gelatine leaves in cold water for about",
+            "confidence": "estimated"
+          }
+        ]
+      },
+      {
+        "id": "step-smores-14",
+        "section": "execution",
+        "position": 14,
+        "text": "Combine the water, caster sugar, and liquid glucose in a pan with a sugar thermometer. Heat over medium heat without stirring until the syrup reaches 116 C.",
+        "language": "en",
+        "temperature": {
+          "value": 116,
+          "unit": "c",
+          "raw": "116 C"
+        },
+        "mediaAnchors": [
+          {
+            "sourceId": "source-youtube-GJnQvXqRtdE",
+            "startSeconds": 443,
+            "label": "combine the water, caster sugar, and liquid gluc",
+            "confidence": "estimated"
+          }
+        ]
+      },
+      {
+        "id": "step-smores-15",
+        "section": "execution",
+        "position": 15,
+        "text": "Begin whisking the egg whites slowly, then increase speed so they reach soft peaks by the time the syrup reaches 119 C.",
+        "language": "en",
+        "temperature": {
+          "value": 119,
+          "unit": "c",
+          "raw": "119 C"
+        },
+        "mediaAnchors": [
+          {
+            "sourceId": "source-youtube-GJnQvXqRtdE",
+            "startSeconds": 470,
+            "label": "begin whisking the egg whites slowly, then incre",
+            "confidence": "estimated"
+          }
+        ]
+      },
+      {
+        "id": "step-smores-16",
+        "section": "execution",
+        "position": 16,
+        "text": "Pour the hot syrup down the side of the mixer bowl while whisking, then increase speed and whisk for 10 to 15 minutes until cool, thick, glossy, and fluffy.",
+        "language": "en",
+        "timerSeconds": 600,
+        "mediaAnchors": [
+          {
+            "sourceId": "source-youtube-GJnQvXqRtdE",
+            "startSeconds": 480,
+            "label": "pour the hot syrup down the side of the mixer bo",
+            "confidence": "estimated"
+          }
+        ]
+      },
+      {
+        "id": "step-smores-17",
+        "section": "execution",
+        "position": 17,
+        "text": "Squeeze excess water from the softened gelatine, melt it gently over a bain-marie, then slowly add it to the meringue to make marshmallow.",
+        "language": "en",
+        "mediaAnchors": [
+          {
+            "sourceId": "source-youtube-GJnQvXqRtdE",
+            "startSeconds": 498,
+            "label": "squeeze excess water from the softened gelatine,",
+            "confidence": "estimated"
+          }
+        ]
+      },
+      {
+        "id": "step-smores-18",
+        "section": "execution",
+        "position": 18,
+        "text": "Working quickly, transfer the marshmallow to a piping bag and pipe it onto the chilled blondie bars.",
+        "language": "en",
+        "mediaAnchors": [
+          {
+            "sourceId": "source-youtube-GJnQvXqRtdE",
+            "startSeconds": 529,
+            "label": "working quickly, transfer the marshmallow to a p",
+            "confidence": "estimated"
+          }
+        ]
+      },
+      {
+        "id": "step-smores-19",
+        "section": "execution",
+        "position": 19,
+        "text": "Chill the topped bars for 30 to 60 minutes until the marshmallow is set.",
+        "language": "en",
+        "timerSeconds": 1800,
+        "mediaAnchors": [
+          {
+            "sourceId": "source-youtube-GJnQvXqRtdE",
+            "startSeconds": 557,
+            "label": "chill the topped bars for 30 to 60 minutes until",
+            "confidence": "estimated"
+          }
+        ]
+      },
+      {
+        "id": "step-smores-20",
+        "section": "preparation",
+        "position": 20,
+        "text": "Make a 1:1 dark chocolate ganache while the marshmallow sets.",
+        "language": "en",
+        "mediaAnchors": [
+          {
+            "sourceId": "source-youtube-GJnQvXqRtdE",
+            "startSeconds": 575,
+            "label": "make a 1:1 dark chocolate ganache while the mars",
+            "confidence": "estimated"
+          }
+        ]
+      },
+      {
+        "id": "step-smores-21",
+        "section": "execution",
+        "position": 21,
+        "text": "Torch the marshmallow tops, add chocolate ganache, and finish with extra pie crumb.",
+        "language": "en",
+        "mediaAnchors": [
+          {
+            "sourceId": "source-youtube-GJnQvXqRtdE",
+            "startSeconds": 575,
+            "label": "torch the marshmallow tops, add chocolate ganach",
+            "confidence": "estimated"
+          }
+        ]
+      }
+    ],
+    "notes": [
+      "Manual candidate created from the YouTube description ingredients and the saved sanitized transcript method.",
+      "The transcript is generated captions, so timings and wording need QA review.",
+      "The video mentions starting with about 160-170g butter to end with 135g browned butter."
+    ],
+    "tags": [
+      "youtube",
+      "import",
+      "baking",
+      "dessert"
+    ],
+    "confidence": {
+      "source": 0.92,
+      "ingredients": 0.9,
+      "steps": 0.78,
+      "overall": 0.82
+    },
+    "warnings": [
+      "Manual draft for testing the target AI output shape. Review before saving as a final recipe.",
+      "Chocolate ganache quantity is described as a 1:1 ratio but no exact amount is provided in the YouTube description.",
+      "Media anchors are estimated from transcript blocks."
+    ]
+  }
+}

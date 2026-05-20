@@ -1,0 +1,294 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-05-05T15:02:13.938Z",
+  "sourceTextKind": "youtube metadata description",
+  "sourceTextLength": 1633,
+  "evidenceTextLength": 4130,
+  "metadataRefreshed": true,
+  "candidate": {
+    "id": "candidate-0a4c0101-d972-4afa-ad4f-5e2a64cf4e4d",
+    "source": {
+      "id": "source-ec111452-7ea2-4e57-ae98-f35c01221333",
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=yz3mSclK5kk",
+      "title": "Never Buy Bread Again! The Easiest 4-Ingredient Daily Bread (No Kneading)",
+      "author": "Food Language",
+      "retrievedAt": "2026-05-05T15:02:14.000Z",
+      "media": {
+        "provider": "youtube",
+        "videoId": "yz3mSclK5kk",
+        "channelId": "UCLxplAwE9ijOwkKyEGeoZTQ",
+        "channelTitle": "Food Language",
+        "channelHandle": "@food-language",
+        "durationSeconds": 522,
+        "thumbnailUrl": "https://i.ytimg.com/vi/yz3mSclK5kk/hqdefault.jpg",
+        "canonicalUrl": "https://www.youtube.com/watch?v=yz3mSclK5kk"
+      }
+    },
+    "title": "Never Buy Bread Again! The Easiest 4-Ingredient Daily Bread (No Kneading)",
+    "language": "en-US",
+    "description": "Make bakery-quality bread at home with just 4 ingredients and no kneading. This recipe builds incredible flavor through a simple preferment, and the stretch-and-fold method does all the work for you. If you've ever struggled with bread, this one will change that.\n\n*Ingredients:*\n\n*Starter:*\n* Water - ½ cup (120 ml)\n* Fresh yeast - ¾ tsp. (3 g) or dry yeast - ½ tsp. (2 g)\n* Bread flour - 1 cup (120 g)\n\n*Main dough:*\n* Water - 7 tbsp (100 ml)\n* Bread flour - 1⅔ cups (200 g)\n* Salt - 1 tsp (6 g)\n\nThis is really it! 4 basic ingredients to make amazing, bakery-quality bread.\n\n*My other awesome channels:*\nSweet Bread Recipes 👉 https://www.youtube.com/@sweet-bread-recipes\nCookie Corner 👉 https://www.youtube.com/@The-Cookie-Corner\n\nTools I Used:\n\nBaking pan I used to bake this bread: https://amzn.to/3N8ZPUi (I used two of them, one turned upside down and used as cover)\n\nAlternative pan:\n* https://amzn.to/49UyaOo - either two of these, one turned upside down and used as a cover, or one, but covered with aluminum foil for the first bake.\n* https://amzn.to/4gnx6Fb - same as the previous pan.\n\n* https://amzn.to/4qCUXVM - my favorite bread lame\n\nYou get two loaves from one batch, each with a thin, flaky crust that crackles as it cools and a soft, open crumb inside. They slice cleanly and taste just as good the next day.\n\nIf you try this recipe, leave a comment below and let me know how it turned out! Subscribe for a new bread recipe every week.\n\nDisclaimer: As an Amazon Associate, I earn from qualifying purchases.\n\n#bread #foodlanguage #recipe",
+    "yield": {
+      "raw": "",
+      "quantity": 0,
+      "unit": ""
+    },
+    "times": {
+      "prepMinutes": 0,
+      "cookMinutes": 0,
+      "totalMinutes": 9
+    },
+    "ingredients": [
+      {
+        "id": "ing-630027b4-d148-48f1-993c-4afde3ca9f60",
+        "raw": "Salt - 1 tsp (6 g)",
+        "language": "en",
+        "unit": "Salt",
+        "item": "- 1 tsp (6 g)",
+        "normalized": {
+          "unitSystem": "unknown"
+        },
+        "conversion": {
+          "confidence": "unknown"
+        }
+      },
+      {
+        "id": "ing-7f5036f0-4030-45bc-b473-c516e43c3f03",
+        "raw": "Salt - 1 tsp (6 g)",
+        "language": "en",
+        "unit": "Salt",
+        "item": "- 1 tsp (6 g)",
+        "normalized": {
+          "unitSystem": "unknown"
+        },
+        "conversion": {
+          "confidence": "unknown"
+        }
+      }
+    ],
+    "steps": [
+      {
+        "id": "step-c52050e0-de89-47a4-8cfa-0431aa1ef1b8",
+        "position": 1,
+        "text": "Mix",
+        "language": "en",
+        "mediaAnchors": [
+          {
+            "sourceId": "source-local-mock",
+            "startSeconds": 0,
+            "label": "mix",
+            "confidence": "estimated"
+          }
+        ]
+      },
+      {
+        "id": "step-0ad7dea8-0c1c-4241-8275-027b47de6ccf",
+        "position": 2,
+        "text": "Mix until there's no more dry flour Just mix, no need to...",
+        "language": "en",
+        "mediaAnchors": [
+          {
+            "sourceId": "source-local-mock",
+            "startSeconds": 45,
+            "label": "mix until there's no more dry flour ",
+            "confidence": "estimated"
+          }
+        ]
+      },
+      {
+        "id": "step-02680399-8ea8-46e4-b9f3-19a33cbe8d27",
+        "position": 3,
+        "text": "knead",
+        "language": "en",
+        "mediaAnchors": [
+          {
+            "sourceId": "source-local-mock",
+            "startSeconds": 90,
+            "label": "knead",
+            "confidence": "estimated"
+          }
+        ]
+      },
+      {
+        "id": "step-0268c8b2-8190-4e70-ad52-ef352c076747",
+        "position": 4,
+        "text": "Cover and let rest for 30 minutes A timer will remind you of the next step",
+        "language": "en",
+        "timerSeconds": 1800,
+        "mediaAnchors": [
+          {
+            "sourceId": "source-local-mock",
+            "startSeconds": 135,
+            "label": "cover and let rest for 30 minutes a ",
+            "confidence": "estimated"
+          }
+        ]
+      },
+      {
+        "id": "step-0701a6af-9e2d-40d6-88df-a11db79e6a54",
+        "position": 5,
+        "text": "Let rise until it doubles in size, it usually takes about 2 hours",
+        "language": "en",
+        "mediaAnchors": [
+          {
+            "sourceId": "source-local-mock",
+            "startSeconds": 180,
+            "label": "let rise until it doubles in size, i",
+            "confidence": "estimated"
+          }
+        ]
+      },
+      {
+        "id": "step-06477317-57e6-40b7-aad3-43f356efd8b1",
+        "position": 6,
+        "text": "Sprinkle flour on the work surface",
+        "language": "en",
+        "mediaAnchors": [
+          {
+            "sourceId": "source-local-mock",
+            "startSeconds": 225,
+            "label": "sprinkle flour on the work surface",
+            "confidence": "estimated"
+          }
+        ]
+      },
+      {
+        "id": "step-14074b52-0eb0-4c94-bd2a-03f4423b5bfd",
+        "position": 7,
+        "text": "Fold the dough to make it easier to cut Bubbles are a great sign!",
+        "language": "en",
+        "mediaAnchors": [
+          {
+            "sourceId": "source-local-mock",
+            "startSeconds": 270,
+            "label": "fold the dough to make it easier to ",
+            "confidence": "estimated"
+          }
+        ]
+      },
+      {
+        "id": "step-08656890-4008-401e-b2dd-469437ac1471",
+        "position": 8,
+        "text": "Let them rest uncovered for 10 minutes",
+        "language": "en",
+        "timerSeconds": 600,
+        "mediaAnchors": [
+          {
+            "sourceId": "source-local-mock",
+            "startSeconds": 315,
+            "label": "let them rest uncovered for 10 minut",
+            "confidence": "estimated"
+          }
+        ]
+      },
+      {
+        "id": "step-9269ebf1-1839-4dd8-9070-7ac2956a94b1",
+        "position": 9,
+        "text": "Fold like this to tighten the surface",
+        "language": "en",
+        "mediaAnchors": [
+          {
+            "sourceId": "source-local-mock",
+            "startSeconds": 360,
+            "label": "fold like this to tighten the surfac",
+            "confidence": "estimated"
+          }
+        ]
+      },
+      {
+        "id": "step-61d912d0-b7bb-4cc3-b692-894b763cf013",
+        "position": 10,
+        "text": "Cover with a towel and let rise for 30 minutes",
+        "language": "en",
+        "timerSeconds": 1800,
+        "mediaAnchors": [
+          {
+            "sourceId": "source-local-mock",
+            "startSeconds": 405,
+            "label": "cover with a towel and let rise for ",
+            "confidence": "estimated"
+          }
+        ]
+      },
+      {
+        "id": "step-c559158f-6d57-457c-9620-857a55c4928b",
+        "position": 11,
+        "text": "Sprinkle a little water around the bread Just a few drops for steam Cover with another tray of the same size",
+        "language": "en",
+        "mediaAnchors": [
+          {
+            "sourceId": "source-local-mock",
+            "startSeconds": 450,
+            "label": "sprinkle a little water around the b",
+            "confidence": "estimated"
+          }
+        ]
+      },
+      {
+        "id": "step-3097aa26-bffc-4c3d-94be-ee93534be4e6",
+        "position": 12,
+        "text": "Bake at 430°F (220°C) for 20 minutes",
+        "language": "en",
+        "timerSeconds": 1200,
+        "temperature": {
+          "value": 220,
+          "unit": "c",
+          "raw": "220°C"
+        },
+        "mediaAnchors": [
+          {
+            "sourceId": "source-local-mock",
+            "startSeconds": 495,
+            "label": "bake at 430°f (220°c) for 20 minutes",
+            "confidence": "estimated"
+          }
+        ]
+      },
+      {
+        "id": "step-8caac57b-d790-41ff-aa31-cb1373e1e93a",
+        "position": 13,
+        "text": "Remove the top tray",
+        "language": "en",
+        "mediaAnchors": [
+          {
+            "sourceId": "source-local-mock",
+            "startSeconds": 540,
+            "label": "remove the top tray",
+            "confidence": "estimated"
+          }
+        ]
+      },
+      {
+        "id": "step-6b920f7b-14df-44f5-88ab-de1620aa08d8",
+        "position": 14,
+        "text": "Bake for 10 more minutes Or until you're happy with the color",
+        "language": "en",
+        "mediaAnchors": [
+          {
+            "sourceId": "source-local-mock",
+            "startSeconds": 585,
+            "label": "bake for 10 more minutes or until yo",
+            "confidence": "estimated"
+          }
+        ]
+      }
+    ],
+    "notes": [
+      "Created from youtube metadata description."
+    ],
+    "tags": [
+      "youtube",
+      "import"
+    ],
+    "confidence": {
+      "source": 0.95,
+      "ingredients": 0.72,
+      "steps": 0.68,
+      "overall": 0.7
+    },
+    "warnings": [
+      "Draft uses YouTube Data API metadata only. No automatic transcript is attached.",
+      "Local backend mock refinement ran. This is contract testing only; no external AI provider was called."
+    ]
+  }
+}
